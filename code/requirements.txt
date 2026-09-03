@@ -1,0 +1,10 @@
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+torch>=2.0
+
+# mpmath is used directly by experiments/spectral/sw1_reference.py for
+# the closed-form reference (Bessel of order zero).  It was reaching the
+# environment only transitively, through torch -> sympy, so it is
+# declared here rather than relied on.
+mpmath>=1.3

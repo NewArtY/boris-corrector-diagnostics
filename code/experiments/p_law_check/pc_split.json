@@ -1,0 +1,54 @@
+{
+ "setup": {
+  "gyros": 100000.0,
+  "n_steps": 2094395
+ },
+ "runs": {
+  "paper": {
+   "campaign": 1.539542116411257,
+   "p_measured": 1.5395421163979095,
+   "a_hat": 0.02185057685720081,
+   "H_hat": 0.31571864660963855,
+   "a+H": 0.3375692234668394,
+   "envelope_exponent_|S|": 0.4200246738960029,
+   "pointwise_slope_|S|": 0.33250139585842825,
+   "final_|S|": 4.74746667083494,
+   "envelope_exponent_|Re S|": 0.4244913180448489,
+   "pointwise_slope_|Re S|": 0.2115958089269427,
+   "final_|Re S|": 4.724055795153077,
+   "envelope_exponent_|Im S|": 0.582104229275134,
+   "pointwise_slope_|Im S|": 0.33384867721587064,
+   "final_|Im S|": 0.4708891960633842,
+   "ratio_|Re S|/|S|_final": 0.9950687646054088,
+   "envelope_exponent_2|Re S|": 0.424491318044849,
+   "envelope_exponent_|S|^2": 0.8400493477920058,
+   "envelope_exponent_full_reconstruction": 1.7303637869142794,
+   "reconstruction_ratio_final": 1.0605463971558533,
+   "law_step_check_env|Re S| minus env|S|": 0.004466644148846011,
+   "seconds": 197.11374711990356
+  },
+  "quasistatic": {
+   "campaign": 0.9772017548657451,
+   "p_measured": 0.9772017548564513,
+   "a_hat": -0.6535590432286267,
+   "H_hat": 0.6482978276565977,
+   "a+H": 0.0,
+   "envelope_exponent_|S|": -4.6642206578092e-17,
+   "pointwise_slope_|S|": 0.0192202917320241,
+   "final_|S|": 0.2227323464852989,
+   "envelope_exponent_|Re S|": -9.431716629015846e-17,
+   "pointwise_slope_|Re S|": 0.043120379454608705,
+   "final_|Re S|": 0.02731347441506364,
+   "envelope_exponent_|Im S|": -1.9884155274818062e-24,
+   "pointwise_slope_|Im S|": 0.0631487683287606,
+   "final_|Im S|": 0.22105128881376127,
+   "ratio_|Re S|/|S|_final": 0.12262913243661455,
+   "envelope_exponent_2|Re S|": -8.079865046327163e-17,
+   "envelope_exponent_|S|^2": -9.3284413156184e-17,
+   "envelope_exponent_full_reconstruction": 0.9961380074174696,
+   "reconstruction_ratio_final": 41.89737328877474,
+   "law_step_check_env|Re S| minus env|S|": -4.767495971206646e-17,
+   "seconds": 215.26282405853271
+  }
+ }
+}

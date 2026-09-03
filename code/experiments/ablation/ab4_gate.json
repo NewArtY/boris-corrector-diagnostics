@@ -1,0 +1,1888 @@
+{
+ "meta": {
+  "wave": "W17",
+  "what": "the fallback gate of task 8, and its verification on the 120 cells of W14",
+  "signal": "g = max_i |(x_i - x_mean_i)/x_std_i| over the network's thirteen inputs",
+  "why_this_signal": "W14: four inputs had zero training variance, clamp_min(1e-12) made their divisor 1e-12, and outside the training point the first layer saturates and the correction degenerates to one constant vector",
+  "n_random_draws": 0,
+  "nothing_retrained": true,
+  "wall_s": 1176.2272491455078
+ },
+ "mechanism": {
+  "dead_inputs": {
+   "Bx": {
+    "x_mean": 0.0,
+    "x_std": 1e-12
+   },
+   "By": {
+    "x_mean": 0.0,
+    "x_std": 1e-12
+   },
+   "Ez": {
+    "x_mean": 0.0,
+    "x_std": 1e-12
+   },
+   "dt": {
+    "x_mean": 0.2999999999999998,
+    "x_std": 1e-12
+   }
+  },
+  "n_dead_inputs": 4,
+  "collapse": {
+   "h=0.3": {
+    "gate_signal_max": 1.7350610958785173,
+    "gate_signal_min": 1.2926109244181663,
+    "output_spread_over_8_ic_relative": 1.9650082853869908,
+    "output_ic0": [
+     0.04304789181346218,
+     0.008736506445961037,
+     1.616274668617874e-16,
+     -0.0021187656091446305,
+     -0.0006557290429736722,
+     4.406691838590284e-19
+    ]
+   },
+   "h=0.2": {
+    "gate_signal_max": 99999999999.99982,
+    "gate_signal_min": 99999999999.99982,
+    "output_spread_over_8_ic_relative": 0.0,
+    "output_ic0": [
+     0.03192698536587769,
+     -0.023385296689844712,
+     1.3070655172989935e-16,
+     -0.0017256677226073118,
+     0.0010124376062074546,
+     1.5573701740100675e-19
+    ]
+   },
+   "h=0.1": {
+    "gate_signal_max": 199999999999.99982,
+    "gate_signal_min": 199999999999.99982,
+    "output_spread_over_8_ic_relative": 0.0,
+    "output_ic0": [
+     0.03192698536587769,
+     -0.023385296689844712,
+     1.3070655172989935e-16,
+     -0.0017256677226073118,
+     0.0010124376062074546,
+     1.5573701740100675e-19
+    ]
+   },
+   "h=0.5": {
+    "gate_signal_max": 200000000000.00018,
+    "gate_signal_min": 200000000000.00018,
+    "output_spread_over_8_ic_relative": 0.0,
+    "output_ic0": [
+     -0.03220414246283668,
+     0.021741832247460385,
+     -1.359528880646691e-16,
+     0.0017309964619937335,
+     -0.0009292258726675326,
+     -1.1675296113133371e-19
+    ]
+   },
+   "h=0.30000000001": {
+    "gate_signal_max": 10.000167360857404,
+    "gate_signal_min": 10.000167360857404,
+    "output_spread_over_8_ic_relative": 1.7319614804101096,
+    "output_ic0": [
+     0.012212270032010468,
+     0.03122078678120257,
+     1.422954485889702e-17,
+     -0.0004524751507107999,
+     -0.0016279911362647014,
+     4.688337193892604e-20
+    ]
+   }
+  }
+ },
+ "threshold": {
+  "value": 3.0144152515499902,
+  "rule": "the largest standardised input attained anywhere in the committed training set; declared before the map was run and carried unchanged",
+  "n_training_states": 6000,
+  "training_gate_signal": {
+   "max": 3.0144152515499902,
+   "median": 1.477811184447125,
+   "p99": 2.798785470973397,
+   "min": 1.0026928926734366
+  },
+  "per_input_max_over_training": {
+   "rx": 1.6861171068572638,
+   "ry": 1.6997558676441125,
+   "rz": 2.6010780447233217,
+   "vx": 1.4157277288437313,
+   "vy": 1.4147780383261663,
+   "vz": 1.6308692196349108,
+   "Bx": 0.0,
+   "By": 0.0,
+   "Bz": 3.0144152515499902,
+   "Ex": 2.4434634150825953,
+   "Ey": 2.4692251198013873,
+   "Ez": 0.0,
+   "dt": 0.00016653345369377348
+  },
+  "flops": 52,
+  "flops_of_the_forward_pass_it_decides": 113958
+ },
+ "domain_of_validity": {
+  "step_size": {
+   "half_width": 3.0144152515499903e-12,
+   "window": [
+    0.29999999999698557,
+    0.3000000000030144
+   ],
+   "note": "h is one of the four inputs whose training variance was zero, so the corrector's step-size domain is 0.3 plus or minus three parts in 1e12"
+  },
+  "field_magnitude": {
+   "window": [
+    0.9985048688239483,
+    1.0005977032001616
+   ],
+   "gyro_orbits_before_B_leaves_it": 28.5762700321488,
+   "time_before_B_leaves_it": 179.54999999999364,
+   "paper_window": 120.0,
+   "crossover_window": 636.0,
+   "note": "B_z decays as exp(-t/tau), so the corrector leaves its own training range in |B| at a time that is inside the crossover horizon and outside the paper window"
+  }
+ },
+ "map": {
+  "n_cells": 120,
+  "cells": {
+   "H_paper|uniform|0.001": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 298999999999.9998,
+    "gate_signal_max_ic0": 298999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|uniform|0.001": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 298999999999.9998,
+    "gate_signal_max_ic0": 298999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|uniform|0.002": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 297999999999.9998,
+    "gate_signal_max_ic0": 297999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|uniform|0.002": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 297999999999.9998,
+    "gate_signal_max_ic0": 297999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|uniform|0.005": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 294999999999.9998,
+    "gate_signal_max_ic0": 294999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|uniform|0.005": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 294999999999.9998,
+    "gate_signal_max_ic0": 294999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|uniform|0.01": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 289999999999.9998,
+    "gate_signal_max_ic0": 289999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|uniform|0.01": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 289999999999.9998,
+    "gate_signal_max_ic0": 289999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|uniform|0.02": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 279999999999.9998,
+    "gate_signal_max_ic0": 279999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|uniform|0.02": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 279999999999.9998,
+    "gate_signal_max_ic0": 279999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|uniform|0.05": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 249999999999.99985,
+    "gate_signal_max_ic0": 249999999999.99985,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|uniform|0.05": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 249999999999.99985,
+    "gate_signal_max_ic0": 249999999999.99985,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|uniform|0.1": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 199999999999.99982,
+    "gate_signal_max_ic0": 199999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|uniform|0.1": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 199999999999.99982,
+    "gate_signal_max_ic0": 199999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|uniform|0.15": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 149999999999.99982,
+    "gate_signal_max_ic0": 149999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|uniform|0.15": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 149999999999.99982,
+    "gate_signal_max_ic0": 149999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|uniform|0.2": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 99999999999.99982,
+    "gate_signal_max_ic0": 99999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|uniform|0.2": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 99999999999.99982,
+    "gate_signal_max_ic0": 99999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|uniform|0.3": {
+    "gated_fraction": 0.0,
+    "gated_fraction_ic0": 0.0,
+    "gated_fraction_median_over_ic": 0.0,
+    "gate_signal_max": 2.686162141252692,
+    "gate_signal_max_ic0": 1.4356381678380745,
+    "fired_on_the_first_step_ic0": false,
+    "n_nonfinite": 0,
+    "corrector_used": true,
+    "corrector_used_majority": true,
+    "corrector_used_at_ic0_first_step": true,
+    "A_holds_in_W14": true
+   },
+   "H_crossover|uniform|0.3": {
+    "gated_fraction": 0.5137382075471698,
+    "gated_fraction_ic0": 0.0,
+    "gated_fraction_median_over_ic": 0.5471698113207548,
+    "gate_signal_max": 13.446200171953794,
+    "gate_signal_max_ic0": 1.5514551954873734,
+    "fired_on_the_first_step_ic0": false,
+    "n_nonfinite": 0,
+    "corrector_used": true,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": true,
+    "A_holds_in_W14": true
+   },
+   "H_paper|uniform|0.4": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 100000000000.0002,
+    "gate_signal_max_ic0": 100000000000.0002,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|uniform|0.4": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 100000000000.0002,
+    "gate_signal_max_ic0": 100000000000.0002,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|uniform|0.5": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 200000000000.00018,
+    "gate_signal_max_ic0": 200000000000.00018,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|uniform|0.5": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 200000000000.00018,
+    "gate_signal_max_ic0": 200000000000.00018,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B1_radial|0.001": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 298999999999.9998,
+    "gate_signal_max_ic0": 298999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B1_radial|0.001": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 298999999999.9998,
+    "gate_signal_max_ic0": 298999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B1_radial|0.002": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 297999999999.9998,
+    "gate_signal_max_ic0": 297999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B1_radial|0.002": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 297999999999.9998,
+    "gate_signal_max_ic0": 297999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B1_radial|0.005": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 294999999999.9998,
+    "gate_signal_max_ic0": 294999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B1_radial|0.005": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 294999999999.9998,
+    "gate_signal_max_ic0": 294999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B1_radial|0.01": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 289999999999.9998,
+    "gate_signal_max_ic0": 289999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B1_radial|0.01": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 289999999999.9998,
+    "gate_signal_max_ic0": 289999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B1_radial|0.02": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 279999999999.9998,
+    "gate_signal_max_ic0": 279999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B1_radial|0.02": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 279999999999.9998,
+    "gate_signal_max_ic0": 279999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B1_radial|0.05": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 249999999999.99985,
+    "gate_signal_max_ic0": 249999999999.99985,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B1_radial|0.05": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 249999999999.99985,
+    "gate_signal_max_ic0": 249999999999.99985,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B1_radial|0.1": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 199999999999.99982,
+    "gate_signal_max_ic0": 199999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B1_radial|0.1": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 199999999999.99982,
+    "gate_signal_max_ic0": 199999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B1_radial|0.15": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 149999999999.99982,
+    "gate_signal_max_ic0": 149999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B1_radial|0.15": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 149999999999.99982,
+    "gate_signal_max_ic0": 149999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B1_radial|0.2": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 99999999999.99982,
+    "gate_signal_max_ic0": 99999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B1_radial|0.2": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 99999999999.99982,
+    "gate_signal_max_ic0": 99999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B1_radial|0.3": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 60.00021136993539,
+    "gate_signal_max_ic0": 46.85135753254083,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B1_radial|0.3": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 60.00021136993539,
+    "gate_signal_max_ic0": 46.85135753254083,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B1_radial|0.4": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 100000000000.0002,
+    "gate_signal_max_ic0": 100000000000.0002,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B1_radial|0.4": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 100000000000.0002,
+    "gate_signal_max_ic0": 100000000000.0002,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B1_radial|0.5": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 200000000000.00018,
+    "gate_signal_max_ic0": 200000000000.00018,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B1_radial|0.5": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 200000000000.00018,
+    "gate_signal_max_ic0": 200000000000.00018,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B2_wave|0.001": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 298999999999.9998,
+    "gate_signal_max_ic0": 298999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B2_wave|0.001": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 298999999999.9998,
+    "gate_signal_max_ic0": 298999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B2_wave|0.002": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 297999999999.9998,
+    "gate_signal_max_ic0": 297999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B2_wave|0.002": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 297999999999.9998,
+    "gate_signal_max_ic0": 297999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B2_wave|0.005": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 294999999999.9998,
+    "gate_signal_max_ic0": 294999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B2_wave|0.005": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 294999999999.9998,
+    "gate_signal_max_ic0": 294999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B2_wave|0.01": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 289999999999.9998,
+    "gate_signal_max_ic0": 289999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B2_wave|0.01": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 289999999999.9998,
+    "gate_signal_max_ic0": 289999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B2_wave|0.02": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 279999999999.9998,
+    "gate_signal_max_ic0": 279999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B2_wave|0.02": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 279999999999.9998,
+    "gate_signal_max_ic0": 279999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B2_wave|0.05": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 249999999999.99985,
+    "gate_signal_max_ic0": 249999999999.99985,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B2_wave|0.05": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 249999999999.99985,
+    "gate_signal_max_ic0": 249999999999.99985,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B2_wave|0.1": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 199999999999.99982,
+    "gate_signal_max_ic0": 199999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B2_wave|0.1": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 199999999999.99982,
+    "gate_signal_max_ic0": 199999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B2_wave|0.15": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 149999999999.99982,
+    "gate_signal_max_ic0": 149999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B2_wave|0.15": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 149999999999.99982,
+    "gate_signal_max_ic0": 149999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B2_wave|0.2": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 99999999999.99982,
+    "gate_signal_max_ic0": 99999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B2_wave|0.2": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 99999999999.99982,
+    "gate_signal_max_ic0": 99999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B2_wave|0.3": {
+    "gated_fraction": 0.9859375,
+    "gated_fraction_ic0": 0.9925,
+    "gated_fraction_median_over_ic": 0.9875,
+    "gate_signal_max": 145.32761564378228,
+    "gate_signal_max_ic0": 145.32147998342373,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": true,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B2_wave|0.3": {
+    "gated_fraction": 0.9925117924528302,
+    "gated_fraction_ic0": 0.9853773584905661,
+    "gated_fraction_median_over_ic": 0.9933962264150943,
+    "gate_signal_max": 145.32767102309268,
+    "gate_signal_max_ic0": 145.32760767684732,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": true,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B2_wave|0.4": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 100000000000.0002,
+    "gate_signal_max_ic0": 100000000000.0002,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B2_wave|0.4": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 100000000000.0002,
+    "gate_signal_max_ic0": 100000000000.0002,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B2_wave|0.5": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 200000000000.00018,
+    "gate_signal_max_ic0": 200000000000.00018,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B2_wave|0.5": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 200000000000.00018,
+    "gate_signal_max_ic0": 200000000000.00018,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B3_tilted|0.001": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B3_tilted|0.001": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B3_tilted|0.002": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B3_tilted|0.002": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B3_tilted|0.005": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B3_tilted|0.005": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B3_tilted|0.01": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B3_tilted|0.01": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B3_tilted|0.02": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B3_tilted|0.02": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B3_tilted|0.05": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B3_tilted|0.05": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B3_tilted|0.1": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B3_tilted|0.1": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B3_tilted|0.15": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B3_tilted|0.15": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B3_tilted|0.2": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B3_tilted|0.2": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B3_tilted|0.3": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B3_tilted|0.3": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B3_tilted|0.4": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B3_tilted|0.4": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B3_tilted|0.5": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B3_tilted|0.5": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 499999999999.99994,
+    "gate_signal_max_ic0": 499999999999.99994,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B4_decaying|0.001": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 298999999999.9998,
+    "gate_signal_max_ic0": 298999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B4_decaying|0.001": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 298999999999.9998,
+    "gate_signal_max_ic0": 298999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B4_decaying|0.002": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 297999999999.9998,
+    "gate_signal_max_ic0": 297999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B4_decaying|0.002": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 297999999999.9998,
+    "gate_signal_max_ic0": 297999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B4_decaying|0.005": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 294999999999.9998,
+    "gate_signal_max_ic0": 294999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B4_decaying|0.005": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 294999999999.9998,
+    "gate_signal_max_ic0": 294999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B4_decaying|0.01": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 289999999999.9998,
+    "gate_signal_max_ic0": 289999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B4_decaying|0.01": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 289999999999.9998,
+    "gate_signal_max_ic0": 289999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B4_decaying|0.02": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 279999999999.9998,
+    "gate_signal_max_ic0": 279999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B4_decaying|0.02": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 279999999999.9998,
+    "gate_signal_max_ic0": 279999999999.9998,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B4_decaying|0.05": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 249999999999.99985,
+    "gate_signal_max_ic0": 249999999999.99985,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B4_decaying|0.05": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 249999999999.99985,
+    "gate_signal_max_ic0": 249999999999.99985,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B4_decaying|0.1": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 199999999999.99982,
+    "gate_signal_max_ic0": 199999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B4_decaying|0.1": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 199999999999.99982,
+    "gate_signal_max_ic0": 199999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B4_decaying|0.15": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 149999999999.99982,
+    "gate_signal_max_ic0": 149999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B4_decaying|0.15": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 149999999999.99982,
+    "gate_signal_max_ic0": 149999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B4_decaying|0.2": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 99999999999.99982,
+    "gate_signal_max_ic0": 99999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B4_decaying|0.2": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 99999999999.99982,
+    "gate_signal_max_ic0": 99999999999.99982,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B4_decaying|0.3": {
+    "gated_fraction": 0.0,
+    "gated_fraction_ic0": 0.0,
+    "gated_fraction_median_over_ic": 0.0,
+    "gate_signal_max": 2.6795603752961337,
+    "gate_signal_max_ic0": 1.5794558431117207,
+    "fired_on_the_first_step_ic0": false,
+    "n_nonfinite": 0,
+    "corrector_used": true,
+    "corrector_used_majority": true,
+    "corrector_used_at_ic0_first_step": true,
+    "A_holds_in_W14": true
+   },
+   "H_crossover|B4_decaying|0.3": {
+    "gated_fraction": 0.726061320754717,
+    "gated_fraction_ic0": 0.7174528301886792,
+    "gated_fraction_median_over_ic": 0.7174528301886792,
+    "gate_signal_max": 13.92755368779907,
+    "gate_signal_max_ic0": 13.92755368779907,
+    "fired_on_the_first_step_ic0": false,
+    "n_nonfinite": 0,
+    "corrector_used": true,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": true,
+    "A_holds_in_W14": true
+   },
+   "H_paper|B4_decaying|0.4": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 100000000000.0002,
+    "gate_signal_max_ic0": 100000000000.0002,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B4_decaying|0.4": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 100000000000.0002,
+    "gate_signal_max_ic0": 100000000000.0002,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_paper|B4_decaying|0.5": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 200000000000.00018,
+    "gate_signal_max_ic0": 200000000000.00018,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   },
+   "H_crossover|B4_decaying|0.5": {
+    "gated_fraction": 1.0,
+    "gated_fraction_ic0": 1.0,
+    "gated_fraction_median_over_ic": 1.0,
+    "gate_signal_max": 200000000000.00018,
+    "gate_signal_max_ic0": 200000000000.00018,
+    "fired_on_the_first_step_ic0": true,
+    "n_nonfinite": 0,
+    "corrector_used": false,
+    "corrector_used_majority": false,
+    "corrector_used_at_ic0_first_step": false,
+    "A_holds_in_W14": false
+   }
+  },
+  "gate_open_cells": [
+   "H_crossover|B2_wave|0.3",
+   "H_crossover|B4_decaying|0.3",
+   "H_crossover|uniform|0.3",
+   "H_paper|B2_wave|0.3",
+   "H_paper|B4_decaying|0.3",
+   "H_paper|uniform|0.3"
+  ],
+  "n_gate_open": 6,
+  "A_holds_cells": [
+   "H_crossover|B4_decaying|0.3",
+   "H_crossover|uniform|0.3",
+   "H_paper|B4_decaying|0.3",
+   "H_paper|uniform|0.3"
+  ],
+  "mixed_cells": [
+   "H_crossover|B2_wave|0.3",
+   "H_crossover|B4_decaying|0.3",
+   "H_crossover|uniform|0.3",
+   "H_paper|B2_wave|0.3"
+  ],
+  "n_mixed": 4,
+  "never_gated_cells": [
+   "H_paper|B4_decaying|0.3",
+   "H_paper|uniform|0.3"
+  ],
+  "n_never_gated": 2,
+  "note": "a cell whose gated fraction is 1.0 runs the plain Boris step at every step and its error is W14's Boris row exactly; a cell whose gated fraction is 0.0 runs the corrector at every step and its error is W14's corrector row exactly.  Nothing is re-measured against a reference here, because in the absence of a mixed cell there is nothing new to measure."
+ },
+ "P3": {
+  "prediction": "the gate separates the 4 cells where the corrector wins from the other 116, with no false negative among the 4",
+  "readings": {
+   "corrector_used": {
+    "gate_open_and_corrector_wins": {
+     "n": 4,
+     "cells": [
+      "H_crossover|B4_decaying|0.3",
+      "H_crossover|uniform|0.3",
+      "H_paper|B4_decaying|0.3",
+      "H_paper|uniform|0.3"
+     ]
+    },
+    "gate_open_and_corrector_loses": {
+     "n": 2,
+     "cells": [
+      "H_crossover|B2_wave|0.3",
+      "H_paper|B2_wave|0.3"
+     ]
+    },
+    "gate_closed_but_corrector_would_have_won": {
+     "n": 0,
+     "cells": []
+    },
+    "gate_closed_and_corrector_loses": {
+     "n": 114
+    },
+    "no_false_negative": true,
+    "exact_separation": false
+   },
+   "corrector_used_majority": {
+    "gate_open_and_corrector_wins": {
+     "n": 2,
+     "cells": [
+      "H_paper|B4_decaying|0.3",
+      "H_paper|uniform|0.3"
+     ]
+    },
+    "gate_open_and_corrector_loses": {
+     "n": 0,
+     "cells": []
+    },
+    "gate_closed_but_corrector_would_have_won": {
+     "n": 2,
+     "cells": [
+      "H_crossover|B4_decaying|0.3",
+      "H_crossover|uniform|0.3"
+     ]
+    },
+    "gate_closed_and_corrector_loses": {
+     "n": 116
+    },
+    "no_false_negative": false,
+    "exact_separation": false
+   },
+   "corrector_used_at_ic0_first_step": {
+    "gate_open_and_corrector_wins": {
+     "n": 4,
+     "cells": [
+      "H_crossover|B4_decaying|0.3",
+      "H_crossover|uniform|0.3",
+      "H_paper|B4_decaying|0.3",
+      "H_paper|uniform|0.3"
+     ]
+    },
+    "gate_open_and_corrector_loses": {
+     "n": 0,
+     "cells": []
+    },
+    "gate_closed_but_corrector_would_have_won": {
+     "n": 0,
+     "cells": []
+    },
+    "gate_closed_and_corrector_loses": {
+     "n": 116
+    },
+    "no_false_negative": true,
+    "exact_separation": true
+   }
+  },
+  "no_false_negative_under_every_reading": false
+ },
+ "demonstration": {
+  "Omega_h=0.2": {
+   "boris": {
+    "pos_err_rms": 0.18238758146670178,
+    "pos_err_final": 0.3904462957694741
+   },
+   "corrector": {
+    "pos_err_rms": 13.839756562263073,
+    "pos_err_final": 24.208568125985746
+   },
+   "gated": {
+    "pos_err_rms": 0.18238758146670178,
+    "pos_err_final": 0.3904462957694741,
+    "gated_fraction": 1.0,
+    "gate_signal_max": 99999999999.99982
+   },
+   "gate_fires": true,
+   "gated_equals_boris": true,
+   "gated_equals_corrector": false,
+   "what_the_gate_saved": 75.88102463428837,
+   "flops_per_step_gated": 165.0
+  },
+  "Omega_h=0.1": {
+   "boris": {
+    "pos_err_rms": 0.05792684264210907,
+    "pos_err_final": 0.09595042672290166
+   },
+   "corrector": {
+    "pos_err_rms": 27.561331782984094,
+    "pos_err_final": 47.79661647791646
+   },
+   "gated": {
+    "pos_err_rms": 0.05792684264210907,
+    "pos_err_final": 0.09595042672290166,
+    "gated_fraction": 1.0,
+    "gate_signal_max": 199999999999.99982
+   },
+   "gate_fires": true,
+   "gated_equals_boris": true,
+   "gated_equals_corrector": false,
+   "what_the_gate_saved": 475.7955125099255,
+   "flops_per_step_gated": 165.0
+  },
+  "Omega_h=0.3": {
+   "boris": {
+    "pos_err_rms": 0.4166534686601131,
+    "pos_err_final": 0.8731425130082274
+   },
+   "corrector": {
+    "pos_err_rms": 0.003468872998930813,
+    "pos_err_final": 0.008871081704826032
+   },
+   "gated": {
+    "pos_err_rms": 0.003468872998930813,
+    "pos_err_final": 0.008871081704826032,
+    "gated_fraction": 0.0,
+    "gate_signal_max": 1.5794558431117207
+   },
+   "gate_fires": false,
+   "gated_equals_boris": false,
+   "gated_equals_corrector": true,
+   "what_the_gate_saved": 1.0,
+   "flops_per_step_gated": null
+  }
+ }
+}

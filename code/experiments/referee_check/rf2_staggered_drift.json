@@ -1,0 +1,16 @@
+{
+ "proj": {
+  "drift_env_1e3": 8.96206665124133e-06,
+  "drift_env_1e4": 4.553332791579212e-05,
+  "drift_env_1e5": 0.0007916368532464579,
+  "drift_envelope_exponent_last2dec": 1.228076467784359
+ },
+ "boris": {
+  "drift_env_1e3": 3.401822972759483e-06,
+  "drift_env_1e4": 3.399303904583206e-05,
+  "drift_env_1e5": 0.0003378997654825966,
+  "drift_envelope_exponent_last2dec": 0.9997572844226889
+ },
+ "ratio_proj_over_boris_at_1e5": 2.342815633848763,
+ "comment": "Under the SAME averaged-staggered convention, monitoring the drift of the reported error relative to its initial reading shows the corrector growing with exponent ~1.2 and exceeding the Boris baseline drift by ~2.3x at 1e5 gyro-orbits; the growth is hidden only from the running-maximum-of-raw-|error| diagnostic used in Fig. 2b."
+}

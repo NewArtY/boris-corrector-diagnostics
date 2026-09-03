@@ -1,0 +1,413 @@
+{
+  "config": {
+    "dt": 0.3,
+    "n_gyrations": 100000,
+    "n_steps": 2094395,
+    "taus": {
+      "paper_tau1.2e5": 120000.0,
+      "quasistatic_tau1.2e8": 120000000.0
+    }
+  },
+  "results": {
+    "paper_tau1.2e5": {
+      "shipped/boris": {
+        "seconds": 4.497400760650635,
+        "us_per_step": 2.14735079135055,
+        "net_evals_per_step": 0.0,
+        "envelope_exponent": 8.354252798528677e-16,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 2.499690216373196e-06,
+            "physical_signal": 0.051012713845887014,
+            "signal_over_err": 20407.614316265728
+          },
+          "1e+04": {
+            "energy_err_max": 2.499690216373196e-06,
+            "physical_signal": 0.407615152811611,
+            "signal_over_err": 163066.26722851297
+          },
+          "1e+05": {
+            "energy_err_max": 2.499690216373196e-06,
+            "physical_signal": 0.9946784345211994,
+            "signal_over_err": 397920.68153324205
+          }
+        }
+      },
+      "shipped/raw": {
+        "seconds": 40.51678824424744,
+        "us_per_step": 19.34534232761606,
+        "net_evals_per_step": 1.0,
+        "envelope_exponent": 2.5532340449940376,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 2.5121715282888073,
+            "physical_signal": 0.051012713845887014,
+            "signal_over_err": 0.020306222434036927
+          },
+          "1e+04": {
+            "energy_err_max": 7.163074811332409,
+            "physical_signal": 0.407615152811611,
+            "signal_over_err": 0.05690505314376162
+          },
+          "1e+05": {
+            "energy_err_max": 42021.91691002774,
+            "physical_signal": 0.9946784345211994,
+            "signal_over_err": 2.3670467881103207e-05
+          }
+        }
+      },
+      "shipped/proj": {
+        "seconds": 44.0313081741333,
+        "us_per_step": 21.02340206796392,
+        "net_evals_per_step": 1.0,
+        "envelope_exponent": 1.539542116411257,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 0.018095198369225907,
+            "physical_signal": 0.051012713845887014,
+            "signal_over_err": 2.819129848979339
+          },
+          "1e+04": {
+            "energy_err_max": 1.9283243183059904,
+            "physical_signal": 0.407615152811611,
+            "signal_over_err": 0.21138308994085392
+          },
+          "1e+05": {
+            "energy_err_max": 35.15863412211816,
+            "physical_signal": 0.9946784345211994,
+            "signal_over_err": 0.028291156905195333
+          }
+        }
+      },
+      "shipped/sym": {
+        "seconds": 58.56456422805786,
+        "us_per_step": 27.962521027818468,
+        "net_evals_per_step": 1.0,
+        "envelope_exponent": 1.5403467739519194,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 0.01807203556762005,
+            "physical_signal": 0.051012713845887014,
+            "signal_over_err": 2.822743107992068
+          },
+          "1e+04": {
+            "energy_err_max": 1.9321026255734384,
+            "physical_signal": 0.407615152811611,
+            "signal_over_err": 0.21096972149221777
+          },
+          "1e+05": {
+            "energy_err_max": 35.25430630156613,
+            "physical_signal": 0.9946784345211994,
+            "signal_over_err": 0.028214381131561564
+          }
+        }
+      },
+      "staggered/boris": {
+        "seconds": 4.809719800949097,
+        "us_per_step": 2.2964721558966175,
+        "net_evals_per_step": 0.0,
+        "envelope_exponent": 3.699094473517028e-16,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 0.02200238314060876,
+            "physical_signal": 0.051012713845887014,
+            "signal_over_err": 2.3185085688165867
+          },
+          "1e+04": {
+            "energy_err_max": 0.02200238314060876,
+            "physical_signal": 0.407615152811611,
+            "signal_over_err": 18.525954675304916
+          },
+          "1e+05": {
+            "energy_err_max": 0.02200238314060876,
+            "physical_signal": 0.9946784345211994,
+            "signal_over_err": 45.20775900340397
+          }
+        }
+      },
+      "staggered/proj": {
+        "seconds": 42.75688052177429,
+        "us_per_step": 20.414907656757343,
+        "net_evals_per_step": 1.0,
+        "envelope_exponent": 1.5643888863775728,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 0.022329225802946828,
+            "physical_signal": 0.051012713845887014,
+            "signal_over_err": 2.2845715429665625
+          },
+          "1e+04": {
+            "energy_err_max": 1.9024519353825,
+            "physical_signal": 0.407615152811611,
+            "signal_over_err": 0.2142577929200915
+          },
+          "1e+05": {
+            "energy_err_max": 34.9498282999207,
+            "physical_signal": 0.9946784345211994,
+            "signal_over_err": 0.028460180862274972
+          }
+        }
+      },
+      "staggered/sym": {
+        "seconds": 56.23800730705261,
+        "us_per_step": 26.85167187042206,
+        "net_evals_per_step": 1.0,
+        "envelope_exponent": 1.5644220028875506,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 0.022329225614115877,
+            "physical_signal": 0.051012713845887014,
+            "signal_over_err": 2.284571562286436
+          },
+          "1e+04": {
+            "energy_err_max": 1.9022696642954973,
+            "physical_signal": 0.407615152811611,
+            "signal_over_err": 0.2142783226071003
+          },
+          "1e+05": {
+            "energy_err_max": 34.9545202706362,
+            "physical_signal": 0.9946784345211994,
+            "signal_over_err": 0.028456360631468492
+          }
+        }
+      }
+    },
+    "quasistatic_tau1.2e8": {
+      "shipped/boris": {
+        "seconds": 4.432262182235718,
+        "us_per_step": 2.11624940960789,
+        "net_evals_per_step": 0.0,
+        "envelope_exponent": 9.562497031099973e-16,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 2.499982110215626e-09,
+            "physical_signal": 5.235850680540555e-05,
+            "signal_over_err": 20943.55259241818
+          },
+          "1e+04": {
+            "energy_err_max": 2.499982110215626e-09,
+            "physical_signal": 0.000523461721680829,
+            "signal_over_err": 209386.1870218263
+          },
+          "1e+05": {
+            "energy_err_max": 2.499982110215626e-09,
+            "physical_signal": 0.005222303865404343,
+            "signal_over_err": 2088936.4944111195
+          }
+        }
+      },
+      "shipped/raw": {
+        "seconds": 39.750914335250854,
+        "us_per_step": 18.979664454532625,
+        "net_evals_per_step": 1.0,
+        "envelope_exponent": 0.05651346501588402,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 0.5581828994057044,
+            "physical_signal": 5.235850680540555e-05,
+            "signal_over_err": 9.380170345804482e-05
+          },
+          "1e+04": {
+            "energy_err_max": 0.9702820830421127,
+            "physical_signal": 0.000523461721680829,
+            "signal_over_err": 0.0005394943705851255
+          },
+          "1e+05": {
+            "energy_err_max": 0.9985685909430739,
+            "physical_signal": 0.005222303865404343,
+            "signal_over_err": 0.005229789833938462
+          }
+        }
+      },
+      "shipped/proj": {
+        "seconds": 41.80488896369934,
+        "us_per_step": 19.96036514778699,
+        "net_evals_per_step": 1.0,
+        "envelope_exponent": 0.9772017548657451,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 1.0914322644550722e-06,
+            "physical_signal": 5.235850680540555e-05,
+            "signal_over_err": 47.97229155722914
+          },
+          "1e+04": {
+            "energy_err_max": 1.0836743600139975e-05,
+            "physical_signal": 0.000523461721680829,
+            "signal_over_err": 48.30433763091595
+          },
+          "1e+05": {
+            "energy_err_max": 0.00013023775327658527,
+            "physical_signal": 0.005222303865404343,
+            "signal_over_err": 40.09823368431243
+          }
+        }
+      },
+      "shipped/sym": {
+        "seconds": 54.727206230163574,
+        "us_per_step": 26.13031745690931,
+        "net_evals_per_step": 1.0,
+        "envelope_exponent": 0.975730662079118,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 1.091271988107323e-06,
+            "physical_signal": 5.235850680540555e-05,
+            "signal_over_err": 47.97933730179855
+          },
+          "1e+04": {
+            "energy_err_max": 1.0833466565385308e-05,
+            "physical_signal": 0.000523461721680829,
+            "signal_over_err": 48.318949296744464
+          },
+          "1e+05": {
+            "energy_err_max": 0.0001299389880007329,
+            "physical_signal": 0.005222303865404343,
+            "signal_over_err": 40.190430491692666
+          }
+        }
+      },
+      "staggered/boris": {
+        "seconds": 4.799875736236572,
+        "us_per_step": 2.291771960989485,
+        "net_evals_per_step": 0.0,
+        "envelope_exponent": 1.3387634731402396e-16,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 0.02200488746871221,
+            "physical_signal": 5.235850680540555e-05,
+            "signal_over_err": 0.0023794035247783852
+          },
+          "1e+04": {
+            "energy_err_max": 0.02200488746871221,
+            "physical_signal": 0.000523461721680829,
+            "signal_over_err": 0.02378842983973976
+          },
+          "1e+05": {
+            "energy_err_max": 0.02200488746871221,
+            "physical_signal": 0.005222303865404343,
+            "signal_over_err": 0.23732472491984835
+          }
+        }
+      },
+      "staggered/proj": {
+        "seconds": 42.859832525253296,
+        "us_per_step": 20.464063619925227,
+        "net_evals_per_step": 1.0,
+        "envelope_exponent": 2.7215093062598033e-16,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 0.022331294548033842,
+            "physical_signal": 5.235850680540555e-05,
+            "signal_over_err": 0.0023446247906848488
+          },
+          "1e+04": {
+            "energy_err_max": 0.022331294548033842,
+            "physical_signal": 0.000523461721680829,
+            "signal_over_err": 0.023440724430680945
+          },
+          "1e+05": {
+            "energy_err_max": 0.022331294548033842,
+            "physical_signal": 0.005222303865404343,
+            "signal_over_err": 0.2338558498779078
+          }
+        }
+      },
+      "staggered/sym": {
+        "seconds": 54.564801931381226,
+        "us_per_step": 26.05277511232658,
+        "net_evals_per_step": 1.0,
+        "envelope_exponent": 2.503772218991315e-16,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 0.02233129892193042,
+            "physical_signal": 5.235850680540555e-05,
+            "signal_over_err": 0.0023446243314573585
+          },
+          "1e+04": {
+            "energy_err_max": 0.02233129892193042,
+            "physical_signal": 0.000523461721680829,
+            "signal_over_err": 0.023440719839487895
+          },
+          "1e+05": {
+            "energy_err_max": 0.02233129892193042,
+            "physical_signal": 0.005222303865404343,
+            "signal_over_err": 0.2338558040739756
+          }
+        }
+      }
+    },
+    "quasistatic": {
+      "staggered/boris": {
+        "seconds": 4.637610197067261,
+        "us_per_step": 2.214295869244942,
+        "net_evals_per_step": 0.0,
+        "boris_evals_per_step": 1.0,
+        "envelope_exponent": 1.3387634731402396e-16,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 0.02200488746871221,
+            "physical_signal": 5.235850680540555e-05,
+            "signal_over_err": 0.0023794035247783852
+          },
+          "1e+04": {
+            "energy_err_max": 0.02200488746871221,
+            "physical_signal": 0.000523461721680829,
+            "signal_over_err": 0.02378842983973976
+          },
+          "1e+05": {
+            "energy_err_max": 0.02200488746871221,
+            "physical_signal": 0.005222303865404343,
+            "signal_over_err": 0.23732472491984835
+          }
+        }
+      },
+      "staggered/proj": {
+        "seconds": 40.77242183685303,
+        "us_per_step": 19.467398383233835,
+        "net_evals_per_step": 1.0,
+        "boris_evals_per_step": 1.0,
+        "envelope_exponent": 2.7215093062598033e-16,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 0.022331294548033842,
+            "physical_signal": 5.235850680540555e-05,
+            "signal_over_err": 0.0023446247906848488
+          },
+          "1e+04": {
+            "energy_err_max": 0.022331294548033842,
+            "physical_signal": 0.000523461721680829,
+            "signal_over_err": 0.023440724430680945
+          },
+          "1e+05": {
+            "energy_err_max": 0.022331294548033842,
+            "physical_signal": 0.005222303865404343,
+            "signal_over_err": 0.2338558498779078
+          }
+        }
+      },
+      "staggered/sym": {
+        "seconds": 53.09499645233154,
+        "us_per_step": 25.350994655894205,
+        "net_evals_per_step": 1.0,
+        "boris_evals_per_step": 4.226865514862287,
+        "envelope_exponent": 2.503772218991315e-16,
+        "horizons": {
+          "1e+03": {
+            "energy_err_max": 0.02233129892193042,
+            "physical_signal": 5.235850680540555e-05,
+            "signal_over_err": 0.0023446243314573585
+          },
+          "1e+04": {
+            "energy_err_max": 0.02233129892193042,
+            "physical_signal": 0.000523461721680829,
+            "signal_over_err": 0.023440719839487895
+          },
+          "1e+05": {
+            "energy_err_max": 0.02233129892193042,
+            "physical_signal": 0.005222303865404343,
+            "signal_over_err": 0.2338558040739756
+          }
+        }
+      }
+    }
+  }
+}

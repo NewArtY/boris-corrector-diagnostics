@@ -1,0 +1,76 @@
+quantity                                            printed      old ruler    closed form     shift
+----------------------------------------------------------------------------------------------------
+trajectory advantage at 19.1 gyro-orbits              117.8        117.814        120.112   +1.95%
+trajectory advantage at 25 gyro-orbits         (not printed)        80.5261        83.8131   +4.08%
+trajectory advantage at 50 gyro-orbits                 32.7         32.721        32.8031   +0.25%
+horizon at which the advantage reaches unity            101        100.984        100.984   +0.00%
+trajectory advantage at 200 gyro-orbits                0.07      0.0670993      0.0670967   -0.00%
+disadvantage factor at 1e3 gyro-orbits                  143        142.546        142.539   -0.01%
+disadvantage factor at 1e4 gyro-orbits                 1575        1575.22        1575.02   -0.01%
+Boris reaches one Larmor radius at                     22.1        22.0589        22.0589   +0.00%
+corrector reaches one Larmor radius at                 74.1        74.0548        74.0548   +0.00%
+one-Larmor horizon gain                                 3.4        3.35714        3.35714   +0.00%
+corrector trajectory error at 19.1 gyro-orbits      3.47e-3     0.00354351     0.00347321   -1.98%
+Boris trajectory error at 19.1 gyro-orbits            0.417       0.417476       0.417174   -0.07%
+Boris trajectory error at 1e3 gyro-orbits             1.462        1.46242         1.4625   +0.01%
+Boris trajectory error at 1e4 gyro-orbits             1.632        1.63175        1.63196   +0.01%
+tab:seeds  advantage, committed run                   117.8        117.814        120.112   +1.95%
+tab:seeds  advantage, ensemble median                 152.8         152.77        143.117   -6.32%
+tab:seeds  advantage, first quartile                   95.7        95.7031        103.682   +8.34%
+tab:seeds  advantage, third quartile                  252.2        252.175         182.19  -27.75%
+tab:seeds  advantage, ensemble minimum         (not printed)        44.6363        45.8828   +2.79%
+tab:seeds  advantage, ensemble maximum         (not printed)        576.751        295.594  -48.75%
+tab:seeds  advantage, max/min spread           (not printed)        12.9211        6.44238  -50.14%
+tab:seeds  corrector error, ensemble median         2.91e-3     0.00276533     0.00291131   +5.28%
+
+P0  confirmed  no manuscript number is spoiled by a seed collision
+P1  refuted    the corrector's advantage will fall, to 111 if the two errors are uncorrelated and 86 if aligned
+P2  refuted    the inversion point will move earlier than 101 gyro-orbits
+P3  fired      the negative control: if the advantage grows, the corrector's residual runs against the ruler's bias, and it is reported at the same length
+
+%% W18: Section 7 read against the closed form of \ref{sec:app_setups}.
+%% Anchors: the paragraph now at main.tex lines 1578-1599, and the
+%% 'trajectory advantage over Boris' row of Table~\ref{tab:seeds} (line 1663).
+
+%% --- ANCHOR A: replaces the sentence beginning 'Against a Boris reference at a step $150$ times smaller' (line 1578-1582).
+Lengthening the run reverses what is left.  Against the closed form of the
+problem---Bessel of order zero in the Larmor frame, \ref{sec:app_setups}---the
+trajectory advantage of the corrector is $120.1$ at $19.1$ gyro-orbits, $32.8$ at
+$50$, unity at $101$, and $0.067$ at $200$.  At $10^{3}$ gyro-orbits the corrector
+is worse than Boris by a factor of $143$ and at $10^{4}$ by a factor of $1575$.
+
+%% --- ANCHOR B: replaces the sentence 'Measured against the closed form, that
+%% reference carries $1.396\times10^{-3}$ ... An advantage above $298$ therefore
+%% reports a corrector error below the error of the ruler.' (lines 1589-1593).
+The Boris reference at $h/150$ that earlier versions of this section used is not
+independent of the corrector, whose training target is the displacement between
+a coarse Boris step and the same state carried by Boris at $h/150$.  Measured
+against the closed form that reference carries $1.398\times10^{-3}$ Larmor radii of error of
+its own, and the two error fields are anti-correlated at $\rho = -0.25$, so the
+advantage it reports is $1.9$ per cent \emph{below} the true one rather than above
+it: $117.8$ against $120.1$.  The closed form agrees with the independent DOP853
+reference of Table~\ref{tab:family} to eleven significant figures.
+
+%% --- ANCHOR C: replaces the 'trajectory advantage over Boris' row of
+%% Table~\ref{tab:seeds} (line 1663).
+    trajectory advantage over Boris            & $120.1$ & $143.1$ & $103.7$--$182.2$ & $8/20$ \\
+
+%% --- ANCHOR D: a sentence for the caption of Table~\ref{tab:seeds}, replacing
+%% 'that reference carries a trajectory error of $1.396\times10^{-3}$ ... above $298$'.
+Both blocks are now scored against the closed form, so the two no longer differ
+by their reference.  On the Boris reference at $h/150$ the same ensemble read
+$152.8$ at the median with an upper quartile of $252.2$ and a maximum of $576.8$.  The
+$3$ members whose reported error fell below that reference's own error of $1.397\times10^{-3}$
+Larmor radii were exactly its $3$ largest advantages; on an independent ruler none
+is below that floor and the maximum falls to $295.6$.
+
+    ("data", os.path.join(EXP, "refcheck"), ["rc0_seed_audit.py"],
+     "refcheck/rc0_seed_audit.json     the seed-collision audit"),
+    ("data", os.path.join(EXP, "refcheck"), ["rc1_calibration.py"],
+     "refcheck/rc1_calibration.json    the stand, calibrated on the old ruler"),
+    ("data", os.path.join(EXP, "refcheck"), ["rc2_horizon.py"],
+     "refcheck/rc2_horizon.json        Sec. 7 horizon numbers on the closed form"),
+    ("data", os.path.join(EXP, "refcheck"), ["rc3_seeds.py"],
+     "refcheck/rc3_seeds.json          tab:seeds on the closed form"),
+    ("data", os.path.join(EXP, "refcheck"), ["rc4_report.py"],
+     "refcheck/rc4_report.json         the was/now table and the LaTeX"),

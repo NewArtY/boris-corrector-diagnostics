@@ -1,0 +1,749 @@
+{
+ "with_script": [
+  "audit_numbers/an1_resonance_profile.json",
+  "audit_numbers/an2_traceability.json",
+  "audit_numbers/an3_derived.json",
+  "audit_numbers/an4_drift_reading.json",
+  "audit_numbers/an5_horizon_readout.json",
+  "audit_numbers/an6_orphan_data.json",
+  "classical/horizon.json",
+  "classical/timing.json",
+  "classical/verdict.json",
+  "classical/workprecision.json",
+  "cost/breakeven.json",
+  "cost/convergence.json",
+  "cost/independent_reference.json",
+  "cost/model_dtype.json",
+  "cost/work_precision.json",
+  "external_arch/ea1_training.json",
+  "external_arch/ea2_probes.json",
+  "external_arch/ea3_cost.json",
+  "external_arch/ckpt/hnn_r0.npz",
+  "f0_settings/s1_s2_s4.json",
+  "f0_settings/s3_broadband.json",
+  "f0_settings/s3b_structured.json",
+  "f0_settings/verdicts.json",
+  "f0_variational/analysis.json",
+  "f0_variational/calibration.json",
+  "f0_variational/degeneracy.json",
+  "f0_variational/f0_runs.npz",
+  "f0_variational/f0_summary.json",
+  "f0_variational/f0_summary_small.json",
+  "f0_variational/symplectic.json",
+  "f0_variational/validation.json",
+  "gtable/gt1_calibration.json",
+  "gtable/gt2_channels__B1_radial.json",
+  "gtable/gt2_channels__B2_wave.json",
+  "gtable/gt2_channels__B3_tilted.json",
+  "gtable/gt2_channels__B4_decaying.json",
+  "gtable/gt2_channels__uniform.json",
+  "gtable/gt3_gtable.json",
+  "horizon/ablate.npz",
+  "horizon/ablate_summary.json",
+  "horizon/crossover.json",
+  "horizon/crossover.npz",
+  "horizon/long_runs.npz",
+  "horizon/long_runs_summary.json",
+  "horizon/traj_summary.json",
+  "horizon/validation.json",
+  "hpo/hp2_selection.json",
+  "hpo/hp4_analysis.json",
+  "ll_probe/prereg.json",
+  "ll_probe/prereg2.json",
+  "ll_probe/prereg3.json",
+  "ll_probe/results.json",
+  "ll_probe/results2.json",
+  "ll_probe/results3.json",
+  "map/mp1_calibration.json",
+  "map/mp2_grid__B1_radial.json",
+  "map/mp2_grid__B2_wave.json",
+  "map/mp2_grid__B3_tilted.json",
+  "map/mp2_grid__B4_decaying.json",
+  "map/mp2_grid__uniform.json",
+  "map/mp3_maps.json",
+  "map/mp4_saturation.json",
+  "map/mp5_equalcost__B1_radial.json",
+  "map/mp5_equalcost__B2_wave.json",
+  "map/mp5_equalcost__B3_tilted.json",
+  "map/mp5_equalcost__B4_decaying.json",
+  "map/mp5_equalcost__uniform.json",
+  "probe4/pb4_channel.json",
+  "p_law/pl_antipersistent.json",
+  "p_law/pl_core.json",
+  "p_law/pl_horizon.json",
+  "p_law/pl_limits.json",
+  "p_law/pl_protocol.json",
+  "p_law/pl_transfer.json",
+  "p_law_check/pc_defect.json",
+  "p_law_check/pc_defect.npz",
+  "p_law_check/pc_split.json",
+  "p_law_check/pc_stall.json",
+  "reconcile_t2/rc1_grid.json",
+  "reconcile_t2/rc2_decisive.json",
+  "reconcile_t2/rc3_mechanism.json",
+  "reconcile_t2/rc4_audit.json",
+  "reconcile_t2/rc5_fieldlaws.json",
+  "referee_check/rf1_channels.json",
+  "referee_check/rf2_staggered_drift.json",
+  "spectral/sw1_reference.json",
+  "spectral/sw2_spectra.json",
+  "spectral/sw3_ensemble.json",
+  "spectrum/sp1_calibration.json",
+  "spectrum/sp2_spectra.json",
+  "spectrum/sp3_horizon.json",
+  "stats/results/baselines_distribution.json",
+  "stats/results/ic_ensemble_b4.json",
+  "stats/results/ic_ensemble_summary.json",
+  "stats/results/seed_lock_probe.json",
+  "stats/results/seed_sweep_b4.json",
+  "stats/results/seed_sweep_baselines.json",
+  "sympmat/sm0_analytic.json",
+  "sympmat/sm2_fig9.json",
+  "sympmat/sm3_horizon.json",
+  "sympmat/sm4_gyrocentre.json",
+  "sympmat/ckpt/standard.json",
+  "symproj/ablation.json",
+  "symproj/envelope_growth.json",
+  "symproj/mechanism.json",
+  "symproj/short_horizon.json",
+  "symproj/summary.json",
+  "symproj/validation.json",
+  "theory/decomposition.json",
+  "theory/polar_decomposition.json",
+  "theory_check/t1_boris_channels.json",
+  "theory_check/t2_convention.json",
+  "theory_check/t3_dichotomy.json",
+  "theory_check/t4_noether.json",
+  "verify_f0/v_calib_runf0.json",
+  "verify_f0/v_caveat.json",
+  "verify_f0/v_caveat2.json",
+  "verify_f0/v_s1s2s4.json",
+  "verify_f0/v_s3.json",
+  "verify_f0/v_s3_noise.json",
+  "verify_f0/v_s3b.json",
+  "verify_f0/v_varint.json",
+  "verify_final/vf1_magnetic.json",
+  "verify_final/vf1b_extras.json",
+  "verify_final/vf2_symproj_floor.json",
+  "verify_final/vf3_noether.json",
+  "verify_final/vf4_ll.json",
+  "verify_final/vf5_opt_orbit.json",
+  "verify_theory/vt2_floor_600x.json",
+  "verify_theory/vt2_map_identity.json",
+  "verify_theory/vt_t2_decisive.json",
+  "verify_theory/vt_t2a_mechanism.json",
+  "verify_theory/vt_t2a_mechanism2.json",
+  "verify_theory/vt_t2c_identity_order.json",
+  "verify_theory/vt_t3_trichotomy.json"
+ ],
+ "constructed": [
+  {
+   "file": "f0_variational/f0_runs_small.npz",
+   "built_by": "f0_variational/run_f0.py"
+  },
+  {
+   "file": "p_law_check/pc_stall_paper.npz",
+   "built_by": "p_law_check/pc_stall.py"
+  },
+  {
+   "file": "p_law_check/pc_stall_quasistatic.npz",
+   "built_by": "p_law_check/pc_stall.py"
+  },
+  {
+   "file": "symproj/env_paper_shipped.npz",
+   "built_by": "symproj/main.py"
+  },
+  {
+   "file": "symproj/env_paper_staggered.npz",
+   "built_by": "symproj/main.py"
+  },
+  {
+   "file": "symproj/env_quasistatic_shipped.npz",
+   "built_by": "symproj/main.py"
+  },
+  {
+   "file": "symproj/env_quasistatic_staggered.npz",
+   "built_by": "symproj/main.py"
+  },
+  {
+   "file": "symproj/envelopes.npz",
+   "built_by": "symproj/short.py"
+  }
+ ],
+ "known_orphans": [
+  {
+   "file": "p_law/pl_fgn_check.json",
+   "why": "computed inline; superseded by pl_core.json/A_fgn_generator_check.  No number from it appears in the paper."
+  },
+  {
+   "file": "p_law/pl_marginal.json",
+   "why": "computed inline; plan/reports/P_LAW.md records it as such.  Section 4.2 quotes its three fields."
+  }
+ ],
+ "NEW_ORPHANS": [
+  {
+   "file": "external_arch/ckpt/hnn_r1.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "external_arch/ckpt/hnn_r2.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "external_arch/ckpt/hnn_r3.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "external_arch/ckpt/pinn_r0.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "external_arch/ckpt/pinn_r1.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "external_arch/ckpt/pinn_r2.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "external_arch/ckpt/pinn_r3.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "external_arch/ckpt/sympnet_r0.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "external_arch/ckpt/sympnet_r1.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "external_arch/ckpt/sympnet_r2.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "external_arch/ckpt/sympnet_r3.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr1e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr1e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr1e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr1e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr1e-3__x2__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr1e-3__x2__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr1e-3__x2__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr1e-3__x2__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr1e-3__x8__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr1e-3__x8__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr1e-3__x8__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr1e-3__x8__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr3e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr3e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr3e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr3e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr3e-4__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr3e-4__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr3e-4__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W128_lr3e-4__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W256_lr1e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W256_lr1e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W256_lr1e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W256_lr1e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W64_lr1e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W64_lr1e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W64_lr1e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L4W64_lr1e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L6W128_lr1e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L6W128_lr1e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L6W128_lr1e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/hnn__L6W128_lr1e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W128_lr1e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W128_lr1e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W128_lr1e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W128_lr1e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W128_lr1e-3__x2__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W128_lr1e-3__x2__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W128_lr1e-3__x2__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W128_lr1e-3__x2__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W256_lr1e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W256_lr1e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W256_lr1e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W256_lr1e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W256_lr3e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W256_lr3e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W256_lr3e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W256_lr3e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W256_lr3e-4__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W256_lr3e-4__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W256_lr3e-4__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W256_lr3e-4__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W512_lr1e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W512_lr1e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W512_lr1e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/pinn__L4W512_lr1e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__dfull__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__dfull__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__dfull__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__dfull__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__dlarge__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__dlarge__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__dlarge__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__dlarge__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__dsmall__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__dsmall__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__dsmall__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__dsmall__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x8__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x8__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x8__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr1e-3__x8__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr3e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr3e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr3e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr3e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr3e-4__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr3e-4__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr3e-4__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W256_lr3e-4__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W512_lr1e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W512_lr1e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W512_lr1e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M10W512_lr1e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M16W256_lr1e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M16W256_lr1e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M16W256_lr1e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M16W256_lr1e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M6W128_lr1e-3__x1__rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M6W128_lr1e-3__x1__rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M6W128_lr1e-3__x1__rep2.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "hpo/runs/sympnet__M6W128_lr1e-3__x1__rep3.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt0_rep0.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt0_rep1.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt0_rep2.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt1_rep0.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt1_rep1.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt1_rep2.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt2_rep0.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt2_rep1.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt2_rep2.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt3_rep0.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt3_rep1.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt3_rep2.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt4_rep0.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt4_rep1.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt4_rep2.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt5_rep0.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt5_rep1.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt5_rep2.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt6_rep0.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt6_rep1.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt6_rep2.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt7_rep0.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt7_rep1.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt7_rep2.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt8_rep0.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt8_rep1.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/param_dt8_rep2.npz",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/parametric_rep0.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/parametric_rep1.json",
+   "why": "no script in its directory names it"
+  },
+  {
+   "file": "sympmat/ckpt/parametric_rep2.json",
+   "why": "no script in its directory names it"
+  }
+ ],
+ "orphan_blocks": [
+  {
+   "file": "ll_probe/results3.json",
+   "key": "F6b_refit_clean_window",
+   "why": "refit of the energy-channel decay over a later, cleaner window; Section 6 quotes 1.7954 and 1.4286 from it.  fix_f3_f6.py writes F6b (1.4926 / 1.2573) but not this refit, which was done inline.  Reconstructing it from the surviving description gets 1.787 / 1.407, close but not equal, so it is named rather than guessed.  Since W6.2 fix_f3_f6.py merges instead of overwriting, so a re-run no longer deletes it.",
+   "present": true
+  }
+ ],
+ "_summary": {
+  "data_files": 282,
+  "with_a_producing_script": 135,
+  "name_built_at_run_time": 8,
+  "known_orphans": 2,
+  "orphan_blocks": 1,
+  "new_orphans": 137
+ }
+}

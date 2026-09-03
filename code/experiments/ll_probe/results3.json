@@ -1,0 +1,79 @@
+{
+  "F3b": {
+    "c_over_Lambda=0.0": {
+      "diverged": false,
+      "dtheta_final": 1.1618480095343386e-05,
+      "exponent": 3.411892306491843e-16
+    },
+    "c_over_Lambda=0.5": {
+      "diverged": false,
+      "dtheta_final": 2.4348147704689183e-05,
+      "exponent": -8.207603112788858e-16
+    },
+    "c_over_Lambda=0.9": {
+      "diverged": false,
+      "dtheta_final": 0.00019662256975538916,
+      "exponent": -4.367870509992497e-16
+    },
+    "c_over_Lambda=0.99": {
+      "diverged": false,
+      "dtheta_final": 0.034561929337552755,
+      "exponent": 0.08410534004706484
+    },
+    "c_over_Lambda=1.05": {
+      "diverged": false,
+      "dtheta_final": 0.092657589272362,
+      "exponent": 0.001989375311700782
+    }
+  },
+  "F3c": {
+    "m=0.01": {
+      "theta_star_measured": 1.8132007192662314,
+      "d_theta_star": -0.005245739965835439,
+      "gamma_star_rel_shift": -0.004962809790011957,
+      "Lambda_h_measured": 1.797998926365137
+    },
+    "m=0.1": {
+      "theta_star_measured": 1.7680755021447174,
+      "d_theta_star": -0.0503709570873494,
+      "gamma_star_rel_shift": -0.04653741075440865,
+      "Lambda_h_measured": 1.779998976973191
+    },
+    "m=0.5": {
+      "theta_star_measured": 1.601902601216549,
+      "d_theta_star": -0.2165438580155179,
+      "gamma_star_rel_shift": -0.18350341907227485,
+      "Lambda_h_measured": 1.6999992107822204
+    }
+  },
+  "F6b": {
+    "euler": {
+      "fitted_decay_rate": 1.4926245660833897,
+      "n_points": 36,
+      "t_window": [
+        0.3,
+        15.299999999999999
+      ]
+    },
+    "ieuler": {
+      "fitted_decay_rate": 1.2573262553716584,
+      "n_points": 46,
+      "t_window": [
+        0.3,
+        18.3
+      ]
+    }
+  },
+  "F6b_refit_clean_window": {
+    "euler": {
+      "fit_from_t4": 1.7953826432412894,
+      "fit_from_t6": 1.7953826432412894,
+      "fit_from_t8": 1.79820613210173
+    },
+    "ieuler": {
+      "fit_from_t4": 1.4286115516954763,
+      "fit_from_t6": 1.4286115516954763,
+      "fit_from_t8": 1.4311724556197585
+    }
+  }
+}

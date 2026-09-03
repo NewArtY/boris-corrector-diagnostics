@@ -1,0 +1,73 @@
+{
+  "identity": {
+    "class_benchmarked": "DefectNet",
+    "checkpoint_loaded": "boris_corrector_b4.pt",
+    "checkpoint_sha256_16": "f8e3b5606b1058f9",
+    "boris_corrector_pt_sha256_16": "5e71335894b8d3f3",
+    "n_parameters": 52102,
+    "layer_shapes": {
+      "x_mean": [
+        13
+      ],
+      "x_std": [
+        13
+      ],
+      "y_scale": [
+        6
+      ],
+      "net.0.weight": [
+        128,
+        13
+      ],
+      "net.0.bias": [
+        128
+      ],
+      "net.2.weight": [
+        128,
+        128
+      ],
+      "net.2.bias": [
+        128
+      ],
+      "net.4.weight": [
+        128,
+        128
+      ],
+      "net.4.bias": [
+        128
+      ],
+      "net.6.weight": [
+        128,
+        128
+      ],
+      "net.6.bias": [
+        128
+      ],
+      "net.8.weight": [
+        6,
+        128
+      ],
+      "net.8.bias": [
+        6
+      ]
+    },
+    "dtype": "torch.float64",
+    "published_pos_err_rms": 0.0035390936565769986,
+    "benchmarked_pos_err_rms": 0.003539093656579478,
+    "relative_difference": 7.005507285384738e-13
+  },
+  "dtype_cost": {
+    "note": "Component costs are measured in ISOLATION and are NOT additive: summed they exceed the in-loop step cost, because each isolated micro-benchmark carries its own call/allocation overhead that is amortised inside the integration loop. Treat them as upper bounds on each component, not as a partition.",
+    "defectnet_forward_us_float64": 50.57662500621518,
+    "defectnet_forward_us_float32": 47.912299996824004,
+    "float64_slowdown_on_network": 1.0556083721626344,
+    "float64_extra_us_per_step": 2.6643250093911774,
+    "boris_step_us_isolated": 51.998174996697344,
+    "tensor_construction_us_isolated": 6.829350000771228,
+    "hybrid_step_measured_in_loop_us": 142.061750011635,
+    "boris_step_measured_in_loop_us": 42.17654167102106,
+    "float64_share_of_hybrid_step_pct": 1.8754696525792245,
+    "network_share_of_hybrid_step_pct_upper_bound": 35.6018597561081,
+    "float32_would_not_help_because": "train_corrector_b4.py sets float64 deliberately: at the 1e-6 relative energy error targeted here, float32 round-off is itself the dominant noise source."
+  }
+}

@@ -1,0 +1,716 @@
+{
+ "setup": {
+  "field": "frozen: tau = infinity, B_z = B_0 = 1 exactly, E = 0 exactly",
+  "coordinates": "canonical (x, y, p_x, p_y), p = v - A, A = (B_z/2)(-y, x)",
+  "stencil": "central differences, fd = 1e-06, the stencil of ea3_cost.symplecticity",
+  "dt_ladder": [
+   0.05,
+   0.1,
+   0.3,
+   0.5,
+   1.0,
+   2.0
+  ],
+  "exact_solution": "r(t) = (cos t, sin t), v(t) = (-sin t, cos t)",
+  "worst_matrix_error_over_ladder": 1.6653345369377348e-10,
+  "worst_abs_error_over_ladder": 1.2420631190224185e-10
+ },
+ "closed_forms": {
+  "boris_dt0.05": {
+   "scheme": "boris",
+   "dt": 0.05,
+   "matrix_error": 1.1102230246251565e-10,
+   "analytic": {
+    "abs": [
+     0.9999999999999997,
+     0.9999999999999997,
+     0.9999999999999999,
+     0.9999999999999999
+    ],
+    "arg": [
+     0.049989587237840284,
+     -0.049989587237840284,
+     7.854839693872277e-17,
+     -7.854839693872277e-17
+    ],
+    "max_abs": 0.9999999999999999,
+    "max_abs_minus_1": -1.1102230246251565e-16,
+    "min_abs": 0.9999999999999997,
+    "reciprocity": 4.440892098500626e-16,
+    "symplectic_defect": 0.003644612890862075,
+    "det_minus_one": 0.0,
+    "rotation_arg": 0.049989587237840284
+   },
+   "measured": {
+    "abs": [
+     0.9999999998757934,
+     0.9999999999999624,
+     1.0000000000558908,
+     1.0000000000558908
+    ],
+    "arg": [
+     0.0,
+     0.0,
+     -0.04998958725516457,
+     0.04998958725516457
+    ],
+    "max_abs": 1.0000000000558908,
+    "max_abs_minus_1": 5.589084750567963e-11,
+    "min_abs": 0.9999999998757934,
+    "reciprocity": 6.831579746346961e-11,
+    "symplectic_defect": 0.003644612902989336,
+    "det_minus_one": 1.2462253451417382e-11,
+    "rotation_arg": 0.04998958725516457
+   },
+   "abs_agreement": 1.2420631190224185e-10,
+   "arg_agreement": 0.04998958725516465
+  },
+  "boris_dt0.1": {
+   "scheme": "boris",
+   "dt": 0.1,
+   "matrix_error": 1.1102230246251565e-10,
+   "analytic": {
+    "abs": [
+     0.9999999999999999,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "arg": [
+     0.0,
+     0.09991679144388552,
+     -0.09991679144388552,
+     0.0
+    ],
+    "max_abs": 1.0,
+    "max_abs_minus_1": 0.0,
+    "min_abs": 0.9999999999999999,
+    "reciprocity": 1.1102230246251565e-16,
+    "symplectic_defect": 0.014581666544762355,
+    "det_minus_one": 0.0,
+    "rotation_arg": 0.09991679144388552
+   },
+   "measured": {
+    "abs": [
+     0.9999999998912318,
+     1.0000000000056442,
+     1.0000000000566227,
+     1.0000000000566227
+    ],
+    "arg": [
+     0.0,
+     0.0,
+     -0.0999167914441142,
+     0.0999167914441142
+    ],
+    "max_abs": 1.0000000000566227,
+    "max_abs_minus_1": 5.6622706523512534e-11,
+    "min_abs": 0.9999999998912318,
+    "reciprocity": 6.22668583361019e-11,
+    "symplectic_defect": 0.014581666571279859,
+    "det_minus_one": 1.0120793092482927e-11,
+    "rotation_arg": 0.0999167914441142
+   },
+   "abs_agreement": 1.0876810563331674e-10,
+   "arg_agreement": 0.0999167914441142
+  },
+  "boris_dt0.3": {
+   "scheme": "boris",
+   "dt": 0.3,
+   "matrix_error": 1.1102230246251565e-10,
+   "analytic": {
+    "abs": [
+     0.9999999999999996,
+     0.9999999999999996,
+     1.0,
+     1.0
+    ],
+    "arg": [
+     0.29777989521899456,
+     -0.29777989521899456,
+     1.0882626970494923e-16,
+     -1.0882626970494923e-16
+    ],
+    "max_abs": 1.0,
+    "max_abs_minus_1": 0.0,
+    "min_abs": 0.9999999999999996,
+    "reciprocity": 4.440892098500626e-16,
+    "symplectic_defect": 0.13154307612296234,
+    "det_minus_one": 2.220446049250313e-16,
+    "rotation_arg": 0.29777989521899456
+   },
+   "measured": {
+    "abs": [
+     0.9999999998802467,
+     0.9999999999690969,
+     1.0000000000519134,
+     1.0000000000519134
+    ],
+    "arg": [
+     0.0,
+     0.0,
+     -0.29777989519956155,
+     0.29777989519956155
+    ],
+    "max_abs": 1.0000000000519134,
+    "max_abs_minus_1": 5.1913362497657545e-11,
+    "min_abs": 0.9999999998802467,
+    "reciprocity": 6.783995587511527e-11,
+    "symplectic_defect": 0.1315430762226295,
+    "det_minus_one": 4.68283190002694e-11,
+    "rotation_arg": 0.29777989519956155
+   },
+   "abs_agreement": 1.1975287428356296e-10,
+   "arg_agreement": 0.29777989521899456
+  },
+  "boris_dt0.5": {
+   "scheme": "boris",
+   "dt": 0.5,
+   "matrix_error": 5.551115123125783e-11,
+   "analytic": {
+    "abs": [
+     0.9999999999999991,
+     0.9999999999999991,
+     0.9999999999999992,
+     1.0
+    ],
+    "arg": [
+     0.4899573262537286,
+     -0.4899573262537286,
+     0.0,
+     0.0
+    ],
+    "max_abs": 1.0,
+    "max_abs_minus_1": 0.0,
+    "min_abs": 0.9999999999999991,
+    "reciprocity": 1.6653345369377348e-15,
+    "symplectic_defect": 0.3670951740107828,
+    "det_minus_one": 1.1102230246251565e-16,
+    "rotation_arg": 0.4899573262537286
+   },
+   "measured": {
+    "abs": [
+     0.9999999999260052,
+     0.99999999997885,
+     1.00000000002998,
+     1.00000000002998
+    ],
+    "arg": [
+     0.0,
+     0.0,
+     -0.48995732624995275,
+     0.48995732624995275
+    ],
+    "max_abs": 1.00000000002998,
+    "max_abs_minus_1": 2.998001846776788e-11,
+    "min_abs": 0.9999999999260052,
+    "reciprocity": 4.401479181126433e-11,
+    "symplectic_defect": 0.36709517407558906,
+    "det_minus_one": 3.518385582879091e-11,
+    "rotation_arg": 0.48995732624995275
+   },
+   "abs_agreement": 7.399392210061251e-11,
+   "arg_agreement": 0.4899573262537286
+  },
+  "boris_dt1": {
+   "scheme": "boris",
+   "dt": 1.0,
+   "matrix_error": 8.326672684688674e-11,
+   "analytic": {
+    "abs": [
+     0.9999999999999996,
+     0.9999999999999999,
+     0.9999999999999999,
+     1.0
+    ],
+    "arg": [
+     0.0,
+     0.9272952180016126,
+     -0.9272952180016126,
+     0.0
+    ],
+    "max_abs": 1.0,
+    "max_abs_minus_1": 0.0,
+    "min_abs": 0.9999999999999996,
+    "reciprocity": 4.440892098500626e-16,
+    "symplectic_defect": 1.4983324063771697,
+    "det_minus_one": 0.0,
+    "rotation_arg": 0.9272952180016126
+   },
+   "measured": {
+    "abs": [
+     0.9999999999303347,
+     0.9999999999947549,
+     0.9999999999947549,
+     1.000000000120237
+    ],
+    "arg": [
+     0.0,
+     0.9272952179544276,
+     -0.9272952179544276,
+     0.0
+    ],
+    "max_abs": 1.000000000120237,
+    "max_abs_minus_1": 1.2023693152229953e-10,
+    "min_abs": 0.9999999999303347,
+    "reciprocity": 5.057154695009558e-11,
+    "symplectic_defect": 1.4983324064413186,
+    "det_minus_one": 4.008260390264695e-11,
+    "rotation_arg": 0.9272952179544276
+   },
+   "abs_agreement": 1.2023693152229953e-10,
+   "arg_agreement": 4.7185033658081466e-11
+  },
+  "boris_dt2": {
+   "scheme": "boris",
+   "dt": 2.0,
+   "matrix_error": 1.6653345369377348e-10,
+   "analytic": {
+    "abs": [
+     0.9999999999999998,
+     0.9999999999999998,
+     0.9999999999999999,
+     1.0
+    ],
+    "arg": [
+     1.5707963267948966,
+     -1.5707963267948966,
+     0.0,
+     0.0
+    ],
+    "max_abs": 1.0,
+    "max_abs_minus_1": 0.0,
+    "min_abs": 0.9999999999999998,
+    "reciprocity": 3.3306690738754696e-16,
+    "symplectic_defect": 6.324555320336759,
+    "det_minus_one": 0.0,
+    "rotation_arg": 1.5707963267948966
+   },
+   "measured": {
+    "abs": [
+     0.999999999958865,
+     0.9999999999732458,
+     1.0000000000215663,
+     1.0000000000215663
+    ],
+    "arg": [
+     0.0,
+     0.0,
+     -1.570796326829841,
+     1.570796326829841
+    ],
+    "max_abs": 1.0000000000215663,
+    "max_abs_minus_1": 2.156630429794859e-11,
+    "min_abs": 0.999999999958865,
+    "reciprocity": 1.9568680009740547e-11,
+    "symplectic_defect": 6.324555320435914,
+    "det_minus_one": 2.475530891388189e-11,
+    "rotation_arg": 1.570796326829841
+   },
+   "abs_agreement": 4.113476226308421e-11,
+   "arg_agreement": 1.570796326829841
+  },
+  "at_working_step_exact_flow": {
+   "abs": [
+    0.9999999999999996,
+    0.9999999999999996,
+    0.9999999999999999,
+    1.0
+   ],
+   "arg": [
+    0.29999999999999993,
+    -0.29999999999999993,
+    0.0,
+    0.0
+   ],
+   "max_abs": 1.0,
+   "max_abs_minus_1": 0.0,
+   "min_abs": 0.9999999999999996,
+   "reciprocity": 5.551115123125783e-16,
+   "symplectic_defect": 3.0292737210923726e-16,
+   "det_minus_one": 0.0,
+   "rotation_arg": 0.29999999999999993,
+   "scheme": "exact_flow",
+   "dt": 0.3
+  },
+  "at_working_step_boris": {
+   "abs": [
+    0.9999999999999996,
+    0.9999999999999996,
+    1.0,
+    1.0
+   ],
+   "arg": [
+    0.29777989521899456,
+    -0.29777989521899456,
+    1.0882626970494923e-16,
+    -1.0882626970494923e-16
+   ],
+   "max_abs": 1.0,
+   "max_abs_minus_1": 0.0,
+   "min_abs": 0.9999999999999996,
+   "reciprocity": 4.440892098500626e-16,
+   "symplectic_defect": 0.13154307612296234,
+   "det_minus_one": 2.220446049250313e-16,
+   "rotation_arg": 0.29777989521899456,
+   "scheme": "boris",
+   "dt": 0.3
+  },
+  "at_working_step_rk4_on_exact_field": {
+   "abs": [
+    0.9999949944405974,
+    0.9999949944405974,
+    0.9999999999999998,
+    0.9999999999999999
+   ],
+   "arg": [
+    0.29998039700716383,
+    -0.29998039700716383,
+    0.0,
+    0.0
+   ],
+   "max_abs": 0.9999999999999999,
+   "max_abs_minus_1": -1.1102230246251565e-16,
+   "min_abs": 0.9999949944405974,
+   "reciprocity": 5.005559402859738e-06,
+   "symplectic_defect": 1.769728069446635e-05,
+   "det_minus_one": 1.0011093750095235e-05,
+   "rotation_arg": 0.29998039700716383,
+   "scheme": "rk4_on_exact_field",
+   "dt": 0.3
+  }
+ },
+ "boris_angle": {
+  "theta_closed_form_2atan_Omega_h_over_2": 0.2977798952189945,
+  "theta_from_eigenvalues": 0.2977798952189945,
+  "difference": 0.0,
+  "exact_Omega_h": 0.3,
+  "relative_frequency_error": -0.007400349270018277,
+  "max_abs_minus_1": 2.220446049250313e-16,
+  "symplectic_defect": 0.13154307612296234,
+  "det_minus_one": 2.220446049250313e-16,
+  "note": "volume preserving, not symplectic, spectrum exactly on the unit circle: symplecticity is not necessary for neutrality"
+ },
+ "rk4_stability": {
+  "dt0.05": {
+   "max_abs": 1.0,
+   "min_abs": 0.999999999891527,
+   "gyration_abs": 0.999999999891527,
+   "closed_form_R_iy": 0.999999999891527
+  },
+  "dt0.1": {
+   "max_abs": 1.0,
+   "min_abs": 0.9999999930642363,
+   "gyration_abs": 0.9999999930642363,
+   "closed_form_R_iy": 0.999999993064236
+  },
+  "dt0.3": {
+   "max_abs": 1.0,
+   "min_abs": 0.9999949944405971,
+   "gyration_abs": 0.9999949944405971,
+   "closed_form_R_iy": 0.9999949944405971
+  },
+  "dt0.5": {
+   "max_abs": 1.0,
+   "min_abs": 0.9998948783722912,
+   "gyration_abs": 0.9998948783722912,
+   "closed_form_R_iy": 0.9998948783722912
+  },
+  "dt1": {
+   "max_abs": 1.0,
+   "min_abs": 0.993905036823047,
+   "gyration_abs": 0.993905036823047,
+   "closed_form_R_iy": 0.993905036823047
+  },
+  "dt2": {
+   "max_abs": 1.0,
+   "min_abs": 0.7453559924999299,
+   "gyration_abs": 0.7453559924999299,
+   "closed_form_R_iy": 0.7453559924999299
+  },
+  "note": "|R(iy)|^2 = 1 - y^6/72 + y^8/576.  At y = Omega h = 0.3 the gyration pair sits 5.0e-6 *inside* the unit circle.  RK4 on an exact Hamiltonian field therefore damps; the departure from the circle has the opposite sign from the SympMat observation, and no symplectic map can have it."
+ },
+ "reciprocity_lemma": {
+  "seed": 13003000,
+  "n_draws": 8,
+  "draws": [
+   {
+    "draw": 0,
+    "symplectic_defect": 5.100161187997942e-16,
+    "reciprocity": 4.440892098500626e-16,
+    "max_abs": 1.9341023891985307,
+    "min_abs": 0.5170357089597457,
+    "product_of_extremes": 1.0000000000000004
+   },
+   {
+    "draw": 1,
+    "symplectic_defect": 4.311741030304721e-16,
+    "reciprocity": 1.7763568394002505e-15,
+    "max_abs": 3.252866929701794,
+    "min_abs": 0.30742112161707047,
+    "product_of_extremes": 1.0000000000000018
+   },
+   {
+    "draw": 2,
+    "symplectic_defect": 4.535139033080239e-16,
+    "reciprocity": 1.9984014443252818e-15,
+    "max_abs": 1.986647292192878,
+    "min_abs": 0.5033606135974915,
+    "product_of_extremes": 1.000000000000002
+   },
+   {
+    "draw": 3,
+    "symplectic_defect": 1.5308490270775524e-15,
+    "reciprocity": 4.884981308350689e-15,
+    "max_abs": 2.8934255568683063,
+    "min_abs": 0.3456111036367368,
+    "product_of_extremes": 0.9999999999999951
+   },
+   {
+    "draw": 4,
+    "symplectic_defect": 2.0739001012617747e-16,
+    "reciprocity": 6.661338147750939e-16,
+    "max_abs": 2.194267610555842,
+    "min_abs": 0.4557329266445697,
+    "product_of_extremes": 1.0000000000000007
+   },
+   {
+    "draw": 5,
+    "symplectic_defect": 3.01470990952415e-16,
+    "reciprocity": 1.4432899320127035e-15,
+    "max_abs": 1.9604954048852576,
+    "min_abs": 0.5100751562631313,
+    "product_of_extremes": 0.9999999999999986
+   },
+   {
+    "draw": 6,
+    "symplectic_defect": 4.382607345384931e-16,
+    "reciprocity": 1.1102230246251565e-15,
+    "max_abs": 2.3757756602246665,
+    "min_abs": 0.4209151633052066,
+    "product_of_extremes": 1.0000000000000007
+   },
+   {
+    "draw": 7,
+    "symplectic_defect": 8.438890111631072e-16,
+    "reciprocity": 4.440892098500626e-16,
+    "max_abs": 1.9831207176221934,
+    "min_abs": 0.5042557374918775,
+    "product_of_extremes": 1.0000000000000004
+   }
+  ],
+  "worst_reciprocity": 4.884981308350689e-15,
+  "min_of_max_abs": 1.9341023891985307,
+  "note": "J symplectic implies Omega J Omega^{-1} = J^{-T}, so J is similar to J^{-T} and the spectrum is closed under lambda -> 1/lambda.  Hence rho(J) >= 1 for every symplectic J, with equality only when the whole spectrum is on the unit circle.  min_of_max_abs is that inequality, measured."
+ },
+ "sympmat_wave10": {
+  "source": "experiments/sympmat/sm4_gyrocentre.json, read only",
+  "n_records": 24,
+  "rows": [
+   {
+    "budget": "at_declared_budget",
+    "case": "dt2_b0.5",
+    "seed": 0,
+    "max_abs": 1.0000000000000007,
+    "reciprocity": 2.220446049250313e-16,
+    "log10_growth_over_1e5_steps": 2.8929823996598607e-11
+   },
+   {
+    "budget": "at_declared_budget",
+    "case": "dt2_b0.5",
+    "seed": 1,
+    "max_abs": 1.0,
+    "reciprocity": 2.220446049250313e-16,
+    "log10_growth_over_1e5_steps": 0.0
+   },
+   {
+    "budget": "at_declared_budget",
+    "case": "dt2_b0.5",
+    "seed": 2,
+    "max_abs": 1.0000581688248367,
+    "reciprocity": 5.551115123125783e-16,
+    "log10_growth_over_1e5_steps": 2.5261664931803476
+   },
+   {
+    "budget": "at_declared_budget",
+    "case": "dt2_b2.5",
+    "seed": 0,
+    "max_abs": 1.0029513430308228,
+    "reciprocity": 5.551115123125783e-16,
+    "log10_growth_over_1e5_steps": 127.9864260901731
+   },
+   {
+    "budget": "at_declared_budget",
+    "case": "dt2_b2.5",
+    "seed": 1,
+    "max_abs": 1.0098225926343816,
+    "reciprocity": 2.220446049250313e-15,
+    "log10_growth_over_1e5_steps": 424.50828842080546
+   },
+   {
+    "budget": "at_declared_budget",
+    "case": "dt2_b2.5",
+    "seed": 2,
+    "max_abs": 1.0001206818518091,
+    "reciprocity": 7.771561172376096e-16,
+    "log10_growth_over_1e5_steps": 5.240830000482859
+   },
+   {
+    "budget": "at_declared_budget",
+    "case": "dt0.5_b0.5",
+    "seed": 0,
+    "max_abs": 1.0,
+    "reciprocity": 2.220446049250313e-16,
+    "log10_growth_over_1e5_steps": 0.0
+   },
+   {
+    "budget": "at_declared_budget",
+    "case": "dt0.5_b0.5",
+    "seed": 1,
+    "max_abs": 1.0000000000000002,
+    "reciprocity": 2.220446049250313e-16,
+    "log10_growth_over_1e5_steps": 9.643274665532869e-12
+   },
+   {
+    "budget": "at_declared_budget",
+    "case": "dt0.5_b0.5",
+    "seed": 2,
+    "max_abs": 1.0000309243840937,
+    "reciprocity": 1.3322676295501878e-15,
+    "log10_growth_over_1e5_steps": 1.343008171071349
+   },
+   {
+    "budget": "at_declared_budget",
+    "case": "dt0.5_b2.5",
+    "seed": 0,
+    "max_abs": 1.0000290925723698,
+    "reciprocity": 4.440892098500626e-16,
+    "log10_growth_over_1e5_steps": 1.2634559859554262
+   },
+   {
+    "budget": "at_declared_budget",
+    "case": "dt0.5_b2.5",
+    "seed": 1,
+    "max_abs": 1.0,
+    "reciprocity": 2.220446049250313e-16,
+    "log10_growth_over_1e5_steps": 0.0
+   },
+   {
+    "budget": "at_declared_budget",
+    "case": "dt0.5_b2.5",
+    "seed": 2,
+    "max_abs": 1.0000427909455172,
+    "reciprocity": 4.440892098500626e-16,
+    "log10_growth_over_1e5_steps": 1.8583473914159347
+   },
+   {
+    "budget": "at_paper_training_loss",
+    "case": "dt2_b0.5",
+    "seed": 0,
+    "max_abs": 1.0000000000000007,
+    "reciprocity": 2.220446049250313e-16,
+    "log10_growth_over_1e5_steps": 2.8929823996598607e-11
+   },
+   {
+    "budget": "at_paper_training_loss",
+    "case": "dt2_b0.5",
+    "seed": 1,
+    "max_abs": 1.0,
+    "reciprocity": 2.220446049250313e-16,
+    "log10_growth_over_1e5_steps": 0.0
+   },
+   {
+    "budget": "at_paper_training_loss",
+    "case": "dt2_b0.5",
+    "seed": 2,
+    "max_abs": 1.0001389879229243,
+    "reciprocity": 1.5543122344752192e-15,
+    "log10_growth_over_1e5_steps": 6.035749359305311
+   },
+   {
+    "budget": "at_paper_training_loss",
+    "case": "dt2_b2.5",
+    "seed": 0,
+    "max_abs": 1.0029513430308228,
+    "reciprocity": 5.551115123125783e-16,
+    "log10_growth_over_1e5_steps": 127.9864260901731
+   },
+   {
+    "budget": "at_paper_training_loss",
+    "case": "dt2_b2.5",
+    "seed": 1,
+    "max_abs": 1.0098225926343816,
+    "reciprocity": 2.220446049250313e-15,
+    "log10_growth_over_1e5_steps": 424.50828842080546
+   },
+   {
+    "budget": "at_paper_training_loss",
+    "case": "dt2_b2.5",
+    "seed": 2,
+    "max_abs": 1.0001479966793336,
+    "reciprocity": 1.3322676295501878e-15,
+    "log10_growth_over_1e5_steps": 6.426938546408324
+   },
+   {
+    "budget": "at_paper_training_loss",
+    "case": "dt0.5_b0.5",
+    "seed": 0,
+    "max_abs": 0.9999999999999998,
+    "reciprocity": 7.771561172376096e-16,
+    "log10_growth_over_1e5_steps": -9.643274665532872e-12
+   },
+   {
+    "budget": "at_paper_training_loss",
+    "case": "dt0.5_b0.5",
+    "seed": 1,
+    "max_abs": 1.000047885643993,
+    "reciprocity": 1.3322676295501878e-15,
+    "log10_growth_over_1e5_steps": 2.079597303821039
+   },
+   {
+    "budget": "at_paper_training_loss",
+    "case": "dt0.5_b0.5",
+    "seed": 2,
+    "max_abs": 1.0000000000000004,
+    "reciprocity": 6.661338147750939e-16,
+    "log10_growth_over_1e5_steps": 1.9286549331065738e-11
+   },
+   {
+    "budget": "at_paper_training_loss",
+    "case": "dt0.5_b2.5",
+    "seed": 0,
+    "max_abs": 1.0000542734192563,
+    "reciprocity": 2.220446049250313e-16,
+    "log10_growth_over_1e5_steps": 2.3570006890405097
+   },
+   {
+    "budget": "at_paper_training_loss",
+    "case": "dt0.5_b2.5",
+    "seed": 1,
+    "max_abs": 1.0000000000000002,
+    "reciprocity": 0.0,
+    "log10_growth_over_1e5_steps": 9.643274665532869e-12
+   },
+   {
+    "budget": "at_paper_training_loss",
+    "case": "dt0.5_b2.5",
+    "seed": 2,
+    "max_abs": 0.9999999999999998,
+    "reciprocity": 1.1102230246251565e-15,
+    "log10_growth_over_1e5_steps": -9.643274665532872e-12
+   }
+  ],
+  "worst_reciprocity": 2.220446049250313e-15,
+  "largest_max_abs": 1.0098225926343816,
+  "largest_case": "at_declared_budget / dt2_b2.5 / seed 1",
+  "log10_growth_of_largest_over_1e5_steps": 424.50828842080546,
+  "note": "The reciprocal pairing holds on the published moduli to the last digit, which is the pairing lemma seen in the trained matrices themselves: the pair leaves the circle radially, one eigenvalue out and its reciprocal in.  The growth column is (max|lambda|)^(10^5) written as a power of ten."
+ },
+ "frequency_check": {
+  "boris_measured_per_step": 0.2977798952189941,
+  "boris_closed_form": 0.2977798952189945,
+  "relative_difference": 1.3049170372399893e-15,
+  "n_steps": 2000,
+  "note": "the per-step phase advance measured on the run agrees with the argument of the gyration eigenvalue, which is what lets sp3 read a frequency error off a spectrum on a learned map"
+ }
+}

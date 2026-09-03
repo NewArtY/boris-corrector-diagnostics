@@ -1,0 +1,421 @@
+{
+ "source": "experiments/classical/workprecision.json (all curves and the hybrid operating point), experiments/cost/work_precision.json (hybrid at dt = 0.2 and 0.1), experiments/cost/breakeven.json (flop model). Every ratio below is recomputed here from workprecision.json and asserted equal to experiments/classical/verdict.json at rtol 1e-12.",
+ "setup": {
+  "field": "B4 decaying, B0 = 1, tau = 1.2e5",
+  "t_final": 120.0,
+  "reference": "DOP853 rtol=1e-12 atol=1e-14",
+  "larmor_radius": 1.0,
+  "dt_grid": [
+   0.3,
+   0.2,
+   0.15,
+   0.1,
+   0.075,
+   0.05,
+   0.03,
+   0.02
+  ],
+  "physical_signal_median": 0.0007497187720287846,
+  "cost_metric": "total flops for the run; flop per step from experiments/cost/breakeven.json, Boris 113, hybrid 114091",
+  "why_flops_not_seconds": "boris_step is pure-Python/NumPy on 3-vectors; its 43 us/step is interpreter overhead, ~400x its arithmetic content. The network runs in compiled BLAS. Wall-clock therefore flatters the hybrid by ~2-3 orders of magnitude relative to a compiled PIC code."
+ },
+ "headline_at_equal_step": {
+  "dt": 0.3,
+  "vps4_traj_err_larmor": 5.35394015973843e-05,
+  "hybrid_traj_err_larmor": 0.0034688730013653656,
+  "hybrid_over_vps4_traj": 64.79103049098778,
+  "vps4_energy_err": 2.635140666784608e-07,
+  "hybrid_energy_err": 1.638655802038702e-05,
+  "hybrid_over_vps4_energy": 62.184756308974805,
+  "vps4_flops": 109200.0,
+  "hybrid_flops": 45636400.0,
+  "hybrid_over_vps4_flops": 417.9157509157509
+ },
+ "hybrid_points_drawn": [
+  {
+   "dt": 0.3,
+   "flops": 45636400.0,
+   "traj_err_larmor": 0.0034688730013653656,
+   "energy_err": 1.638655802038702e-05,
+   "in_training_distribution": true,
+   "source": "experiments/classical/workprecision.json"
+  },
+  {
+   "dt": 0.2,
+   "flops": 68454600.0,
+   "traj_err_larmor": 13.839226741460223,
+   "energy_err": 9.358603829690004e-05,
+   "in_training_distribution": false,
+   "source": "experiments/cost/work_precision.json; flops = n_steps x hybrid_step_total of breakeven.json"
+  },
+  {
+   "dt": 0.1,
+   "flops": 136909200.0,
+   "traj_err_larmor": 27.56079826394451,
+   "energy_err": 0.00015979268109445055,
+   "in_training_distribution": false,
+   "source": "experiments/cost/work_precision.json; flops = n_steps x hybrid_step_total of breakeven.json"
+  }
+ ],
+ "cross_suite_check_at_dt_0.3": {
+  "traj_cost_over_classical": 1.0202430746777045,
+  "energy_cost_over_classical": 0.9992793914855447,
+  "note": "the two suites score against different references (DOP853 rtol 1e-12 vs Boris at dt = 0.002); they agree to 2.0 % and 0.07 % at the overlapping point, which is why the open stars may share an axis with the curves."
+ },
+ "curves_drawn": {
+  "shipped": [
+   {
+    "dt": 0.3,
+    "flops": 45200.0,
+    "traj_err_larmor": 0.4166534686545755,
+    "energy_err": 1.2498392230053668e-06
+   },
+   {
+    "dt": 0.2,
+    "flops": 67800.0,
+    "traj_err_larmor": 0.18238758146184733,
+    "energy_err": 8.357946679193873e-07
+   },
+   {
+    "dt": 0.15,
+    "flops": 90400.0,
+    "traj_err_larmor": 0.1063635755497849,
+    "energy_err": 6.018525960937993e-07
+   },
+   {
+    "dt": 0.1,
+    "flops": 135600.0,
+    "traj_err_larmor": 0.057926842640543603,
+    "energy_err": 4.0679346113847714e-07
+   },
+   {
+    "dt": 0.075,
+    "flops": 180800.0,
+    "traj_err_larmor": 0.04201161031794161,
+    "energy_err": 3.04501162728954e-07
+   },
+   {
+    "dt": 0.05,
+    "flops": 271200.0,
+    "traj_err_larmor": 0.02887607015836773,
+    "energy_err": 2.0376412801503818e-07
+   },
+   {
+    "dt": 0.03,
+    "flops": 452000.0,
+    "traj_err_larmor": 0.018476656820965588,
+    "energy_err": 1.222037726567038e-07
+   },
+   {
+    "dt": 0.02,
+    "flops": 678000.0,
+    "traj_err_larmor": 0.01284083928957844,
+    "energy_err": 8.145067442733023e-08
+   }
+  ],
+  "staggered": [
+   {
+    "dt": 0.3,
+    "flops": 45200.0,
+    "traj_err_larmor": 0.5065233104356814,
+    "energy_err": 0.02195374003629602
+   },
+   {
+    "dt": 0.2,
+    "flops": 67800.0,
+    "traj_err_larmor": 0.22953670758476216,
+    "energy_err": 0.0098772267841577
+   },
+   {
+    "dt": 0.15,
+    "flops": 90400.0,
+    "traj_err_larmor": 0.1296151885425804,
+    "energy_err": 0.005579760546466694
+   },
+   {
+    "dt": 0.1,
+    "flops": 135600.0,
+    "traj_err_larmor": 0.057707908230345085,
+    "energy_err": 0.002487333735479935
+   },
+   {
+    "dt": 0.075,
+    "flops": 180800.0,
+    "traj_err_larmor": 0.03247311560572628,
+    "energy_err": 0.0014004946821629671
+   },
+   {
+    "dt": 0.05,
+    "flops": 271200.0,
+    "traj_err_larmor": 0.014434917982128577,
+    "energy_err": 0.0006227884136850159
+   },
+   {
+    "dt": 0.03,
+    "flops": 452000.0,
+    "traj_err_larmor": 0.0051966714352981525,
+    "energy_err": 0.00022419338808310485
+   },
+   {
+    "dt": 0.02,
+    "flops": 678000.0,
+    "traj_err_larmor": 0.0023095823105001275,
+    "energy_err": 9.959841765072586e-05
+   }
+  ],
+  "vps2": [
+   {
+    "dt": 0.3,
+    "flops": 36400.0,
+    "traj_err_larmor": 0.010583014451054718,
+    "energy_err": 5.568576563752536e-06
+   },
+   {
+    "dt": 0.2,
+    "flops": 54600.0,
+    "traj_err_larmor": 0.004701399158973945,
+    "energy_err": 2.4727500707033556e-06
+   },
+   {
+    "dt": 0.15,
+    "flops": 72800.0,
+    "traj_err_larmor": 0.0026442647850151136,
+    "energy_err": 1.3904951555732126e-06
+   },
+   {
+    "dt": 0.1,
+    "flops": 109200.0,
+    "traj_err_larmor": 0.0011752070877371148,
+    "energy_err": 6.178628703112921e-07
+   },
+   {
+    "dt": 0.075,
+    "flops": 145600.0,
+    "traj_err_larmor": 0.0006610688035300309,
+    "energy_err": 3.4752160660289633e-07
+   },
+   {
+    "dt": 0.05,
+    "flops": 218400.0,
+    "traj_err_larmor": 0.00029382113800404503,
+    "energy_err": 1.5444611400905472e-07
+   },
+   {
+    "dt": 0.03,
+    "flops": 364000.0,
+    "traj_err_larmor": 0.0001057808961513252,
+    "energy_err": 5.5599646109349976e-08
+   },
+   {
+    "dt": 0.02,
+    "flops": 546000.0,
+    "traj_err_larmor": 4.701514415818006e-05,
+    "energy_err": 2.471128934811162e-08
+   }
+  ],
+  "vps4": [
+   {
+    "dt": 0.3,
+    "flops": 109200.0,
+    "traj_err_larmor": 5.35394015973843e-05,
+    "energy_err": 2.635140666784608e-07
+   },
+   {
+    "dt": 0.2,
+    "flops": 163800.0,
+    "traj_err_larmor": 1.057569029274746e-05,
+    "energy_err": 5.249462498024826e-08
+   },
+   {
+    "dt": 0.15,
+    "flops": 218400.0,
+    "traj_err_larmor": 3.3464092128850857e-06,
+    "energy_err": 1.6658282420145554e-08
+   },
+   {
+    "dt": 0.1,
+    "flops": 327600.0,
+    "traj_err_larmor": 6.610827904258048e-07,
+    "energy_err": 3.2967307772580057e-09
+   },
+   {
+    "dt": 0.075,
+    "flops": 436800.0,
+    "traj_err_larmor": 2.0918367169121075e-07,
+    "energy_err": 1.0418338414197592e-09
+   },
+   {
+    "dt": 0.05,
+    "flops": 655200.0,
+    "traj_err_larmor": 4.132300928175623e-08,
+    "energy_err": 2.053561765080758e-10
+   },
+   {
+    "dt": 0.03,
+    "flops": 1092000.0,
+    "traj_err_larmor": 5.355588549568591e-09,
+    "energy_err": 2.550293309866447e-11
+   },
+   {
+    "dt": 0.02,
+    "flops": 1638000.0,
+    "traj_err_larmor": 1.0577493959677718e-09,
+    "energy_err": 4.300448885885544e-12
+   }
+  ],
+  "gl4": [
+   {
+    "dt": 0.3,
+    "flops": 772800.0,
+    "traj_err_larmor": 0.0007745714317733591,
+    "energy_err": 4.177814716399553e-08
+   },
+   {
+    "dt": 0.2,
+    "flops": 1005600.0,
+    "traj_err_larmor": 0.00015342736920320868,
+    "energy_err": 8.287884822877345e-09
+   },
+   {
+    "dt": 0.15,
+    "flops": 1238400.0,
+    "traj_err_larmor": 4.859098140141276e-05,
+    "energy_err": 2.626816653084063e-09
+   },
+   {
+    "dt": 0.1,
+    "flops": 1704000.0,
+    "traj_err_larmor": 9.604362360112852e-06,
+    "energy_err": 5.197396957257183e-10
+   },
+   {
+    "dt": 0.075,
+    "flops": 2067200.0,
+    "traj_err_larmor": 3.0395095678006324e-06,
+    "energy_err": 1.6572054839514294e-10
+   },
+   {
+    "dt": 0.05,
+    "flops": 2793600.0,
+    "traj_err_larmor": 6.004725015240438e-07,
+    "energy_err": 3.3727687309692556e-11
+   },
+   {
+    "dt": 0.03,
+    "flops": 4144000.0,
+    "traj_err_larmor": 7.78200819846752e-08,
+    "energy_err": 5.2726711885497934e-12
+   },
+   {
+    "dt": 0.02,
+    "flops": 6216000.0,
+    "traj_err_larmor": 1.536709631713531e-08,
+    "energy_err": 1.8139933999350433e-12
+   }
+  ]
+ },
+ "schemes_not_drawn": {
+  "imr": {
+   "reason": "implicit midpoint; run on the same grid and committed in the same JSON, left off the artwork to match the five-scheme table of the manuscript. Its numbers are here so the omission hides nothing.",
+   "points": [
+    {
+     "dt": 0.3,
+     "flops": 506400.0,
+     "traj_err_larmor": 0.5026379075146472,
+     "energy_err": 1.6479318080353522e-05
+    },
+    {
+     "dt": 0.2,
+     "flops": 633600.0,
+     "traj_err_larmor": 0.2285845717590668,
+     "energy_err": 7.414686587048358e-06
+    },
+    {
+     "dt": 0.15,
+     "flops": 732800.0,
+     "traj_err_larmor": 0.1292485673486354,
+     "energy_err": 4.188886468026176e-06
+    },
+    {
+     "dt": 0.1,
+     "flops": 931200.0,
+     "traj_err_larmor": 0.05760311371039918,
+     "energy_err": 1.867524771936857e-06
+    },
+    {
+     "dt": 0.075,
+     "flops": 1241600.0,
+     "traj_err_larmor": 0.032426791488536943,
+     "energy_err": 1.051629173298707e-06
+    },
+    {
+     "dt": 0.05,
+     "flops": 1526400.0,
+     "traj_err_larmor": 0.014418813676151485,
+     "energy_err": 4.6775578710356314e-07
+    },
+    {
+     "dt": 0.03,
+     "flops": 2264000.0,
+     "traj_err_larmor": 0.005191871518865626,
+     "energy_err": 1.6845997174996796e-07
+    },
+    {
+     "dt": 0.02,
+     "flops": 3396000.0,
+     "traj_err_larmor": 0.0023076270521608473,
+     "energy_err": 7.488096809282752e-08
+    }
+   ],
+   "best_traj_still_beats_hybrid": {
+    "dt": 0.02,
+    "traj_err_larmor": 0.0023076270521608473,
+    "flops": 3396000.0,
+    "hybrid_traj_err_larmor": 0.0034688730013653656,
+    "hybrid_flops": 45636400.0
+   }
+  }
+ },
+ "no_fitted_exponent_on_this_figure": {
+  "rule": "plan/reports/W0_2_exponent_1540.md -- a fitted exponent must be printed with its local half-decade slopes.",
+  "discharged_by": "no exponent is fitted or printed here; the curves themselves are drawn, so the local slope is visible at every point.",
+  "committed_orders_deliberately_not_drawn": {
+   "shipped_traj": {
+    "traj_all": [
+     1.3075272017713118,
+     0.14153422244806965
+    ],
+    "traj_coarse_dt>=0.1": [
+     1.817245219902501,
+     0.13702089573928938
+    ],
+    "traj_fine_dt<=0.075": [
+     0.9593458156019219,
+     0.011784344062744962
+    ],
+    "energy_all": [
+     1.0397267126455487,
+     0.008645535383637814
+    ]
+   },
+   "staggered_traj": {
+    "traj_all": [
+     1.8918586415088565,
+     0.04738900166054281
+    ],
+    "traj_coarse_dt>=0.1": [
+     1.9674619310968224,
+     0.008909600684329168
+    ],
+    "traj_fine_dt<=0.075": [
+     1.7458649726851343,
+     0.11155137635358146
+    ],
+    "energy_all": [
+     1.9934475884690934,
+     0.003017438592920126
+    ]
+   }
+  }
+ }
+}

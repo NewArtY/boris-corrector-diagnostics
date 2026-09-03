@@ -1,0 +1,82 @@
+{
+ "M1_discrete_Lz": {
+  "mean_minus_1": 0.004603306914983563,
+  "amplitude_(max-min)/2": 0.14833246237037212,
+  "pred_amplitude_h_Omega_over_2": 0.15,
+  "secular_slope_per_unit_time": 1.7459794791204777e-05
+ },
+ "M2_closed_form": {
+  "max_rel_discrepancy_vs_(h/2tau)(1-cos om_h t)": 0.02809142463913855,
+  "measured_max": 2.499690216373196e-06,
+  "pred_max": 2.499869302260987e-06,
+  "measured_median_2nd_half": 1.2498530289617449e-06,
+  "pred_median_2nd_half": 1.2597759661285195e-06,
+  "corr": 0.9993358354472762,
+  "best_fit_omega": 0.9922026108696897,
+  "omega_h": 0.9925996507299817,
+  "Omega_phys": 1.0,
+  "best_fit_residual_over_h_tau": 0.005019823533370093
+ },
+ "M3_pphi": [
+  {
+   "gyro": 100.0,
+   "pphi_drift_max": 0.04498908159153825,
+   "pphi_0": 0.5,
+   "dev_max": 2.499690216373196e-06
+  },
+  {
+   "gyro": 1000.0,
+   "pphi_drift_max": 0.04498908159153825,
+   "pphi_0": 0.5,
+   "dev_max": 2.499690216373196e-06
+  },
+  {
+   "gyro": 10000.0,
+   "pphi_drift_max": 0.04498908159153825,
+   "pphi_0": 0.5,
+   "dev_max": 2.499690216373196e-06
+  }
+ ],
+ "M2b_B0_scan": [
+  {
+   "B0": 0.5,
+   "median_over_(h/2tau)": 0.9422148974813639,
+   "max_over_(h/tau)": 1.000083369628868,
+   "Lz_amp": 0.03739384999631093,
+   "pred_Lz_amp_hB0_over_2": 0.0375,
+   "omega_h": 0.4990656514051124
+  },
+  {
+   "B0": 1.0,
+   "median_over_(h/2tau)": 0.999882423169396,
+   "max_over_(h/tau)": 0.9998760865492785,
+   "Lz_amp": 0.14833246237037212,
+   "pred_Lz_amp_hB0_over_2": 0.15,
+   "omega_h": 0.9925996507299817
+  },
+  {
+   "B0": 2.0,
+   "median_over_(h/2tau)": 0.9753315941551933,
+   "max_over_(h/tau)": 0.9998018401624621,
+   "Lz_amp": 0.5746820137775622,
+   "pred_Lz_amp_hB0_over_2": 0.6,
+   "omega_h": 1.943045296519114
+  }
+ ],
+ "M4_offaxis": [
+  {
+   "case": "on-axis",
+   "median_dev_vs_adiabatic_coarse": 1.2498530289617449e-06,
+   "median_dev_vs_adiabatic_FINE(h/200)": 6.2859490945754715e-09,
+   "median_dev_vs_fine_reference": 1.2468544512422852e-06,
+   "h_over_2tau": 1.2499999999999999e-06
+  },
+  {
+   "case": "off-axis",
+   "median_dev_vs_adiabatic_coarse": 2.206210276911591e-06,
+   "median_dev_vs_adiabatic_FINE(h/200)": 3.1997626135371604e-06,
+   "median_dev_vs_fine_reference": 1.7001325369747633e-06,
+   "h_over_2tau": 1.2499999999999999e-06
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+[10:42:28] train: Run parameters: {
+  "seed": 42,
+  "epochs": 200,
+  "batch_size": 1024,
+  "device": "cpu",
+  "train_fields": [
+    "uniform",
+    "dipole",
+    "stochastic"
+  ],
+  "lr_pinn": 0.0005,
+  "lr_hnn": 0.001,
+  "lr_sympnet": 0.001,
+  "lr_boris_corrector": 0.001
+}
+[10:42:28] train: Ensuring reference datasets exist ...
+[10:42:28] dataset_generation: Dataset for 'uniform' already exists, skipping.
+[10:42:28] dataset_generation: Dataset for 'dipole' already exists, skipping.
+[10:42:28] dataset_generation: Dataset for 'stochastic' already exists, skipping.
+[10:42:28] dataset_generation: Multi-scale corrector dataset already exists, skipping.
+[10:42:28] train: Loading combined training/validation data ...
+[10:42:28] train: Train samples: 24000, Val samples: 3000
+[10:42:28] train: Boris+Corrector multi-scale train samples: 2880
+[10:42:28] train: === Training PINN-symplectic ===
+[10:42:28] train: [PINN-symplectic] epoch    0/200  loss=1.477793e-03
+[10:42:50] train: [PINN-symplectic] epoch   50/200  loss=6.542998e-05
+[10:43:11] train: [PINN-symplectic] epoch  100/200  loss=3.773277e-05
+[10:43:33] train: [PINN-symplectic] epoch  150/200  loss=1.873949e-05
+[10:43:55] train: [PINN-symplectic] epoch  199/200  loss=2.379870e-05
+[10:43:55] train: === Training HNN ===
+[10:43:55] train: [HNN] epoch    0/200  loss=1.336584e+00
+[10:44:17] train: [HNN] epoch   50/200  loss=2.754029e-02
+[10:44:39] train: [HNN] epoch  100/200  loss=6.452954e-03
+[10:45:01] train: [HNN] epoch  150/200  loss=7.457371e-03
+[10:45:23] train: [HNN] epoch  199/200  loss=6.875297e-03
+[10:45:23] train: === Training SympNet ===
+[10:45:24] train: [SympNet] epoch    0/200  loss=4.995015e-03
+[10:45:49] train: [SympNet] epoch   50/200  loss=4.573545e-03
+[10:46:14] train: [SympNet] epoch  100/200  loss=4.551615e-03
+[10:46:39] train: [SympNet] epoch  150/200  loss=4.245408e-03
+[10:47:03] train: [SympNet] epoch  199/200  loss=3.960870e-03
+[10:47:03] train: === Training Boris + Corrector ===
+[10:47:04] train: [Boris+Corrector] epoch    0/200  loss=2.183427e-05
+[10:47:06] train: [Boris+Corrector] epoch   50/200  loss=1.035853e-05
+[10:47:08] train: [Boris+Corrector] epoch  100/200  loss=8.760712e-06
+[10:47:11] train: [Boris+Corrector] epoch  150/200  loss=7.186874e-06
+[10:47:13] train: [Boris+Corrector] epoch  199/200  loss=5.129608e-06
+[10:47:13] train: All models trained and saved to /home/user/workspace/deliverable/code/checkpoints. Total training time: 284.7 s

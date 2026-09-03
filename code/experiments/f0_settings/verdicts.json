@@ -1,0 +1,109 @@
+{
+ "rule": "FAILS if a classical attack matches or beats the hybrid in both channels at no greater flop cost",
+ "hybrid_reference": {
+  "pos": 0.003469,
+  "energy": 1.639e-05,
+  "flops": 45600000.0
+ },
+ "settings": {
+  "S1": {
+   "name": "field known only on a coarse time grid",
+   "attack": "cubic spline through the same samples + vps4",
+   "verdict": "FAILS",
+   "numbers": {
+    "h_node": 0.25,
+    "n_nodes": 481,
+    "pos_err_rms": 5.386132793428472e-05,
+    "energy_err": 1.424351378176425e-06,
+    "flops": 109200
+   },
+   "margin": {
+    "position": 64.406135775792,
+    "energy": 11.506992060473072,
+    "cost": 417.5824175824176
+   },
+   "note": "already beats the hybrid on position at 121 nodes; GEMPIC closes this setting classically in the literature too"
+  },
+  "S2": {
+   "name": "deterministic quasi-periodic dB, 9 free parameters",
+   "attack": "least-squares identification of the tones + vps4",
+   "verdict": "FAILS",
+   "numbers": {
+    "fit_residual_rms": 7.043184781207005e-12,
+    "pos_err_rms": 5.33604484192202e-05,
+    "energy_err": 9.119944062163654e-07,
+    "flops": 109200
+   },
+   "margin": {
+    "position": 65.01069805010262,
+    "energy": 17.9716014575111,
+    "cost": 417.5824175824176
+   },
+   "note": "the field is recovered to 7e-12; a deterministic field with finitely many parameters is always identifiable from data"
+  },
+  "S3": {
+   "name": "broadband dB, realization unknown, statistics public",
+   "attacks": [
+    "mean field (ignore dB)",
+    "Monte Carlo from the public PSD",
+    "closed-form O(a^2) mean shift"
+   ],
+   "verdict": "FAILS",
+   "numbers": {
+    "ignoring_dB_error_vs_ensemble_mean": 2.4179191293107046e-05,
+    "ignoring_dB_rel_error": 0.023832093304094214,
+    "ignoring_dB_flops": 109200,
+    "quadratic_coefficient_uniform": [
+     36.01899137253531,
+     36.0196532407977,
+     36.02547211102154,
+     36.09160442657265
+    ],
+    "coefficient_constant_to": "4 significant figures over two decades of amplitude (36.02 -> 36.09)",
+    "antithetic_runs_to_resolve_it": 48
+   },
+   "note": "the ensemble-averaged effect of a zero-mean broadband perturbation is exactly one number: the shift is quadratic in amplitude with a constant coefficient across the whole perturbative range. A classical attacker measures that number once with 48 antithetic runs (~5e6 flops at the working step, 9x less than a single hybrid run) and adds it. Nothing is left for an effective learned model except amortisation across queries, which is an engineering argument, not a numerical one."
+  },
+  "S4": {
+   "name": "large step, field fully known",
+   "attack": "vps4 subcycled to the hybrid's own flop budget",
+   "verdict": "FAILS",
+   "numbers": {
+    "dt_outer": 1.0,
+    "subcycles": 417,
+    "pos_err_rms": 6.214374843610975e-12,
+    "energy_err": 1.0151879337172431e-12,
+    "flops": 13660920,
+    "hybrid_budget": 13690920.0
+   },
+   "margin": {
+    "position": 558221878.6764196
+   },
+   "known_competitor": {
+    "ref": "Bigi, Spies, Ceriotti, arXiv:2508.01068",
+    "what": "learned generating function for large-step molecular dynamics; trained from scratch on autonomous systems",
+    "why_it_matters": "direct precedent for a learned construction in exactly the large-step regime S4 probes. Not reimplemented (out of budget, and S4 is expected to die on flops regardless), but any wall-clock-only survival of S4 must be argued against this work, not only against filtered Boris."
+   },
+   "note": "at matched flops the classical scheme is eleven orders of magnitude more accurate; wall-clock-only survival would also have to be argued against arXiv:2508.01068"
+  },
+  "S5": {
+   "name": "radiation reaction (Landau-Lifshitz)",
+   "attack": "the force is known in closed form",
+   "verdict": "FAILS",
+   "computed": false,
+   "note": "dies on paper, as the plan anticipated: the LL force is an explicit function of the state and the known fields, so it enters the right-hand side directly and any classical scheme integrates it. There is no epistemic gap, only a stiffer ODE. The analytic contraction rate Lambda = 2(alpha - eps_rad) makes it a good VALIDATION system with an exact reference, which is how 08_ARCHITECTURE.md proposed using it -- but that is a test case, not a setting that needs learning."
+  }
+ },
+ "summary": {
+  "surviving": [],
+  "failing": [
+   "S1",
+   "S2",
+   "S3",
+   "S4",
+   "S5"
+  ],
+  "rejection_criterion_met": true,
+  "statement": "No candidate setting survives classical attack. Every attack costs at most one hybrid run and wins on both channels, usually by orders of magnitude."
+ }
+}

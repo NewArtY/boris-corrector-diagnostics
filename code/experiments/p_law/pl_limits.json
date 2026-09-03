@@ -1,0 +1,156 @@
+{
+ "L1_AR1_is_a_crossover": [
+  {
+   "rho": 0.9,
+   "corr_time_steps": 10.000000000000002,
+   "true_asymptotic_H": 0.5,
+   "window_fit_exponent_from_closed_form_Var": 0.5003734580547029,
+   "measured_mean_64_seeds": 0.5003516813793577,
+   "measured_std": 0.18054355040007344
+  },
+  {
+   "rho": 0.99,
+   "corr_time_steps": 99.99999999999991,
+   "true_asymptotic_H": 0.5,
+   "window_fit_exponent_from_closed_form_Var": 0.5039811159168046,
+   "measured_mean_64_seeds": 0.5138749696995751,
+   "measured_std": 0.1872148957204504
+  },
+  {
+   "rho": 0.999,
+   "corr_time_steps": 999.9999999999991,
+   "true_asymptotic_H": 0.5,
+   "window_fit_exponent_from_closed_form_Var": 0.5444926961205854,
+   "measured_mean_64_seeds": 0.5922022379339056,
+   "measured_std": 0.21399102529681427
+  }
+ ],
+ "L1_verifier_reported": {
+  "0.9": 0.466,
+  "0.99": 0.617,
+  "0.999": 0.776
+ },
+ "L2_limit_points": [
+  {
+   "case": "DC in co-rotating frame (u_k = 1): a=0, H=1",
+   "a": 0.0,
+   "H": 1.0,
+   "predicted_p": 1.0,
+   "exponent": 1.9999999999995832
+  },
+  {
+   "case": "lab-frame resonance at omega_h: a=0, H=1",
+   "a": 0.0,
+   "H": 1.0,
+   "predicted_p": 1.0,
+   "exponent": 0.5447571618343561
+  },
+  {
+   "case": "stationary incoherent: a=0, H=1/2",
+   "a": 0.0,
+   "H": 0.5,
+   "predicted_p": 0.5,
+   "exponent": 0.5162573552149405,
+   "std_64_seeds": 0.1695954245730353
+  },
+  {
+   "case": "summable-variance incoherent a=-0.5",
+   "a": -0.5,
+   "H": 0.5,
+   "predicted_p": 0.0,
+   "exponent": 0.03773365513587938,
+   "std_32_seeds": 0.05679910757908117
+  },
+  {
+   "case": "summable-variance incoherent a=-0.6",
+   "a": -0.6,
+   "H": 0.5,
+   "predicted_p": 0.0,
+   "exponent": 0.015567631008495737,
+   "std_32_seeds": 0.026657968545154672
+  },
+  {
+   "case": "summable-variance incoherent a=-0.75",
+   "a": -0.75,
+   "H": 0.5,
+   "predicted_p": 0.0,
+   "exponent": 0.0011929930912793593,
+   "std_32_seeds": 0.0034066377213653487
+  },
+  {
+   "case": "summable-variance incoherent a=-1.0",
+   "a": -1.0,
+   "H": 0.5,
+   "predicted_p": 0.0,
+   "exponent": 4.048106014876484e-06,
+   "std_32_seeds": 2.2428697057445194e-05
+  },
+  {
+   "case": "Weyl sum, golden-ratio rotation (H=0): a=0",
+   "a": 0.0,
+   "H": 0.0,
+   "predicted_p": 0.0,
+   "exponent": 5.241742868091278e-09
+  }
+ ],
+ "L4_frame_dependence": [
+  {
+   "H_of_raw_noise": 0.5,
+   "frame_where_memory_lives": "co-rotating",
+   "predicted_p": 0.5,
+   "measured_mean": 0.5217550995348895,
+   "std": 0.14321427069959355
+  },
+  {
+   "H_of_raw_noise": 0.5,
+   "frame_where_memory_lives": "lab",
+   "predicted_p": 0.5,
+   "measured_mean": 0.5414991516777325,
+   "std": 0.18038234841472744
+  },
+  {
+   "H_of_raw_noise": 0.9,
+   "frame_where_memory_lives": "co-rotating",
+   "predicted_p": 0.9,
+   "measured_mean": 0.8507615774767613,
+   "std": 0.23859768678901394
+  },
+  {
+   "H_of_raw_noise": 0.9,
+   "frame_where_memory_lives": "lab",
+   "predicted_p": 0.5,
+   "measured_mean": 0.47103801275701535,
+   "std": 0.15306969488088515
+  }
+ ],
+ "L5_linear_regime": [
+  {
+   "kappa": 3.47e-07,
+   "final_|S_N|/|z0|": 3.342406204297296e-05,
+   "exponent": 0.511087609233292,
+   "linear_pred": 0.5,
+   "quadratic_pred": 1.0
+  },
+  {
+   "kappa": 3.47e-05,
+   "final_|S_N|/|z0|": 0.003342406204297215,
+   "exponent": 0.5109577941296156,
+   "linear_pred": 0.5,
+   "quadratic_pred": 1.0
+  },
+  {
+   "kappa": 0.000347,
+   "final_|S_N|/|z0|": 0.03342406204297189,
+   "exponent": 0.5107460794766877,
+   "linear_pred": 0.5,
+   "quadratic_pred": 1.0
+  },
+  {
+   "kappa": 0.0015,
+   "final_|S_N|/|z0|": 0.14448441805319692,
+   "exponent": 0.5178437378003341,
+   "linear_pred": 0.5,
+   "quadratic_pred": 1.0
+  }
+ ]
+}

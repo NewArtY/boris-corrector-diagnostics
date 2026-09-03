@@ -1,0 +1,13 @@
+{
+  "tag": "run1",
+  "seconds_eval_corrector": 2.7862186999991536,
+  "seconds_fig6": 4.614044599991757,
+  "timing_probe": {
+    "n_steps": 1000,
+    "seconds_boris": 0.04435000001103617,
+    "seconds_hybrid": 0.14809400000376627,
+    "hybrid_over_boris": 3.339210822252856,
+    "us_per_step_boris": 44.35000001103617,
+    "us_per_step_hybrid": 148.09400000376627
+  }
+}

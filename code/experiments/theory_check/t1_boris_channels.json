@@ -1,0 +1,37 @@
+{
+ "theta_end_deg": {
+  "measured": 50.79486013487795,
+  "predicted": 50.80548085514104
+ },
+ "theta_median_2nd_half_deg": {
+  "measured": 38.11025976010511,
+  "predicted": 38.11827006476873,
+  "article": 38.11
+ },
+ "speed_err_median": {
+  "measured": 6.233163331831602e-07,
+  "predicted": 6.249999999999999e-07,
+  "article": 6.23e-07
+ },
+ "energy_err_median": {
+  "measured": 1.245860386966946e-06,
+  "predicted": 1.2490628514746259e-06,
+  "article": 1.246e-06
+ },
+ "signal_over_error": {
+  "measured": 601.7679253166383,
+  "predicted_180_over_h": 600.0,
+  "article": 601.95
+ },
+ "pos_err_rms": {
+  "measured": 0.4169552535942972,
+  "predicted_phase_only": 0.502448012660365,
+  "article": 0.417
+ },
+ "theta_curve_ratio_meas_over_pred_at_t": {
+  "30": 0.9997936391081128,
+  "60": 0.9997905947680622,
+  "90": 0.9997898565530384,
+  "120": 0.999790953257713
+ }
+}

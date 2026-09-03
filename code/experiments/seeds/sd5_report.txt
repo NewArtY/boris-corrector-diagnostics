@@ -1,0 +1,149 @@
+====================================================================================================
+W16 -- the corrector over 20 independent retrainings, and the committed checkpoint placed inside them
+====================================================================================================
+
+0.  THE RULER, MEASURED BEFORE THE ENSEMBLE IS READ
+    the reference of ../horizon/ and ../stats/ is the Boris scheme at h/150.
+    its own trajectory error over the window of tab:family is 1.3959e-03 Larmor radii,
+    against a closed form whose own cost is 0.00e+00 (DOP853 at rtol 1e-12 measures 6.20e-12).
+    fitted order of the shipped Boris position readout:
+       h_over_1     h = 0.300000   rms 4.166535e-01  
+       h_over_10    h = 0.030000   rms 1.845932e-02  order 1.354
+       h_over_50    h = 0.006000   rms 4.106562e-03  order 0.934
+       h_over_150   h = 0.002000   rms 1.395921e-03  order 0.982
+       h_over_750   h = 0.000400   rms 2.814055e-04  order 0.995
+       h_over_1500  h = 0.000200   rms 1.408427e-04  order 0.999
+    a trajectory advantage above 298.5 is a corrector error BELOW the error of the ruler.
+    a trajectory advantage above 29.8 is within the factor of ten W14 and W15 use to flag
+    a cell as reference-limited.
+
+1.  THE READOUT SECTION 7 PRINTS (Boris reference at h/150)
+    trajectory advantage over Boris                committed       117.8 | median       152.8  IQR [      95.7,      252.2]  range [     44.64,      576.8]  x12.92 | 8 of 20 below, 40%
+    energy separation, projected corrector         committed       45.78 | median       45.78  IQR [     45.69,      45.83]  range [     45.58,      45.95]  x1.01 | 10 of 20 below, 50%
+    energy separation, unprojected correction      committed       2.946 | median       2.694  IQR [     2.096,      6.461]  range [      1.11,      26.53]  x23.90 | 11 of 20 below, 55%
+    corrector trajectory error (h/150 ruler)       committed    0.003539 | median    0.002765  IQR [  0.001654,   0.004357]  range [ 0.0007229,   0.009341]  x12.92 | 12 of 20 below, 60%
+    corrector energy error (h/150 ruler)           committed   1.637e-05 | median   1.638e-05  IQR [ 1.636e-05,  1.641e-05]  range [ 1.632e-05,  1.645e-05]  x1.01 | 10 of 20 below, 50%
+
+    against what Section 7 prints for its five: committed 117.8, median 135, range 50 to 447
+    the energy separation is quoted as 45.8 with a standard deviation of 0.064 over five;
+    over 20 it is 45.7631 with a standard deviation of 0.1049.
+    members whose REPORTED advantage puts the corrector below the ruler's own error: 3 of 20
+
+2.  THE SAME QUANTITIES ON A REFERENCE THAT IS NOT THE TRAINING TARGET (tab:family, DOP853 rtol 1e-12)
+    corrector trajectory error (DOP853 ruler)      committed    0.003469 | median    0.002911  IQR [  0.002291,   0.004019]  range [   0.00141,   0.009081]  x6.44 | 12 of 20 below, 60%
+    corrector energy error (DOP853 ruler)          committed   1.639e-05 | median   1.639e-05  IQR [ 1.637e-05,  1.642e-05]  range [ 1.633e-05,  1.646e-05]  x1.01 | 10 of 20 below, 50%
+    trajectory advantage over Boris                committed       120.1 | median       143.1  IQR [     103.7,      182.2]  range [     45.88,      295.6]  x6.44 | 8 of 20 below, 40%
+
+    the spread of the advantage narrows from x12.92 on the training target to x6.44 on the closed-form-grade reference.
+    energy separation on the same reference: committed 45.7509, median 45.7458, range [45.5449, 45.9125], x1.0081
+
+3.  THE CORRECTOR COLUMN OF tab:gtable, CELL BY CELL (H_paper, canonical initial condition)
+    configuration  channel     committed    median        q1        q3  min..max   below
+    uniform        trajectory     +1.555    +1.544    +1.418    +1.697   +1.29.. +2.35  11/20 
+    uniform        phase          +2.547    +2.571    +2.515    +2.633   +2.46.. +2.76   8/20 
+    uniform        energy         -0.626    -0.674    -0.742    -0.611   -0.86.. -0.24  15/20 dagger: degenerate
+    uniform        spectral       +2.333    +2.288    +2.043    +2.603   +1.81.. +3.99  11/20 
+    B1_radial      trajectory     +0.000    -1.102    -1.177    -0.601   -1.31.. +0.08  19/20 SIGN FLIP
+    B1_radial      phase          +0.557    -0.368    -0.408    -0.044   -0.46.. +1.10  17/20 SIGN FLIP
+    B1_radial      energy         +0.057    +0.061    +0.052    +0.073   +0.04.. +0.08   7/20 dagger: degenerate
+    B1_radial      spectral       -0.893    -2.862    -3.063    -1.813   -3.35.. -0.58  19/20 
+    B2_wave        trajectory     -0.456    -0.348    -0.465    -0.238   -0.65.. +0.05   6/20 SIGN FLIP
+    B2_wave        phase          +0.103    +0.048    -0.034    +0.292   -0.11.. +0.83  12/20 SIGN FLIP
+    B2_wave        energy         +0.088    +0.108    +0.090    +0.156   +0.05.. +0.21   4/20 dagger: degenerate
+    B2_wave        spectral       -1.590    -1.379    -1.655    -1.126   -2.05.. -0.06   7/20 
+    B3_tilted      trajectory     -1.414    -1.337    -1.368    -1.250   -1.39.. -1.09   0/20 
+    B3_tilted      phase          -0.040    -0.010    -0.031    -0.005   -0.04.. +0.00   0/20 SIGN FLIP
+    B3_tilted      energy         -0.816    -0.698    -0.773    -0.602   -0.89.. -0.30   2/20 dagger: degenerate
+    B3_tilted      spectral       -3.516    -3.397    -3.468    -3.248   -3.50.. -2.87   0/20 
+    B4_decaying    trajectory     +2.081    +2.155    +2.014    +2.260   +1.66.. +2.47   8/20 
+    B4_decaying    phase          +2.902    +2.910    +2.882    +2.971   +2.78.. +3.01   7/20 
+    B4_decaying    energy         -1.111    -1.111    -1.112    -1.111   -1.11.. -1.11  11/20 
+    B4_decaying    spectral       +3.755    +3.594    +3.322    +4.089   +2.71.. +5.00  11/20 
+
+    Q1  cells whose sign changes across the ensemble: 5 of 20  ['B1_radial|trajectory', 'B1_radial|phase', 'B2_wave|trajectory', 'B2_wave|phase', 'B3_tilted|phase']
+    cells of 16 in which the corrector beats the scheme it corrects: committed 9, ensemble median 7.0, range 6 to 10 (18 of 20 members below the committed)
+
+4.  THE FOUR QUESTIONS
+    Q1 sign change in the tab:gtable corrector column: YES -- ['B1_radial|trajectory', 'B1_radial|phase', 'B2_wave|trajectory', 'B2_wave|phase', 'B3_tilted|phase']
+    Q2 corrector reaches vps4 at the working step: no (best of the ensemble is 0.00141 against vps4's 5.35e-05 on the trajectory, a factor of 26.3)
+    Q3 energy error ever above the physical signal: no (worst separation 45.5780 on the h/150 ruler, 45.5449 on DOP853)
+    Q4 trajectory advantage ever below one: no (worst 44.64 on the h/150 ruler, 45.88 on DOP853)
+
+5.  THE EXTERNAL ARCHITECTURES, FOUR REPETITIONS AGAINST TEN
+    arch      channel                        med(4)   range(4)     x(4)    med(10)  range(10)    x(10)   wider
+    hnn       pos_err_rms                   0.08643 0.032..0.12      3.57     0.1092  0.03..0.22      7.11    1.99
+    hnn       energy_err_median_2nd_half   0.001533 0.00097..0.0022     2.26   0.001501 0.00048..0.0025     5.10    2.26
+    sympnet   pos_err_rms                   0.03628 0.018..0.06      3.43     0.0332 0.012..0.06      4.82    1.41
+    sympnet   energy_err_median_2nd_half  0.0004218 0.0003..0.0006     2.03  0.0004598 0.0003..0.00073     2.45    1.21
+    pinn      pos_err_rms                    0.5174   0.5..0.6       1.21     0.4751  0.29..0.6       2.07    1.72
+    pinn      energy_err_median_2nd_half   0.003516 0.0031..0.0071     2.30   0.005838 0.0031..0.011     3.50    1.52
+    channels whose spread widened at ten repetitions: 6 of 6
+
+6.  WHAT HAS NO SPREAD, AND WHY
+    boris      trajectory 4.166535e-01  energy 1.249839e-06   none: the scheme contains no random draw. This is not a measured zero, it is undefined by construction.
+    vps2       trajectory 1.058301e-02  energy 5.568577e-06   none: the scheme contains no random draw. This is not a measured zero, it is undefined by construction.
+    vps4       trajectory 5.353940e-05  energy 2.635141e-07   none: the scheme contains no random draw. This is not a measured zero, it is undefined by construction.
+    gl4        trajectory 7.745714e-04  energy 4.177815e-08   none: the scheme contains no random draw. This is not a measured zero, it is undefined by construction.
+    the flop model, the closed forms and the classical schemes are arithmetic, not draws.
+    one retraining of the corrector costs 7.714e+11 flops (1.017e+08 data, 7.713e+11 optimisation);
+    the ensemble of 20 cost 1.543e+13; the cost column of tab:family carries none of it.
+
+7.  THE REPRODUCTION CHECK
+    ../stats/checkpoints/corrector_b4_seed42.pt is a retraining of the committed run at the committed seed.
+    trajectory advantage 117.81413 against the committed 117.81413; energy separation 45.784331 against 45.784331
+    this directory's own retraining at seed 42: bitwise identical to the committed checkpoint = False, largest relative difference 9.585e-13
+    validation defect error, ensemble: median 0.001430  IQR [0.001371, 0.001478]; committed 0.001372 (4 of 16 below)
+
+\begin{table}[tbp]
+  \centering
+  \caption{The learned corrector over $20$ independent retrainings at the architecture and hyper-parameters of the committed run.  The committed checkpoint is the one every corrector number in this paper stands on; it is placed inside the ensemble and is not one of its members, and the last column counts the members that fall below it.  The upper block is scored against the reference the corrector was trained on, a Boris run at $h/150$, which is the reference Section~\ref{sec:family} quotes; that reference carries a trajectory error of $1.396\times10^{-3}$ Larmor radii of its own, so an advantage above $298$ reports a corrector error below the error of the ruler.  The lower block is scored against DOP853 at $\mathrm{rtol}=10^{-12}$, which is the reference of Table~\ref{tab:family} and is not the training target.  The classical schemes contain no random draw and have no spread.}
+  \label{tab:seeds}
+  \footnotesize
+  \begin{tabular}{@{}lrrrr@{}}
+    \toprule
+    Quantity & committed & median & IQR & below \\
+    \midrule
+    \multicolumn{5}{@{}l}{\emph{against the Boris reference at $h/150$, the training target}} \\
+    trajectory advantage over Boris            & $117.8$ & $152.8$ & $95.7$--$252.2$ & $8/20$ \\
+    trajectory error (Larmor radii)            & $3.54\times10^{-3}$ & $2.77\times10^{-3}$ & $1.65\times10^{-3}$--$4.36\times10^{-3}$ & $12/20$ \\
+    energy error                               & $1.637\times10^{-5}$ & $1.638\times10^{-5}$ & $1.636\times10^{-5}$--$1.641\times10^{-5}$ & $10/20$ \\
+    signal per energy error                    & $45.784$ & $45.779$ & $45.695$--$45.829$ & $10/20$ \\
+    signal per energy error, no projection     & $2.95$ & $2.69$ & $2.10$--$6.46$ & $11/20$ \\
+    \addlinespace
+    \multicolumn{5}{@{}l}{\emph{against DOP853 at $\mathrm{rtol}=10^{-12}$}} \\
+    trajectory error (Larmor radii)            & $3.47\times10^{-3}$ & $2.91\times10^{-3}$ & $2.29\times10^{-3}$--$4.02\times10^{-3}$ & $12/20$ \\
+    energy error                               & $1.639\times10^{-5}$ & $1.639\times10^{-5}$ & $1.637\times10^{-5}$--$1.642\times10^{-5}$ & $10/20$ \\
+    trajectory advantage over Boris            & $120.1$ & $143.1$ & $103.7$--$182.2$ & $8/20$ \\
+    signal per energy error                    & $45.75$ & $45.75$ & $45.66$--$45.80$ & $10/20$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[tbp]
+  \centering
+  \caption{The corrector column of Table~\ref{tab:gtable} with its spread over $20$ retrainings.  Each entry is $G=\log_{10}(E_{\mathrm{Boris}}/E_{\mathrm{corrector}})$ at $\Omega h = 0.3$ over $19.1$ gyro-orbits, so a positive $G$ is an advantage over the scheme being corrected and a change of sign across the ensemble would be a change of verdict.  The energy channel is omitted where the configuration carries no electric field and every entry would be a ratio of rounding errors.  $\ast$: the sign of the entry is not stable across the ensemble, so the committed checkpoint and a typical retraining disagree on whether the corrector helps in that cell.}
+  \label{tab:seed_channels}
+  \footnotesize
+  \begin{tabular}{@{}llrrrr@{}}
+    \toprule
+    Configuration & Channel & committed & median & IQR & below \\
+    \midrule
+    uniform        & trajectory  & $+1.55$ & $+1.54$ & $+1.42$--$+1.70$ & $11/20$ \\
+                   & phase       & $+2.55$ & $+2.57$ & $+2.51$--$+2.63$ & $8/20$ \\
+                   & spectral    & $+2.33$ & $+2.29$ & $+2.04$--$+2.60$ & $11/20$ \\
+    B1 radial      & trajectory  & $+0.00^{\ast}$ & $-1.10$ & $-1.18$--$-0.60$ & $19/20$ \\
+                   & phase       & $+0.56^{\ast}$ & $-0.37$ & $-0.41$--$-0.04$ & $17/20$ \\
+                   & spectral    & $-0.89$ & $-2.86$ & $-3.06$--$-1.81$ & $19/20$ \\
+    B2 wave        & trajectory  & $-0.46^{\ast}$ & $-0.35$ & $-0.47$--$-0.24$ & $6/20$ \\
+                   & phase       & $+0.10^{\ast}$ & $+0.05$ & $-0.03$--$+0.29$ & $12/20$ \\
+                   & spectral    & $-1.59$ & $-1.38$ & $-1.66$--$-1.13$ & $7/20$ \\
+    B3 tilted      & trajectory  & $-1.41$ & $-1.34$ & $-1.37$--$-1.25$ & $0/20$ \\
+                   & phase       & $-0.04^{\ast}$ & $-0.01$ & $-0.03$--$-0.01$ & $0/20$ \\
+                   & spectral    & $-3.52$ & $-3.40$ & $-3.47$--$-3.25$ & $0/20$ \\
+    B4 decaying    & trajectory  & $+2.08$ & $+2.16$ & $+2.01$--$+2.26$ & $8/20$ \\
+                   & phase       & $+2.90$ & $+2.91$ & $+2.88$--$+2.97$ & $7/20$ \\
+                   & energy      & $-1.11$ & $-1.11$ & $-1.11$--$-1.11$ & $11/20$ \\
+                   & spectral    & $+3.76$ & $+3.59$ & $+3.32$--$+4.09$ & $11/20$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}

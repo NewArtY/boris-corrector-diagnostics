@@ -1,0 +1,1241 @@
+{
+ "meta": {
+  "what": "calibration of the W15 stand and the reference, per configuration and per channel",
+  "dt": 0.3,
+  "horizons_samples": {
+   "H_paper": 400,
+   "H_crossover": 2120
+  },
+  "horizons_t": {
+   "H_paper": 120.0,
+   "H_crossover": 636.0
+  },
+  "gyro_orbits": {
+   "H_paper": 19.098593171027442,
+   "H_crossover": 101.22254380644544
+  },
+  "bins_in_band_identity": "n_bins = 0.2 * (gyro-orbits in the record)",
+  "schemes": [
+   "boris",
+   "corrector",
+   "vps2",
+   "vps4",
+   "gl4"
+  ],
+  "fields": [
+   "uniform",
+   "B1_radial",
+   "B2_wave",
+   "B3_tilted",
+   "B4_decaying"
+  ],
+  "channels": [
+   "trajectory",
+   "phase",
+   "energy",
+   "spectral"
+  ],
+  "band_edge_ratio": 0.2,
+  "omega_c_ref_declaration": "Omega_c^ref = |q/m| |B(r_0, 0)|, the initial gyrofrequency of the configuration, declared in gt_common.py before any run; scheme-independent by construction",
+  "phase_definition": "theta = atan2(|v x v_ref|, v . v_ref); never arccos",
+  "n_initial_conditions": 8,
+  "n_random_draws": 0,
+  "seeds": "none drawn here; the initial conditions are ../map/map_common.py:initial_conditions with MAP_SEED",
+  "corrector_checkpoint": "checkpoints/boris_corrector_b4.pt -- one checkpoint, trained on B4 at Omega h = 0.3; every corrector number in this directory is that one run and not an ensemble",
+  "rank_statistic": "spearman rho (primary), kendall tau-b (reported alongside)",
+  "wall_s": 809.1700613498688
+ },
+ "declared_band": {
+  "uniform": {
+   "omega_c_ref_per_ic": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "omega_c_ref_ic0": 1.0,
+   "band_edge_ic0": 0.2,
+   "H_paper": {
+    "omega_c_along_reference_mean_ic0": 1.0,
+    "omega_c_along_reference_min_ic0": 1.0,
+    "omega_c_along_reference_max_ic0": 1.0,
+    "relative_spread_ic0": 0.0,
+    "mean_over_initial_ic0": 1.0,
+    "omega_c_alt_mean_per_ic": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "H_crossover": {
+    "omega_c_along_reference_mean_ic0": 1.0,
+    "omega_c_along_reference_min_ic0": 1.0,
+    "omega_c_along_reference_max_ic0": 1.0,
+    "relative_spread_ic0": 0.0,
+    "mean_over_initial_ic0": 1.0,
+    "omega_c_alt_mean_per_ic": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  },
+  "B1_radial": {
+   "omega_c_ref_per_ic": [
+    1.012,
+    1.0083370720508504,
+    1.0188480986981587,
+    1.0098387051416542,
+    1.0073605298297108,
+    1.013947420424394,
+    1.0167250801996028,
+    1.0132081022744746
+   ],
+   "omega_c_ref_ic0": 1.012,
+   "band_edge_ic0": 0.20240000000000002,
+   "H_paper": {
+    "omega_c_along_reference_mean_ic0": 1.011725116432374,
+    "omega_c_along_reference_min_ic0": 1.0114501736687969,
+    "omega_c_along_reference_max_ic0": 1.012,
+    "relative_spread_ic0": 0.0005434542666509981,
+    "mean_over_initial_ic0": 0.9997283759213181,
+    "omega_c_alt_mean_per_ic": [
+     1.0117251164323735,
+     1.0120009180968281,
+     1.0125380765211147,
+     1.01180286390247,
+     1.0122108100193015,
+     1.011817152940007,
+     1.01215250597513,
+     1.0117665219908805
+    ]
+   },
+   "H_crossover": {
+    "omega_c_along_reference_mean_ic0": 1.0117249612603123,
+    "omega_c_along_reference_min_ic0": 1.0114501654185197,
+    "omega_c_along_reference_max_ic0": 1.012,
+    "relative_spread_ic0": 0.0005434625046666311,
+    "mean_over_initial_ic0": 0.9997282225892414,
+    "omega_c_alt_mean_per_ic": [
+     1.0117249612603119,
+     1.0120028776224081,
+     1.0125354951697303,
+     1.0118039596187736,
+     1.0122132228080338,
+     1.0118159651304022,
+     1.0121501666522679,
+     1.0117657122315342
+    ]
+   }
+  },
+  "B2_wave": {
+   "omega_c_ref_per_ic": [
+    1.0194709171154326,
+    0.9911300653539822,
+    1.0236619599636365,
+    1.013978107698364,
+    0.9970100228490024,
+    0.9792491319506164,
+    1.0169680502917025,
+    0.9958572141045696
+   ],
+   "omega_c_ref_ic0": 1.0194709171154326,
+   "band_edge_ic0": 0.20389418342308652,
+   "H_paper": {
+    "omega_c_along_reference_mean_ic0": 0.9984755291192919,
+    "omega_c_along_reference_min_ic0": 0.9500047928870471,
+    "omega_c_along_reference_max_ic0": 1.0499921325066814,
+    "relative_spread_ic0": 0.10014000013383248,
+    "mean_over_initial_ic0": 0.9794056037855925,
+    "omega_c_alt_mean_per_ic": [
+     0.9984755291192918,
+     0.9985594767695595,
+     0.9983034643858631,
+     0.9986532957847406,
+     0.998632949082486,
+     0.9984434060817315,
+     0.9985596565319712,
+     0.9982216907757312
+    ]
+   },
+   "H_crossover": {
+    "omega_c_along_reference_mean_ic0": 0.999567500878619,
+    "omega_c_along_reference_min_ic0": 0.950000055495772,
+    "omega_c_along_reference_max_ic0": 1.0499997450877836,
+    "relative_spread_ic0": 0.10004295808348301,
+    "mean_over_initial_ic0": 0.9804767199312269,
+    "omega_c_alt_mean_per_ic": [
+     0.9995675008786167,
+     0.9996395124479723,
+     0.9995853452151439,
+     0.9995900310643745,
+     0.9996327099848934,
+     0.999612602452151,
+     0.9996090676785497,
+     0.9995527259573428
+    ]
+   }
+  },
+  "B3_tilted": {
+   "omega_c_ref_per_ic": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "omega_c_ref_ic0": 1.0,
+   "band_edge_ic0": 0.2,
+   "H_paper": {
+    "omega_c_along_reference_mean_ic0": 1.0,
+    "omega_c_along_reference_min_ic0": 1.0,
+    "omega_c_along_reference_max_ic0": 1.0,
+    "relative_spread_ic0": 0.0,
+    "mean_over_initial_ic0": 1.0,
+    "omega_c_alt_mean_per_ic": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "H_crossover": {
+    "omega_c_along_reference_mean_ic0": 1.0,
+    "omega_c_along_reference_min_ic0": 1.0,
+    "omega_c_along_reference_max_ic0": 1.0,
+    "relative_spread_ic0": 0.0,
+    "mean_over_initial_ic0": 1.0,
+    "omega_c_alt_mean_per_ic": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  },
+  "B4_decaying": {
+   "omega_c_ref_per_ic": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "omega_c_ref_ic0": 1.0,
+   "band_edge_ic0": 0.2,
+   "H_paper": {
+    "omega_c_along_reference_mean_ic0": 0.9995014160007372,
+    "omega_c_along_reference_min_ic0": 0.9990029973377464,
+    "omega_c_along_reference_max_ic0": 1.0,
+    "relative_spread_ic0": 0.0009974999997927156,
+    "mean_over_initial_ic0": 0.9995014160007372,
+    "omega_c_alt_mean_per_ic": [
+     0.9995014160007365,
+     0.9995014160007365,
+     0.9995014160007365,
+     0.9995014160007365,
+     0.9995014160007365,
+     0.9995014160007365,
+     0.9995014160007365,
+     0.9995014160007365
+    ]
+   },
+   "H_crossover": {
+    "omega_c_along_reference_mean_ic0": 0.9973559221638918,
+    "omega_c_along_reference_min_ic0": 0.9947165070081679,
+    "omega_c_along_reference_max_ic0": 1.0,
+    "relative_spread_ic0": 0.005297499994153386,
+    "mean_over_initial_ic0": 0.9973559221638918,
+    "omega_c_alt_mean_per_ic": [
+     0.9973559221638906,
+     0.9973559221638906,
+     0.9973559221638906,
+     0.9973559221638906,
+     0.9973559221638906,
+     0.9973559221638906,
+     0.9973559221638906,
+     0.9973559221638906
+    ]
+   }
+  }
+ },
+ "calibration_vs_tab_family": {
+  "rows": {
+   "boris": {
+    "trajectory_rms_401": 0.41665346865457553,
+    "table_family_trajectory": 0.417,
+    "rel_diff_trajectory_vs_printed": 0.0008310104206821345,
+    "energy_median_2nd_half_401": 1.2498392230053668e-06,
+    "table_family_energy": 1.25e-06,
+    "rel_diff_energy_vs_printed": 0.0001286215957066724,
+    "trajectory_rms_400_W15_record": 0.4148833192648656,
+    "energy_median_2nd_half_400_W15_record": 1.2673121372874796e-06,
+    "record_convention_rel_diff_trajectory": 0.004248493107295989,
+    "record_convention_rel_diff_energy": 0.01398012957226404,
+    "flops_per_step": 113.0,
+    "total_flops_400_steps": 45200.0
+   },
+   "corrector": {
+    "trajectory_rms_401": 0.003468873001366504,
+    "table_family_trajectory": 0.00347,
+    "rel_diff_trajectory_vs_printed": 0.00032478346786626525,
+    "energy_median_2nd_half_401": 1.638655802171929e-05,
+    "table_family_energy": 1.64e-05,
+    "rel_diff_energy_vs_printed": 0.0008196328219945298,
+    "trajectory_rms_400_W15_record": 0.003444767390200048,
+    "energy_median_2nd_half_400_W15_record": 1.6359723949421756e-05,
+    "record_convention_rel_diff_trajectory": 0.006949118966580773,
+    "record_convention_rel_diff_energy": 0.0016375661235242726,
+    "flops_per_step": 114091.0,
+    "total_flops_400_steps": 45636400.0
+   },
+   "vps2": {
+    "trajectory_rms_401": 0.010583014451054662,
+    "table_family_trajectory": 0.0106,
+    "rel_diff_trajectory_vs_printed": 0.0016024102778620485,
+    "energy_median_2nd_half_401": 5.568576563752536e-06,
+    "table_family_energy": 5.57e-06,
+    "rel_diff_energy_vs_printed": 0.0002555540839252482,
+    "trajectory_rms_400_W15_record": 0.010594208105207748,
+    "energy_median_2nd_half_400_W15_record": 5.556642361181918e-06,
+    "record_convention_rel_diff_trajectory": 0.0010576999780974475,
+    "record_convention_rel_diff_energy": 0.0021431334262873064,
+    "flops_per_step": 91.0,
+    "total_flops_400_steps": 36400.0
+   },
+   "vps4": {
+    "trajectory_rms_401": 5.353940159721674e-05,
+    "table_family_trajectory": 5.35e-05,
+    "rel_diff_trajectory_vs_printed": 0.0007364784526493819,
+    "energy_median_2nd_half_401": 2.635140666784608e-07,
+    "table_family_energy": 2.64e-07,
+    "rel_diff_energy_vs_printed": 0.0018406565209818293,
+    "trajectory_rms_400_W15_record": 5.359601428791676e-05,
+    "energy_median_2nd_half_400_W15_record": 2.6309010503489105e-07,
+    "record_convention_rel_diff_trajectory": 0.0010574023805108163,
+    "record_convention_rel_diff_energy": 0.0016088767059522584,
+    "flops_per_step": 273.0,
+    "total_flops_400_steps": 109200.0
+   },
+   "gl4": {
+    "trajectory_rms_401": 0.0007745714317733487,
+    "table_family_trajectory": 0.000775,
+    "rel_diff_trajectory_vs_printed": 0.0005529912601952203,
+    "energy_median_2nd_half_401": 4.177814760808474e-08,
+    "table_family_energy": 4.18e-08,
+    "rel_diff_energy_vs_printed": 0.0005227844955803869,
+    "trajectory_rms_400_W15_record": 0.0007726390987256685,
+    "energy_median_2nd_half_400_W15_record": 4.170799744462883e-08,
+    "record_convention_rel_diff_trajectory": 0.002494712518968345,
+    "record_convention_rel_diff_energy": 0.001679111388900626,
+    "flops_per_step": 1932.0,
+    "total_flops_400_steps": 772800.0,
+    "mean_iters": 15.0
+   }
+  },
+  "vs_committed_mp1_calibration": {
+   "boris": {
+    "trajectory_rel_diff_vs_mp1": 0.0,
+    "energy_rel_diff_vs_mp1": 0.0
+   },
+   "corrector": {
+    "trajectory_rel_diff_vs_mp1": 0.0,
+    "energy_rel_diff_vs_mp1": 0.0
+   },
+   "vps2": {
+    "trajectory_rel_diff_vs_mp1": 0.0,
+    "energy_rel_diff_vs_mp1": 0.0
+   },
+   "vps4": {
+    "trajectory_rel_diff_vs_mp1": 0.0,
+    "energy_rel_diff_vs_mp1": 0.0
+   },
+   "gl4": {
+    "trajectory_rel_diff_vs_mp1": 0.0,
+    "energy_rel_diff_vs_mp1": 0.0
+   }
+  },
+  "worst_rel_diff_trajectory_vs_printed": 0.0016024102778620485,
+  "worst_rel_diff_energy_vs_printed": 0.0018406565209818293,
+  "physical_signal_median_2nd_half": 0.0007497187720287846,
+  "table_family_signal_printed": 0.0007497,
+  "signal_rel_diff": 2.503938746779976e-05,
+  "note": "the printed table carries three significant figures, so a relative difference of order 1e-3 against it is the printing and not the stand; the comparison against mp1_calibration.json is the one carried to full precision"
+ },
+ "calibration_vs_sw2_spectra": {
+  "boris": {
+   "p_band_W15": 0.022511266792049105,
+   "p_band_W13": 0.022511266792049105,
+   "p_total_W15": 0.12509572695289425,
+   "p_total_W13": 0.12509572695289425,
+   "n_bins_in_band": 4,
+   "p_band_rel_diff": 0.0
+  },
+  "corrector": {
+   "p_band_W15": 3.953117126865891e-06,
+   "p_band_W13": 3.953117126862971e-06,
+   "p_total_W15": 5.219824545918094e-06,
+   "p_total_W13": 5.219824545915515e-06,
+   "n_bins_in_band": 4,
+   "p_band_rel_diff": 7.388016869741652e-13,
+   "band_ratio_orders_W15": 3.7554602528009857,
+   "band_ratio_orders_W13": 3.755460252801307,
+   "band_ratio_orders_abs_diff": 3.2107649872159527e-13
+  },
+  "vps2": {
+   "p_band_W15": 5.6447229661057536e-05,
+   "p_band_W13": 5.644722966105827e-05,
+   "p_total_W15": 0.00011275377546236423,
+   "p_total_W13": 0.00011275377546236534,
+   "n_bins_in_band": 4,
+   "p_band_rel_diff": 1.2964966940310159e-14,
+   "band_ratio_orders_W15": 2.6007573027295763,
+   "band_ratio_orders_W13": 2.6007573027295705,
+   "band_ratio_orders_abs_diff": 5.773159728050814e-15
+  },
+  "vps4": {
+   "p_band_W15": 1.4424325286429573e-09,
+   "p_band_W13": 1.4424325286438614e-09,
+   "p_total_W15": 2.885773890230781e-09,
+   "p_total_W13": 2.885773890231392e-09,
+   "n_bins_in_band": 4,
+   "p_band_rel_diff": 6.267942462241053e-13,
+   "band_ratio_orders_W15": 7.19330442733712,
+   "band_ratio_orders_W13": 7.193304427336848,
+   "band_ratio_orders_abs_diff": 2.717825964282383e-13
+  },
+  "gl4": {
+   "p_band_W15": 5.420975798416412e-15,
+   "p_band_W13": 5.4209757973879584e-15,
+   "p_total_W15": 4.857174917473781e-07,
+   "p_total_W13": 4.857174917474189e-07,
+   "n_bins_in_band": 4,
+   "p_band_rel_diff": 1.8971745637571143e-10,
+   "band_ratio_orders_W15": 12.61832246663496,
+   "band_ratio_orders_W13": 12.618322466717354,
+   "band_ratio_orders_abs_diff": 8.239453563874122e-11
+  },
+  "_worst_band_ratio_orders_abs_diff": 8.239453563874122e-11,
+  "_note": "the two routes are not expected to agree bit for bit: W13 integrates the planar reduction with a scalar inner loop and W15 the three-dimensional field class with the batched bridge, so they differ by the order in which the same arithmetic is done.  The agreement measured above is what calibrates the spectral channel of this directory"
+ },
+ "calibration_vs_t1_phase": {
+  "t1_target_deg": 38.11025976010511,
+  "article_deg": 38.11,
+  "reproductions": {
+   "t1_recipe_boris_h_over_150_arccos": {
+    "deg": 38.11025976010508,
+    "abs_diff_vs_t1": 2.842170943040401e-14,
+    "rel_diff_vs_t1": 7.457757992024145e-16
+   },
+   "same_reference_atan2": {
+    "deg": 38.11025976010509,
+    "abs_diff_vs_t1": 2.1316282072803006e-14,
+    "rel_diff_vs_t1": 5.593318494018109e-16
+   },
+   "closed_form_reference_atan2": {
+    "deg": 38.11193352741636,
+    "abs_diff_vs_t1": 0.001673767311253016,
+    "rel_diff_vs_t1": 4.391907380818125e-05,
+    "note": "a different reference from t1's, so this is not expected to agree to rounding; the h/150 Boris reference carries its own phase lag, smaller by 150^2"
+   }
+  },
+  "arccos_vs_atan2_per_scheme": {
+   "boris": {
+    "theta_atan2_rad": 0.6651787243546321,
+    "theta_arccos_rad": 0.6651787243546321,
+    "arccos_over_atan2": 1.0,
+    "arccos_is_exactly_zero": false
+   },
+   "corrector": {
+    "theta_atan2_rad": 0.0008361953882201277,
+    "theta_arccos_rad": 0.0008361953882810529,
+    "arccos_over_atan2": 1.00000000007286,
+    "arccos_is_exactly_zero": false
+   },
+   "vps2": {
+    "theta_atan2_rad": 3.102861310420983e-08,
+    "theta_arccos_rad": 2.9802322387695312e-08,
+    "arccos_over_atan2": 0.9604787132316869,
+    "arccos_is_exactly_zero": false
+   },
+   "vps4": {
+    "theta_atan2_rad": 1.571526471434104e-10,
+    "theta_arccos_rad": 0.0,
+    "arccos_over_atan2": 0.0,
+    "arccos_is_exactly_zero": true
+   },
+   "gl4": {
+    "theta_atan2_rad": 0.0010051942319618812,
+    "theta_arccos_rad": 0.0010051942319848936,
+    "arccos_over_atan2": 1.0000000000228935,
+    "arccos_is_exactly_zero": false
+   }
+  },
+  "resolution_note": "arccos of a double-precision cosine cannot resolve an angle below about sqrt(2 eps) = 2.1e-8 rad; three of the five schemes sit below that, so the phase channel of this wave is measured with the two-argument arctangent throughout and arccos appears nowhere outside this calibration",
+  "sqrt_2eps_rad": 2.1073424255447017e-08
+ },
+ "reference_floors": {
+  "per_configuration": {
+   "uniform": {
+    "closed_form": "exact cyclotron orbit about z",
+    "reference_primary": "closed form",
+    "reference_second": "DOP853 rtol 3e-14 atol 1e-16",
+    "H_paper": {
+     "trajectory": {
+      "floor_primary_statistic": {
+       "ic0": 1.755640907126511e-13,
+       "median": 1.7287003645539033e-13,
+       "min": 1.6767958301387828e-13,
+       "max": 1.755640907126511e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.755640907126511e-13,
+       "median": 1.7287003645539033e-13,
+       "min": 1.6767958301387828e-13,
+       "max": 1.755640907126511e-13,
+       "n_finite": 8
+      }
+     },
+     "phase": {
+      "floor_primary_statistic": {
+       "ic0": 2.2429280654990195e-13,
+       "median": 2.2143078363851774e-13,
+       "min": 2.1536891012754084e-13,
+       "max": 2.2429280654990195e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.7343296783306887e-13,
+       "median": 1.7019251917228261e-13,
+       "min": 1.651573404596855e-13,
+       "max": 1.7343296783306887e-13,
+       "n_finite": 8
+      }
+     },
+     "energy": {
+      "floor_primary_statistic": {
+       "ic0": 2.986499936241671e-14,
+       "median": 3.03120865112803e-14,
+       "min": 2.7779317389801003e-14,
+       "max": 3.295159139111894e-14,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 5.4806082019774175e-14,
+       "median": 5.345166954057636e-14,
+       "min": 5.205593620401221e-14,
+       "max": 5.4806082019774175e-14,
+       "n_finite": 8
+      }
+     },
+     "spectral": {
+      "floor_primary_statistic": {
+       "ic0": 8.150680273617425e-29,
+       "median": 4.365751912457875e-29,
+       "min": 1.7774898806990836e-30,
+       "max": 1.124639518664434e-28,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 9.02811180348218e-15,
+       "median": 6.278293532269626e-15,
+       "min": 1.3332253675575948e-15,
+       "max": 1.0604902256336143e-14,
+       "n_finite": 8
+      }
+     }
+    },
+    "H_crossover": {
+     "trajectory": {
+      "floor_primary_statistic": {
+       "ic0": 9.236274742170597e-13,
+       "median": 9.138487937604313e-13,
+       "min": 8.870256575302844e-13,
+       "max": 9.255638321599951e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 9.236274742170597e-13,
+       "median": 9.138487937604313e-13,
+       "min": 8.870256575302844e-13,
+       "max": 9.255638321599951e-13,
+       "n_finite": 8
+      }
+     },
+     "phase": {
+      "floor_primary_statistic": {
+       "ic0": 1.1986800441122483e-12,
+       "median": 1.179837244723429e-12,
+       "min": 1.1474187172759656e-12,
+       "max": 1.1986800441122483e-12,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 9.212048757704537e-13,
+       "median": 9.07247653074875e-13,
+       "min": 8.826043738583675e-13,
+       "max": 9.212048757704537e-13,
+       "n_finite": 8
+      }
+     },
+     "energy": {
+      "floor_primary_statistic": {
+       "ic0": 1.549316230864406e-13,
+       "median": 1.449323664867348e-13,
+       "min": 1.344368334086007e-13,
+       "max": 1.549316230864406e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.3343251098002468e-13,
+       "median": 1.249166157502864e-13,
+       "min": 1.189394425149335e-13,
+       "max": 1.3343251098002468e-13,
+       "n_finite": 8
+      }
+     },
+     "spectral": {
+      "floor_primary_statistic": {
+       "ic0": 9.17087826463583e-29,
+       "median": 1.113189943059756e-27,
+       "min": 9.17087826463583e-29,
+       "max": 5.824119629682441e-27,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 9.576470260297282e-15,
+       "median": 3.2905664321517623e-14,
+       "min": 9.576470260297282e-15,
+       "max": 7.631591989671906e-14,
+       "n_finite": 8
+      }
+     }
+    }
+   },
+   "B1_radial": {
+    "closed_form": null,
+    "reference_primary": "DOP853 rtol 3e-14 atol 1e-16",
+    "reference_second": "DOP853 rtol 1e-13 atol 1e-15",
+    "H_paper": {
+     "trajectory": {
+      "floor_primary_statistic": {
+       "ic0": 5.215069568913599e-13,
+       "median": 5.043750391376998e-13,
+       "min": 4.766924561314179e-13,
+       "max": 5.215069568913599e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 5.215069568913599e-13,
+       "median": 5.043750391376998e-13,
+       "min": 4.766924561314179e-13,
+       "max": 5.215069568913599e-13,
+       "n_finite": 8
+      }
+     },
+     "phase": {
+      "floor_primary_statistic": {
+       "ic0": 6.656342144140552e-13,
+       "median": 6.447031378262879e-13,
+       "min": 5.958495584827017e-13,
+       "max": 6.656342144140552e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 5.122305208677945e-13,
+       "median": 4.947734682204976e-13,
+       "min": 4.641620452545525e-13,
+       "max": 5.122305208677945e-13,
+       "n_finite": 8
+      }
+     },
+     "energy": {
+      "floor_primary_statistic": {
+       "ic0": 9.270362255620057e-14,
+       "median": 9.44649937032343e-14,
+       "min": 8.32403924014874e-14,
+       "max": 1.0288243105168585e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.9279973993037654e-13,
+       "median": 1.8206769093622315e-13,
+       "min": 1.729475914172407e-13,
+       "max": 1.9439337935106824e-13,
+       "n_finite": 8
+      }
+     },
+     "spectral": {
+      "floor_primary_statistic": {
+       "ic0": 3.193953199949828e-30,
+       "median": 1.7050169199078487e-28,
+       "min": 3.193953199949828e-30,
+       "max": 3.753750955953532e-28,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.787163450820833e-15,
+       "median": 1.3045550007579068e-14,
+       "min": 1.787163450820833e-15,
+       "max": 1.9374599237025605e-14,
+       "n_finite": 8
+      }
+     }
+    },
+    "H_crossover": {
+     "trajectory": {
+      "floor_primary_statistic": {
+       "ic0": 3.2096878596637825e-12,
+       "median": 3.1256334864525937e-12,
+       "min": 2.9627505889690207e-12,
+       "max": 3.2338191259369193e-12,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 3.2096878596637825e-12,
+       "median": 3.1256334864525937e-12,
+       "min": 2.9627505889690207e-12,
+       "max": 3.2338191259369193e-12,
+       "n_finite": 8
+      }
+     },
+     "phase": {
+      "floor_primary_statistic": {
+       "ic0": 4.158340338734593e-12,
+       "median": 4.039075606081761e-12,
+       "min": 3.7893816710796566e-12,
+       "max": 4.189817923660287e-12,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 3.205257048723788e-12,
+       "median": 3.115851898200695e-12,
+       "min": 2.923526929514979e-12,
+       "max": 3.224779261798192e-12,
+       "n_finite": 8
+      }
+     },
+     "energy": {
+      "floor_primary_statistic": {
+       "ic0": 2.9004576518332215e-13,
+       "median": 2.699774804763803e-13,
+       "min": 2.425357515655556e-13,
+       "max": 2.949549417581759e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 3.0406049048132816e-13,
+       "median": 2.844567346932976e-13,
+       "min": 2.599879530581111e-13,
+       "max": 3.0406049048132816e-13,
+       "n_finite": 8
+      }
+     },
+     "spectral": {
+      "floor_primary_statistic": {
+       "ic0": 3.4766625515674187e-29,
+       "median": 8.798726470954565e-27,
+       "min": 3.4766625515674187e-29,
+       "max": 4.9302416250369526e-26,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 5.896323050484445e-15,
+       "median": 9.324206938912576e-14,
+       "min": 5.896323050484445e-15,
+       "max": 2.2204147416725896e-13,
+       "n_finite": 8
+      }
+     }
+    }
+   },
+   "B2_wave": {
+    "closed_form": null,
+    "reference_primary": "DOP853 rtol 3e-14 atol 1e-16",
+    "reference_second": "DOP853 rtol 1e-13 atol 1e-15",
+    "H_paper": {
+     "trajectory": {
+      "floor_primary_statistic": {
+       "ic0": 3.5201186310514037e-13,
+       "median": 3.4387255949913797e-13,
+       "min": 3.365311991338386e-13,
+       "max": 3.521546040832237e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 3.5201186310514037e-13,
+       "median": 3.4387255949913797e-13,
+       "min": 3.365311991338386e-13,
+       "max": 3.521546040832237e-13,
+       "n_finite": 8
+      }
+     },
+     "phase": {
+      "floor_primary_statistic": {
+       "ic0": 4.4014791811265664e-13,
+       "median": 4.2932119276016e-13,
+       "min": 4.181493764713817e-13,
+       "max": 4.4014791811265664e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 3.348477740975116e-13,
+       "median": 3.3213785337992946e-13,
+       "min": 3.222011755646306e-13,
+       "max": 3.359639898229237e-13,
+       "n_finite": 8
+      }
+     },
+     "energy": {
+      "floor_primary_statistic": {
+       "ic0": 9.364731212713195e-14,
+       "median": 9.293376884912502e-14,
+       "min": 8.377889371527286e-14,
+       "max": 1.0722865953445257e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.6271995823527203e-13,
+       "median": 1.635263051663477e-13,
+       "min": 1.5853598135616414e-13,
+       "max": 1.6927912187284413e-13,
+       "n_finite": 8
+      }
+     },
+     "spectral": {
+      "floor_primary_statistic": {
+       "ic0": 1.2557394543135222e-28,
+       "median": 1.3205010558612222e-28,
+       "min": 9.863379102451445e-29,
+       "max": 2.040310324146248e-28,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.1205978111318629e-14,
+       "median": 1.148784813937772e-14,
+       "min": 9.931454627823381e-15,
+       "max": 1.428394316757893e-14,
+       "n_finite": 8
+      }
+     }
+    },
+    "H_crossover": {
+     "trajectory": {
+      "floor_primary_statistic": {
+       "ic0": 1.8444503898993485e-12,
+       "median": 1.7884425441047163e-12,
+       "min": 1.7394802329183146e-12,
+       "max": 1.8444503898993485e-12,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.8444503898993485e-12,
+       "median": 1.7884425441047163e-12,
+       "min": 1.7394802329183146e-12,
+       "max": 1.8444503898993485e-12,
+       "n_finite": 8
+      }
+     },
+     "phase": {
+      "floor_primary_statistic": {
+       "ic0": 2.3456514508535565e-12,
+       "median": 2.294646122371919e-12,
+       "min": 2.2341874090334003e-12,
+       "max": 2.3466279300264737e-12,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.795393548868431e-12,
+       "median": 1.7669335105818292e-12,
+       "min": 1.7132462539925517e-12,
+       "max": 1.795393548868431e-12,
+       "n_finite": 8
+      }
+     },
+     "energy": {
+      "floor_primary_statistic": {
+       "ic0": 4.159450561758149e-13,
+       "median": 4.1644773380500633e-13,
+       "min": 3.913613064166074e-13,
+       "max": 5.288473270235269e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 3.6661295787714876e-13,
+       "median": 3.669292934700499e-13,
+       "min": 3.5074937606310994e-13,
+       "max": 4.2636162690734525e-13,
+       "n_finite": 8
+      }
+     },
+     "spectral": {
+      "floor_primary_statistic": {
+       "ic0": 2.623392345340074e-28,
+       "median": 2.6634025174696554e-27,
+       "min": 2.623392345340074e-28,
+       "max": 6.168299111376808e-27,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.61968896561657e-14,
+       "median": 5.1607004189106434e-14,
+       "min": 1.61968896561657e-14,
+       "max": 7.853851992097131e-14,
+       "n_finite": 8
+      }
+     }
+    }
+   },
+   "B3_tilted": {
+    "closed_form": "exact cyclotron orbit about the tilted axis; B3 is a static, spatially uniform field",
+    "reference_primary": "closed form",
+    "reference_second": "DOP853 rtol 3e-14 atol 1e-16",
+    "H_paper": {
+     "trajectory": {
+      "floor_primary_statistic": {
+       "ic0": 1.2161164468064555e-13,
+       "median": 1.4099048581776847e-13,
+       "min": 1.2161164468064555e-13,
+       "max": 1.6517732338936013e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.2161164468064555e-13,
+       "median": 1.4099048581776847e-13,
+       "min": 1.2161164468064555e-13,
+       "max": 1.6517732338936013e-13,
+       "n_finite": 8
+      }
+     },
+     "phase": {
+      "floor_primary_statistic": {
+       "ic0": 1.499559355364803e-13,
+       "median": 1.6362261649242752e-13,
+       "min": 1.499559355364803e-13,
+       "max": 1.6564674320616724e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.1501699053314057e-13,
+       "median": 1.2599845816746013e-13,
+       "min": 1.1501699053314057e-13,
+       "max": 1.283113763936182e-13,
+       "n_finite": 8
+      }
+     },
+     "energy": {
+      "floor_primary_statistic": {
+       "ic0": 2.3203661214665772e-14,
+       "median": 2.168731892063018e-14,
+       "min": 1.5472562630191785e-14,
+       "max": 2.543243630858173e-14,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 3.945888312265266e-14,
+       "median": 3.95850271561425e-14,
+       "min": 3.318575034821336e-14,
+       "max": 4.52579748699507e-14,
+       "n_finite": 8
+      }
+     },
+     "spectral": {
+      "floor_primary_statistic": {
+       "ic0": 4.039168553148475e-28,
+       "median": 6.846799485917233e-28,
+       "min": 4.039168553148475e-28,
+       "max": 3.887356882547516e-27,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 2.009768283446745e-14,
+       "median": 2.6164615738503813e-14,
+       "min": 2.009768283446745e-14,
+       "max": 6.234867185872941e-14,
+       "n_finite": 8
+      }
+     }
+    },
+    "H_crossover": {
+     "trajectory": {
+      "floor_primary_statistic": {
+       "ic0": 7.361265245653267e-13,
+       "median": 8.663479632016112e-13,
+       "min": 7.361265245653267e-13,
+       "max": 1.2854113985282386e-12,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 7.361265245653267e-13,
+       "median": 8.663479632016112e-13,
+       "min": 7.361265245653267e-13,
+       "max": 1.2854113985282386e-12,
+       "n_finite": 8
+      }
+     },
+     "phase": {
+      "floor_primary_statistic": {
+       "ic0": 7.957571237756558e-13,
+       "median": 8.915080071941285e-13,
+       "min": 7.957571237756558e-13,
+       "max": 1.141700256752718e-12,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 6.11556816435694e-13,
+       "median": 6.852560039330057e-13,
+       "min": 6.11556816435694e-13,
+       "max": 8.731798946150878e-13,
+       "n_finite": 8
+      }
+     },
+     "energy": {
+      "floor_primary_statistic": {
+       "ic0": 1.1235457009206584e-13,
+       "median": 1.1110905804362888e-13,
+       "min": 8.509909446605482e-14,
+       "max": 1.4857249321062292e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 9.590817571250784e-14,
+       "median": 9.529759211727045e-14,
+       "min": 7.578055154621288e-14,
+       "max": 1.2713731197448645e-13,
+       "n_finite": 8
+      }
+     },
+     "spectral": {
+      "floor_primary_statistic": {
+       "ic0": 9.71284623303074e-26,
+       "median": 9.216135613790744e-26,
+       "min": 7.546438034520984e-27,
+       "max": 6.187320855976914e-25,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 3.116543956537552e-13,
+       "median": 3.034705603135701e-13,
+       "min": 8.68702367587483e-14,
+       "max": 7.865952489035841e-13,
+       "n_finite": 8
+      }
+     }
+    }
+   },
+   "B4_decaying": {
+    "closed_form": "Bessel of order zero in the Larmor frame (../spectral/sw_common.py)",
+    "reference_primary": "closed form",
+    "reference_second": "DOP853 rtol 3e-14 atol 1e-16",
+    "H_paper": {
+     "trajectory": {
+      "floor_primary_statistic": {
+       "ic0": 1.7772499951452685e-13,
+       "median": 1.7387791885690751e-13,
+       "min": 1.6851357950695602e-13,
+       "max": 1.7772499951452685e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.7772499951452685e-13,
+       "median": 1.7387791885690751e-13,
+       "min": 1.6851357950695602e-13,
+       "max": 1.7772499951452685e-13,
+       "n_finite": 8
+      }
+     },
+     "phase": {
+      "floor_primary_statistic": {
+       "ic0": 2.2732262677122324e-13,
+       "median": 2.2271655779946819e-13,
+       "min": 2.1619550932696752e-13,
+       "max": 2.2732262677122324e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.7540928556830837e-13,
+       "median": 1.7125514575316254e-13,
+       "min": 1.660275103523692e-13,
+       "max": 1.7540928556830837e-13,
+       "n_finite": 8
+      }
+     },
+     "energy": {
+      "floor_primary_statistic": {
+       "ic0": 3.4083846855992306e-14,
+       "median": 3.074297040929351e-14,
+       "min": 2.7476141134604523e-14,
+       "max": 3.4083846855992306e-14,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 5.5648259319930264e-14,
+       "median": 5.399754803421476e-14,
+       "min": 5.1003902667833217e-14,
+       "max": 5.576650923057892e-14,
+       "n_finite": 8
+      }
+     },
+     "spectral": {
+      "floor_primary_statistic": {
+       "ic0": 9.587623167194723e-29,
+       "median": 4.843442546668685e-29,
+       "min": 1.016610609886648e-29,
+       "max": 1.7899512031506688e-28,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 9.791640908037183e-15,
+       "median": 6.882273066885986e-15,
+       "min": 3.1884331730281694e-15,
+       "max": 1.337890579662877e-14,
+       "n_finite": 8
+      }
+     }
+    },
+    "H_crossover": {
+     "trajectory": {
+      "floor_primary_statistic": {
+       "ic0": 9.239615794610082e-13,
+       "median": 9.116484569519837e-13,
+       "min": 8.835688446517687e-13,
+       "max": 9.239615794610082e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 9.239615794610082e-13,
+       "median": 9.116484569519837e-13,
+       "min": 8.835688446517687e-13,
+       "max": 9.239615794610082e-13,
+       "n_finite": 8
+      }
+     },
+     "phase": {
+      "floor_primary_statistic": {
+       "ic0": 1.1961518597258913e-12,
+       "median": 1.175728731473137e-12,
+       "min": 1.1379977968715635e-12,
+       "max": 1.1961518597258913e-12,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 9.198910345699466e-13,
+       "median": 9.044720279630088e-13,
+       "min": 8.766172851372617e-13,
+       "max": 9.198910345699466e-13,
+       "n_finite": 8
+      }
+     },
+     "energy": {
+      "floor_primary_statistic": {
+       "ic0": 1.463829057968269e-13,
+       "median": 1.4363565481475424e-13,
+       "min": 1.2342457049354096e-13,
+       "max": 1.5271956566328208e-13,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 1.2771578344022878e-13,
+       "median": 1.2432911475987316e-13,
+       "min": 1.1030104188100056e-13,
+       "max": 1.3098360459639527e-13,
+       "n_finite": 8
+      }
+     },
+     "spectral": {
+      "floor_primary_statistic": {
+       "ic0": 5.863585673460405e-29,
+       "median": 9.91734769916106e-28,
+       "min": 5.863585673460405e-29,
+       "max": 3.3585152213239344e-27,
+       "n_finite": 8
+      },
+      "floor_rms": {
+       "ic0": 7.657405352637671e-15,
+       "median": 3.1476000147005696e-14,
+       "min": 7.657405352637671e-15,
+       "max": 5.795269813670399e-14,
+       "n_finite": 8
+      }
+     }
+    }
+   }
+  },
+  "closed_form_float64_vs_mpmath40_ic0": {
+   "uniform": {
+    "H_paper": {
+     "trajectory": 5.98749331925316e-17,
+     "phase": 0.0,
+     "energy": 0.0,
+     "spectral": 1.6846285914592438e-35
+    },
+    "H_crossover": {
+     "trajectory": 5.99823129055873e-17,
+     "phase": 0.0,
+     "energy": 0.0,
+     "spectral": 7.660344667129292e-35
+    }
+   },
+   "B3_tilted": {
+    "H_paper": {
+     "trajectory": 1.7284366075620695e-15,
+     "phase": 2.2411848714426276e-15,
+     "energy": 0.0,
+     "spectral": 2.4968072320795072e-33
+    },
+    "H_crossover": {
+     "trajectory": 9.152391015927915e-15,
+     "phase": 1.1909090800449025e-14,
+     "energy": 0.0,
+     "spectral": 2.2097334376943816e-33
+    }
+   },
+   "B4_decaying": {
+    "H_paper": {
+     "trajectory": 2.6860611048479565e-16,
+     "phase": 1.666240308727802e-16,
+     "energy": 2.220446049250313e-16,
+     "spectral": 2.0495698600450754e-32
+    },
+    "H_crossover": {
+     "trajectory": 2.759315881997962e-16,
+     "phase": 1.6705802586316678e-16,
+     "energy": 1.1102230246251565e-16,
+     "spectral": 1.8249831998812442e-32
+    }
+   }
+  },
+  "ref_limit_factor": 10.0,
+  "which_floor_applies": "gt2_channels.py scores the three closed-form configurations against the float64 closed form, so the floor that applies to them is closed_form_float64_vs_mpmath40_ic0 and not the distance to DOP853, which is DOP853's error.  B1 and B2 have no closed form, are scored against DOP853 at rtol 3e-14, and take the per_configuration floor",
+  "method": "the second reference is scored through the same four channels as a scheme, so the floor is in the units of each channel; a cell within ref_limit_factor of it is marked in gt3_gtable.json rather than reported as a property of the scheme"
+ }
+}

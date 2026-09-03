@@ -1,0 +1,13 @@
+{
+ "theta_median_2nd_half_deg": 38.11193352733775,
+ "theta_final_deg": 50.79709113634749,
+ "speed_rel_err_median_2nd_half": 6.253056361165375e-07,
+ "pos_err_rms_larmor": 0.4166534686591707,
+ "polar_identity_max_resid": 4.6523115221353e-16,
+ "energy_identity_max_resid": 5.170828762671879e-17,
+ "floor_base": 1.2498530289617449e-06,
+ "floor_shifted": 3.495159717203933e-11,
+ "ratio": 35759.53976608559,
+ "lag_pred_final_deg": 50.80548085490841,
+ "lag_pred_median_2nd_half_deg": 38.118270064594114
+}

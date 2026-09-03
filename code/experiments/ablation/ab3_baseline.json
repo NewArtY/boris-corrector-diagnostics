@@ -1,0 +1,905 @@
+{
+ "meta": {
+  "wave": "W17",
+  "what": "the non-learned corrector: the one-step Boris defect written out by hand and put through the same measurements",
+  "derivation": "ab_common.analytic_defect",
+  "reference": "the closed form of B4 on the working grid",
+  "n_random_draws": 0,
+  "nothing_trained": true,
+  "uses_only_the_networks_own_inputs": true,
+  "variants": {
+   "analytic": {
+    "what": "the hand-written defect, both terms, with the shipped projection",
+    "source": "analytic",
+    "zero_dr": false,
+    "zero_dv": false,
+    "ortho": true,
+    "rescale": true,
+    "gated": false,
+    "analytic_kind": "rotation",
+    "label": "analytic rotation ortho rescale"
+   },
+   "analytic_raw": {
+    "what": "the same, with the projection removed",
+    "source": "analytic",
+    "zero_dr": false,
+    "zero_dv": false,
+    "ortho": false,
+    "rescale": false,
+    "gated": false,
+    "analytic_kind": "rotation",
+    "label": "analytic rotation no-ortho no-rescale"
+   },
+   "analytic_linear": {
+    "what": "the same, with the rotation completion linearised and its angle taken from the series -- no transcendental",
+    "source": "analytic",
+    "zero_dr": false,
+    "zero_dv": false,
+    "ortho": true,
+    "rescale": true,
+    "gated": false,
+    "analytic_kind": "linear",
+    "label": "analytic linear ortho rescale"
+   },
+   "analytic_dr": {
+    "what": "the position term alone",
+    "source": "analytic",
+    "zero_dr": false,
+    "zero_dv": true,
+    "ortho": true,
+    "rescale": true,
+    "gated": false,
+    "analytic_kind": "rotation",
+    "label": "analytic rotation dv=0 ortho rescale"
+   },
+   "analytic_dv": {
+    "what": "the rotation completion alone",
+    "source": "analytic",
+    "zero_dr": true,
+    "zero_dv": false,
+    "ortho": true,
+    "rescale": true,
+    "gated": false,
+    "analytic_kind": "rotation",
+    "label": "analytic rotation dr=0 ortho rescale"
+   },
+   "analytic_order3": {
+    "what": "the position half carried one order further, to -(h^3/3) a'; 1/tau is inverted out of E and the inputs, so this still uses nothing the network is not given",
+    "source": "analytic",
+    "zero_dr": false,
+    "zero_dv": false,
+    "ortho": true,
+    "rescale": true,
+    "gated": false,
+    "analytic_kind": "order3",
+    "label": "analytic order3 ortho rescale"
+   },
+   "analytic_order3_raw": {
+    "what": "the same, with the projection removed",
+    "source": "analytic",
+    "zero_dr": false,
+    "zero_dv": false,
+    "ortho": false,
+    "rescale": false,
+    "gated": false,
+    "analytic_kind": "order3",
+    "label": "analytic order3 no-ortho no-rescale"
+   },
+   "trapezoid": {
+    "what": "no expansion at all: the position update made symmetric, r_{n+1} = r_n + (h/2)(v_n + v_{n+1}), written as a correction to the shipped rule -- six flops",
+    "source": "analytic",
+    "zero_dr": false,
+    "zero_dv": false,
+    "ortho": true,
+    "rescale": true,
+    "gated": false,
+    "analytic_kind": "trapezoid",
+    "label": "analytic trapezoid ortho rescale"
+   },
+   "trapezoid_rot": {
+    "what": "the symmetric position update together with the rotation completion",
+    "source": "analytic",
+    "zero_dr": false,
+    "zero_dv": false,
+    "ortho": true,
+    "rescale": true,
+    "gated": false,
+    "analytic_kind": "trapezoid_rot",
+    "label": "analytic trapezoid_rot ortho rescale"
+   }
+  },
+  "wall_s": 14.624022960662842
+ },
+ "runs": {
+  "boris": {
+   "energy_err_median_2nd_half": 1.2498379314829222e-06,
+   "energy_err_max": 2.499624659257904e-06,
+   "pos_err_final": 0.8731425130081953,
+   "pos_err_rms": 0.41665346865912883,
+   "speed_change_from_initial_max": 0.0004998424942361801,
+   "energy_separation": 599.8527915943222,
+   "traj_gain_over_boris": 1.0
+  },
+  "analytic": {
+   "energy_err_median_2nd_half": 3.8101264565604254e-05,
+   "energy_err_max": 5.095979881986068e-05,
+   "pos_err_final": 0.016180653072621128,
+   "pos_err_rms": 0.04184387968572657,
+   "speed_change_from_initial_max": 0.0004743827005861956,
+   "gate": {
+    "n_steps": 400,
+    "n_gated": 0,
+    "gated_fraction": 0.0,
+    "constraint_max_abs": 2.220446049250313e-16,
+    "constraint_max_rel": 2.220991077180469e-16,
+    "gate_signal_max": null,
+    "gate_signal_median": null
+   },
+   "constraint_max_abs": 2.220446049250313e-16,
+   "constraint_max_rel": 2.220991077180469e-16,
+   "energy_separation": 19.677004970520304,
+   "traj_gain_over_boris": 9.957333588291865,
+   "channels": {
+    "trajectory": {
+     "primary": 0.041843879685757014,
+     "rms": 0.041843879685757014
+    },
+    "phase": {
+     "primary": 0.0001647478964485019,
+     "rms": 0.00012687648295575543
+    },
+    "energy": {
+     "primary": 3.8101264565604254e-05,
+     "rms": 2.952582567743959e-05
+    },
+    "spectral": {
+     "primary": 0.0008826547624892124,
+     "rms": 0.029709506264648904
+    }
+   }
+  },
+  "analytic_raw": {
+   "energy_err_median_2nd_half": 3.810127769110494e-05,
+   "energy_err_max": 5.095981576341835e-05,
+   "pos_err_final": 0.016178608451429516,
+   "pos_err_rms": 0.04184388996767831,
+   "speed_change_from_initial_max": 0.00047438269211041995,
+   "gate": {
+    "n_steps": 400,
+    "n_gated": 0,
+    "gated_fraction": 0.0,
+    "constraint_max_abs": 2.220446049250313e-16,
+    "constraint_max_rel": 2.2211310461133396e-16,
+    "gate_signal_max": null,
+    "gate_signal_median": null
+   },
+   "constraint_max_abs": 2.220446049250313e-16,
+   "constraint_max_rel": 2.2211310461133396e-16,
+   "energy_separation": 19.676998191993235,
+   "traj_gain_over_boris": 9.957331141558939,
+   "channels": {
+    "trajectory": {
+     "primary": 0.04184388996770874,
+     "rms": 0.04184388996770874
+    },
+    "phase": {
+     "primary": 0.0001663838199825731,
+     "rms": 0.0001281365995451702
+    },
+    "energy": {
+     "primary": 3.810127769110494e-05,
+     "rms": 2.9525835769738792e-05
+    },
+    "spectral": {
+     "primary": 0.0008826558115420514,
+     "rms": 0.02970952391981486
+    }
+   }
+  },
+  "analytic_linear": {
+   "energy_err_median_2nd_half": 3.8173075281644486e-05,
+   "energy_err_max": 5.105253413273392e-05,
+   "pos_err_final": 0.005745059362075498,
+   "pos_err_rms": 0.042445531821441077,
+   "speed_change_from_initial_max": 0.00047433631092441697,
+   "gate": {
+    "n_steps": 400,
+    "n_gated": 0,
+    "gated_fraction": 0.0,
+    "constraint_max_abs": 2.220446049250313e-16,
+    "constraint_max_rel": 2.2214471546591465e-16,
+    "gate_signal_max": null,
+    "gate_signal_median": null
+   },
+   "constraint_max_abs": 2.220446049250313e-16,
+   "constraint_max_rel": 2.2214471546591465e-16,
+   "energy_separation": 19.63998883267878,
+   "traj_gain_over_boris": 9.816191499541045,
+   "channels": {
+    "trajectory": {
+     "primary": 0.042445531821416235,
+     "rms": 0.042445531821416235
+    },
+    "phase": {
+     "primary": 0.009117182106206573,
+     "rms": 0.007022754396195875
+    },
+    "energy": {
+     "primary": 3.8173075281644486e-05,
+     "rms": 2.958103217389126e-05
+    },
+    "spectral": {
+     "primary": 0.0008883959424058702,
+     "rms": 0.029805971589697763
+    }
+   }
+  },
+  "analytic_dr": {
+   "energy_err_median_2nd_half": 3.277709355686831e-05,
+   "energy_err_max": 4.398475965894377e-05,
+   "pos_err_final": 0.8511753353582711,
+   "pos_err_rms": 0.49754689326089313,
+   "speed_change_from_initial_max": 0.00047787188146086734,
+   "gate": {
+    "n_steps": 400,
+    "n_gated": 0,
+    "gated_fraction": 0.0,
+    "constraint_max_abs": 0.0,
+    "constraint_max_rel": 0.0,
+    "gate_signal_max": null,
+    "gate_signal_median": null
+   },
+   "constraint_max_abs": 0.0,
+   "constraint_max_rel": 0.0,
+   "energy_separation": 22.873253570812825,
+   "traj_gain_over_boris": 0.8374154764155123,
+   "channels": {
+    "trajectory": {
+     "primary": 0.4975468932612343,
+     "rms": 0.4975468932612343
+    },
+    "phase": {
+     "primary": 0.6651255046930621,
+     "rms": 0.5123330714273364
+    },
+    "energy": {
+     "primary": 3.277709355686831e-05,
+     "rms": 2.5391096878497227e-05
+    },
+    "spectral": {
+     "primary": 0.0005065822055959278,
+     "rms": 0.022507381135883575
+    }
+   }
+  },
+  "analytic_dv": {
+   "energy_err_median_2nd_half": 6.719090744566891e-06,
+   "energy_err_max": 9.555557253682068e-06,
+   "pos_err_final": 0.08176005951485803,
+   "pos_err_rms": 0.20861464126723953,
+   "speed_change_from_initial_max": 0.0004961308695279332,
+   "gate": {
+    "n_steps": 400,
+    "n_gated": 0,
+    "gated_fraction": 0.0,
+    "constraint_max_abs": 2.220446049250313e-16,
+    "constraint_max_rel": 2.2206923430138465e-16,
+    "gate_signal_max": null,
+    "gate_signal_median": null
+   },
+   "constraint_max_abs": 2.220446049250313e-16,
+   "constraint_max_rel": 2.2206923430138465e-16,
+   "energy_separation": 111.58039096982468,
+   "traj_gain_over_boris": 1.9972398204083261,
+   "channels": {
+    "trajectory": {
+     "primary": 0.2086146412670613,
+     "rms": 0.2086146412670613
+    },
+    "phase": {
+     "primary": 0.0001118335338803796,
+     "rms": 8.570238156753956e-05
+    },
+    "energy": {
+     "primary": 6.719090744566891e-06,
+     "rms": 5.3902417244044995e-06
+    },
+    "spectral": {
+     "primary": 0.021906212113817245,
+     "rms": 0.14800747316881416
+    }
+   }
+  },
+  "analytic_order3": {
+   "energy_err_median_2nd_half": 1.695871073303934e-05,
+   "energy_err_max": 2.2679891999999313e-05,
+   "pos_err_final": 0.003039943622237504,
+   "pos_err_rms": 0.007779720577377464,
+   "speed_change_from_initial_max": 0.0004885294650419647,
+   "gate": {
+    "n_steps": 400,
+    "n_gated": 0,
+    "gated_fraction": 0.0,
+    "constraint_max_abs": 2.220446049250313e-16,
+    "constraint_max_rel": 2.2214797910734343e-16,
+    "gate_signal_max": null,
+    "gate_signal_median": null
+   },
+   "constraint_max_abs": 2.220446049250313e-16,
+   "constraint_max_rel": 2.2214797910734343e-16,
+   "energy_separation": 44.208476932145864,
+   "traj_gain_over_boris": 53.55635392236443,
+   "channels": {
+    "trajectory": {
+     "primary": 0.007779720577552305,
+     "rms": 0.007779720577552305
+    },
+    "phase": {
+     "primary": 0.00016784114836324086,
+     "rms": 0.00012930134985834077
+    },
+    "energy": {
+     "primary": 1.695871073303934e-05,
+     "rms": 1.3073322163464602e-05
+    },
+    "spectral": {
+     "primary": 3.112402219832598e-05,
+     "rms": 0.005578890767735642
+    }
+   }
+  },
+  "analytic_order3_raw": {
+   "energy_err_median_2nd_half": 1.6958724020188498e-05,
+   "energy_err_max": 2.267990987081525e-05,
+   "pos_err_final": 0.003039553815671409,
+   "pos_err_rms": 0.007778972100219797,
+   "speed_change_from_initial_max": 0.0004885294561021158,
+   "gate": {
+    "n_steps": 400,
+    "n_gated": 0,
+    "gated_fraction": 0.0,
+    "constraint_max_abs": 2.220446049250313e-16,
+    "constraint_max_rel": 2.2212898247927067e-16,
+    "gate_signal_max": null,
+    "gate_signal_median": null
+   },
+   "constraint_max_abs": 2.220446049250313e-16,
+   "constraint_max_rel": 2.2212898247927067e-16,
+   "energy_separation": 44.20844229483315,
+   "traj_gain_over_boris": 53.56150700776471,
+   "channels": {
+    "trajectory": {
+     "primary": 0.007778972100394599,
+     "rms": 0.007778972100394599
+    },
+    "phase": {
+     "primary": 0.0001694770717013085,
+     "rms": 0.0001305614665000051
+    },
+    "energy": {
+     "primary": 1.6958724020188498e-05,
+     "rms": 1.307333256345474e-05
+    },
+    "spectral": {
+     "primary": 3.112404825723766e-05,
+     "rms": 0.005578893103227347
+    }
+   }
+  },
+  "trapezoid": {
+   "energy_err_median_2nd_half": 1.6479821681847362e-05,
+   "energy_err_max": 2.196234450013712e-05,
+   "pos_err_final": 0.8581911101368845,
+   "pos_err_rms": 0.5025176890128177,
+   "speed_change_from_initial_max": 0.000488888414213573,
+   "gate": {
+    "n_steps": 400,
+    "n_gated": 0,
+    "gated_fraction": 0.0,
+    "constraint_max_abs": 0.0,
+    "constraint_max_rel": 0.0,
+    "gate_signal_max": null,
+    "gate_signal_median": null
+   },
+   "constraint_max_abs": 0.0,
+   "constraint_max_rel": 0.0,
+   "energy_separation": 45.49313619493374,
+   "traj_gain_over_boris": 0.8291319445443468,
+   "channels": {
+    "trajectory": {
+     "primary": 0.5025176890131616,
+     "rms": 0.5025176890131616
+    },
+    "phase": {
+     "primary": 0.6651243401522037,
+     "rms": 0.5123322003558589
+    },
+    "energy": {
+     "primary": 1.6479821681847362e-05,
+     "rms": 1.2694107623826073e-05
+    },
+    "spectral": {
+     "primary": 2.268131464435573e-09,
+     "rms": 4.7624903825998145e-05
+    }
+   }
+  },
+  "trapezoid_rot": {
+   "energy_err_median_2nd_half": 2.1913072002721634e-05,
+   "energy_err_max": 2.9260352463866823e-05,
+   "pos_err_final": 0.003880428035900829,
+   "pos_err_rms": 0.010455071024148098,
+   "speed_change_from_initial_max": 0.0004852376320706453,
+   "gate": {
+    "n_steps": 400,
+    "n_gated": 0,
+    "gated_fraction": 0.0,
+    "constraint_max_abs": 2.220446049250313e-16,
+    "constraint_max_rel": 2.220896001852725e-16,
+    "gate_signal_max": null,
+    "gate_signal_median": null
+   },
+   "constraint_max_abs": 2.220446049250313e-16,
+   "constraint_max_rel": 2.220896001852725e-16,
+   "energy_separation": 34.21331213384358,
+   "traj_gain_over_boris": 39.85180662061343,
+   "channels": {
+    "trajectory": {
+     "primary": 0.0104550710241952,
+     "rms": 0.0104550710241952
+    },
+    "phase": {
+     "primary": 0.00016585340440065005,
+     "rms": 0.00012774981663367767
+    },
+    "energy": {
+     "primary": 2.1913072002721634e-05,
+     "rms": 1.6924617601952848e-05
+    },
+    "spectral": {
+     "primary": 5.523261219865727e-05,
+     "rms": 0.007431864651529741
+    }
+   }
+  },
+  "physical_signal_median": 0.0007497187722405041
+ },
+ "flops": {
+  "model": "one flop per arithmetic operation, twenty per transcendental (Section 9), counted operation by operation in ab_common.flops_analytic_defect",
+  "boris_step": 113.0,
+  "network_forward": 113958,
+  "corrector_step": 114091.0,
+  "projection": 72,
+  "analytic_defect_rotation": 144,
+  "analytic_defect_linear": 62,
+  "per_step": {
+   "analytic": 329.0,
+   "analytic_raw": 257.0,
+   "analytic_linear": 247.0,
+   "analytic_dr": 329.0,
+   "analytic_dv": 329.0,
+   "analytic_order3": 386.0,
+   "analytic_order3_raw": 314.0,
+   "trapezoid": 191.0,
+   "trapezoid_rot": 318.0
+  },
+  "corrector_over_analytic": 346.78115501519756,
+  "corrector_over_analytic_linear": 461.9068825910931,
+  "vps4_step": 273.0
+ },
+ "table": {
+  "learned_corrector": {
+   "energy_separation": 45.752058584917684,
+   "traj_gain_over_boris": 120.11205620944715,
+   "pos_err_rms": 0.003468872999164907,
+   "energy_err_median_2nd_half": 1.6386558232106552e-05,
+   "constraint_max_abs": 2.220446049250313e-16,
+   "flops_per_step": 114091.0,
+   "ensemble_median_traj_gain": 143.11715285905956,
+   "ensemble_range_traj_gain": [
+    45.88278101434951,
+    295.59436383907286
+   ]
+  },
+  "analytic": {
+   "energy_separation": 19.677004970520304,
+   "traj_gain_over_boris": 9.957333588291865,
+   "pos_err_rms": 0.04184387968572657,
+   "energy_err_median_2nd_half": 3.8101264565604254e-05,
+   "constraint_max_abs": 2.220446049250313e-16,
+   "flops_per_step": 329.0
+  },
+  "analytic_raw": {
+   "energy_separation": 19.676998191993235,
+   "traj_gain_over_boris": 9.957331141558939,
+   "pos_err_rms": 0.04184388996767831,
+   "energy_err_median_2nd_half": 3.810127769110494e-05,
+   "constraint_max_abs": 2.220446049250313e-16,
+   "flops_per_step": 257.0
+  },
+  "analytic_linear": {
+   "energy_separation": 19.63998883267878,
+   "traj_gain_over_boris": 9.816191499541045,
+   "pos_err_rms": 0.042445531821441077,
+   "energy_err_median_2nd_half": 3.8173075281644486e-05,
+   "constraint_max_abs": 2.220446049250313e-16,
+   "flops_per_step": 247.0
+  },
+  "analytic_dr": {
+   "energy_separation": 22.873253570812825,
+   "traj_gain_over_boris": 0.8374154764155123,
+   "pos_err_rms": 0.49754689326089313,
+   "energy_err_median_2nd_half": 3.277709355686831e-05,
+   "constraint_max_abs": 0.0,
+   "flops_per_step": 329.0
+  },
+  "analytic_dv": {
+   "energy_separation": 111.58039096982468,
+   "traj_gain_over_boris": 1.9972398204083261,
+   "pos_err_rms": 0.20861464126723953,
+   "energy_err_median_2nd_half": 6.719090744566891e-06,
+   "constraint_max_abs": 2.220446049250313e-16,
+   "flops_per_step": 329.0
+  },
+  "analytic_order3": {
+   "energy_separation": 44.208476932145864,
+   "traj_gain_over_boris": 53.55635392236443,
+   "pos_err_rms": 0.007779720577377464,
+   "energy_err_median_2nd_half": 1.695871073303934e-05,
+   "constraint_max_abs": 2.220446049250313e-16,
+   "flops_per_step": 386.0
+  },
+  "analytic_order3_raw": {
+   "energy_separation": 44.20844229483315,
+   "traj_gain_over_boris": 53.56150700776471,
+   "pos_err_rms": 0.007778972100219797,
+   "energy_err_median_2nd_half": 1.6958724020188498e-05,
+   "constraint_max_abs": 2.220446049250313e-16,
+   "flops_per_step": 314.0
+  },
+  "trapezoid": {
+   "energy_separation": 45.49313619493374,
+   "traj_gain_over_boris": 0.8291319445443468,
+   "pos_err_rms": 0.5025176890128177,
+   "energy_err_median_2nd_half": 1.6479821681847362e-05,
+   "constraint_max_abs": 0.0,
+   "flops_per_step": 191.0
+  },
+  "trapezoid_rot": {
+   "energy_separation": 34.21331213384358,
+   "traj_gain_over_boris": 39.85180662061343,
+   "pos_err_rms": 0.010455071024148098,
+   "energy_err_median_2nd_half": 2.1913072002721634e-05,
+   "constraint_max_abs": 2.220446049250313e-16,
+   "flops_per_step": 318.0
+  },
+  "boris": {
+   "energy_separation": 599.8527915943222,
+   "traj_gain_over_boris": 1.0,
+   "pos_err_rms": 0.4166534686594656,
+   "energy_err_median_2nd_half": 1.2498379314829222e-06,
+   "constraint_max_abs": null,
+   "flops_per_step": 113.0
+  },
+  "vps2": {
+   "energy_separation": 134.63382161538894,
+   "traj_gain_over_boris": 39.370017929553555,
+   "pos_err_rms": 0.010583014450361729,
+   "energy_err_median_2nd_half": 5.568576775472067e-06,
+   "constraint_max_abs": null,
+   "flops_per_step": 91.0
+  },
+  "vps4": {
+   "energy_separation": 2845.0829363691396,
+   "traj_gain_over_boris": 7782.183991937305,
+   "pos_err_rms": 5.3539400904827934e-05,
+   "energy_err_median_2nd_half": 2.6351385495893e-07,
+   "constraint_max_abs": null,
+   "flops_per_step": 273.0
+  },
+  "gl4": {
+   "energy_separation": 17945.146346255377,
+   "traj_gain_over_boris": 537.9148377887809,
+   "pos_err_rms": 0.0007745714365720284,
+   "energy_err_median_2nd_half": 4.177835932761553e-08,
+   "constraint_max_abs": null,
+   "flops_per_step": 1932.0
+  }
+ },
+ "P2": {
+  "note": "the non-learned corrector against the learned one, on the same reference, the same field, the same step and the same statistic",
+  "analytic_order3": {
+   "trajectory": {
+    "learned_gain_over_boris": 120.11205620944715,
+    "non_learned_gain_over_boris": 53.55635392236443,
+    "share_of_the_learned_gain": 0.4458865796866782,
+    "error_ratio_to_learned": 2.2427228034149262,
+    "beats_the_committed_checkpoint": false,
+    "beats_n_of_the_twenty_retrainings": 2,
+    "learned_ensemble_median_gain": 143.11715285905956,
+    "learned_ensemble_gain_range": [
+     45.88278101434951,
+     295.59436383907286
+    ],
+    "inside_the_learned_ensemble_range": true
+   },
+   "energy": {
+    "learned_separation": 45.752058584917684,
+    "non_learned_separation": 44.208476932145864,
+    "share_of_the_learned_separation": 0.9662620284089104,
+    "boris_separation": 599.8527915943222
+   },
+   "cost": {
+    "learned_flops_per_step": 114091.0,
+    "non_learned_flops_per_step": 386.0,
+    "ratio": 295.57253886010363
+   },
+   "accuracy_per_flop_ratio": 131.7918284016394,
+   "training_cost_not_paid_by_the_non_learned_form": "one training of the corrector is 7.71e11 flops (W16), which the cost column does not contain; the non-learned form has no training term at all"
+  },
+  "analytic": {
+   "trajectory": {
+    "learned_gain_over_boris": 120.11205620944715,
+    "non_learned_gain_over_boris": 9.957333588291865,
+    "share_of_the_learned_gain": 0.08290036739466536,
+    "error_ratio_to_learned": 12.06267271698907,
+    "beats_the_committed_checkpoint": false,
+    "beats_n_of_the_twenty_retrainings": 0,
+    "learned_ensemble_median_gain": 143.11715285905956,
+    "learned_ensemble_gain_range": [
+     45.88278101434951,
+     295.59436383907286
+    ],
+    "inside_the_learned_ensemble_range": false
+   },
+   "energy": {
+    "learned_separation": 45.752058584917684,
+    "non_learned_separation": 19.677004970520304,
+    "share_of_the_learned_separation": 0.4300791172925909,
+    "boris_separation": 599.8527915943222
+   },
+   "cost": {
+    "learned_flops_per_step": 114091.0,
+    "non_learned_flops_per_step": 329.0,
+    "ratio": 346.78115501519756
+   },
+   "accuracy_per_flop_ratio": 28.748285156306277,
+   "training_cost_not_paid_by_the_non_learned_form": "one training of the corrector is 7.71e11 flops (W16), which the cost column does not contain; the non-learned form has no training term at all"
+  },
+  "trapezoid_rot": {
+   "trajectory": {
+    "learned_gain_over_boris": 120.11205620944715,
+    "non_learned_gain_over_boris": 39.85180662061343,
+    "share_of_the_learned_gain": 0.33178856376516663,
+    "error_ratio_to_learned": 3.0139676565458124,
+    "beats_the_committed_checkpoint": false,
+    "beats_n_of_the_twenty_retrainings": 0,
+    "learned_ensemble_median_gain": 143.11715285905956,
+    "learned_ensemble_gain_range": [
+     45.88278101434951,
+     295.59436383907286
+    ],
+    "inside_the_learned_ensemble_range": false
+   },
+   "energy": {
+    "learned_separation": 45.752058584917684,
+    "non_learned_separation": 34.21331213384358,
+    "share_of_the_learned_separation": 0.7477983109840245,
+    "boris_separation": 599.8527915943222
+   },
+   "cost": {
+    "learned_flops_per_step": 114091.0,
+    "non_learned_flops_per_step": 318.0,
+    "ratio": 358.77672955974845
+   },
+   "accuracy_per_flop_ratio": 119.03801581299254,
+   "training_cost_not_paid_by_the_non_learned_form": "one training of the corrector is 7.71e11 flops (W16), which the cost column does not contain; the non-learned form has no training term at all"
+  },
+  "ensemble_error_min": 0.0014095446991877112
+ },
+ "equal_cost": {
+  "form": "analytic_order3",
+  "substeps_per_corrector_step": 295,
+  "sub_dt": 0.001016949152542373,
+  "omega_h": 0.001016949152542373,
+  "pos_err_rms": 4.4060444162536975e-07,
+  "energy_err_median_2nd_half": 1.988140763131696e-10,
+  "energy_separation": 3770954.180626305,
+  "learned_pos_err_rms": 0.003468872999164907,
+  "ratio_to_learned": 0.00012701659637912382,
+  "vps4_pos_err_rms": 5.3539400904827934e-05,
+  "note": "the largest integer m for which m steps of the non-learned scheme cost no more than one step of the learned one, and what it reaches on that budget"
+ },
+ "omitted_term": {
+  "what": "the map takes E at the left end of the step; the exact impulse is h E(r_mid, t_mid), a difference of O(h^2 dE/dt)",
+  "E_scale": 4.166666666666667e-06,
+  "estimated_per_step_velocity_defect": 1.875e-07,
+  "why_not_corrected": "it cannot be formed from the thirteen inputs the network is given, and correcting it here would make the comparison unequal"
+ },
+ "defect_comparison": {
+  "n_states": 400,
+  "magnitudes": {
+   "true": {
+    "position_median": 0.044192624606358484,
+    "velocity_median": 0.0022157008206047796
+   },
+   "trained": {
+    "position_median": 0.04389433483682147,
+    "velocity_median": 0.0022156047267777304
+   },
+   "network": {
+    "position_median": 0.04396038489621519,
+    "velocity_median": 0.0022192097122968905
+   },
+   "analytic": {
+    "position_median": 0.04496634696531077,
+    "velocity_median": 0.002216258812825833
+   },
+   "analytic_order3": {
+    "position_median": 0.04585586666351606,
+    "velocity_median": 0.002216258812825833
+   }
+  },
+  "network_vs_true": {
+   "position": {
+    "median": 0.00528101261949067,
+    "mean": 0.005392961376890258,
+    "max": 0.008673581190447725
+   },
+   "velocity": {
+    "median": 0.0020337317724147957,
+    "mean": 0.0020233182876842155,
+    "max": 0.0073601596520656435
+   },
+   "both": {
+    "median": 0.005275202072010179,
+    "mean": 0.005387457098047583,
+    "max": 0.008670542687074097
+   }
+  },
+  "analytic_vs_true": {
+   "position": {
+    "median": 0.20061623155648356,
+    "mean": 0.2006162402098085,
+    "max": 0.200717030645881
+   },
+   "velocity": {
+    "median": 0.00025212595583494436,
+    "mean": 0.000252126007751413,
+    "max": 0.0002523770348628667
+   },
+   "both": {
+    "median": 0.20036455648945803,
+    "mean": 0.2003645648781245,
+    "max": 0.20046472509288005
+   }
+  },
+  "analytic_order3_vs_true": {
+   "position": {
+    "median": 0.0376543947493988,
+    "mean": 0.03765440112954254,
+    "max": 0.037692173445527735
+   },
+   "velocity": {
+    "median": 0.00025212595583494436,
+    "mean": 0.000252126007751413,
+    "max": 0.0002523770348628667
+   },
+   "both": {
+    "median": 0.037607158979483454,
+    "mean": 0.03760716528813134,
+    "max": 0.037644795628696576
+   }
+  },
+  "network_vs_trained": {
+   "position": {
+    "median": 0.001812596360493621,
+    "mean": 0.0018742676829058649,
+    "max": 0.006922841963070843
+   },
+   "velocity": {
+    "median": 0.002075142225576484,
+    "mean": 0.002053998208988309,
+    "max": 0.007376303724288679
+   },
+   "both": {
+    "median": 0.001814698974920721,
+    "mean": 0.0018749063952812489,
+    "max": 0.006924029651075548
+   }
+  },
+  "analytic_vs_trained": {
+   "position": {
+    "median": 0.20233814882358175,
+    "mean": 0.20233815749957174,
+    "max": 0.20243971232852329
+   },
+   "velocity": {
+    "median": 0.0002954612079587516,
+    "mean": 0.00029546123403487883,
+    "max": 0.00029570884984194947
+   },
+   "both": {
+    "median": 0.2020808809463145,
+    "mean": 0.20208088935244872,
+    "max": 0.20218180005423822
+   }
+  },
+  "analytic_order3_vs_trained": {
+   "position": {
+    "median": 0.044713079140132214,
+    "mean": 0.04471308557466,
+    "max": 0.044751208707947084
+   },
+   "velocity": {
+    "median": 0.0002954612079587516,
+    "mean": 0.00029546123403487883,
+    "max": 0.00029570884984194947
+   },
+   "both": {
+    "median": 0.044656229945062076,
+    "mean": 0.04465623630086309,
+    "max": 0.04469419712732642
+   }
+  },
+  "trained_vs_true": {
+   "position": {
+    "median": 0.0067576632613834285,
+    "mean": 0.0067576632700383655,
+    "max": 0.00675775384911548
+   },
+   "velocity": {
+    "median": 4.3370890545841036e-05,
+    "mean": 4.3370773524018696e-05,
+    "max": 4.337684327924387e-05
+   },
+   "both": {
+    "median": 0.006749186041302433,
+    "mean": 0.0067491860441916554,
+    "max": 0.006749259546351683
+   }
+  },
+  "network_vs_analytic": {
+   "position": {
+    "median": 0.1972830869984603,
+    "mean": 0.19761517626756678,
+    "max": 0.2039555666617346
+   },
+   "velocity": {
+    "median": 0.001799891335623487,
+    "mean": 0.001856569317270053,
+    "max": 0.0072829597716945315
+   },
+   "both": {
+    "median": 0.19704357925146238,
+    "mean": 0.19737561673886256,
+    "max": 0.20370908668911086
+   }
+  },
+  "network_vs_analytic_order3": {
+   "position": {
+    "median": 0.041277300429035074,
+    "mean": 0.04136157953142531,
+    "max": 0.04300346110115674
+   },
+   "velocity": {
+    "median": 0.001799891335623487,
+    "mean": 0.001856569317270053,
+    "max": 0.0072829597716945315
+   },
+   "both": {
+    "median": 0.041229520842078524,
+    "mean": 0.041313487576472324,
+    "max": 0.0429532862774989
+   }
+  },
+  "network_analytic_correlation": [
+   0.9804417479842507,
+   0.9801227283044784,
+   null,
+   0.9999989318935953,
+   0.9999985096044901,
+   null
+  ]
+ }
+}

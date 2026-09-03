@@ -1,0 +1,254 @@
+{
+ "M1_limit_points_and_degeneracy": [
+  {
+   "case": "co-rotating DC, generic phase pi/4",
+   "a": 0.0,
+   "H": 1.0,
+   "predicted_p": 1.0,
+   "exponent": 1.0146989154097703
+  },
+  {
+   "case": "co-rotating DC, degenerate: S _|_ z0",
+   "a": 0.0,
+   "H": 1.0,
+   "predicted_p": 2.0,
+   "exponent": 1.9999999999995832
+  },
+  {
+   "case": "lab resonance at omega_h, NO chirp (tau=inf): a=0, H=1",
+   "a": 0.0,
+   "H": 1.0,
+   "predicted_p": 1.0,
+   "exponent": 1.005321789578032
+  },
+  {
+   "case": "phase-tracking drive sin(Phi_n) in the chirped field: a=0, H=1",
+   "a": 0.0,
+   "H": 1.0,
+   "predicted_p": 1.0,
+   "exponent": 1.0053234468546204
+  },
+  {
+   "case": "lab resonance at omega_h(0) WITH chirp (campaign config)",
+   "a": 0.0,
+   "H": "1 up to T*, 0 after",
+   "predicted_p": "window average",
+   "exponent": 0.5447571618343561
+  },
+  {
+   "case": "co-rotating DC with growing amplitude a=0.25, H=1",
+   "a": 0.25,
+   "H": 1.0,
+   "predicted_p": 1.25,
+   "exponent": 1.2617731687854143
+  },
+  {
+   "case": "co-rotating DC with growing amplitude a=0.5, H=1",
+   "a": 0.5,
+   "H": 1.0,
+   "predicted_p": 1.5,
+   "exponent": 1.5096239160084681
+  }
+ ],
+ "M3_AR1_horizon_sweep": [
+  {
+   "rho": 0.9,
+   "gyros": 1000.0,
+   "N_steps": 20944,
+   "window_fit_exponent_closed_form": 0.5037889466580534
+  },
+  {
+   "rho": 0.9,
+   "gyros": 10000.0,
+   "N_steps": 209440,
+   "window_fit_exponent_closed_form": 0.5003734580547029
+  },
+  {
+   "rho": 0.9,
+   "gyros": 100000.0,
+   "N_steps": 2094395,
+   "window_fit_exponent_closed_form": 0.500037294231756
+  },
+  {
+   "rho": 0.9,
+   "gyros": 1000000.0,
+   "N_steps": 20943951,
+   "window_fit_exponent_closed_form": 0.5000037289065531
+  },
+  {
+   "rho": 0.9,
+   "gyros": 10000000.0,
+   "N_steps": 209439510,
+   "window_fit_exponent_closed_form": 0.5000003728854704
+  },
+  {
+   "rho": 0.99,
+   "gyros": 1000.0,
+   "N_steps": 20944,
+   "window_fit_exponent_closed_form": 0.5443014810219139
+  },
+  {
+   "rho": 0.99,
+   "gyros": 10000.0,
+   "N_steps": 209440,
+   "window_fit_exponent_closed_form": 0.5039811159168046
+  },
+  {
+   "rho": 0.99,
+   "gyros": 100000.0,
+   "N_steps": 2094395,
+   "window_fit_exponent_closed_form": 0.5003922582149108
+  },
+  {
+   "rho": 0.99,
+   "gyros": 1000000.0,
+   "N_steps": 20943951,
+   "window_fit_exponent_closed_form": 0.5000391686254684
+  },
+  {
+   "rho": 0.99,
+   "gyros": 10000000.0,
+   "N_steps": 209439510,
+   "window_fit_exponent_closed_form": 0.5000039162917007
+  },
+  {
+   "rho": 0.999,
+   "gyros": 1000.0,
+   "N_steps": 20944,
+   "window_fit_exponent_closed_form": 0.7481980336623593
+  },
+  {
+   "rho": 0.999,
+   "gyros": 10000.0,
+   "N_steps": 209440,
+   "window_fit_exponent_closed_form": 0.5444926961205854
+  },
+  {
+   "rho": 0.999,
+   "gyros": 100000.0,
+   "N_steps": 2094395,
+   "window_fit_exponent_closed_form": 0.5039995549016705
+  },
+  {
+   "rho": 0.999,
+   "gyros": 1000000.0,
+   "N_steps": 20943951,
+   "window_fit_exponent_closed_form": 0.500394045091395
+  },
+  {
+   "rho": 0.999,
+   "gyros": 10000000.0,
+   "N_steps": 209439510,
+   "window_fit_exponent_closed_form": 0.5000393467814652
+  }
+ ],
+ "M3_note": "AR(1) has exponentially decaying memory: its true Hurst exponent is exactly 1/2.  The elevated exponents are the ballistic->diffusive crossover seen inside a finite fit window; they decay to 1/2 as T grows.",
+ "M4_linear_regime_breakdown": [
+  {
+   "kappa": 3.47e-07,
+   "median_final_|S_N|/|z0|": 0.00010947550818169339,
+   "exponent_mean": 0.50275113472662,
+   "linear_pred_(a+H)": 0.5,
+   "quadratic_pred_2(a+H)": 1.0
+  },
+  {
+   "kappa": 0.000347,
+   "median_final_|S_N|/|z0|": 0.10947550818169582,
+   "exponent_mean": 0.49907894758645405,
+   "linear_pred_(a+H)": 0.5,
+   "quadratic_pred_2(a+H)": 1.0
+  },
+  {
+   "kappa": 0.003,
+   "median_final_|S_N|/|z0|": 0.9464741341356808,
+   "exponent_mean": 0.5699671560540291,
+   "linear_pred_(a+H)": 0.5,
+   "quadratic_pred_2(a+H)": 1.0
+  },
+  {
+   "kappa": 0.01,
+   "median_final_|S_N|/|z0|": 3.1549137804523353,
+   "exponent_mean": 0.8630534521999793,
+   "linear_pred_(a+H)": 0.5,
+   "quadratic_pred_2(a+H)": 1.0
+  },
+  {
+   "kappa": 0.03,
+   "median_final_|S_N|/|z0|": 9.464741341356893,
+   "exponent_mean": 0.9954063403005088,
+   "linear_pred_(a+H)": 0.5,
+   "quadratic_pred_2(a+H)": 1.0
+  },
+  {
+   "kappa": 0.1,
+   "median_final_|S_N|/|z0|": 31.549137804522953,
+   "exponent_mean": 1.0117396656528757,
+   "linear_pred_(a+H)": 0.5,
+   "quadratic_pred_2(a+H)": 1.0
+  }
+ ],
+ "M5_baseline_floor_median": 1.2494809076279978e-09,
+ "M5_full_nonlinear_boris": [
+  {
+   "a": 0.0,
+   "H": 0.5,
+   "predicted_p": 0.5,
+   "n_seeds": 12,
+   "exponent_mean": 0.5090556670918319,
+   "exponent_std": 0.162378050640621,
+   "final_dev": 8.783201094986204e-06
+  },
+  {
+   "a": 0.25,
+   "H": 0.5,
+   "predicted_p": 0.75,
+   "n_seeds": 12,
+   "exponent_mean": 0.7774385247450107,
+   "exponent_std": 0.14015988131001167,
+   "final_dev": 3.873810089149998e-06
+  },
+  {
+   "a": 0.4,
+   "H": 0.5,
+   "predicted_p": 0.9,
+   "n_seeds": 12,
+   "exponent_mean": 0.943573862294118,
+   "exponent_std": 0.1581757583479252,
+   "final_dev": 1.6461800694811402e-06
+  },
+  {
+   "a": 0.0,
+   "H": 0.8,
+   "predicted_p": 0.8,
+   "n_seeds": 12,
+   "exponent_mean": 0.7372462463896848,
+   "exponent_std": 0.27691983061057474,
+   "final_dev": 5.040184436977402e-05
+  },
+  {
+   "a": 0.25,
+   "H": 0.8,
+   "predicted_p": 1.05,
+   "n_seeds": 12,
+   "exponent_mean": 0.9859788341190997,
+   "exponent_std": 0.23212718041392025,
+   "final_dev": 0.00032318442392420543
+  },
+  {
+   "a": 0.0,
+   "H": 1.0,
+   "predicted_p": 1.0,
+   "n_seeds": 1,
+   "exponent_mean": 1.000230834390781,
+   "exponent_std": 0.0,
+   "final_dev": 0.0017785268681506095
+  }
+ ],
+ "M5_setup": {
+  "gyros": 3000.0,
+  "h": 0.3,
+  "tau": 120000000.0,
+  "kick_amplitude": 2e-08,
+  "note": "kick placed in the frame co-rotating with the measured numerical gyrophase of the unperturbed Boris run"
+ }
+}

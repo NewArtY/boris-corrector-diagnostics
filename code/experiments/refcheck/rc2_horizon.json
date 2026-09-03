@@ -1,0 +1,785 @@
+{
+ "meta": {
+  "what": "Section 7's horizon numbers on the closed form, with the shift of each against the printed value",
+  "n_random_draws": 0,
+  "tau": 120000.0,
+  "dt": 0.3,
+  "refine": 150,
+  "rulers": {
+   "old": "Boris at h/150, the reference of Section 7 and the training target of the corrector",
+   "new": "the closed form of ../spectral/sw_common.py, zeta'' + (Bz^2/4) zeta = 0 -> Bessel order 0"
+  }
+ },
+ "grids": {
+  "H1e3": {
+   "gyro_orbits": 1000.0,
+   "n_coarse": 20944,
+   "coarse_seconds": 4.427845239639282,
+   "closed_form_seconds": 0.0031108856201171875,
+   "old_ruler_seconds": 8.564886569976807,
+   "old": {
+    "gain_vs_horizon": [
+     {
+      "gyro_orbits_requested": 19.1,
+      "gyro_orbits_sampled": 19.098593171027442,
+      "boris_pos_err_rms": 0.41747612232154574,
+      "raw_pos_err_rms": 0.0036014017066929803,
+      "proj_pos_err_rms": 0.0035435147682684,
+      "traj_gain_projected": 117.81413359977407
+     },
+     {
+      "gyro_orbits_requested": 25.0,
+      "gyro_orbits_sampled": 24.97141057111838,
+      "boris_pos_err_rms": 0.5560709840121217,
+      "raw_pos_err_rms": 0.007012464432071635,
+      "proj_pos_err_rms": 0.00690547414218962,
+      "traj_gain_projected": 80.52611197466597
+     },
+     {
+      "gyro_orbits_requested": 50.0,
+      "gyro_orbits_sampled": 49.990567625164324,
+      "boris_pos_err_rms": 1.0944303961921764,
+      "raw_pos_err_rms": 0.03425961041540514,
+      "proj_pos_err_rms": 0.03344735257278062,
+      "traj_gain_projected": 32.720987223449825
+     },
+     {
+      "gyro_orbits_requested": 100.0,
+      "gyro_orbits_sampled": 99.98113525032865,
+      "boris_pos_err_rms": 1.5556130300959685,
+      "raw_pos_err_rms": 1.606675319808757,
+      "proj_pos_err_rms": 1.4747149542484368,
+      "traj_gain_projected": 1.0548567542591714
+     },
+     {
+      "gyro_orbits_requested": 200.0,
+      "gyro_orbits_sampled": 199.9622705006573,
+      "boris_pos_err_rms": 1.3902958015343434,
+      "raw_pos_err_rms": 21.262992789517142,
+      "proj_pos_err_rms": 20.719979305736807,
+      "traj_gain_projected": 0.06709928523670908
+     },
+     {
+      "gyro_orbits_requested": 300.0,
+      "gyro_orbits_sampled": 299.9911522339135,
+      "boris_pos_err_rms": 1.3846285355026422,
+      "raw_pos_err_rms": 44.667070356173774,
+      "proj_pos_err_rms": 44.08677841093009,
+      "traj_gain_projected": 0.03140688853688983
+     },
+     {
+      "gyro_orbits_requested": 500.0,
+      "gyro_orbits_sampled": 499.9534227345708,
+      "boris_pos_err_rms": 1.4425774070228015,
+      "raw_pos_err_rms": 90.75151774091594,
+      "proj_pos_err_rms": 90.27306736424208,
+      "traj_gain_projected": 0.015980152764746073
+     },
+     {
+      "gyro_orbits_requested": 1000.0,
+      "gyro_orbits_sampled": 999.9545919520692,
+      "boris_pos_err_rms": 1.4624335015423273,
+      "raw_pos_err_rms": 207.93031680851755,
+      "proj_pos_err_rms": 208.45029339061296,
+      "traj_gain_projected": 0.007015742111726788
+     }
+    ],
+    "crossover_gyrations": 100.98381139180759,
+    "rms_over_whole_grid": {
+     "boris": 1.462420454313781,
+     "raw": 207.94237657220006,
+     "proj": 208.46239865919094
+    },
+    "final_over_whole_grid": {
+     "boris": 1.1573516221388553,
+     "raw": 385.0662447638802,
+     "proj": 386.20272409241346
+    },
+    "traj_gain_projected_whole_grid": 0.0070152721244690725,
+    "disadvantage_factor_whole_grid": 142.5461453607805,
+    "boris_reaches_1_larmor_at_gyr": 22.058875112536693,
+    "raw_reaches_1_larmor_at_gyr": 73.33859777674536,
+    "proj_reaches_1_larmor_at_gyr": 74.0547950206589,
+    "one_larmor_horizon_gain": 3.357142857142857
+   },
+   "new": {
+    "gain_vs_horizon": [
+     {
+      "gyro_orbits_requested": 19.1,
+      "gyro_orbits_sampled": 19.098593171027442,
+      "boris_pos_err_rms": 0.41717396039102106,
+      "raw_pos_err_rms": 0.003543082304653212,
+      "proj_pos_err_rms": 0.0034732063836010953,
+      "traj_gain_projected": 120.11205621431748
+     },
+     {
+      "gyro_orbits_requested": 25.0,
+      "gyro_orbits_sampled": 24.97141057111838,
+      "boris_pos_err_rms": 0.5556397828332867,
+      "raw_pos_err_rms": 0.006749218142602319,
+      "proj_pos_err_rms": 0.006629512899808639,
+      "traj_gain_projected": 83.81306307576916
+     },
+     {
+      "gyro_orbits_requested": 50.0,
+      "gyro_orbits_sampled": 49.990567625164324,
+      "boris_pos_err_rms": 1.0939821709442403,
+      "raw_pos_err_rms": 0.0341967897169149,
+      "proj_pos_err_rms": 0.03334991811621552,
+      "traj_gain_projected": 32.80314413762594
+     },
+     {
+      "gyro_orbits_requested": 100.0,
+      "gyro_orbits_sampled": 99.98113525032865,
+      "boris_pos_err_rms": 1.5555393299085791,
+      "raw_pos_err_rms": 1.6071479397760156,
+      "proj_pos_err_rms": 1.4751716928393361,
+      "traj_gain_projected": 1.054480192007044
+     },
+     {
+      "gyro_orbits_requested": 200.0,
+      "gyro_orbits_sampled": 199.9622705006573,
+      "boris_pos_err_rms": 1.3902830954117484,
+      "raw_pos_err_rms": 21.263595667801106,
+      "proj_pos_err_rms": 20.72057855400061,
+      "traj_gain_projected": 0.06709673148307534
+     },
+     {
+      "gyro_orbits_requested": 300.0,
+      "gyro_orbits_sampled": 299.9911522339135,
+      "boris_pos_err_rms": 1.3847004109203673,
+      "raw_pos_err_rms": 44.66774031295942,
+      "proj_pos_err_rms": 44.087446289444955,
+      "traj_gain_projected": 0.031408043047661864
+     },
+     {
+      "gyro_orbits_requested": 500.0,
+      "gyro_orbits_sampled": 499.9534227345708,
+      "boris_pos_err_rms": 1.4426527549370907,
+      "raw_pos_err_rms": 90.75223506013042,
+      "proj_pos_err_rms": 90.27378328939056,
+      "traj_gain_projected": 0.015980860692548803
+     },
+     {
+      "gyro_orbits_requested": 1000.0,
+      "gyro_orbits_sampled": 999.9545919520692,
+      "boris_pos_err_rms": 1.4625144294154466,
+      "raw_pos_err_rms": 207.93106880912774,
+      "proj_pos_err_rms": 208.45104396800926,
+      "traj_gain_projected": 0.007016105084318489
+     }
+    ],
+    "crossover_gyrations": 100.98381139180759,
+    "rms_over_whole_grid": {
+     "boris": 1.4625013769011463,
+     "raw": 207.9431285241675,
+     "proj": 208.4631491879445
+    },
+    "final_over_whole_grid": {
+     "boris": 1.1572948829506078,
+     "raw": 385.06659394464475,
+     "proj": 386.2030720409488
+    },
+    "traj_gain_projected_whole_grid": 0.007015635053956689,
+    "disadvantage_factor_whole_grid": 142.5387712315535,
+    "boris_reaches_1_larmor_at_gyr": 22.058875112536693,
+    "raw_reaches_1_larmor_at_gyr": 73.33859777674536,
+    "proj_reaches_1_larmor_at_gyr": 74.0547950206589,
+    "one_larmor_horizon_gain": 3.357142857142857
+   },
+   "ruler_own_error": {
+    "rms_over_whole_grid": 0.001161057557960507,
+    "max": 0.001994014725170932,
+    "final": 0.0013011432982255597,
+    "rms_over_19.1_gyro_orbits": 0.001397665304988275
+   },
+   "decomposition": {
+    "whole_grid": {
+     "boris": {
+      "rms_measured": 1.462420454313781,
+      "rms_ruler": 0.001161057557960507,
+      "rms_true": 1.4625013769011463,
+      "rho": 0.0693022729776651,
+      "identity_check": 0.0
+     },
+     "raw": {
+      "rms_measured": 207.94237657220006,
+      "rms_ruler": 0.001161057557960507,
+      "rms_true": 207.9431285241675,
+      "rho": 0.6476423847183673,
+      "identity_check": 1.6826779861708677e-16
+     },
+     "proj": {
+      "rms_measured": 208.46239865919094,
+      "rms_ruler": 0.001161057557960507,
+      "rms_true": 208.4631491879445,
+      "rho": 0.6464165933717925,
+      "identity_check": 1.6742934258371257e-16
+     }
+    },
+    "19.1_gyro_orbits": {
+     "boris": {
+      "rms_measured": 0.4174761223215459,
+      "rms_ruler": 0.001397665304988275,
+      "rms_true": 0.417173960391021,
+      "rho": -0.21778618706503705,
+      "identity_check": 0.0
+     },
+     "raw": {
+      "rms_measured": 0.0036014017066929803,
+      "rms_ruler": 0.001397665304988275,
+      "rms_true": 0.0035430823046532114,
+      "rho": -0.2354330795958764,
+      "identity_check": 1.349484240764609e-16
+     },
+     "proj": {
+      "rms_measured": 0.0035435147682684,
+      "rms_ruler": 0.001397665304988275,
+      "rms_true": 0.0034732063836010953,
+      "rho": -0.24701965573420392,
+      "identity_check": 1.4043298205096627e-16
+     }
+    },
+    "50_gyro_orbits": {
+     "boris": {
+      "rms_measured": 1.0944303961921769,
+      "rms_ruler": 0.0013799733246938478,
+      "rms_true": 1.0939821709442406,
+      "rho": -0.3253711229802966,
+      "identity_check": 0.0
+     },
+     "raw": {
+      "rms_measured": 0.034259610415405116,
+      "rms_ruler": 0.0013799733246938478,
+      "rms_true": 0.03419678971691491,
+      "rho": -0.06562133291933503,
+      "identity_check": 5.562766721904265e-16
+     },
+     "proj": {
+      "rms_measured": 0.03344735257278062,
+      "rms_ruler": 0.0013799733246938478,
+      "rms_true": 0.03334991811621552,
+      "rho": -0.09113223998919988,
+      "identity_check": 1.949623383015013e-16
+     }
+    }
+   },
+   "cost_flops": {
+    "old_ruler": 355000800.0,
+    "new_ruler": 4733344.0,
+    "ratio": 75.0,
+    "the_runs_being_measured": {
+     "boris": 2366672.0,
+     "corrector": 2389521904.0
+    }
+   }
+  },
+  "H1e4": {
+   "gyro_orbits": 10000.0,
+   "n_coarse": 209440,
+   "coarse_seconds": 44.855122566223145,
+   "closed_form_seconds": 0.1501166820526123,
+   "old_ruler_seconds": 118.83358550071716,
+   "old": {
+    "gain_vs_horizon": [
+     {
+      "gyro_orbits_requested": 19.1,
+      "gyro_orbits_sampled": 19.098593171027442,
+      "boris_pos_err_rms": 0.41747612232154574,
+      "raw_pos_err_rms": 0.0036014017066929803,
+      "proj_pos_err_rms": 0.0035435147682684,
+      "traj_gain_projected": 117.81413359977407
+     },
+     {
+      "gyro_orbits_requested": 25.0,
+      "gyro_orbits_sampled": 24.97141057111838,
+      "boris_pos_err_rms": 0.5560709840121217,
+      "raw_pos_err_rms": 0.007012464432071635,
+      "proj_pos_err_rms": 0.00690547414218962,
+      "traj_gain_projected": 80.52611197466597
+     },
+     {
+      "gyro_orbits_requested": 50.0,
+      "gyro_orbits_sampled": 49.990567625164324,
+      "boris_pos_err_rms": 1.0944303961921764,
+      "raw_pos_err_rms": 0.03425961041540514,
+      "proj_pos_err_rms": 0.03344735257278062,
+      "traj_gain_projected": 32.720987223449825
+     },
+     {
+      "gyro_orbits_requested": 100.0,
+      "gyro_orbits_sampled": 99.98113525032865,
+      "boris_pos_err_rms": 1.5556130300959685,
+      "raw_pos_err_rms": 1.606675319808757,
+      "proj_pos_err_rms": 1.4747149542484368,
+      "traj_gain_projected": 1.0548567542591714
+     },
+     {
+      "gyro_orbits_requested": 200.0,
+      "gyro_orbits_sampled": 199.9622705006573,
+      "boris_pos_err_rms": 1.3902958015343434,
+      "raw_pos_err_rms": 21.262992789517142,
+      "proj_pos_err_rms": 20.719979305736807,
+      "traj_gain_projected": 0.06709928523670908
+     },
+     {
+      "gyro_orbits_requested": 300.0,
+      "gyro_orbits_sampled": 299.9911522339135,
+      "boris_pos_err_rms": 1.3846285355026422,
+      "raw_pos_err_rms": 44.667070356173774,
+      "proj_pos_err_rms": 44.08677841093009,
+      "traj_gain_projected": 0.03140688853688983
+     },
+     {
+      "gyro_orbits_requested": 500.0,
+      "gyro_orbits_sampled": 499.9534227345708,
+      "boris_pos_err_rms": 1.4425774070228015,
+      "raw_pos_err_rms": 90.75151774091594,
+      "proj_pos_err_rms": 90.27306736424208,
+      "traj_gain_projected": 0.015980152764746073
+     },
+     {
+      "gyro_orbits_requested": 1000.0,
+      "gyro_orbits_sampled": 999.9545919520692,
+      "boris_pos_err_rms": 1.4624335015423273,
+      "raw_pos_err_rms": 207.93031680851755,
+      "proj_pos_err_rms": 208.45029339061296,
+      "traj_gain_projected": 0.007015742111726788
+     }
+    ],
+    "crossover_gyrations": 100.98381139180759,
+    "rms_over_whole_grid": {
+     "boris": 1.631745568336142,
+     "raw": 2593.4476611227315,
+     "proj": 2570.36452171526
+    },
+    "final_over_whole_grid": {
+     "boris": 2.4697593033434506,
+     "raw": 5033.4550125479345,
+     "proj": 4936.17167460053
+    },
+    "traj_gain_projected_whole_grid": 0.0006348304120099054,
+    "disadvantage_factor_whole_grid": 1575.2238410159794,
+    "boris_reaches_1_larmor_at_gyr": 22.058875112536693,
+    "raw_reaches_1_larmor_at_gyr": 73.33859777674536,
+    "proj_reaches_1_larmor_at_gyr": 74.0547950206589,
+    "one_larmor_horizon_gain": 3.357142857142857
+   },
+   "new": {
+    "gain_vs_horizon": [
+     {
+      "gyro_orbits_requested": 19.1,
+      "gyro_orbits_sampled": 19.098593171027442,
+      "boris_pos_err_rms": 0.41717396039102106,
+      "raw_pos_err_rms": 0.003543082304653212,
+      "proj_pos_err_rms": 0.0034732063836010953,
+      "traj_gain_projected": 120.11205621431748
+     },
+     {
+      "gyro_orbits_requested": 25.0,
+      "gyro_orbits_sampled": 24.97141057111838,
+      "boris_pos_err_rms": 0.5556397828332867,
+      "raw_pos_err_rms": 0.006749218142602319,
+      "proj_pos_err_rms": 0.006629512899808639,
+      "traj_gain_projected": 83.81306307576916
+     },
+     {
+      "gyro_orbits_requested": 50.0,
+      "gyro_orbits_sampled": 49.990567625164324,
+      "boris_pos_err_rms": 1.0939821709442403,
+      "raw_pos_err_rms": 0.0341967897169149,
+      "proj_pos_err_rms": 0.03334991811621552,
+      "traj_gain_projected": 32.80314413762594
+     },
+     {
+      "gyro_orbits_requested": 100.0,
+      "gyro_orbits_sampled": 99.98113525032865,
+      "boris_pos_err_rms": 1.5555393299085791,
+      "raw_pos_err_rms": 1.6071479397760156,
+      "proj_pos_err_rms": 1.4751716928393361,
+      "traj_gain_projected": 1.054480192007044
+     },
+     {
+      "gyro_orbits_requested": 200.0,
+      "gyro_orbits_sampled": 199.9622705006573,
+      "boris_pos_err_rms": 1.3902830954117484,
+      "raw_pos_err_rms": 21.263595667801106,
+      "proj_pos_err_rms": 20.72057855400061,
+      "traj_gain_projected": 0.06709673148307534
+     },
+     {
+      "gyro_orbits_requested": 300.0,
+      "gyro_orbits_sampled": 299.9911522339135,
+      "boris_pos_err_rms": 1.3847004109203673,
+      "raw_pos_err_rms": 44.66774031295942,
+      "proj_pos_err_rms": 44.087446289444955,
+      "traj_gain_projected": 0.031408043047661864
+     },
+     {
+      "gyro_orbits_requested": 500.0,
+      "gyro_orbits_sampled": 499.9534227345708,
+      "boris_pos_err_rms": 1.4426527549370907,
+      "raw_pos_err_rms": 90.75223506013042,
+      "proj_pos_err_rms": 90.27378328939056,
+      "traj_gain_projected": 0.015980860692548803
+     },
+     {
+      "gyro_orbits_requested": 1000.0,
+      "gyro_orbits_sampled": 999.9545919520692,
+      "boris_pos_err_rms": 1.4625144294154466,
+      "raw_pos_err_rms": 207.93106880912774,
+      "proj_pos_err_rms": 208.45104396800926,
+      "traj_gain_projected": 0.007016105084318489
+     }
+    ],
+    "crossover_gyrations": 100.98381139180759,
+    "rms_over_whole_grid": {
+     "boris": 1.6319604402453114,
+     "raw": 2593.448563553785,
+     "proj": 2570.365426358052
+    },
+    "final_over_whole_grid": {
+     "boris": 2.4722736860212167,
+     "raw": 5033.468230620401,
+     "proj": 4936.184884103961
+    },
+    "traj_gain_projected_whole_grid": 0.0006349137844410063,
+    "disadvantage_factor_whole_grid": 1575.016993654382,
+    "boris_reaches_1_larmor_at_gyr": 22.058875112536693,
+    "raw_reaches_1_larmor_at_gyr": 73.33859777674536,
+    "proj_reaches_1_larmor_at_gyr": 74.0547950206589,
+    "one_larmor_horizon_gain": 3.357142857142857
+   },
+   "ruler_own_error": {
+    "rms_over_whole_grid": 0.007767058576861289,
+    "max": 0.013721098726564965,
+    "final": 0.013447793805909469,
+    "rms_over_19.1_gyro_orbits": 0.001397665304988275
+   },
+   "decomposition": {
+    "whole_grid": {
+     "boris": {
+      "rms_measured": 1.631745568336142,
+      "rms_ruler": 0.007767058576861289,
+      "rms_true": 1.6319604402453114,
+      "rho": 0.025286351969800343,
+      "identity_check": 1.6674428859935278e-16
+     },
+     "raw": {
+      "rms_measured": 2593.4476611227315,
+      "rms_ruler": 0.007767058576861289,
+      "rms_true": 2593.448563553785,
+      "rho": 0.11618549937719276,
+      "identity_check": 2.769330876360397e-16
+     },
+     "proj": {
+      "rms_measured": 2570.36452171526,
+      "rms_ruler": 0.007767058576861289,
+      "rms_true": 2570.365426358052,
+      "rho": 0.11647024511697375,
+      "identity_check": 1.4096470544388036e-16
+     }
+    },
+    "19.1_gyro_orbits": {
+     "boris": {
+      "rms_measured": 0.4174761223215459,
+      "rms_ruler": 0.001397665304988275,
+      "rms_true": 0.417173960391021,
+      "rho": -0.21778618706503705,
+      "identity_check": 0.0
+     },
+     "raw": {
+      "rms_measured": 0.0036014017066929803,
+      "rms_ruler": 0.001397665304988275,
+      "rms_true": 0.0035430823046532114,
+      "rho": -0.2354330795958764,
+      "identity_check": 1.349484240764609e-16
+     },
+     "proj": {
+      "rms_measured": 0.0035435147682684,
+      "rms_ruler": 0.001397665304988275,
+      "rms_true": 0.0034732063836010953,
+      "rho": -0.24701965573420392,
+      "identity_check": 1.4043298205096627e-16
+     }
+    },
+    "50_gyro_orbits": {
+     "boris": {
+      "rms_measured": 1.0944303961921769,
+      "rms_ruler": 0.0013799733246938478,
+      "rms_true": 1.0939821709442406,
+      "rho": -0.3253711229802966,
+      "identity_check": 0.0
+     },
+     "raw": {
+      "rms_measured": 0.034259610415405116,
+      "rms_ruler": 0.0013799733246938478,
+      "rms_true": 0.03419678971691491,
+      "rho": -0.06562133291933503,
+      "identity_check": 5.562766721904265e-16
+     },
+     "proj": {
+      "rms_measured": 0.03344735257278062,
+      "rms_ruler": 0.0013799733246938478,
+      "rms_true": 0.03334991811621552,
+      "rho": -0.09113223998919988,
+      "identity_check": 1.949623383015013e-16
+     }
+    }
+   },
+   "cost_flops": {
+    "old_ruler": 3550008000.0,
+    "new_ruler": 47333440.0,
+    "ratio": 75.0,
+    "the_runs_being_measured": {
+     "boris": 23666720.0,
+     "corrector": 23895219040.0
+    }
+   }
+  }
+ },
+ "shifts": {
+  "gain_at_19.1_gyro_orbits": {
+   "old": 117.81413359977407,
+   "new": 120.11205621431748,
+   "ratio": 1.019504642985787,
+   "percent": 1.9504642985787033
+  },
+  "corrector_error_at_19.1_gyro_orbits": {
+   "old": 0.0035435147682684,
+   "new": 0.0034732063836010953,
+   "ratio": 0.9801585743914757,
+   "percent": -1.9841425608524328
+  },
+  "boris_error_at_19.1_gyro_orbits": {
+   "old": 0.41747612232154574,
+   "new": 0.41717396039102106,
+   "ratio": 0.9992762174544394,
+   "percent": -0.07237825455606564
+  },
+  "gain_at_25_gyro_orbits": {
+   "old": 80.52611197466597,
+   "new": 83.81306307576916,
+   "ratio": 1.0408184503200315,
+   "percent": 4.081845032003153
+  },
+  "corrector_error_at_25_gyro_orbits": {
+   "old": 0.00690547414218962,
+   "new": 0.006629512899808639,
+   "ratio": 0.9600373215946214,
+   "percent": -3.996267840537861
+  },
+  "boris_error_at_25_gyro_orbits": {
+   "old": 0.5560709840121217,
+   "new": 0.5556397828332867,
+   "ratio": 0.9992245573115076,
+   "percent": -0.07754426884924369
+  },
+  "gain_at_50_gyro_orbits": {
+   "old": 32.720987223449825,
+   "new": 32.80314413762594,
+   "ratio": 1.0025108323784693,
+   "percent": 0.25108323784692776
+  },
+  "corrector_error_at_50_gyro_orbits": {
+   "old": 0.03344735257278062,
+   "new": 0.03334991811621552,
+   "ratio": 0.9970869306814917,
+   "percent": -0.2913069318508353
+  },
+  "boris_error_at_50_gyro_orbits": {
+   "old": 1.0944303961921764,
+   "new": 1.0939821709442403,
+   "ratio": 0.9995904488311951,
+   "percent": -0.04095511688048719
+  },
+  "gain_at_100_gyro_orbits": {
+   "old": 1.0548567542591714,
+   "new": 1.054480192007044,
+   "ratio": 0.9996430204853816,
+   "percent": -0.0356979514618471
+  },
+  "corrector_error_at_100_gyro_orbits": {
+   "old": 1.4747149542484368,
+   "new": 1.4751716928393361,
+   "ratio": 1.0003097131344492,
+   "percent": 0.030971313444916583
+  },
+  "boris_error_at_100_gyro_orbits": {
+   "old": 1.5556130300959685,
+   "new": 1.5555393299085791,
+   "ratio": 0.9999526230585862,
+   "percent": -0.004737694141379425
+  },
+  "gain_at_200_gyro_orbits": {
+   "old": 0.06709928523670908,
+   "new": 0.06709673148307534,
+   "ratio": 0.9999619406730678,
+   "percent": -0.0038059326932203806
+  },
+  "corrector_error_at_200_gyro_orbits": {
+   "old": 20.719979305736807,
+   "new": 20.72057855400061,
+   "ratio": 1.0000289212771385,
+   "percent": 0.002892127713841951
+  },
+  "boris_error_at_200_gyro_orbits": {
+   "old": 1.3902958015343434,
+   "new": 1.3902830954117484,
+   "ratio": 0.9999908608494819,
+   "percent": -0.0009139150518141952
+  },
+  "gain_at_300_gyro_orbits": {
+   "old": 0.03140688853688983,
+   "new": 0.031408043047661864,
+   "ratio": 1.0000367597946125,
+   "percent": 0.0036759794612445744
+  },
+  "corrector_error_at_300_gyro_orbits": {
+   "old": 44.08677841093009,
+   "new": 44.087446289444955,
+   "ratio": 1.0000151491793898,
+   "percent": 0.0015149179389854326
+  },
+  "boris_error_at_300_gyro_orbits": {
+   "old": 1.3846285355026422,
+   "new": 1.3847004109203673,
+   "ratio": 1.000051909530883,
+   "percent": 0.005190953088298109
+  },
+  "gain_at_500_gyro_orbits": {
+   "old": 0.015980152764746073,
+   "new": 0.015980860692548803,
+   "ratio": 1.0000443004402493,
+   "percent": 0.004430044024931594
+  },
+  "corrector_error_at_500_gyro_orbits": {
+   "old": 90.27306736424208,
+   "new": 90.27378328939056,
+   "ratio": 1.0000079306615959,
+   "percent": 0.0007930661595832783
+  },
+  "boris_error_at_500_gyro_orbits": {
+   "old": 1.4425774070228015,
+   "new": 1.4426527549370907,
+   "ratio": 1.000052231453177,
+   "percent": 0.005223145317706499
+  },
+  "gain_at_1000_gyro_orbits": {
+   "old": 0.007015742111726788,
+   "new": 0.007016105084318489,
+   "ratio": 1.000051736877713,
+   "percent": 0.005173687771309669
+  },
+  "corrector_error_at_1000_gyro_orbits": {
+   "old": 208.45029339061296,
+   "new": 208.45104396800926,
+   "ratio": 1.0000036007500115,
+   "percent": 0.0003600750011403164
+  },
+  "boris_error_at_1000_gyro_orbits": {
+   "old": 1.4624335015423273,
+   "new": 1.4625144294154466,
+   "ratio": 1.0000553378140162,
+   "percent": 0.005533781401613028
+  },
+  "crossover_gyrations": {
+   "old": 100.98381139180759,
+   "new": 100.98381139180759,
+   "ratio": 1.0,
+   "percent": 0.0
+  },
+  "boris_reaches_1_larmor": {
+   "old": 22.058875112536693,
+   "new": 22.058875112536693,
+   "ratio": 1.0,
+   "percent": 0.0
+  },
+  "raw_reaches_1_larmor": {
+   "old": 73.33859777674536,
+   "new": 73.33859777674536,
+   "ratio": 1.0,
+   "percent": 0.0
+  },
+  "proj_reaches_1_larmor": {
+   "old": 74.0547950206589,
+   "new": 74.0547950206589,
+   "ratio": 1.0,
+   "percent": 0.0
+  },
+  "one_larmor_horizon_gain": {
+   "old": 3.357142857142857,
+   "new": 3.357142857142857,
+   "ratio": 1.0,
+   "percent": 0.0
+  },
+  "disadvantage_factor_at_1e3": {
+   "old": 142.5461453607805,
+   "new": 142.5387712315535,
+   "ratio": 0.9999482684767915,
+   "percent": -0.005173152320842589
+  },
+  "disadvantage_factor_at_1e4": {
+   "old": 1575.2238410159794,
+   "new": 1575.016993654382,
+   "ratio": 0.999868687004214,
+   "percent": -0.013131299578596534
+  },
+  "boris_saturation_at_1e3": {
+   "old": 1.462420454313781,
+   "new": 1.4625013769011463,
+   "ratio": 1.0000553346933343,
+   "percent": 0.005533469333429321
+  },
+  "boris_saturation_at_1e4": {
+   "old": 1.631745568336142,
+   "new": 1.6319604402453114,
+   "ratio": 1.000131682238542,
+   "percent": 0.013168223854198535
+  }
+ },
+ "calibration_1e4": {
+  "committed_traj_gain": 0.0006348304120099054,
+  "stand_traj_gain": 0.0006348304120099054,
+  "committed_boris_rms": 1.631745568336142,
+  "stand_boris_rms": 1.631745568336142,
+  "ok": true
+ },
+ "adiabatic_ruler_floor": {
+  "seconds": 1.7063755989074707,
+  "1e+03": {
+   "energy_ruler_floor_max": 6.678646524704845e-11,
+   "energy_ruler_floor_at_end": 2.970135248858696e-11,
+   "mu_ruler_floor_max": 7.034062221578097e-11,
+   "mu_ruler_floor_at_end": 3.129785319799794e-11,
+   "boris_energy_err_max_reported": 2.499690216373196e-06,
+   "boris_mu_err_max_reported": 2.509278552054184e-06,
+   "proj_energy_err_max_reported": 0.018095198369225907,
+   "floor_as_fraction_of_boris_energy_err": 2.6717896805608587e-05,
+   "floor_as_fraction_of_boris_mu_err": 2.8032209560073615e-05
+  },
+  "1e+04": {
+   "energy_ruler_floor_max": 7.261535817093545e-11,
+   "energy_ruler_floor_at_end": 1.6470491637221585e-11,
+   "mu_ruler_floor_max": 1.2257728165820936e-10,
+   "mu_ruler_floor_at_end": 2.7803759294897645e-11,
+   "boris_energy_err_max_reported": 2.499690216373196e-06,
+   "boris_mu_err_max_reported": 3.2660023778774416e-06,
+   "proj_energy_err_max_reported": 1.9283243183059904,
+   "floor_as_fraction_of_boris_energy_err": 2.9049742922262252e-05,
+   "floor_as_fraction_of_boris_mu_err": 3.753128977752665e-05
+  },
+  "1e+05": {
+   "energy_ruler_floor_max": 3.282902547030453e-09,
+   "energy_ruler_floor_at_end": 3.2289044623809438e-09,
+   "mu_ruler_floor_max": 6.143448754158953e-07,
+   "mu_ruler_floor_at_end": 6.067582272173411e-07,
+   "boris_energy_err_max_reported": 2.499690216373196e-06,
+   "boris_mu_err_max_reported": 0.00023133611172565516,
+   "proj_energy_err_max_reported": 35.15863412211816,
+   "floor_as_fraction_of_boris_energy_err": 0.0013133237572908617,
+   "floor_as_fraction_of_boris_mu_err": 0.002655637595156159
+  },
+  "note": "../horizon/long_runs.py scores the energy against E_0 e^{-t/tau} and mu against (E/B)/(E_0/B_0).  Neither is the Boris ruler, so the energy and mu numbers of Section 7 are NOT affected by the ruler swap this wave is about.  They carry a floor of their own, measured here: it is the score the exact solution gets on those same rulers."
+ }
+}

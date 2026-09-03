@@ -1,0 +1,381 @@
+{
+ "setup": {
+  "run": "decaying field, tau = 1.2e5, Omega h = 0.3, t = 120 (19.1 gyro-orbits), DOP853 rtol 1e-12 atol 1e-14 on the grid",
+  "physical_signal": 0.0007497187720287846,
+  "cost": "flops, one per arithmetic operation and twenty per transcendental (Section 9)",
+  "flop_model_calibration_corrector_forward": 113958
+ },
+ "calibration": {
+  "boris_planar_traj": 0.4166534686556138,
+  "boris_3d_traj_table1": 0.4166534686545755,
+  "traj_relative_difference": 2.4920855384537913e-12,
+  "boris_planar_energy": 1.2498369652558239e-06,
+  "boris_3d_energy_table1": 1.2498392230053668e-06,
+  "energy_relative_difference": 1.8064319804660377e-06,
+  "boris_wall_s_per_step": 1.019275005091913e-05
+ },
+ "rows": {
+  "shipped": {
+   "traj": 0.4166534686545755,
+   "energy": 1.2498392230053668e-06,
+   "flops_run": 45200.0,
+   "wall_s_run": 0.01835529998061247,
+   "source": "experiments/classical/verdict.json"
+  },
+  "staggered": {
+   "traj": 0.5065233104356814,
+   "energy": 0.02195374003629602,
+   "flops_run": 45200.0,
+   "wall_s_run": 0.017373700015014037,
+   "source": "experiments/classical/verdict.json"
+  },
+  "imr": {
+   "traj": 0.5026379075146472,
+   "energy": 1.6479318080353522e-05,
+   "flops_run": 506400.0,
+   "wall_s_run": 0.2265670000051614,
+   "source": "experiments/classical/verdict.json"
+  },
+  "vps2": {
+   "traj": 0.010583014451054718,
+   "energy": 5.568576563752536e-06,
+   "flops_run": 36400.0,
+   "wall_s_run": 0.013227299990830943,
+   "source": "experiments/classical/verdict.json"
+  },
+  "gl4": {
+   "traj": 0.0007745714317733591,
+   "energy": 4.177814716399553e-08,
+   "flops_run": 772800.0,
+   "wall_s_run": 0.363442900008522,
+   "source": "experiments/classical/verdict.json"
+  },
+  "vps4": {
+   "traj": 5.35394015973843e-05,
+   "energy": 2.635140666784608e-07,
+   "flops_run": 109200.0,
+   "wall_s_run": 0.039718100015306845,
+   "source": "experiments/classical/verdict.json"
+  },
+  "hybrid": {
+   "traj": 0.0034688730013653656,
+   "energy": 1.638655802038702e-05,
+   "flops_run": 45636400.0,
+   "wall_s_run": 0.09633249999023974,
+   "source": "experiments/classical/verdict.json"
+  },
+  "hnn": {
+   "traj": 0.08802236486049494,
+   "energy": 0.0020151609368970202,
+   "row_is": "repetition 0, the seed the probes are run on",
+   "traj_median_over_reps": 0.08643307963280765,
+   "traj_best_of_reps": 0.03248889375280954,
+   "traj_reps": [
+    0.08802236486049494,
+    0.03248889375280954,
+    0.11597646359470475,
+    0.08484379440512035
+   ],
+   "traj_spread_factor": 3.5697264572043315,
+   "energy_median_over_reps": 0.0015333893677502708,
+   "energy_best_of_reps": 0.0009672616411098289,
+   "energy_of_best_traj_rep": 0.002184180705222749,
+   "energy_reps": [
+    0.0020151609368970202,
+    0.002184180705222749,
+    0.0010516177986035213,
+    0.0009672616411098289
+   ],
+   "energy_spread_factor": 2.2581074369046994,
+   "best_traj_rep": 1,
+   "flops_per_step": 848052,
+   "flops_run": 339220800,
+   "wall_s_per_step": 0.0001889298750757007,
+   "wall_s_run": 0.07557195003028028,
+   "n_parameters": 50433,
+   "n_reps": 4,
+   "reporting_rule": "median over the four repetitions; the best repetition is given beside it, and the comparisons below use the best one, which is the reading most favourable to the architecture",
+   "source": "ea1_training.json + this script"
+  },
+  "sympnet": {
+   "traj": 0.037875118661759945,
+   "energy": 0.00034671762904547876,
+   "row_is": "repetition 0, the seed the probes are run on",
+   "traj_median_over_reps": 0.03628394079052018,
+   "traj_best_of_reps": 0.017585057021086366,
+   "traj_reps": [
+    0.037875118661759945,
+    0.017585057021086366,
+    0.060240350462205904,
+    0.03469276291928041
+   ],
+   "traj_spread_factor": 3.425655679704153,
+   "energy_median_over_reps": 0.0004217524677144202,
+   "energy_best_of_reps": 0.00029557394357704325,
+   "energy_of_best_traj_rep": 0.00029557394357704325,
+   "energy_reps": [
+    0.00034671762904547876,
+    0.00029557394357704325,
+    0.0006001309771939134,
+    0.0004967873063833617
+   ],
+   "energy_spread_factor": 2.030392022825535,
+   "best_traj_rep": 1,
+   "flops_per_step": 82012,
+   "flops_run": 32804800,
+   "wall_s_per_step": 0.0004673136250494281,
+   "wall_s_run": 0.18692545001977123,
+   "n_parameters": 15360,
+   "n_reps": 4,
+   "reporting_rule": "median over the four repetitions; the best repetition is given beside it, and the comparisons below use the best one, which is the reading most favourable to the architecture",
+   "source": "ea1_training.json + this script"
+  },
+  "pinn": {
+   "traj": 0.5028886097035986,
+   "energy": 0.007108416330990686,
+   "row_is": "repetition 0, the seed the probes are run on",
+   "traj_median_over_reps": 0.5173622348166969,
+   "traj_best_of_reps": 0.4961641175376336,
+   "traj_reps": [
+    0.5028886097035986,
+    0.4961641175376336,
+    0.531835859929795,
+    0.5988318532979621
+   ],
+   "traj_spread_factor": 1.2069229356404259,
+   "energy_median_over_reps": 0.0035160860946577555,
+   "energy_best_of_reps": 0.003088849279372141,
+   "energy_of_best_traj_rep": 0.0037626764121925227,
+   "energy_reps": [
+    0.007108416330990686,
+    0.0037626764121925227,
+    0.003088849279372141,
+    0.0032694957771229882
+   ],
+   "energy_spread_factor": 2.30131537283541,
+   "best_traj_rep": 1,
+   "flops_per_step": 111402,
+   "flops_run": 44560800,
+   "wall_s_per_step": 0.00014143075000902172,
+   "wall_s_run": 0.05657230000360869,
+   "n_parameters": 50820,
+   "n_reps": 4,
+   "reporting_rule": "median over the four repetitions; the best repetition is given beside it, and the comparisons below use the best one, which is the reading most favourable to the architecture",
+   "source": "ea1_training.json + this script"
+  }
+ },
+ "against_classical": {
+  "hnn": {
+   "reading": "the repetition with the smallest trajectory error, rep 1; ratios above 1 mean the classical scheme is the more accurate or the cheaper of the two",
+   "vps4": {
+    "classical_more_accurate_in_traj_by": 606.8221306828503,
+    "classical_more_accurate_in_energy_by": 8288.668353662808,
+    "classical_cheaper_in_flops_by": 3106.4175824175823,
+    "classical_cheaper_in_wall_by": 1.9027080852597638
+   },
+   "vps2": {
+    "classical_more_accurate_in_traj_by": 3.0699092307836406,
+    "classical_more_accurate_in_energy_by": 392.2332179897118,
+    "classical_cheaper_in_flops_by": 9319.252747252747,
+    "classical_cheaper_in_wall_by": 5.7133315251537455
+   },
+   "gl4": {
+    "classical_more_accurate_in_traj_by": 41.944348087337985,
+    "classical_more_accurate_in_energy_by": 52280.458887968096,
+    "classical_cheaper_in_flops_by": 438.9503105590062,
+    "classical_cheaper_in_wall_by": 0.2079334883925598
+   },
+   "imr": {
+    "classical_more_accurate_in_traj_by": 0.06463677583223823,
+    "classical_more_accurate_in_energy_by": 132.5407213194524,
+    "classical_cheaper_in_flops_by": 669.8672985781991,
+    "classical_cheaper_in_wall_by": 0.3335523268108713
+   },
+   "shipped": {
+    "classical_more_accurate_in_traj_by": 0.07797581490853805,
+    "classical_more_accurate_in_energy_by": 1747.5693393352326,
+    "classical_cheaper_in_flops_by": 7504.884955752213,
+    "classical_cheaper_in_wall_by": 4.117173247514455
+   },
+   "learned_corrector": {
+    "corrector_more_accurate_in_traj_by": 9.365835457228256,
+    "corrector_more_accurate_in_energy_by": 133.29100000777117,
+    "corrector_dearer_in_flops_by": 0.13453302391834462
+   },
+   "below_physical_signal": false,
+   "signal_over_error": 0.343249425396021,
+   "signal_over_error_rep0": 0.3720391549387686
+  },
+  "sympnet": {
+   "reading": "the repetition with the smallest trajectory error, rep 1; ratios above 1 mean the classical scheme is the more accurate or the cheaper of the two",
+   "vps4": {
+    "classical_more_accurate_in_traj_by": 328.4507576929193,
+    "classical_more_accurate_in_energy_by": 1121.6628671960113,
+    "classical_cheaper_in_flops_by": 300.4102564102564,
+    "classical_cheaper_in_wall_by": 4.706303925609044
+   },
+   "vps2": {
+    "classical_more_accurate_in_traj_by": 1.661630256900369,
+    "classical_more_accurate_in_energy_by": 53.07890449078476,
+    "classical_cheaper_in_flops_by": 901.2307692307693,
+    "classical_cheaper_in_wall_by": 14.131791835774983
+   },
+   "gl4": {
+    "classical_more_accurate_in_traj_by": 22.702950689552136,
+    "classical_more_accurate_in_energy_by": 7074.845670316594,
+    "classical_cheaper_in_flops_by": 42.44927536231884,
+    "classical_cheaper_in_wall_by": 0.5143186179050085
+   },
+   "imr": {
+    "classical_more_accurate_in_traj_by": 0.03498553682120349,
+    "classical_more_accurate_in_energy_by": 17.9360542794197,
+    "classical_cheaper_in_flops_by": 64.78041074249604,
+    "classical_cheaper_in_wall_by": 0.825033875257707
+   },
+   "shipped": {
+    "classical_more_accurate_in_traj_by": 0.042205473718653165,
+    "classical_more_accurate_in_energy_by": 236.4895725278211,
+    "classical_cheaper_in_flops_by": 725.7699115044247,
+    "classical_cheaper_in_wall_by": 10.183731686063895
+   },
+   "learned_corrector": {
+    "corrector_more_accurate_in_traj_by": 5.069386228370079,
+    "corrector_more_accurate_in_energy_by": 18.037585636306943,
+    "corrector_dearer_in_flops_by": 1.391150075598693
+   },
+   "below_physical_signal": true,
+   "signal_over_error": 2.536484654079007,
+   "signal_over_error_rep0": 2.162332426224697
+  },
+  "pinn": {
+   "reading": "the repetition with the smallest trajectory error, rep 1; ratios above 1 mean the classical scheme is the more accurate or the cheaper of the two",
+   "vps4": {
+    "classical_more_accurate_in_traj_by": 9267.270509834649,
+    "classical_more_accurate_in_energy_by": 14278.844615850172,
+    "classical_cheaper_in_flops_by": 408.0659340659341,
+    "classical_cheaper_in_wall_by": 1.424345574984867
+   },
+   "vps2": {
+    "classical_more_accurate_in_traj_by": 46.88306151638914,
+    "classical_more_accurate_in_energy_by": 675.6980655855328,
+    "classical_cheaper_in_flops_by": 1224.1978021978023,
+    "classical_cheaper_in_wall_by": 4.276934827426924
+   },
+   "gl4": {
+    "classical_more_accurate_in_traj_by": 640.565991959812,
+    "classical_more_accurate_in_energy_by": 90063.26674619029,
+    "classical_cheaper_in_flops_by": 57.661490683229815,
+    "classical_cheaper_in_wall_by": 0.15565663822922993
+   },
+   "imr": {
+    "classical_more_accurate_in_traj_by": 0.9871203705883943,
+    "classical_more_accurate_in_energy_by": 228.32719132221544,
+    "classical_cheaper_in_flops_by": 87.99526066350711,
+    "classical_cheaper_in_wall_by": 0.24969346816756158
+   },
+   "shipped": {
+    "classical_more_accurate_in_traj_by": 1.1908316019540355,
+    "classical_more_accurate_in_energy_by": 3010.5283487141496,
+    "classical_cheaper_in_flops_by": 985.858407079646,
+    "classical_cheaper_in_wall_by": 3.08206894266846
+   },
+   "learned_corrector": {
+    "corrector_more_accurate_in_traj_by": 143.0332322175937,
+    "corrector_more_accurate_in_energy_by": 229.61969240344808,
+    "corrector_dearer_in_flops_by": 1.0241378072206961
+   },
+   "below_physical_signal": false,
+   "signal_over_error": 0.19925146090144946,
+   "signal_over_error_rep0": 0.1054691702229402
+  }
+ },
+ "symplecticity": {
+  "boris": {
+   "n_states": 8,
+   "fd_step": 1e-06,
+   "residual_median": 0.13147830076993794,
+   "residual_max": 0.13154287982018179,
+   "det_minus_one_median": 1.2648548874949483e-10,
+   "det_minus_one_max": 1.7946311103855805e-10
+  },
+  "hnn": {
+   "n_states": 8,
+   "fd_step": 1e-06,
+   "residual_median": 5.059925545486823e-05,
+   "residual_max": 9.507620616476292e-05,
+   "det_minus_one_median": 3.3547294117364235e-05,
+   "det_minus_one_max": 6.078236106910051e-05
+  },
+  "sympnet": {
+   "n_states": 8,
+   "fd_step": 1e-06,
+   "residual_median": 4.425798210246886e-10,
+   "residual_max": 6.310320977030942e-10,
+   "det_minus_one_median": 9.781542242848218e-11,
+   "det_minus_one_max": 2.6268875963353366e-10
+  },
+  "pinn": {
+   "n_states": 8,
+   "fd_step": 1e-06,
+   "residual_median": 0.21878017130080052,
+   "residual_max": 0.3141616784786191,
+   "det_minus_one_median": 0.13042103314159004,
+   "det_minus_one_max": 0.2783466158420924
+  },
+  "note": "Central differences at 1e-6 in double precision resolve the residual to about 1e-9.  The G-SympNet is a composition of shears and is symplectic at any weights; the PINN is penalised toward symplecticity during training and is not; RK4 on a learned Hamiltonian field is not symplectic either, and its residual is the RK4 residual rather than a property of the learned field."
+ },
+ "hnn_step_refinement": {
+  "h=0.3": {
+   "pos_err_rms": 0.08802236486049494,
+   "pos_err_final": 0.062328036709724054,
+   "energy_err_median_2nd_half": 0.0020151609368970202,
+   "energy_err_max": 0.004069481010109843,
+   "flops_per_step": 848052,
+   "flops_run": 339220800,
+   "diverged_at_step": null
+  },
+  "h=0.15": {
+   "pos_err_rms": 0.18948146144940695,
+   "pos_err_final": 0.2950573024703651,
+   "energy_err_median_2nd_half": 0.0004956810296292691,
+   "energy_err_max": 0.0024008892012534755,
+   "flops_per_step": 848052,
+   "flops_run": 678441600,
+   "diverged_at_step": null
+  },
+  "h=0.075": {
+   "pos_err_rms": 0.19343603295226625,
+   "pos_err_final": 0.30331828343186185,
+   "energy_err_median_2nd_half": 0.0005228087019055749,
+   "energy_err_max": 0.002501846645401762,
+   "flops_per_step": 848052,
+   "flops_run": 1356883200,
+   "diverged_at_step": null
+  },
+  "h=0.0375": {
+   "pos_err_rms": 0.1935991633263483,
+   "pos_err_final": 0.3036521849476529,
+   "energy_err_median_2nd_half": 0.0005244284075163197,
+   "energy_err_max": 0.0025045927227954623,
+   "flops_per_step": 848052,
+   "flops_run": 2713766400,
+   "diverged_at_step": null
+  },
+  "h=0.01875": {
+   "pos_err_rms": 0.19360403366285792,
+   "pos_err_final": 0.3036676591352948,
+   "energy_err_median_2nd_half": 0.0005237316981734352,
+   "energy_err_max": 0.0025046798144822136,
+   "flops_per_step": 848052,
+   "flops_run": 5427532800,
+   "diverged_at_step": null
+  },
+  "note": "RK4 on the learned field.  A fourth-order integrator on an exact field would divide the trajectory error by 16 at each halving; what is measured is the floor of the learned field.",
+  "ratios_between_successive_h": [
+   0.4645434133090514,
+   0.979556179670852,
+   0.9991573807898794,
+   0.9999748438272825
+  ]
+ }
+}

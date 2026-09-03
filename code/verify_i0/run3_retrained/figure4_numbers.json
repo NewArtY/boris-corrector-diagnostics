@@ -1,0 +1,26 @@
+{
+  "regime": {
+    "omega_c_dt": 0.3,
+    "tau": 120000.0,
+    "t_final": 120.0,
+    "n_gyrations": 19.1
+  },
+  "physical_signal_median": 0.0007497069637355621,
+  "energy_error_median": {
+    "boris": 1.2458603868559237e-06,
+    "raw": 0.0002544608272753157,
+    "hybrid": 1.6374749727710025e-05
+  },
+  "energy_separation_ratio": {
+    "boris": 601.7584086026978,
+    "raw": 2.9462568826926403,
+    "hybrid": 45.78433113190592
+  },
+  "trajectory_rms_error_in_larmor_radii": {
+    "boris": 0.41695525361490254,
+    "raw": 0.0035969083720288546,
+    "hybrid": 0.0035390936565811333
+  },
+  "trajectory_gain_hybrid_over_boris": 117.81413380783297,
+  "trajectory_gain_orders": 2.071197394581326
+}

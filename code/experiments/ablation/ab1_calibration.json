@@ -1,0 +1,333 @@
+{
+ "meta": {
+  "wave": "W17",
+  "what": "the ablation stand, calibrated against the committed numbers",
+  "reference": "the closed form of B4 (../spectral/sw_common.py through ../refcheck/rc_common.py), never a Boris run at h/150",
+  "n_random_draws": 0,
+  "nothing_retrained": true,
+  "wall_s": 12.375916242599487
+ },
+ "checkpoint": {
+  "path": "checkpoints/boris_corrector_b4.pt",
+  "md5": "0fe271bdb54de8a720f11eec85ee01f5"
+ },
+ "standardisation": {
+  "x_mean": {
+   "rx": 0.011126854164361542,
+   "ry": -0.01235122845400438,
+   "rz": 1.32203051643846,
+   "vx": -0.0004759161635093749,
+   "vy": -0.0007682933687827978,
+   "vz": 0.022089064602144267,
+   "Bx": 0.0,
+   "By": 0.0,
+   "Bz": 0.9995512860120549,
+   "Ex": 5.0144890697959603e-08,
+   "Ey": 4.50768832332985e-08,
+   "Ez": 0.0,
+   "dt": 0.2999999999999998
+  },
+  "x_std": {
+   "rx": 0.7168188286893402,
+   "ry": 0.7142781299546025,
+   "rz": 6.530120418421033,
+   "vx": 0.7066611895567994,
+   "vy": 0.7073521465718396,
+   "vz": 0.09378059621796647,
+   "Bx": 1e-12,
+   "By": 1e-12,
+   "Bz": 0.000347137703595597,
+   "Ex": 2.9278674819303124e-06,
+   "Ey": 2.9335949847465056e-06,
+   "Ez": 1e-12,
+   "dt": 1e-12
+  },
+  "y_scale": [
+   0.02796339300213379,
+   0.027922957905378694,
+   2.704362529632835e-14,
+   0.0014115916442893454,
+   0.0014097937950269352,
+   1e-16
+  ],
+  "dead_inputs": [
+   "Bx",
+   "By",
+   "Ez",
+   "dt"
+  ],
+  "n_dead_inputs": 4,
+  "note": "an input whose training variance was zero; clamp_min(1e-12) made its divisor 1e-12, so a departure of 1e-12 in that input is one standard deviation to the first layer (W14)"
+ },
+ "variant_is_the_committed_integrator": {
+  "projected": {
+   "variant": {
+    "source": "net",
+    "zero_dr": false,
+    "zero_dv": false,
+    "ortho": true,
+    "rescale": true,
+    "gated": false,
+    "analytic_kind": null,
+    "label": "net ortho rescale"
+   },
+   "position_max_abs_diff": 0.0,
+   "velocity_max_abs_diff": 0.0,
+   "bit_identical": true
+  },
+  "raw": {
+   "variant": {
+    "source": "net",
+    "zero_dr": false,
+    "zero_dv": false,
+    "ortho": false,
+    "rescale": false,
+    "gated": false,
+    "analytic_kind": null,
+    "label": "net no-ortho no-rescale"
+   },
+   "position_max_abs_diff": 0.0,
+   "velocity_max_abs_diff": 0.0,
+   "bit_identical": true
+  }
+ },
+ "overlap_with_the_committed_evaluate": {
+  "old_h150": {
+   "energy_separation_projected": {
+    "ab": 45.78433113345744,
+    "committed": 45.78433113345744,
+    "rel_diff": 0.0
+   },
+   "energy_separation_unprojected": {
+    "ab": 2.946256882688746,
+    "committed": 2.946256882688746,
+    "rel_diff": 0.0
+   },
+   "traj_gain_projected": {
+    "ab": 117.81413380788808,
+    "committed": 117.81413380788808,
+    "rel_diff": 0.0
+   },
+   "boris_pos_err_rms": {
+    "ab": 0.41695525361490254,
+    "committed": 0.41695525361490254,
+    "rel_diff": 0.0
+   }
+  },
+  "closed_form": {
+   "energy_separation_projected": {
+    "ab": 45.752058584917684,
+    "committed": 45.752058584917684,
+    "rel_diff": 0.0
+   },
+   "energy_separation_unprojected": {
+    "ab": 2.9462773703544824,
+    "committed": 2.9462773703544824,
+    "rel_diff": 0.0
+   },
+   "traj_gain_projected": {
+    "ab": 120.11205620944715,
+    "committed": 120.11205620944715,
+    "rel_diff": 0.0
+   },
+   "boris_pos_err_rms": {
+    "ab": 0.41665346865912883,
+    "committed": 0.41665346865912883,
+    "rel_diff": 0.0
+   }
+  }
+ },
+ "overlap_worst_rel_diff": 0.0,
+ "calibration_against_rc3": {
+  "closed_form": {
+   "energy_separation_hybrid": {
+    "got": 45.752058584917684,
+    "rc3": 45.752058584917684,
+    "rel_diff": 0.0
+   },
+   "energy_separation_raw": {
+    "got": 2.9462773703544824,
+    "rc3": 2.9462773703544824,
+    "rel_diff": 0.0
+   },
+   "traj_gain_projected": {
+    "got": 120.11205620944715,
+    "rc3": 120.11205620944715,
+    "rel_diff": 0.0
+   },
+   "corrector_projected_pos_err_rms": {
+    "got": 0.003468872999164907,
+    "rc3": 0.003468872999164907,
+    "rel_diff": 0.0
+   },
+   "corrector_raw_pos_err_rms": {
+    "got": 0.003538661738741027,
+    "rc3": 0.003538661738741027,
+    "rel_diff": 0.0
+   },
+   "boris_pos_err_rms": {
+    "got": 0.41665346865912883,
+    "rc3": 0.41665346865912883,
+    "rel_diff": 0.0
+   },
+   "physical_signal_median": {
+    "got": 0.0007497187722405041,
+    "rc3": 0.0007497187722405041,
+    "rel_diff": 0.0
+   },
+   "corrector_projected_energy": {
+    "got": 1.6386558232106552e-05,
+    "rc3": 1.6386558232106552e-05,
+    "rel_diff": 0.0
+   }
+  },
+  "old_h150": {
+   "energy_separation_hybrid": {
+    "got": 45.78433113345744,
+    "rc3": 45.78433113345744,
+    "rel_diff": 0.0
+   },
+   "energy_separation_raw": {
+    "got": 2.946256882688746,
+    "rc3": 2.946256882688746,
+    "rel_diff": 0.0
+   },
+   "traj_gain_projected": {
+    "got": 117.81413380788808,
+    "rc3": 117.81413380788808,
+    "rel_diff": 0.0
+   }
+  }
+ },
+ "calibration_worst_rel_diff": 0.0,
+ "manuscript": {
+  "printed": {
+   "energy_separation_projected": 45.75,
+   "energy_separation_unprojected": 2.95,
+   "traj_advantage_closed_form": 120.1,
+   "traj_advantage_h150": 117.8
+  },
+  "reproduced": {
+   "energy_separation_projected": 45.752058584917684,
+   "energy_separation_unprojected": 2.9462773703544824,
+   "traj_advantage_closed_form": 120.11205620944715,
+   "traj_advantage_h150": 117.81413380788808
+  }
+ },
+ "runs": {
+  "old_h150": {
+   "boris": {
+    "energy_err_median_2nd_half": 1.2458603868559237e-06,
+    "energy_err_max": 2.4840047152530076e-06,
+    "pos_err_final": 0.8730451840867831,
+    "pos_err_rms": 0.41695525361490254,
+    "speed_change_from_initial_max": 0.0004998424942361801,
+    "energy_separation": 601.7584086026901,
+    "traj_gain_over_boris": 1.0
+   },
+   "corrector_projected": {
+    "energy_err_median_2nd_half": 1.6374749727154914e-05,
+    "energy_err_max": 2.185001306231893e-05,
+    "pos_err_final": 0.00930243501239169,
+    "pos_err_rms": 0.003539093656579478,
+    "speed_change_from_initial_max": 0.0004889439761808223,
+    "gate": {
+     "n_steps": 400,
+     "n_gated": 0,
+     "gated_fraction": 0.0,
+     "constraint_max_abs": 2.220446049250313e-16,
+     "constraint_max_rel": 2.2210134997929783e-16,
+     "gate_signal_max": null,
+     "gate_signal_median": null
+    },
+    "constraint_max_abs": 2.220446049250313e-16,
+    "constraint_max_rel": 2.2210134997929783e-16,
+    "energy_separation": 45.78433113345744,
+    "traj_gain_over_boris": 117.81413380788808
+   },
+   "corrector_raw": {
+    "energy_err_median_2nd_half": 0.0002544608272756488,
+    "energy_err_max": 0.0003107158827286849,
+    "pos_err_final": 0.00926410050452273,
+    "pos_err_rms": 0.003596908372027636,
+    "speed_change_from_initial_max": 0.0006069498344843938,
+    "gate": {
+     "n_steps": 400,
+     "n_gated": 0,
+     "gated_fraction": 0.0,
+     "constraint_max_abs": 1.53833638971701e-05,
+     "constraint_max_rel": 1.5392178545901392e-05,
+     "gate_signal_max": null,
+     "gate_signal_median": null
+    },
+    "constraint_max_abs": 1.53833638971701e-05,
+    "constraint_max_rel": 1.5392178545901392e-05,
+    "energy_separation": 2.946256882688746,
+    "traj_gain_over_boris": 115.92045459302541
+   },
+   "physical_signal_median": 0.0007497069637355525
+  },
+  "closed_form": {
+   "boris": {
+    "energy_err_median_2nd_half": 1.2498379314829222e-06,
+    "energy_err_max": 2.499624659257904e-06,
+    "pos_err_final": 0.8731425130081953,
+    "pos_err_rms": 0.41665346865912883,
+    "speed_change_from_initial_max": 0.0004998424942361801,
+    "energy_separation": 599.8527915943222,
+    "traj_gain_over_boris": 1.0
+   },
+   "corrector_projected": {
+    "energy_err_median_2nd_half": 1.6386558232106552e-05,
+    "energy_err_max": 2.1851274895956507e-05,
+    "pos_err_final": 0.008871081704495137,
+    "pos_err_rms": 0.003468872999164907,
+    "speed_change_from_initial_max": 0.0004889439761808223,
+    "gate": {
+     "n_steps": 400,
+     "n_gated": 0,
+     "gated_fraction": 0.0,
+     "constraint_max_abs": 2.220446049250313e-16,
+     "constraint_max_rel": 2.2210134997929783e-16,
+     "gate_signal_max": null,
+     "gate_signal_median": null
+    },
+    "constraint_max_abs": 2.220446049250313e-16,
+    "constraint_max_rel": 2.2210134997929783e-16,
+    "energy_separation": 45.752058584917684,
+    "traj_gain_over_boris": 120.11205620944715
+   },
+   "corrector_raw": {
+    "energy_err_median_2nd_half": 0.00025446306576026867,
+    "energy_err_max": 0.0003107269700883819,
+    "pos_err_final": 0.008817461701392085,
+    "pos_err_rms": 0.003538661738741027,
+    "speed_change_from_initial_max": 0.0006069498344843938,
+    "gate": {
+     "n_steps": 400,
+     "n_gated": 0,
+     "gated_fraction": 0.0,
+     "constraint_max_abs": 1.53833638971701e-05,
+     "constraint_max_rel": 1.5392178545901392e-05,
+     "gate_signal_max": null,
+     "gate_signal_median": null
+    },
+    "constraint_max_abs": 1.53833638971701e-05,
+    "constraint_max_rel": 1.5392178545901392e-05,
+    "energy_separation": 2.9462773703544824,
+    "traj_gain_over_boris": 117.74323160013718
+   },
+   "physical_signal_median": 0.0007497187722405041
+  }
+ },
+ "reference": {
+  "closed_form_basis_agreement": {
+   "n_spot": 61,
+   "t_max": 120.0,
+   "position_max_abs": 8.270995000003722e-12,
+   "velocity_max_abs": 6.97768232083007e-12
+  },
+  "old_ruler_own_rms_error_vs_closed_form": 0.001397499970886964,
+  "why_not_h150": "W18: the corrector's training target is a Boris run at h/150, so ruler and pupil are the same object"
+ }
+}

@@ -1,0 +1,410 @@
+{
+ "meta": {
+  "wave": "W16",
+  "what": "calibration of the seed-ensemble stand, before any retraining exists",
+  "committed_checkpoint": "checkpoints/boris_corrector_b4.pt",
+  "committed_checkpoint_md5": "0fe271bdb54de8a720f11eec85ee01f5",
+  "committed_seed": 42,
+  "seed_block": 16000000,
+  "n_corrector_seeds_declared": 16,
+  "corrector_seeds_declared": [
+   16000000,
+   16000001,
+   16000002,
+   16000003,
+   16000004,
+   16000005,
+   16000006,
+   16000007,
+   16000008,
+   16000009,
+   16000010,
+   16000011,
+   16000012,
+   16000013,
+   16000014,
+   16000015
+  ],
+  "external_reps_committed": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "external_reps_added": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "dt": 0.3,
+  "horizons": {
+   "H_paper": 400,
+   "H_crossover": 2120
+  },
+  "channels": [
+   "trajectory",
+   "phase",
+   "energy",
+   "spectral"
+  ],
+  "fields": [
+   "uniform",
+   "B1_radial",
+   "B2_wave",
+   "B3_tilted",
+   "B4_decaying"
+  ],
+  "n_initial_conditions": 8,
+  "n_random_draws_in_this_script": 0,
+  "wall_s": 155.9166135787964
+ },
+ "tab_family": {
+  "setup": "B4_decaying, Omega h = 0.3, t = 120, 401 samples, DOP853 rtol 1e-12 atol 1e-14, canonical initial condition r0=(1,0,0) v0=(0,1,0), r_L = 1",
+  "rows": {
+   "boris": {
+    "trajectory": 0.41665346865457553,
+    "trajectory_printed": 0.417,
+    "trajectory_rel_diff": 0.0008310104206821345,
+    "energy": 1.2498392230053668e-06,
+    "energy_printed": 1.25e-06,
+    "energy_rel_diff": 0.0001286215957066724
+   },
+   "corrector": {
+    "trajectory": 0.003468873001366504,
+    "trajectory_printed": 0.00347,
+    "trajectory_rel_diff": 0.00032478346786626525,
+    "energy": 1.638655802171929e-05,
+    "energy_printed": 1.64e-05,
+    "energy_rel_diff": 0.0008196328219945298
+   },
+   "vps2": {
+    "trajectory": 0.010583014451054662,
+    "trajectory_printed": 0.0106,
+    "trajectory_rel_diff": 0.0016024102778620485,
+    "energy": 5.568576563752536e-06,
+    "energy_printed": 5.57e-06,
+    "energy_rel_diff": 0.0002555540839252482
+   },
+   "vps4": {
+    "trajectory": 5.353940159721674e-05,
+    "trajectory_printed": 5.35e-05,
+    "trajectory_rel_diff": 0.0007364784526493819,
+    "energy": 2.635140666784608e-07,
+    "energy_printed": 2.64e-07,
+    "energy_rel_diff": 0.0018406565209818293
+   },
+   "gl4": {
+    "trajectory": 0.0007745714317733487,
+    "trajectory_printed": 0.000775,
+    "trajectory_rel_diff": 0.0005529912601952203,
+    "energy": 4.177814760808474e-08,
+    "energy_printed": 4.18e-08,
+    "energy_rel_diff": 0.0005227844955803869
+   }
+  },
+  "worst_relative_difference_vs_printed": 0.0018406565209818293,
+  "note": "the printed table carries three significant digits, so agreement at 2e-3 is agreement to the printed precision"
+ },
+ "against_gtable": {
+  "per_field": {
+   "uniform": {
+    "cells": {
+     "H_paper|trajectory": {
+      "sd1": 0.01158205509758301,
+      "gt2": 0.01158205509758301,
+      "rel_diff": 0.0
+     },
+     "H_paper|phase": {
+      "sd1": 0.0018879872579049385,
+      "gt2": 0.0018879872579049385,
+      "rel_diff": 0.0
+     },
+     "H_paper|energy": {
+      "sd1": 8.43769498715119e-15,
+      "gt2": 8.43769498715119e-15,
+      "rel_diff": 0.0
+     },
+     "H_paper|spectral": {
+      "sd1": 0.00010461853580153216,
+      "gt2": 0.00010461853580153216,
+      "rel_diff": 0.0
+     },
+     "H_crossover|trajectory": {
+      "sd1": 0.07348286843152217,
+      "gt2": 0.07348286843152217,
+      "rel_diff": 0.0
+     },
+     "H_crossover|phase": {
+      "sd1": 0.0099852179736734,
+      "gt2": 0.0099852179736734,
+      "rel_diff": 0.0
+     },
+     "H_crossover|energy": {
+      "sd1": 4.363176486776865e-14,
+      "gt2": 4.363176486776865e-14,
+      "rel_diff": 0.0
+     },
+     "H_crossover|spectral": {
+      "sd1": 0.003965389372414359,
+      "gt2": 0.003965389372414359,
+      "rel_diff": 0.0
+     }
+    },
+    "wall_s": 2.4022045135498047
+   },
+   "B1_radial": {
+    "cells": {
+     "H_paper|trajectory": {
+      "sd1": 0.40105202280437874,
+      "gt2": 0.40105202280437874,
+      "rel_diff": 0.0
+     },
+     "H_paper|phase": {
+      "sd1": 0.18008220188110038,
+      "gt2": 0.18008220188110038,
+      "rel_diff": 0.0
+     },
+     "H_paper|energy": {
+      "sd1": 2.7922109069322687e-14,
+      "gt2": 2.7922109069322687e-14,
+      "rel_diff": 0.0
+     },
+     "H_paper|spectral": {
+      "sd1": 0.17413891330439407,
+      "gt2": 0.17413891330439407,
+      "rel_diff": 0.0
+     },
+     "H_crossover|trajectory": {
+      "sd1": 0.5781244733777201,
+      "gt2": 0.5781244733777201,
+      "rel_diff": 0.0
+     },
+     "H_crossover|phase": {
+      "sd1": 0.5199123980916254,
+      "gt2": 0.5199123980916254,
+      "rel_diff": 0.0
+     },
+     "H_crossover|energy": {
+      "sd1": 7.327471962526033e-14,
+      "gt2": 7.327471962526033e-14,
+      "rel_diff": 0.0
+     },
+     "H_crossover|spectral": {
+      "sd1": 0.2208993723622677,
+      "gt2": 0.2208993723622677,
+      "rel_diff": 0.0
+     }
+    },
+    "wall_s": 2.4709315299987793
+   },
+   "B2_wave": {
+    "cells": {
+     "H_paper|trajectory": {
+      "sd1": 1.2106476846087613,
+      "gt2": 1.2106476846087613,
+      "rel_diff": 0.0
+     },
+     "H_paper|phase": {
+      "sd1": 0.519064532444131,
+      "gt2": 0.519064532444131,
+      "rel_diff": 0.0
+     },
+     "H_paper|energy": {
+      "sd1": 2.6700863742235015e-14,
+      "gt2": 2.6700863742235015e-14,
+      "rel_diff": 0.0
+     },
+     "H_paper|spectral": {
+      "sd1": 0.9266936263974401,
+      "gt2": 0.9266936263974401,
+      "rel_diff": 0.0
+     },
+     "H_crossover|trajectory": {
+      "sd1": 18.965488846299387,
+      "gt2": 18.965488846299387,
+      "rel_diff": 0.0
+     },
+     "H_crossover|phase": {
+      "sd1": 2.5053620817072195,
+      "gt2": 2.5053620817072195,
+      "rel_diff": 0.0
+     },
+     "H_crossover|energy": {
+      "sd1": 1.3428147482841268e-13,
+      "gt2": 1.3428147482841268e-13,
+      "rel_diff": 0.0
+     },
+     "H_crossover|spectral": {
+      "sd1": 196.21630479057342,
+      "gt2": 196.21630479057342,
+      "rel_diff": 0.0
+     }
+    },
+    "wall_s": 2.4036917686462402
+   },
+   "B3_tilted": {
+    "cells": {
+     "H_paper|trajectory": {
+      "sd1": 10.778393660402987,
+      "gt2": 10.778393660402987,
+      "rel_diff": 0.0
+     },
+     "H_paper|phase": {
+      "sd1": 0.7296249659891392,
+      "gt2": 0.7296249659891392,
+      "rel_diff": 0.0
+     },
+     "H_paper|energy": {
+      "sd1": 1.7430501486614958e-14,
+      "gt2": 1.7430501486614958e-14,
+      "rel_diff": 0.0
+     },
+     "H_paper|spectral": {
+      "sd1": 73.75007541868482,
+      "gt2": 73.75007541868482,
+      "rel_diff": 0.0
+     },
+     "H_crossover|trajectory": {
+      "sd1": 198.56823955928775,
+      "gt2": 198.56823955928775,
+      "rel_diff": 0.0
+     },
+     "H_crossover|phase": {
+      "sd1": 1.9166405499276773,
+      "gt2": 1.9166405499276773,
+      "rel_diff": 0.0
+     },
+     "H_crossover|energy": {
+      "sd1": 7.394085344003543e-14,
+      "gt2": 7.394085344003543e-14,
+      "rel_diff": 0.0
+     },
+     "H_crossover|spectral": {
+      "sd1": 22929.263448923135,
+      "gt2": 22929.263448923135,
+      "rel_diff": 0.0
+     }
+    },
+    "wall_s": 2.171393632888794
+   },
+   "B4_decaying": {
+    "cells": {
+     "H_paper|trajectory": {
+      "sd1": 0.0034447673877762335,
+      "gt2": 0.0034447673877762335,
+      "rel_diff": 0.0
+     },
+     "H_paper|phase": {
+      "sd1": 0.0008330078984296167,
+      "gt2": 0.0008330078984296167,
+      "rel_diff": 0.0
+     },
+     "H_paper|energy": {
+      "sd1": 1.6359723671255377e-05,
+      "gt2": 1.6359723671255377e-05,
+      "rel_diff": 0.0
+     },
+     "H_paper|spectral": {
+      "sd1": 3.953117126865891e-06,
+      "gt2": 3.953117126865891e-06,
+      "rel_diff": 0.0
+     },
+     "H_crossover|trajectory": {
+      "sd1": 1.5748473607082711,
+      "gt2": 1.5748473607082711,
+      "rel_diff": 0.0
+     },
+     "H_crossover|phase": {
+      "sd1": 0.039540594110932345,
+      "gt2": 0.039540594110932345,
+      "rel_diff": 0.0
+     },
+     "H_crossover|energy": {
+      "sd1": 7.666680234652556e-05,
+      "gt2": 7.666680234652556e-05,
+      "rel_diff": 0.0
+     },
+     "H_crossover|spectral": {
+      "sd1": 0.20156741378748375,
+      "gt2": 0.20156741378748375,
+      "rel_diff": 0.0
+     }
+    },
+    "wall_s": 2.237685441970825
+   }
+  },
+  "worst_relative_difference": 0.0,
+  "requirement": "exact zero: the same code on the same checkpoint"
+ },
+ "reference_floor": {
+  "what": "the trajectory error of the reference itself, in Larmor radii, over the window of Table tab:family (t = 120, 401 samples), against the closed form of ../spectral/sw_common.py",
+  "boris_ladder": {
+   "h_over_1": {
+    "h": 0.3,
+    "refinement": 1,
+    "rms_vs_closed_form": 0.4166534686601131,
+    "final_vs_closed_form": 0.8731425130082274
+   },
+   "h_over_10": {
+    "h": 0.03,
+    "refinement": 10,
+    "rms_vs_closed_form": 0.018459317591118282,
+    "final_vs_closed_form": 0.010337871801322292,
+    "fitted_order": 1.3535593598244862
+   },
+   "h_over_50": {
+    "h": 0.006,
+    "refinement": 50,
+    "rms_vs_closed_form": 0.00410656243737573,
+    "final_vs_closed_form": 0.00159509144091452,
+    "fitted_order": 0.9338558271050651
+   },
+   "h_over_150": {
+    "h": 0.002,
+    "refinement": 150,
+    "rms_vs_closed_form": 0.0013959214902257689,
+    "final_vs_closed_form": 0.0005427956170978839,
+    "fitted_order": 0.9821768207679102
+   },
+   "h_over_750": {
+    "h": 0.00039999999999999996,
+    "refinement": 750,
+    "rms_vs_closed_form": 0.00028140550543963603,
+    "final_vs_closed_form": 0.00011007033646433145,
+    "fitted_order": 0.995076182388686
+   },
+   "h_over_1500": {
+    "h": 0.00019999999999999998,
+    "refinement": 1500,
+    "rms_vs_closed_form": 0.00014084266768889665,
+    "final_vs_closed_form": 5.5141586258406316e-05,
+    "fitted_order": 0.9985660953152092
+   }
+  },
+  "dop853_rtol_1e-12": {
+   "rms_vs_closed_form": 6.196214477428449e-12,
+   "final_vs_closed_form": 1.0664805787507891e-11
+  },
+  "reference_of_horizon_and_stats": "Boris at h/150",
+  "its_own_rms_error": 0.0013959214902257689,
+  "boris_at_the_working_step": 0.4166534686601131,
+  "gain_at_which_a_report_falls_below_this_floor": 298.4791562974833,
+  "gain_within_a_factor_of_ten_of_the_floor": 29.84791562974833,
+  "why_it_is_first_order": "the shipped Boris step drifts the position over the full step with the NEW velocity (models/boris.py:boris_step, r_new = r + v_new dt), which is the synchronized reading.  The manuscript already reports the fitted order of that reading as 1.31 over the whole step grid and 0.96 over its fine half; the consequence for a reference built at h/150 is what is measured here.",
+  "consequence": "a corrector trained on the h/150 Boris propagation is trained on a trajectory that is this far from the true one, and is then scored against the same trajectory.  A reported advantage above boris_at_the_working_step / its_own_rms_error is a corrector error below the error of the ruler."
+ },
+ "training_cost": {
+  "forward_flops": 113958,
+  "n_parameters": 52102,
+  "data_flops": 101700000.0,
+  "adam_steps": 4400,
+  "optimisation_flops": 771319991200.0,
+  "total_flops": 771421691200.0,
+  "inference_flops_per_step": 114091.0,
+  "run_flops_400_steps": 45636400.0,
+  "model": "1 flop per arithmetic op, 20 per transcendental (Section 9); backward = 2x forward; Adam update 5 flops per parameter per step"
+ }
+}

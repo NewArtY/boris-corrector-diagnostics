@@ -1,0 +1,26 @@
+{
+  "corrector_multiscale.npz": {
+    "status": "OK",
+    "max_rel_dev": 2.3850113464875214e-12,
+    "worst_key": "test_drdt",
+    "n_arrays": 24
+  },
+  "dipole.npz": {
+    "status": "OK",
+    "max_rel_dev": 6.01240771273072e-07,
+    "worst_key": "train_v",
+    "n_arrays": 24
+  },
+  "stochastic.npz": {
+    "status": "OK",
+    "max_rel_dev": 5.45236913728708e-14,
+    "worst_key": "train_v",
+    "n_arrays": 24
+  },
+  "uniform.npz": {
+    "status": "OK",
+    "max_rel_dev": 0.0,
+    "worst_key": null,
+    "n_arrays": 24
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "flops": {
+    "transcendental_charged_as": 20,
+    "boris_step_total": 113,
+    "boris_step_arithmetic_only": 73,
+    "defectnet_forward": 113958,
+    "defectnet_MACs": 51584,
+    "defectnet_parameters": 52102,
+    "hybrid_step_total": 114091,
+    "ratio_hybrid_over_boris_per_step": 1009.6548672566372
+  },
+  "hybrid_operating_point": {
+    "dt": 0.3,
+    "n_steps": 400,
+    "wall_s": 0.056824700004654005,
+    "us_per_step": 142.061750011635,
+    "traj_err_vs_independent_ref": 0.0034688730015049133,
+    "total_flops": 45636400
+  },
+  "breakeven_vs_staggered_boris_2nd_order": {
+    "target_traj_err": 0.0034688730015049133,
+    "dt": 0.02451066769542617,
+    "local_order": 2.0000527943764523,
+    "n_steps": 4895.827461378894,
+    "us_per_step": 43.946749998819236,
+    "wall_s": 0.2151557054825721,
+    "total_flops": 553228.503135815,
+    "wall_ratio_hybrid_over_boris": 0.26410965898953065,
+    "flop_ratio_hybrid_over_boris": 82.49104979465686
+  },
+  "breakeven_vs_shipped_boris_1st_order": {
+    "dt": null,
+    "local_order": null,
+    "note": "shipped scheme is 1st order in position; below dt~6e-3 its error approaches that of the fine reference itself, so this extrapolation is not physically meaningful"
+  },
+  "convergence_orders": {
+    "shipped_traj": {
+      "traj_all": [
+        1.3075272017713118,
+        0.14153422244806965
+      ],
+      "traj_coarse_dt>=0.1": [
+        1.817245219902501,
+        0.13702089573928938
+      ],
+      "traj_fine_dt<=0.075": [
+        0.9593458156019219,
+        0.011784344062744962
+      ],
+      "energy_all": [
+        1.0397267126455487,
+        0.008645535383637814
+      ]
+    },
+    "staggered_traj": {
+      "traj_all": [
+        1.8918586415088565,
+        0.04738900166054281
+      ],
+      "traj_coarse_dt>=0.1": [
+        1.9674619310968224,
+        0.008909600684329168
+      ],
+      "traj_fine_dt<=0.075": [
+        1.7458649726851343,
+        0.11155137635358146
+      ],
+      "energy_all": [
+        1.9934475884690934,
+        0.003017438592920126
+      ]
+    }
+  },
+  "reference_quality": {
+    "article_reference_own_error_vs_DOP853": 0.0013969752400163121,
+    "hybrid_err_over_reference_err": 2.4831313413002283
+  },
+  "verdict": {
+    "at_fixed_cost_wallclock_as_implemented": "SURVIVES: hybrid is 3.8x CHEAPER in wall-clock than a correctly implemented 2nd-order Boris at equal trajectory accuracy",
+    "at_fixed_cost_flops": "FAILS: hybrid costs 82x MORE FLOPs than the same Boris at equal trajectory accuracy",
+    "why_they_disagree": "boris_step is pure-Python/NumPy on 3-vectors; its 43 us/step is interpreter overhead, ~400x its arithmetic content. The network runs in compiled BLAS. Wall-clock therefore flatters the hybrid by ~2-3 orders of magnitude relative to a compiled PIC code."
+  }
+}

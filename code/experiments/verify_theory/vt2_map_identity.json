@@ -1,0 +1,15 @@
+{
+ "n_steps": 20000,
+ "A_same_start_no_halfback": {
+  "max_abs_dr": 0.0,
+  "max_abs_dv": 0.0,
+  "bitwise_identical": true
+ },
+ "B_same_start_with_halfback": {
+  "max_abs_dr": 0.0,
+  "max_abs_dv": 0.0,
+  "bitwise_identical": true
+ },
+ "C_init_convention_orbit_gap_rms_rL": 0.21655657374807757,
+ "note": "A/B == 0 -> the two recursions are the same map, differing only in initial state and readout; C is the size of the init-convention effect (O(h))"
+}

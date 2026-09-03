@@ -1,0 +1,53 @@
+{
+ "S7_disadvantage_factors": {
+  "note": "reciprocal of horizon/traj_summary.json traj_gain_projected",
+  "at_1e3_gyro_orbits": 142.5461453607805,
+  "at_1e4_gyro_orbits": 1575.2238410159794,
+  "manuscript_prints": [
+   143,
+   1575
+  ]
+ },
+ "S7_energy_crosses_physical_signal_gyro_orbits": {
+  "note": "first sample with |dE|/E0 > 1 - exp(-t/tau); rule of horizon/ablate.py applied to horizon/long_runs.npz",
+  "crossings": {
+   "paper_tau1.2e5/boris": null,
+   "paper_tau1.2e5/raw": 24.971410571118415,
+   "paper_tau1.2e5/proj": 3495.997479951814,
+   "quasistatic_tau1.2e8/boris": null,
+   "quasistatic_tau1.2e8/raw": 24.971410571118415,
+   "quasistatic_tau1.2e8/proj": null
+  },
+  "manuscript_prints": 3496,
+  "value_used": 3495.997479951814
+ },
+ "S7_reference_convergence": {
+  "boris_pos_err_rms_ref150x": 1.462420454313781,
+  "boris_pos_err_rms_ref1500x": 1.4624916300001773,
+  "relative_change": 4.866741452478837e-05,
+  "manuscript_prints": 4.87e-05
+ },
+ "S7_boris_trajectory_saturation_larmor": {
+  "at_19.1_gyro_orbits": 0.41695525361490227,
+  "at_1e3_gyro_orbits": 1.462420454313781,
+  "at_1e4_gyro_orbits": 1.631745568336142,
+  "manuscript_prints": [
+   0.417,
+   1.462,
+   1.632
+  ]
+ },
+ "consistency_checks": {
+  "crossover_gain_at_19.1_vs_validation_traj_gain": [
+   117.81413359977407,
+   117.81413380797055,
+   1e-08
+  ],
+  "crossover_gain_at_1000_vs_traj_summary_1e3": [
+   0.007015742111726788,
+   0.0070152721244690725,
+   0.001
+  ],
+  "one_larmor_horizon_gain": 3.357142857142857
+ }
+}

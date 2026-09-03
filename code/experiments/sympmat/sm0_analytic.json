@@ -1,0 +1,216 @@
+{
+ "declared": {
+  "dt_ladder": [
+   2.0,
+   1.0,
+   0.5,
+   0.25,
+   0.125,
+   0.0625,
+   0.03125,
+   0.015625,
+   0.0078125
+  ],
+  "b_eval": [
+   0.5,
+   2.5
+  ],
+  "n_ensemble": 625,
+  "n_seeds": 3,
+  "n_pairs_per_b": 100,
+  "tf_main": 8.0
+ },
+ "max_symplectic_defect": 3.9140537222535934e-16,
+ "max_vs_dop853": 4.3076653355456074e-14,
+ "max_group_defect": 7.771561172376096e-16,
+ "max_rotation_commutator": 2.220446049250313e-16,
+ "max_spectrum_defect": 2.4424906541753444e-15,
+ "boris_family": {
+  "b0.5_h0.25": {
+   "theta": 0.125,
+   "r_true": 1.66,
+   "Rg_predicted": 1.663239027470195,
+   "offset_predicted": 0.10375,
+   "B2B": {
+    "radius": 1.6600000000000088,
+    "centre_offset": 2.666656470271895e-15,
+    "offset_along_v0": -2.6645352591003757e-15,
+    "offset_perp_v0": -1.0634182363424498e-16
+   },
+   "BLF_stored": {
+    "radius": 1.6632390274702038,
+    "centre_offset": 4.831860904748829e-16,
+    "offset_along_v0": -4.440892098500626e-16,
+    "offset_perp_v0": -1.9040370722007704e-16
+   },
+   "B1A": {
+    "radius": 1.6632390274702031,
+    "centre_offset": 0.10375000000000156,
+    "offset_along_v0": -0.10375000000000158,
+    "offset_perp_v0": -4.613410329394646e-16
+   },
+   "B1B": {
+    "radius": 1.6632390274702031,
+    "centre_offset": 0.10374999999999801,
+    "offset_along_v0": 0.10374999999999801,
+    "offset_perp_v0": -2.1445011026769144e-16
+   }
+  },
+  "b0.5_h1": {
+   "theta": 0.5,
+   "r_true": 1.66,
+   "Rg_predicted": 1.711088834631329,
+   "offset_predicted": 0.415,
+   "B2B": {
+    "radius": 1.6599999999999908,
+    "centre_offset": 1.6480188395173523e-15,
+    "offset_along_v0": -1.5543122344752192e-15,
+    "offset_perp_v0": -5.477951927178369e-16
+   },
+   "BLF_stored": {
+    "radius": 1.711088834631319,
+    "centre_offset": 8.574344957300167e-16,
+    "offset_along_v0": -6.661338147750939e-16,
+    "offset_perp_v0": -5.398700355464905e-16
+   },
+   "B1A": {
+    "radius": 1.7110888346313204,
+    "centre_offset": 0.41499999999999826,
+    "offset_along_v0": -0.41499999999999826,
+    "offset_perp_v0": 9.282662362709073e-16
+   },
+   "B1B": {
+    "radius": 1.7110888346313191,
+    "centre_offset": 0.4149999999999996,
+    "offset_along_v0": 0.4149999999999996,
+    "offset_perp_v0": -4.593756859081892e-16
+   }
+  },
+  "b1_h0.25": {
+   "theta": 0.25,
+   "r_true": 0.83,
+   "Rg_predicted": 0.8364592413859744,
+   "offset_predicted": 0.10375,
+   "B2B": {
+    "radius": 0.8300000000000007,
+    "centre_offset": 8.85142108598109e-18,
+    "offset_along_v0": 0.0,
+    "offset_perp_v0": -8.85142108598109e-18
+   },
+   "BLF_stored": {
+    "radius": 0.8364592413859754,
+    "centre_offset": 1.1193681090895742e-16,
+    "offset_along_v0": -1.1102230246251565e-16,
+    "offset_perp_v0": 1.4279285429928932e-17
+   },
+   "B1A": {
+    "radius": 0.8364592413859734,
+    "centre_offset": 0.10374999999999501,
+    "offset_along_v0": -0.10374999999999501,
+    "offset_perp_v0": -1.1345559662582104e-15
+   },
+   "B1B": {
+    "radius": 0.8364592413859754,
+    "centre_offset": 0.10375000000000012,
+    "offset_along_v0": 0.10375000000000012,
+    "offset_perp_v0": 1.653860255410992e-16
+   }
+  },
+  "b1_h1": {
+   "theta": 1.0,
+   "r_true": 0.83,
+   "Rg_predicted": 0.9279682106624128,
+   "offset_predicted": 0.415,
+   "B2B": {
+    "radius": 0.830000000000004,
+    "centre_offset": 1.904770966307433e-15,
+    "offset_along_v0": -1.3322676295501878e-15,
+    "offset_perp_v0": 1.3613285412935686e-15
+   },
+   "BLF_stored": {
+    "radius": 0.9279682106624173,
+    "centre_offset": 1.908852202289092e-15,
+    "offset_along_v0": -1.3322676295501878e-15,
+    "offset_perp_v0": 1.3670331720322809e-15
+   },
+   "B1A": {
+    "radius": 0.9279682106624174,
+    "centre_offset": 0.4150000000000016,
+    "offset_along_v0": -0.4150000000000016,
+    "offset_perp_v0": 4.668905816851024e-16
+   },
+   "B1B": {
+    "radius": 0.9279682106624172,
+    "centre_offset": 0.41499999999999937,
+    "offset_along_v0": 0.41499999999999937,
+    "offset_perp_v0": 1.3590876960210416e-15
+   }
+  },
+  "b2.5_h0.25": {
+   "theta": 0.625,
+   "r_true": 0.33199999999999996,
+   "Rg_predicted": 0.34783338324548435,
+   "offset_predicted": 0.10375,
+   "B2B": {
+    "radius": 0.3320000000000028,
+    "centre_offset": 3.552063577518929e-16,
+    "offset_along_v0": -5.551115123125783e-17,
+    "offset_perp_v0": 3.5084194258432977e-16
+   },
+   "BLF_stored": {
+    "radius": 0.3478333832454872,
+    "centre_offset": 3.530073666958335e-16,
+    "offset_along_v0": 9.71445146547012e-17,
+    "offset_perp_v0": 3.393775835467469e-16
+   },
+   "B1A": {
+    "radius": 0.34783338324548735,
+    "centre_offset": 0.10375000000000015,
+    "offset_along_v0": -0.10375000000000015,
+    "offset_perp_v0": -3.2385800190352513e-16
+   },
+   "B1B": {
+    "radius": 0.3478333832454873,
+    "centre_offset": 0.10375000000000026,
+    "offset_along_v0": 0.10375000000000027,
+    "offset_perp_v0": 3.57819418409775e-16
+   }
+  },
+  "b2.5_h1": {
+   "theta": 2.5,
+   "r_true": 0.33199999999999996,
+   "Rg_predicted": 0.5314593117069264,
+   "offset_predicted": 0.415,
+   "B2B": {
+    "radius": 0.3319999999999986,
+    "centre_offset": 3.3337049691623553e-16,
+    "offset_along_v0": -2.3592239273284576e-16,
+    "offset_perp_v0": 2.355345257523548e-16
+   },
+   "BLF_stored": {
+    "radius": 0.5314593117069243,
+    "centre_offset": 3.0479521045890028e-16,
+    "offset_along_v0": -1.6653345369377348e-16,
+    "offset_perp_v0": 2.5527774897062437e-16
+   },
+   "B1A": {
+    "radius": 0.5314593117069245,
+    "centre_offset": 0.4149999999999999,
+    "offset_along_v0": -0.4149999999999999,
+    "offset_perp_v0": 2.3973641865297916e-16
+   },
+   "B1B": {
+    "radius": 0.5314593117069242,
+    "centre_offset": 0.41499999999999987,
+    "offset_along_v0": 0.41499999999999987,
+    "offset_perp_v0": 2.4331626255887403e-16
+   }
+  }
+ },
+ "blf_centred_minus_b2b": 0.0,
+ "flops": {
+  "boris_step_uniform": 14,
+  "sympmat_step_uniform": 28,
+  "parametric_matrix_build": 8416
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "source": "reproduced from experiments/verify_final/vf1_magnetic.py (T1/T7 block); asserted equal to vf1_magnetic.json at rtol 1e-9",
+ "setup": {
+  "h": 0.3,
+  "tau": 120000.0,
+  "t_final": 120.0,
+  "gyroperiods": 19.098593171027318,
+  "reference": "DOP853, rtol 1e-13, atol 1e-15"
+ },
+ "panel_a": {
+  "theta_end_deg_measured": 50.79709113635572,
+  "theta_end_deg_closed_form": 50.805480854908026,
+  "theta_median_2nd_half_deg_measured": 38.11193352734287,
+  "theta_median_2nd_half_deg_closed_form": 38.118270064594064,
+  "deviation_end_percent": 0.016513412354601797,
+  "deviation_median_percent": 0.016623359980549868
+ },
+ "panel_b": {
+  "smoothing": "median over one gyroperiod (21 steps)",
+  "rel_velocity_error_end": 0.8578244188332315,
+  "two_sin_half_theta_end": 0.8578244048763132,
+  "speed_err_median_2nd_half": 6.253057579458407e-07,
+  "speed_err_closed_form_h_over_4tau": 6.249999999999999e-07,
+  "energy_err_median_2nd_half": 1.24983676785817e-06,
+  "energy_err_closed_form_median": 1.2490628514746259e-06,
+  "speed_last_gyroperiod_median": 5.9139238484881e-07,
+  "energy_last_gyroperiod_median": 1.1816147416077172e-06,
+  "velocity_last_gyroperiod_median": 0.8337574314456302,
+  "gap_velocity_over_energy_annotated": 705608.5220392657
+ },
+ "polar_identity_max_residual": 5.377642775528102e-16,
+ "reference_energy_drift_from_analytic": 6.940137353694809e-11,
+ "pos_err_rms_over_larmor_radius": 0.41665346865924435
+}

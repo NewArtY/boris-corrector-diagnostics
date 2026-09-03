@@ -1,0 +1,74 @@
+{
+  "crossover_gyrations": 100.98381139180759,
+  "reference_refinement": 150,
+  "gain_vs_horizon": [
+    {
+      "gyro_orbits_requested": 19.1,
+      "gyro_orbits_sampled": 19.098593171027442,
+      "boris_pos_err_rms": 0.41747612232154574,
+      "proj_pos_err_rms": 0.0035435147682684,
+      "raw_pos_err_rms": 0.0036014017066929803,
+      "traj_gain_projected": 117.81413359977407
+    },
+    {
+      "gyro_orbits_requested": 25.0,
+      "gyro_orbits_sampled": 24.97141057111838,
+      "boris_pos_err_rms": 0.5560709840121217,
+      "proj_pos_err_rms": 0.00690547414218962,
+      "raw_pos_err_rms": 0.007012464432071635,
+      "traj_gain_projected": 80.52611197466597
+    },
+    {
+      "gyro_orbits_requested": 50.0,
+      "gyro_orbits_sampled": 49.990567625164324,
+      "boris_pos_err_rms": 1.0944303961921764,
+      "proj_pos_err_rms": 0.03344735257278062,
+      "raw_pos_err_rms": 0.03425961041540514,
+      "traj_gain_projected": 32.720987223449825
+    },
+    {
+      "gyro_orbits_requested": 100.0,
+      "gyro_orbits_sampled": 99.98113525032865,
+      "boris_pos_err_rms": 1.5556130300959685,
+      "proj_pos_err_rms": 1.4747149542484368,
+      "raw_pos_err_rms": 1.606675319808757,
+      "traj_gain_projected": 1.0548567542591714
+    },
+    {
+      "gyro_orbits_requested": 200.0,
+      "gyro_orbits_sampled": 199.9622705006573,
+      "boris_pos_err_rms": 1.3902958015343434,
+      "proj_pos_err_rms": 20.719979305736807,
+      "raw_pos_err_rms": 21.262992789517142,
+      "traj_gain_projected": 0.06709928523670908
+    },
+    {
+      "gyro_orbits_requested": 300.0,
+      "gyro_orbits_sampled": 299.9911522339135,
+      "boris_pos_err_rms": 1.3846285355026422,
+      "proj_pos_err_rms": 44.08677841093009,
+      "raw_pos_err_rms": 44.667070356173774,
+      "traj_gain_projected": 0.03140688853688983
+    },
+    {
+      "gyro_orbits_requested": 500.0,
+      "gyro_orbits_sampled": 499.9534227345708,
+      "boris_pos_err_rms": 1.4425774070228015,
+      "proj_pos_err_rms": 90.27306736424208,
+      "raw_pos_err_rms": 90.75151774091594,
+      "traj_gain_projected": 0.015980152764746073
+    },
+    {
+      "gyro_orbits_requested": 1000.0,
+      "gyro_orbits_sampled": 999.9545919520692,
+      "boris_pos_err_rms": 1.4624335015423273,
+      "proj_pos_err_rms": 208.45029339061296,
+      "raw_pos_err_rms": 207.93031680851755,
+      "traj_gain_projected": 0.007015742111726788
+    }
+  ],
+  "boris_reaches_1_larmor_at_gyr": 22.058875112536693,
+  "proj_reaches_1_larmor_at_gyr": 74.0547950206589,
+  "raw_reaches_1_larmor_at_gyr": 73.33859777674536,
+  "one_larmor_horizon_gain": 3.357142857142857
+}

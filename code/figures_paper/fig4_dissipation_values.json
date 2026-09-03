@@ -1,0 +1,233 @@
+{
+ "source": "experiments/ll_probe/followup.py, block F7, reproduced here verbatim and asserted equal to experiments/ll_probe/results2.json at rtol 1e-9 (the reproduction is bit-identical); Lambda and the predicted plateaux come from the preregistered experiments/ll_probe/prereg2.json.",
+ "setup": {
+  "model": "dtheta/dt = alpha tanh(theta) - eps sinh(theta) cosh(theta)",
+  "alpha": 1.0,
+  "h": 0.05,
+  "theta_0": 0.3,
+  "integrator": "RK4",
+  "defect": "kappa added to theta on every step",
+  "held_fixed_across_the_sweep": "eps=0 keeps the relativistic kinematics, the code, alpha, h, theta_0 and T identical and removes only the contraction.  If p goes 1 -> 0 along the sweep, the responsible factor is dissipation, not relativity.",
+  "caveat_from_prereg": "at eps/alpha >= 0.9 the attractor sits at theta* <= 0.33 (sub-relativistic): that end of the sweep tests the dynamical law, not a physical regime."
+ },
+ "lambda_label_warning": {
+  "issue": "results2.json stores Lambda = 2.0 for the eps = 0 run, the formula 2(alpha - eps) evaluated where its attractor does not exist. With eps = 0 the flow has no fixed point and the contraction rate is 0.",
+  "value_used_here": 0.0,
+  "value_stored_in_results2_json": 2.0,
+  "authority": "prereg2.json F7_eps_sweep.grid['eps_over_alpha=0'].Lambda = 0.0, frozen before the run; attractor: null",
+  "why_it_matters": "plotted at the stored value the only growing point in the sweep would land at the largest Lambda and reverse the conclusion of the figure."
+ },
+ "runs": [
+  {
+   "eps_over_alpha": 0.0,
+   "Lambda": 0.0,
+   "kappa": 1e-06,
+   "q0_kappa_over_h": 1.9999999999999998e-05,
+   "T": 300.0,
+   "Lambda_times_T": 0.0,
+   "envelope_exponent_two_decade_fit": 0.9443711516144307,
+   "local_half_decade_slopes_in_fit_window": [
+    0.78181,
+    0.91417,
+    0.970397,
+    0.990439
+   ],
+   "local_half_decade_slopes_whole_run": [
+    1.1336,
+    1.251085,
+    0.791938,
+    0.851928,
+    0.945511,
+    0.982036
+   ],
+   "plateau_or_final_dtheta": 0.006031532649956262,
+   "plateau_over_q0": 301.5766324978131,
+   "plateau_times_Lambda_over_q0": null,
+   "discrete_prediction_kappa_over_1_minus_R": null
+  },
+  {
+   "eps_over_alpha": 0.1,
+   "Lambda": 1.8,
+   "kappa": 1e-06,
+   "q0_kappa_over_h": 1.9999999999999998e-05,
+   "T": 20000.0,
+   "Lambda_times_T": 36000.0,
+   "envelope_exponent_two_decade_fit": 3.7884463736764483e-16,
+   "local_half_decade_slopes_in_fit_window": [
+    -0.0,
+    -0.0,
+    -0.0,
+    0.0
+   ],
+   "local_half_decade_slopes_whole_run": [
+    1.112759,
+    1.154781,
+    0.04034,
+    -0.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    0.0
+   ],
+   "plateau_or_final_dtheta": 1.1618480095343386e-05,
+   "plateau_over_q0": 0.5809240047671693,
+   "plateau_times_Lambda_over_q0": 1.045663208580905,
+   "discrete_prediction_kappa_over_1_minus_R": 1.1618616643061277e-05
+  },
+  {
+   "eps_over_alpha": 0.5,
+   "Lambda": 1.0,
+   "kappa": 1e-06,
+   "q0_kappa_over_h": 1.9999999999999998e-05,
+   "T": 20000.0,
+   "Lambda_times_T": 20000.0,
+   "envelope_exponent_two_decade_fit": 3.647777560106506e-16,
+   "local_half_decade_slopes_in_fit_window": [
+    0.0,
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "local_half_decade_slopes_whole_run": [
+    1.039186,
+    1.010625,
+    0.131879,
+    0.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    0.0
+   ],
+   "plateau_or_final_dtheta": 2.050346066273523e-05,
+   "plateau_over_q0": 1.0251730331367614,
+   "plateau_times_Lambda_over_q0": 1.0251730331367614,
+   "discrete_prediction_kappa_over_1_minus_R": 2.0504167578852903e-05
+  },
+  {
+   "eps_over_alpha": 0.9,
+   "Lambda": 0.19999999999999996,
+   "kappa": 1e-06,
+   "q0_kappa_over_h": 1.9999999999999998e-05,
+   "T": 20000.0,
+   "Lambda_times_T": 3999.999999999999,
+   "envelope_exponent_two_decade_fit": -8.869508536714411e-16,
+   "local_half_decade_slopes_in_fit_window": [
+    -0.0,
+    -0.0,
+    0.0,
+    0.0
+   ],
+   "local_half_decade_slopes_whole_run": [
+    0.976396,
+    0.925992,
+    0.753813,
+    0.320544,
+    0.00881,
+    -0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    0.0
+   ],
+   "plateau_or_final_dtheta": 0.00010045501798944256,
+   "plateau_over_q0": 5.022750899472128,
+   "plateau_times_Lambda_over_q0": 1.0045501798944254,
+   "discrete_prediction_kappa_over_1_minus_R": 0.00010050083334034742
+  },
+  {
+   "eps_over_alpha": 0.99,
+   "Lambda": 0.020000000000000018,
+   "kappa": 1e-07,
+   "q0_kappa_over_h": 2e-06,
+   "T": 20000.0,
+   "Lambda_times_T": 400.00000000000034,
+   "envelope_exponent_two_decade_fit": 0.00580774027069127,
+   "local_half_decade_slopes_in_fit_window": [
+    0.065872,
+    1.6e-05,
+    0.0,
+    0.0
+   ],
+   "local_half_decade_slopes_whole_run": [
+    0.963294,
+    0.904505,
+    0.802611,
+    0.752813,
+    0.786407,
+    0.65455,
+    0.137624,
+    0.000215,
+    0.0,
+    0.0
+   ],
+   "plateau_or_final_dtheta": 9.990090438735666e-05,
+   "plateau_over_q0": 49.95045219367833,
+   "plateau_times_Lambda_over_q0": 0.9990090438735675,
+   "discrete_prediction_kappa_over_1_minus_R": 0.0001000500083333251
+  },
+  {
+   "eps_over_alpha": 0.999,
+   "Lambda": 0.0020000000000000018,
+   "kappa": 1e-08,
+   "q0_kappa_over_h": 2e-07,
+   "T": 20000.0,
+   "Lambda_times_T": 40.000000000000036,
+   "envelope_exponent_two_decade_fit": 0.37442178052659775,
+   "local_half_decade_slopes_in_fit_window": [
+    0.902258,
+    0.618718,
+    0.070889,
+    1.7e-05
+   ],
+   "local_half_decade_slopes_whole_run": [
+    0.962001,
+    0.902292,
+    0.8041,
+    0.772062,
+    0.851504,
+    0.925685,
+    0.919567,
+    0.71342,
+    0.147695,
+    0.000233
+   ],
+   "plateau_or_final_dtheta": 9.953477290589735e-05,
+   "plateau_over_q0": 497.67386452948676,
+   "plateau_times_Lambda_over_q0": 0.9953477290589744,
+   "discrete_prediction_kappa_over_1_minus_R": 0.00010000500008333198
+  }
+ ],
+ "panel_c": {
+  "rule": "plan/reports/W0_2_exponent_1540.md -- every fitted exponent is printed together with its local half-decade slopes.",
+  "Lambda_0_fit": 0.9443711516144307,
+  "Lambda_0_local_slopes": [
+   0.78181,
+   0.91417,
+   0.970397,
+   0.990439
+  ],
+  "Lambda_0_reading": "still climbing towards the exact linear law; the last half decade gives 0.990, and the measured slope of Delta theta against t is 2.000000e-05 against q0 = 2.000000e-05.",
+  "Lambda_0.002_fit": 0.37442178052659775,
+  "Lambda_0.002_local_slopes": [
+   0.902258,
+   0.618718,
+   0.070889,
+   1.7e-05
+  ],
+  "Lambda_0.002_reading": "not an exponent: the fit window straddles Lambda t = 1.",
+  "Lambda_0.002_windowed_exponents": {
+   "early_LambdaT_lt_1": 0.8228226833285935,
+   "late_LambdaT_gt_1": 0.10267248375155144
+  }
+ },
+ "panel_d": {
+  "law": "plateau * Lambda / q0 = 1 across three decades of Lambda (eps/alpha = 0.1 -> 0.999); the eps=0 point is off the law entirely (linear growth, no plateau)",
+  "max_deviation_from_continuum_law": 0.045663208580905,
+  "explained_by": "the discrete plateau kappa / (1 - R_rk4(-Lambda h)), i.e. z / (1 - R(-z)) with z = Lambda h; the residual after that correction is at most 0.47 %",
+  "prereg_tolerance_rel": 0.02
+ }
+}

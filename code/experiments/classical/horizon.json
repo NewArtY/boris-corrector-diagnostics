@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "dt": 0.3,
+    "tau": 120000.0,
+    "hybrid_reference": "I1.2: inverts at ~101 gyr, envelope exponent 0.977 quasi-static",
+    "physical_signal_median_1e3gyr": 0.03850892914663806
+  },
+  "long": {
+    "1e+03": {
+      "shipped": {
+        "n_steps": 20944,
+        "wall_s": 1.2976597000088077,
+        "envelope_exponent": 7.451620998127048e-16,
+        "max_energy_err": 2.499690216373196e-06,
+        "final_energy_err": 2.287630295749743e-06,
+        "physical_signal_final": 0.051012830040063184,
+        "ratio_signal_over_err_final": 22299.420555341243
+      },
+      "vps2": {
+        "n_steps": 20944,
+        "wall_s": 1.088252299989108,
+        "envelope_exponent": 0.9695322359857937,
+        "max_energy_err": 0.00035432813066638147,
+        "final_energy_err": 0.00035432813066638147,
+        "physical_signal_final": 0.051012830040063184,
+        "ratio_signal_over_err_final": 143.97059004071693
+      },
+      "vps4": {
+        "n_steps": 20944,
+        "wall_s": 3.1582774000125937,
+        "envelope_exponent": 0.9547635123982524,
+        "max_energy_err": 1.5781371254908194e-05,
+        "final_energy_err": 1.5781371254908194e-05,
+        "physical_signal_final": 0.051012830040063184,
+        "ratio_signal_over_err_final": 3232.4713243278898
+      }
+    },
+    "1e+04": {
+      "shipped": {
+        "n_steps": 209440,
+        "wall_s": 13.902571600017836,
+        "envelope_exponent": 3.541371818172528e-15,
+        "max_energy_err": 2.499690216373196e-06,
+        "final_energy_err": 1.880402701659456e-06,
+        "physical_signal_final": 0.4076158781293444,
+        "ratio_signal_over_err_final": 216770.52355307897
+      },
+      "vps2": {
+        "n_steps": 209440,
+        "wall_s": 10.216762900003232,
+        "envelope_exponent": 0.7059742835856603,
+        "max_energy_err": 0.0014451789042985164,
+        "final_energy_err": 0.0014451577799010629,
+        "physical_signal_final": 0.4076158781293444,
+        "ratio_signal_over_err_final": 282.0563150947091
+      },
+      "vps4": {
+        "n_steps": 209440,
+        "wall_s": 30.618584499985445,
+        "envelope_exponent": 0.5918877899281821,
+        "max_energy_err": 4.7219487474770006e-05,
+        "final_energy_err": 4.586769821535164e-05,
+        "physical_signal_final": 0.4076158781293444,
+        "ratio_signal_over_err_final": 8886.774222145681
+      }
+    },
+    "1e+05": {
+      "shipped": {
+        "n_steps": 2094395,
+        "wall_s": 136.49714089999907,
+        "envelope_exponent": -1.0124461304707665e-14,
+        "max_energy_err": 2.499690216373196e-06,
+        "final_energy_err": 9.302292313904947e-07,
+        "physical_signal_final": 0.9946784331590482,
+        "ratio_signal_over_err_final": 1069283.1396753849
+      },
+      "vps2": {
+        "n_steps": 2094395,
+        "wall_s": 101.30234049999854,
+        "envelope_exponent": 0.09654155345418135,
+        "max_energy_err": 0.0014466932267817034,
+        "final_energy_err": 2.0027060272383157e-05,
+        "physical_signal_final": 0.9946784331590482,
+        "ratio_signal_over_err_final": 49666.721906793595
+      },
+      "vps4": {
+        "n_steps": 2094395,
+        "wall_s": 236.7776202999812,
+        "envelope_exponent": 0.05928309332909293,
+        "max_energy_err": 4.7219487474770006e-05,
+        "final_energy_err": 4.6703800951185953e-07,
+        "physical_signal_final": 0.9946784331590482,
+        "ratio_signal_over_err_final": 2129759.062219946
+      }
+    }
+  },
+  "scored": {
+    "shipped": {
+      "pos_err_rms": 1.462466463454377,
+      "energy_err_median_2nd_half": 1.2019829898068934e-06,
+      "energy_below_signal_factor": 32037.832043550614
+    },
+    "vps2": {
+      "pos_err_rms": 0.010427807998404053,
+      "energy_err_median_2nd_half": 0.0002727683402874437,
+      "energy_below_signal_factor": 141.17814811666668
+    },
+    "vps4": {
+      "pos_err_rms": 5.482996110353726e-05,
+      "energy_err_median_2nd_half": 1.229721847129106e-05,
+      "energy_below_signal_factor": 3131.5154102970964
+    }
+  }
+}

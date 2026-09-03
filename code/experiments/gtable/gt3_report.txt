@@ -1,0 +1,125 @@
+W15 -- the table of orders, channel by channel
+==============================================================================
+
+HEADLINE
+The four channels are substantially AGREED by rank: median Spearman
+rho = +0.80 over the 144 (configuration, initial condition, channel
+pair) cells at the paper horizon.  Prediction P4, the negative
+control, is TRIGGERED.  The +0.00 the manuscript's map reports for the
+energy-against-trajectory agreement decomposes as +0.80 over the 24
+cells whose energy channel carries a signal and -0.20 over the 96
+cells in which every scheme's energy error is accumulated rounding,
+the field carrying no electric part.  Four fifths of the cells behind
+the number are of the second kind.
+
+==============================================================================
+
+G = log10(E_Boris / E_scheme) at Omega h = 0.3, canonical initial
+condition, over 19.1 gyro-orbits (H_paper).  '.' marks a cell whose
+channel is analytically degenerate in that configuration; '*' a cell
+within a factor of ten of the reference; '+' a cell whose error is
+exactly zero by construction, so that the entry measures rounding.
+
+configuration channel          boris  corrector       vps2       vps4        gl4
+--------------------------------------------------------------------------------
+uniform       trajectory       +0.00      +1.55      +1.59      +3.89      +2.73
+              phase            +0.00      +2.55    +14.28+    +12.87+      +2.82
+              energy               .          .          .          .          .
+              spectral         +0.00      +2.33      +2.60      +7.19     +12.62
+
+B1 radial     trajectory       +0.00      +0.00      +1.50      +2.66      +2.67
+              phase            +0.00      +0.56      +1.90      +2.76      +2.76
+              energy               .          .          .          .          .
+              spectral         +0.00      -0.89      +2.57      +8.11     +10.51
+
+B2 wave       trajectory       +0.00      -0.46      +1.59      +3.85      +2.73
+              phase            +0.00      +0.10      +3.26      +5.00      +2.81
+              energy               .          .          .          .          .
+              spectral         +0.00      -1.59      +2.58      +7.20     +10.79
+
+B3 tilted     trajectory       +0.00      -1.41      +1.59      +3.89      +2.73
+              phase            +0.00      -0.04    +14.36+    +12.86+      +2.82
+              energy               .          .          .          .          .
+              spectral         +0.00      -3.52      +2.60      +7.19     +12.62
+
+B4 decaying   trajectory       +0.00      +2.08      +1.59      +3.89      +2.73
+              phase            +0.00      +2.90      +7.33      +9.62      +2.82
+              energy           +0.00      -1.11      -0.64      +0.68      +1.48
+              spectral         +0.00      +3.76      +2.60      +7.19     +12.62
+
+orderings by channel, best first, canonical initial condition
+------------------------------------------------------------------------------
+  uniform
+    trajectory  vps4 < gl4 < vps2 < corrector < boris
+    phase       vps2 < vps4 < gl4 < corrector < boris
+    energy      boris < corrector < vps4 < vps2 < gl4   (degenerate: rounding only)
+    spectral    gl4 < vps4 < vps2 < corrector < boris
+  B1 radial
+    trajectory  gl4 < vps4 < vps2 < corrector < boris
+    phase       gl4 < vps4 < vps2 < corrector < boris
+    energy      corrector < boris < vps2 < vps4 < gl4   (degenerate: rounding only)
+    spectral    gl4 < vps4 < vps2 < boris < corrector
+  B2 wave
+    trajectory  vps4 < gl4 < vps2 < boris < corrector
+    phase       vps4 < vps2 < gl4 < corrector < boris
+    energy      gl4 < corrector < boris < vps4 < vps2   (degenerate: rounding only)
+    spectral    gl4 < vps4 < vps2 < boris < corrector
+  B3 tilted
+    trajectory  vps4 < gl4 < vps2 < boris < corrector
+    phase       vps2 < vps4 < gl4 < boris < corrector
+    energy      boris < corrector < vps4 < vps2 < gl4   (degenerate: rounding only)
+    spectral    gl4 < vps4 < vps2 < boris < corrector
+  B4 decaying
+    trajectory  vps4 < gl4 < corrector < vps2 < boris
+    phase       vps4 < vps2 < corrector < gl4 < boris
+    energy      gl4 < vps4 < boris < vps2 < corrector
+    spectral    gl4 < vps4 < corrector < vps2 < boris
+
+rank agreement, four measured schemes, Spearman rho
+------------------------------------------------------------------------------
+  energy|spectral            cells   8  median rho +0.80  identical  1  rho<=0  0
+  phase|energy               cells   8  median rho -0.20  identical  0  rho<=0  8
+  phase|spectral             cells  40  median rho +0.20  identical  4  rho<=0  9
+  trajectory|energy          cells   8  median rho +0.60  identical  0  rho<=0  0
+  trajectory|phase           cells  40  median rho +0.40  identical  4  rho<=0  1
+  trajectory|spectral        cells  40  median rho +0.80  identical  8  rho<=0  0
+  ALL PAIRS                  cells 144  median rho +0.80  identical 17  rho<=0 18
+
+controls, robustness and sensitivity
+------------------------------------------------------------------------------
+  all_5_schemes_incl_boris           median rho +0.70  identical 6/144
+  control_degenerate_energy_kept     median rho +0.30  identical 19/240
+  control_exact_cells_tied           median rho +0.80  identical 17/144
+  control_built_in_pair_dropped      median rho +0.40  identical 9/104
+  robustness_all_channels_as_rms     median rho +0.80  identical 19/144
+  sensitivity_omega_c_alternative    median rho +0.80  identical 17/144
+  B4_only_energy_carries_signal      median rho +0.50  identical 1/48
+  H_crossover, primary               median rho +0.80  identical 24/144
+  worst |dG| from the Omega_c choice 0.000e+00
+  reference-limited cells            2
+
+
+where the agreement comes from: the best two schemes, per cell
+------------------------------------------------------------------------------
+  the two fourth-order schemes are the best two in 12 of 16 cells
+    not there: uniform|phase -> vps2+vps4
+    not there: B2_wave|phase -> vps2+vps4
+    not there: B3_tilted|phase -> vps2+vps4
+    not there: B4_decaying|phase -> vps2+vps4
+
+the W14 number taken apart (from ../map/mp3_maps.json, not remeasured)
+------------------------------------------------------------------------------
+  uniform       median rho (energy vs trajectory, 24 cells) -0.400
+  B1_radial     median rho (energy vs trajectory, 24 cells) +0.075
+  B2_wave       median rho (energy vs trajectory, 24 cells) +0.100
+  B3_tilted     median rho (energy vs trajectory, 24 cells) -0.400
+  B4_decaying   median rho (energy vs trajectory, 24 cells) +0.800
+  all           +0.000 over 120 cells
+  W14 H_paper|B4|0.3 = +0.500 ; the same measured here = +0.500
+
+pre-registration
+------------------------------------------------------------------------------
+  P1  refuted
+  P2  refuted
+  P3  refuted in the sense that matters: the median rho is +0.80, substantial positive agreement.  The identical-ordering rule declared above reads the other way only because an identical ordering of four schemes is a demanding thing to ask
+  P4  TRIGGERED

@@ -1,0 +1,113 @@
+{
+ "meta": {
+  "setting": "S3",
+  "t_final": 120.0,
+  "dt_truth": 0.05,
+  "dt_work": 0.3,
+  "n_truth_realizations": 400,
+  "hybrid_flops_one_run": 45636400.0,
+  "rms_chosen": 0.0001
+ },
+ "amplitude_scan": [
+  {
+   "rms": 0.0001,
+   "mean_dE_final": -0.001009434176810246,
+   "mean_abs_dE_final": 0.001009434176810246,
+   "spread_dE_final": 0.00015168734330244424
+  },
+  {
+   "rms": 0.0003,
+   "mean_dE_final": -0.0010274876581450598,
+   "mean_abs_dE_final": 0.0010274876581450598,
+   "spread_dE_final": 0.00045507346914141475
+  },
+  {
+   "rms": 0.001,
+   "mean_dE_final": -0.0010716318533219443,
+   "mean_abs_dE_final": 0.0014504327042496185,
+   "spread_dE_final": 0.0015171358983835047
+  },
+  {
+   "rms": 0.003,
+   "mean_dE_final": -0.0010346134323368599,
+   "mean_abs_dE_final": 0.003602552259858255,
+   "spread_dE_final": 0.004555666930212616
+  }
+ ],
+ "truth": {
+  "mean_dE_final": -0.0010100060890611059,
+  "sd_across_realizations_final": 0.00014183228597477906,
+  "mean_signal_scale": 0.0010145643097559207
+ },
+ "attack_mean_field": {
+  "flops": 109200,
+  "max_err_vs_truth_mean": 2.4179191293107046e-05,
+  "rel_err": 0.023832093304094214
+ },
+ "attack_monte_carlo": {
+  "per_run_flops": 109200.0,
+  "convergence": [
+   {
+    "n": 1,
+    "flops": 109200.0,
+    "max_err_vs_truth_mean": 0.00043595178324844783,
+    "rel_err": 0.4296935926647441
+   },
+   {
+    "n": 4,
+    "flops": 436800.0,
+    "max_err_vs_truth_mean": 0.00023158760963758402,
+    "rel_err": 0.22826311492595114
+   },
+   {
+    "n": 16,
+    "flops": 1747200.0,
+    "max_err_vs_truth_mean": 0.00011390877580934409,
+    "rel_err": 0.11227358848917891
+   },
+   {
+    "n": 64,
+    "flops": 6988800.0,
+    "max_err_vs_truth_mean": 5.918118672136786e-05,
+    "rel_err": 0.05833162683951045
+   },
+   {
+    "n": 128,
+    "flops": 13977600.0,
+    "max_err_vs_truth_mean": 3.714683824141535e-05,
+    "rel_err": 0.03661358662454031
+   },
+   {
+    "n": 256,
+    "flops": 27955200.0,
+    "max_err_vs_truth_mean": 3.8154571046669736e-05,
+    "rel_err": 0.037606853187895785
+   },
+   {
+    "n": 418,
+    "flops": 45645600.0,
+    "max_err_vs_truth_mean": 3.206309833513629e-05,
+    "rel_err": 0.03160282500263575
+   },
+   {
+    "n": 512,
+    "flops": 55910400.0,
+    "max_err_vs_truth_mean": 2.8233476343897824e-05,
+    "rel_err": 0.027828178137559466
+   }
+  ]
+ },
+ "attack_smooth_law": {
+  "n_params": 2,
+  "coef": [
+   -8.329877562462418e-06,
+   -1.1136787739826184e-05
+  ],
+  "max_residual": 1.333382049779864e-05,
+  "rel_residual": 0.013142410362342068
+ },
+ "attack_parametric_fit": {
+  "implemented": false,
+  "reason": "not implementable by construction: the realization is 64 independent phases and the attacker is given only the PSD"
+ }
+}

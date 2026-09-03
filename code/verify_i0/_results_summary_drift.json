@@ -1,0 +1,6 @@
+{
+  "n_fields": 54,
+  "n_over_1pct": 24,
+  "max_rel": 57.964191911745175,
+  "worst_field": "boris_corrector.B3.rms_energy_error"
+}

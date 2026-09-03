@@ -1,0 +1,23 @@
+{
+ "S5_erosion_threshold": {
+  "alpha": 1.0,
+  "eps": 0.1,
+  "Lambda": 1.8,
+  "h": 0.05,
+  "scheme": "RK4",
+  "rho_=_R_rk4(-Lambda h)": 0.9139312337500001,
+  "c_over_Lambda_closed_form_(1-rho)/(Lambda h)": 0.9563196249999991,
+  "c_over_Lambda_bisection_on_the_recurrence": 0.9573382126435697,
+  "manuscript_prints": 0.956
+ },
+ "S42_grid_horizon": {
+  "N_steps": 524288,
+  "h": 0.3,
+  "gyro_orbits_N_h_over_2pi": 25032.908041129085,
+  "shipped_pl_core_grid_setup_gyros": 25032.908041129085,
+  "shipped_pl_protocol_full_run_gyros": 25032.908041129085,
+  "shipped_pl_protocol_short_run_gyros": 1564.5567525705678,
+  "manuscript_prints": 25046,
+  "correct_rounded": 25033
+ }
+}

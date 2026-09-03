@@ -1,0 +1,853 @@
+{
+ "setup": {
+  "gyros": 100000.0,
+  "n_steps": 2094395,
+  "dt": 0.3,
+  "short_divisor": 16,
+  "thresholds": {
+   "TOL_P": 0.15,
+   "TOL_SPREAD": 0.3,
+   "TOL_REC_decades": 0.5,
+   "COEF_FACTOR": 2.0
+  }
+ },
+ "bench_a_control": [
+  {
+   "a_true": 0.0,
+   "H_true": 0.5,
+   "a_hat_short": -0.0003246236319239054,
+   "H_hat_short": 0.5213856029788957,
+   "a_hat_full": 0.0006278055385618584,
+   "H_hat_full": 0.4752369913725394
+  },
+  {
+   "a_true": 0.25,
+   "H_true": 0.5,
+   "a_hat_short": 0.2499489599362525,
+   "H_hat_short": 0.5114760861972382,
+   "a_hat_full": 0.25014979144918137,
+   "H_hat_full": 0.4750430245651317
+  },
+  {
+   "a_true": 0.4,
+   "H_true": 0.5,
+   "a_hat_short": 0.39874369801258186,
+   "H_hat_short": 0.48338332634039965,
+   "a_hat_full": 0.40048017057116614,
+   "H_hat_full": 0.46861278508307186
+  },
+  {
+   "a_true": -0.25,
+   "H_true": 0.5,
+   "a_hat_short": -0.2519850044183773,
+   "H_hat_short": 0.5004923508157014,
+   "a_hat_full": -0.24987120130501078,
+   "H_hat_full": 0.5426644272630423
+  },
+  {
+   "a_true": 0.0,
+   "H_true": 0.8,
+   "a_hat_short": -0.001648240245144344,
+   "H_hat_short": 0.786784011037947,
+   "a_hat_full": 0.001213400576551285,
+   "H_hat_full": 0.8359792740662723
+  },
+  {
+   "a_true": 0.25,
+   "H_true": 0.8,
+   "a_hat_short": 0.24576350560246313,
+   "H_hat_short": 0.7540281429046087,
+   "a_hat_full": 0.2497185342055083,
+   "H_hat_full": 0.8122091644589231
+  },
+  {
+   "a_true": 0.0,
+   "H_true": 0.7,
+   "a_hat_short": 0.002161615316383136,
+   "H_hat_short": 0.7156668113626792,
+   "a_hat_full": 0.0003782761001500762,
+   "H_hat_full": 0.6959805834134508
+  },
+  {
+   "a_true": 0.5,
+   "H_true": 1.0,
+   "a_hat_short": 0.4996602199102705,
+   "H_hat_short": 1.000339145621711,
+   "a_hat_full": 0.4999788887391131,
+   "H_hat_full": 1.0000211079801349
+  }
+ ],
+ "bench_a_rule": [
+  {
+   "a_true": 0.0,
+   "H_true": 0.5,
+   "p_true": 0.5,
+   "deterministic_drive": false,
+   "p_measured_envelope_full": 0.8466376771490417,
+   "full_half_decade_spread": 1.1019454787505194,
+   "verdict": "EXPONENT",
+   "selected": "V(ref)",
+   "p_pred": 0.2948791450743395,
+   "p_hat_per_channel": {
+    "V(ref)": 0.2948791450743395,
+    "V(own)": 0.2948791450743395,
+    "E": 0.29691039822532894
+   },
+   "survivors": [
+    "V(ref)",
+    "V(own)",
+    "E"
+   ],
+   "G1_rho": {
+    "V(ref)": 0.0,
+    "V(own)": 0.0,
+    "E": 0.0
+   },
+   "G2_margin": {
+    "V(ref)": 0.4383050270464825,
+    "V(own)": 0.4383050270464825,
+    "E": 0.14999999999999997
+   }
+  },
+  {
+   "a_true": 0.25,
+   "H_true": 0.5,
+   "p_true": 0.75,
+   "deterministic_drive": false,
+   "p_measured_envelope_full": 1.1098722629826248,
+   "full_half_decade_spread": 1.4036683617447916,
+   "verdict": "EXPONENT",
+   "selected": "V(ref)",
+   "p_pred": 0.919531655775658,
+   "p_hat_per_channel": {
+    "V(ref)": 0.919531655775658,
+    "V(own)": 0.919531655775658,
+    "E": 1.3441508521631196
+   },
+   "survivors": [
+    "V(ref)",
+    "V(own)",
+    "E"
+   ],
+   "G1_rho": {
+    "V(ref)": 0.0,
+    "V(own)": 0.0,
+    "E": 0.0
+   },
+   "G2_margin": {
+    "V(ref)": 0.6985810307386486,
+    "V(own)": 0.6985810307386486,
+    "E": 0.15000000000000002
+   }
+  },
+  {
+   "a_true": 0.4,
+   "H_true": 0.5,
+   "p_true": 0.9,
+   "deterministic_drive": false,
+   "p_measured_envelope_full": 0.9431799567287222,
+   "full_half_decade_spread": 1.5116684682372608,
+   "verdict": "EXPONENT",
+   "selected": "V(ref)",
+   "p_pred": 0.9420058292196825,
+   "p_hat_per_channel": {
+    "V(ref)": 0.9420058292196825,
+    "V(own)": 0.9420058292196825,
+    "E": 0.5255106353185309
+   },
+   "survivors": [
+    "V(ref)",
+    "V(own)",
+    "E"
+   ],
+   "G1_rho": {
+    "V(ref)": 0.0,
+    "V(own)": 0.0,
+    "E": 0.0
+   },
+   "G2_margin": {
+    "V(ref)": 0.7763764082236142,
+    "V(own)": 0.7763764082236142,
+    "E": 0.1499999999999999
+   }
+  },
+  {
+   "a_true": -0.25,
+   "H_true": 0.5,
+   "p_true": 0.25,
+   "deterministic_drive": false,
+   "p_measured_envelope_full": 0.21434611683843746,
+   "full_half_decade_spread": 0.6664241240792602,
+   "verdict": "EXPONENT",
+   "selected": "V(ref)",
+   "p_pred": 0.17161171058139277,
+   "p_hat_per_channel": {
+    "V(ref)": 0.17161171058139277,
+    "V(own)": 0.17161171058139277,
+    "E": 0.2601926552467705
+   },
+   "survivors": [
+    "V(ref)",
+    "V(own)",
+    "E"
+   ],
+   "G1_rho": {
+    "V(ref)": 0.0,
+    "V(own)": 0.0,
+    "E": 0.0
+   },
+   "G2_margin": {
+    "V(ref)": 0.17408036773553753,
+    "V(own)": 0.17408036773553753,
+    "E": 0.14999999999999997
+   }
+  },
+  {
+   "a_true": 0.0,
+   "H_true": 0.8,
+   "p_true": 0.8,
+   "deterministic_drive": false,
+   "p_measured_envelope_full": 0.6104678703021023,
+   "full_half_decade_spread": 0.7302973192057292,
+   "verdict": "EXPONENT",
+   "selected": "V(ref)",
+   "p_pred": 1.090844294277532,
+   "p_hat_per_channel": {
+    "V(ref)": 1.090844294277532,
+    "V(own)": 1.090844294277532,
+    "E": 1.0834474932553022
+   },
+   "survivors": [
+    "V(ref)",
+    "V(own)",
+    "E"
+   ],
+   "G1_rho": {
+    "V(ref)": 0.0,
+    "V(own)": 0.0,
+    "E": 0.0
+   },
+   "G2_margin": {
+    "V(ref)": 1.0234461416602056,
+    "V(own)": 1.0234461416602056,
+    "E": 0.15000000000000002
+   }
+  },
+  {
+   "a_true": 0.25,
+   "H_true": 0.8,
+   "p_true": 1.05,
+   "deterministic_drive": false,
+   "p_measured_envelope_full": 1.2258894307848884,
+   "full_half_decade_spread": 2.704970469299743,
+   "verdict": "EXPONENT",
+   "selected": "V(ref)",
+   "p_pred": 1.0488980565880037,
+   "p_hat_per_channel": {
+    "V(ref)": 1.0488980565880037,
+    "V(own)": 1.0488980565880037,
+    "E": 1.024503622446854
+   },
+   "survivors": [
+    "V(ref)",
+    "V(own)",
+    "E"
+   ],
+   "G1_rho": {
+    "V(ref)": 0.0,
+    "V(own)": 0.0,
+    "E": 0.0
+   },
+   "G2_margin": {
+    "V(ref)": 1.2805859541271754,
+    "V(own)": 1.2805859541271754,
+    "E": 0.15000000000000002
+   }
+  },
+  {
+   "a_true": 0.0,
+   "H_true": 0.7,
+   "p_true": 0.7,
+   "deterministic_drive": false,
+   "p_measured_envelope_full": 0.842703003835205,
+   "full_half_decade_spread": 0.7562854454837543,
+   "verdict": "EXPONENT",
+   "selected": "V(ref)",
+   "p_pred": 0.8057218136517849,
+   "p_hat_per_channel": {
+    "V(ref)": 0.8057218136517849,
+    "V(own)": 0.8057218136517849,
+    "E": 0.7561160499840814
+   },
+   "survivors": [
+    "V(ref)",
+    "V(own)",
+    "E"
+   ],
+   "G1_rho": {
+    "V(ref)": 0.0,
+    "V(own)": 0.0,
+    "E": 0.0
+   },
+   "G2_margin": {
+    "V(ref)": 0.9158101954452342,
+    "V(own)": 0.9158101954452342,
+    "E": 0.1499999999999999
+   }
+  },
+  {
+   "a_true": 0.5,
+   "H_true": 1.0,
+   "p_true": 1.5,
+   "deterministic_drive": true,
+   "p_measured_envelope_full": 1.5478242859956204,
+   "full_half_decade_spread": 0.11776611944929649,
+   "verdict": "EXPONENT",
+   "selected": "V(ref)",
+   "p_pred": 1.4999993655319814,
+   "p_hat_per_channel": {
+    "V(ref)": 1.4999993655319814,
+    "V(own)": 1.4999993655319814,
+    "E": 1.5003399080922728
+   },
+   "survivors": [
+    "V(ref)",
+    "V(own)",
+    "E"
+   ],
+   "G1_rho": {
+    "V(ref)": 0.0,
+    "V(own)": 0.0,
+    "E": 0.0
+   },
+   "G2_margin": {
+    "V(ref)": 1.6490222765260014,
+    "V(own)": 1.6490222765260014,
+    "E": 0.1499999999999999
+   }
+  },
+  {
+   "a_true": -0.6,
+   "H_true": 0.5,
+   "p_true": 0.0,
+   "deterministic_drive": false,
+   "p_measured_envelope_full": 0.012875628482342881,
+   "full_half_decade_spread": 0.02628994157136049,
+   "verdict": "EXPONENT",
+   "selected": "V(ref)",
+   "p_pred": 0.0,
+   "p_hat_per_channel": {
+    "V(ref)": 0.0,
+    "V(own)": 0.0,
+    "E": 0.3490572143114793
+   },
+   "survivors": [
+    "V(ref)",
+    "V(own)",
+    "E"
+   ],
+   "G1_rho": {
+    "V(ref)": 0.0,
+    "V(own)": 0.0,
+    "E": 0.0
+   },
+   "G2_margin": {
+    "V(ref)": 0.15000000000000172,
+    "V(own)": 0.15000000000000172,
+    "E": 0.15
+   }
+  },
+  {
+   "a_true": -0.4,
+   "H_true": 0.2,
+   "p_true": 0.0,
+   "deterministic_drive": false,
+   "p_measured_envelope_full": 5.574357420012607e-16,
+   "full_half_decade_spread": 3.817688634614953e-15,
+   "verdict": "EXPONENT",
+   "selected": "V(ref)",
+   "p_pred": 0.0,
+   "p_hat_per_channel": {
+    "V(ref)": 0.0,
+    "V(own)": 0.0,
+    "E": 0.0
+   },
+   "survivors": [
+    "V(ref)",
+    "V(own)",
+    "E"
+   ],
+   "G1_rho": {
+    "V(ref)": 0.0,
+    "V(own)": 0.0,
+    "E": 0.0
+   },
+   "G2_margin": {
+    "V(ref)": 0.15000000000000208,
+    "V(own)": 0.15000000000000208,
+    "E": 0.15
+   }
+  }
+ ],
+ "bench_b": {
+  "split_recomputed": {
+   "quasistatic": {
+    "envelope_exponent_|S|": -4.6642206578092e-17,
+    "envelope_exponent_|Re S|": -9.431716629015846e-17,
+    "envelope_exponent_2|Re S|": -8.079865046327163e-17,
+    "envelope_exponent_|S|^2": -9.3284413156184e-17,
+    "envelope_exponent_full_reconstruction": 0.9961380074174696,
+    "a_hat": -0.6535590432286267,
+    "H_hat": 0.6482978276565977
+   },
+   "paper": {
+    "envelope_exponent_|S|": 0.4200246738960029,
+    "envelope_exponent_|Re S|": 0.4244913180448489,
+    "envelope_exponent_2|Re S|": 0.424491318044849,
+    "envelope_exponent_|S|^2": 0.8400493477920058,
+    "envelope_exponent_full_reconstruction": 1.7303637869142794,
+    "a_hat": 0.02185057685720081,
+    "H_hat": 0.31571864660963855
+   }
+  },
+  "quasistatic": {
+   "n_short": 130899,
+   "n_full": 2094395,
+   "short_gyros": 6249.966868735802,
+   "full_gyros": 99999.99511108504,
+   "G0_coefficient_change": 1.0049208076016871,
+   "G0_limit": 2.0,
+   "G0_pass": true,
+   "G0_margin_factor": 1.9902065763501684,
+   "channels": [
+    {
+     "channel": "V(ref)",
+     "a_hat": -0.000793097579889568,
+     "H_hat": -0.31772459221533617,
+     "p_hat": 0.0,
+     "G1_rho_decades": 1.5295099908725214,
+     "G1_pass": false,
+     "G1_margin_decades": -1.0295099908725214,
+     "G2_p_reconstruction": 1.0392389188245301,
+     "G2_p_terms": 2.6780956323218804e-05,
+     "G2_pass": false,
+     "G2_margin": -0.889212137868207,
+     "term_exponents": {
+      "2|v_phys Re S|": 2.6780927693144103e-05,
+      "|S|^2": 2.6780956323218804e-05
+     },
+     "survives": false
+    },
+    {
+     "channel": "V(own)",
+     "a_hat": -0.000793097579889568,
+     "H_hat": 0.9996986037059246,
+     "p_hat": 0.998905506126035,
+     "G1_rho_decades": 9.827630205821523,
+     "G1_pass": false,
+     "G1_margin_decades": -9.327630205821523,
+     "G2_p_reconstruction": 1.9993651862149067,
+     "G2_p_terms": 1.9993037669325155,
+     "G2_pass": true,
+     "G2_margin": 0.1499385807176088,
+     "term_exponents": {
+      "2|v_phys Re S|": 0.999278908815187,
+      "|S|^2": 1.9993037669325155
+     },
+     "survives": false
+    },
+    {
+     "channel": "E",
+     "a_hat": 0.7148675293463513,
+     "H_hat": 0.29582642951745786,
+     "p_hat": 1.010693958863809,
+     "G1_rho_decades": 0.0,
+     "G1_pass": true,
+     "G1_margin_decades": 0.5,
+     "G2_p_reconstruction": 0.9918900144701028,
+     "G2_p_terms": 0.9918900144701028,
+     "G2_pass": true,
+     "G2_margin": 0.1499999999999999,
+     "term_exponents": {
+      "|S|": 0.9918900144701028
+     },
+     "survives": true
+    }
+   ],
+   "G3_half_decade_slopes_short": [
+    {
+     "t_lo": 392.69699999999995,
+     "t_hi": 1241.816950315142,
+     "slope": 1.0017744716438086
+    },
+    {
+     "t_lo": 1241.816950315142,
+     "t_hi": 3926.97,
+     "slope": 0.9826214215528903
+    },
+    {
+     "t_lo": 3926.97,
+     "t_hi": 12418.16950315142,
+     "slope": 1.003076003263533
+    },
+    {
+     "t_lo": 12418.16950315142,
+     "t_hi": 39269.7,
+     "slope": 0.9939395110861341
+    }
+   ],
+   "G3_spread": 0.02045458171064274,
+   "G3_limit": 0.3,
+   "G3_applies": true,
+   "G3_pass": true,
+   "p_fit_short": 0.9918900144701028,
+   "survivors": [
+    "E"
+   ],
+   "p_hat_spread_over_survivors": 0.0,
+   "verdict": "EXPONENT",
+   "reason": "",
+   "selected": "E",
+   "p_pred": 1.010693958863809,
+   "p_measured_full_horizon": 0.9772017548564513,
+   "full_half_decade_slopes": [
+    {
+     "t_lo": 6283.185,
+     "t_hi": 19869.175560205058,
+     "slope": 0.9989187274084987
+    },
+    {
+     "t_lo": 19869.175560205058,
+     "t_hi": 62831.85,
+     "slope": 0.9918462208672522
+    },
+    {
+     "t_lo": 62831.85,
+     "t_hi": 198691.75560205057,
+     "slope": 1.040318105566805
+    },
+    {
+     "t_lo": 198691.75560205057,
+     "t_hi": 628318.5,
+     "slope": 1.1158624653513238
+    }
+   ],
+   "full_half_decade_spread": 0.12401624448407167,
+   "full_curve_is_power_law": true,
+   "probe_verdict": "PASS",
+   "prediction_error": 0.03349220400735775,
+   "legacy_pc_defect_fields": {
+    "p_measured_envelope": 0.9772017548564513,
+    "V_frameA_unperturbed": {
+     "a_hat_short": -0.000793097579889568,
+     "H_hat_short": -0.31772459221533617,
+     "p_pred_short_(a+H)": 0.0,
+     "a_hat_full": -0.6535590432286267,
+     "H_hat_full": 0.6482978276565977,
+     "p_pred_full_(a+H)": 0.0,
+     "slope_|S_n|_last2dec": -0.01597965702338901,
+     "|S_N|": 0.22273234648529888,
+     "p_reconstructed_envelope": 0.9961380074174696,
+     "reconstruction_ratio_final": 41.89737328877474
+    },
+    "V_frameB_comoving": {
+     "a_hat_short": -0.000793097579889568,
+     "H_hat_short": 0.9996986037059246,
+     "p_pred_short_(a+H)": 0.998905506126035,
+     "a_hat_full": -0.6535590432286267,
+     "H_hat_full": 1.3067061044285502,
+     "p_pred_full_(a+H)": 0.6531470611999235,
+     "slope_|S_n|_last2dec": 0.8093034302279776,
+     "|S_N|": 1299.901221272364,
+     "p_reconstructed_envelope": 1.1289303321415018,
+     "reconstruction_ratio_final": 14110454209.686575
+    },
+    "E_energy_increment": {
+     "a_hat_short": 0.7148675293463513,
+     "H_hat_short": 0.29582642951745786,
+     "p_pred_short_(a+H)": 1.010693958863809,
+     "a_hat_full": 1.0201270753354392,
+     "H_hat_full": 0.06314911303052415,
+     "p_pred_full_(a+H)": 1.0832761883659634,
+     "identity_check_max|dev-|sum g||": 0.0,
+     "slope_|S_n|_last2dec": 0.9617941566590339
+    }
+   },
+   "seconds": 100.67410826683044
+  },
+  "paper": {
+   "n_short": 130899,
+   "n_full": 2094395,
+   "short_gyros": 6249.966868735802,
+   "full_gyros": 99999.99511108504,
+   "G0_coefficient_change": 135.4686163716704,
+   "G0_limit": 2.0,
+   "G0_pass": false,
+   "G0_margin_factor": 0.014763567042811001,
+   "channels": [
+    {
+     "channel": "V(ref)",
+     "a_hat": -0.27162441153456357,
+     "H_hat": 0.303813554341674,
+     "p_hat": 0.03218914280711044,
+     "G1_rho_decades": 0.32854780092898883,
+     "G1_pass": true,
+     "G1_margin_decades": 0.17145219907101117,
+     "G2_p_reconstruction": 1.2993325928366224,
+     "G2_p_terms": 3.38112758941723e-05,
+     "G2_pass": false,
+     "G2_margin": -1.1492987815607283,
+     "term_exponents": {
+      "2|v_phys Re S|": 3.3621119084437294e-05,
+      "|S|^2": 3.38112758941723e-05
+     },
+     "survives": false
+    },
+    {
+     "channel": "V(own)",
+     "a_hat": -0.27162441153456357,
+     "H_hat": 0.4068068355471217,
+     "p_hat": 0.13518242401255814,
+     "G1_rho_decades": 2.902038887205716,
+     "G1_pass": false,
+     "G1_margin_decades": -2.402038887205716,
+     "G2_p_reconstruction": 0.4946888022632834,
+     "G2_p_terms": 0.4946643641028688,
+     "G2_pass": true,
+     "G2_margin": 0.14997556183958538,
+     "term_exponents": {
+      "2|v_phys Re S|": 0.48897276866907,
+      "|S|^2": 0.4946643641028688
+     },
+     "survives": false
+    },
+    {
+     "channel": "E",
+     "a_hat": 2.0842109875185675,
+     "H_hat": 0.00032080775637796796,
+     "p_hat": 2.0845317952749456,
+     "G1_rho_decades": 0.0,
+     "G1_pass": true,
+     "G1_margin_decades": 0.5,
+     "G2_p_reconstruction": 1.9079613407126768,
+     "G2_p_terms": 1.9079613407126768,
+     "G2_pass": true,
+     "G2_margin": 0.15000000000000013,
+     "term_exponents": {
+      "|S|": 1.9079613407126768
+     },
+     "survives": true
+    }
+   ],
+   "G3_half_decade_slopes_short": [
+    {
+     "t_lo": 392.69699999999995,
+     "t_hi": 1241.816950315142,
+     "slope": 2.2517749152747846
+    },
+    {
+     "t_lo": 1241.816950315142,
+     "t_hi": 3926.97,
+     "slope": 1.8828790833626752
+    },
+    {
+     "t_lo": 3926.97,
+     "t_hi": 12418.16950315142,
+     "slope": 2.0974088044702155
+    },
+    {
+     "t_lo": 12418.16950315142,
+     "t_hi": 39269.7,
+     "slope": 1.8306021471045575
+    }
+   ],
+   "G3_spread": 0.4211727681702271,
+   "G3_limit": 0.3,
+   "G3_applies": true,
+   "G3_pass": false,
+   "p_fit_short": 1.9079613407126768,
+   "survivors": [
+    "E"
+   ],
+   "verdict": "NO EXPONENT",
+   "reason": "G0: the coefficient changes by 135.5 over the gap",
+   "selected": null,
+   "p_pred": null,
+   "p_measured_full_horizon": 1.5395421163979095,
+   "full_half_decade_slopes": [
+    {
+     "t_lo": 6283.185,
+     "t_hi": 19869.175560205058,
+     "slope": 1.7919840687868125
+    },
+    {
+     "t_lo": 19869.175560205058,
+     "t_hi": 62831.85,
+     "slope": 2.2720947552837587
+    },
+    {
+     "t_lo": 62831.85,
+     "t_hi": 198691.75560205057,
+     "slope": 1.6205004649061214
+    },
+    {
+     "t_lo": 198691.75560205057,
+     "t_hi": 628318.5,
+     "slope": 0.49096883788202933
+    }
+   ],
+   "full_half_decade_spread": 1.7811259174017293,
+   "full_curve_is_power_law": false,
+   "probe_verdict": "NO EXPONENT",
+   "legacy_pc_defect_fields": {
+    "p_measured_envelope": 1.5395421163979095,
+    "V_frameA_unperturbed": {
+     "a_hat_short": -0.27162441153456357,
+     "H_hat_short": 0.303813554341674,
+     "p_pred_short_(a+H)": 0.03218914280711044,
+     "a_hat_full": 0.02185057685720081,
+     "H_hat_full": 0.31571864660963855,
+     "p_pred_full_(a+H)": 0.3375692234668394,
+     "slope_|S_n|_last2dec": 0.3370925463413927,
+     "|S_N|": 4.74746667083494,
+     "p_reconstructed_envelope": 1.7303637869142794,
+     "reconstruction_ratio_final": 1.0605463971558533
+    },
+    "V_frameB_comoving": {
+     "a_hat_short": -0.27162441153456357,
+     "H_hat_short": 0.4068068355471217,
+     "p_pred_short_(a+H)": 0.13518242401255814,
+     "a_hat_full": 0.02185057685720081,
+     "H_hat_full": 1.1035394465704371,
+     "p_pred_full_(a+H)": 1.125390023427638,
+     "slope_|S_n|_last2dec": 1.0964972682430714,
+     "|S_N|": 893.225110433325,
+     "p_reconstructed_envelope": 3.110425853688461,
+     "reconstruction_ratio_final": 64639.9134697204
+    },
+    "E_energy_increment": {
+     "a_hat_short": 2.0842109875185675,
+     "H_hat_short": 0.00032080775637796796,
+     "p_pred_short_(a+H)": 2.0845317952749456,
+     "a_hat_full": 0.9501828176549372,
+     "H_hat_full": 0.9278522737353349,
+     "p_pred_full_(a+H)": 1.878035091390272,
+     "identity_check_max|dev-|sum g||": 0.0,
+     "slope_|S_n|_last2dec": 1.7913218643429991
+    }
+   },
+   "seconds": 93.4125587940216
+  }
+ },
+ "channel_order_evidence": {
+  "mean_abs_error_V": 0.089271531514894,
+  "mean_abs_error_E": 0.1896379517062312,
+  "max_abs_error_V": 0.290844294277532,
+  "max_abs_error_E": 0.5941508521631196,
+  "n_cases": 10
+ },
+ "checks": [
+  {
+   "check": "quasistatic: velocity channels rejected",
+   "pass": true,
+   "detail": "V(ref) G1 rho = 1.53 decades, V(own) G1 rho = 9.83 decades"
+  },
+  {
+   "check": "quasistatic: rule selects E and returns an exponent",
+   "pass": true,
+   "detail": "selected E, p_pred = 1.010693958863809"
+  },
+  {
+   "check": "quasistatic: prediction agrees with the measured exponent",
+   "pass": true,
+   "detail": "p_pred 1.0107 vs measured 0.9772, error 0.0335"
+  },
+  {
+   "check": "quasistatic: the first version's p = 0 came from a rejected channel",
+   "pass": true,
+   "detail": "V(ref) full-run (a+H)_+ = 0.0000"
+  },
+  {
+   "check": "decaying field: the rule returns no exponent",
+   "pass": true,
+   "detail": "verdict NO EXPONENT -- G0: the coefficient changes by 135.5 over the gap"
+  },
+  {
+   "check": "decaying field: the rule does not return 0.34",
+   "pass": true,
+   "detail": "V(ref) alone would have given 0.0322"
+  },
+  {
+   "check": "decaying field: the full-horizon curve is not a power law",
+   "pass": true,
+   "detail": "half-decade slopes spread by 1.78 over the last two decades"
+  },
+  {
+   "check": "synthetic (+0.00,0.5): velocity channel kept",
+   "pass": true,
+   "detail": "selected V(ref), p_pred 0.2948791450743395, survivors ['V(ref)', 'V(own)', 'E']"
+  },
+  {
+   "check": "synthetic (+0.25,0.5): velocity channel kept",
+   "pass": true,
+   "detail": "selected V(ref), p_pred 0.919531655775658, survivors ['V(ref)', 'V(own)', 'E']"
+  },
+  {
+   "check": "synthetic (+0.40,0.5): velocity channel kept",
+   "pass": true,
+   "detail": "selected V(ref), p_pred 0.9420058292196825, survivors ['V(ref)', 'V(own)', 'E']"
+  },
+  {
+   "check": "synthetic (-0.25,0.5): velocity channel kept",
+   "pass": true,
+   "detail": "selected V(ref), p_pred 0.17161171058139277, survivors ['V(ref)', 'V(own)', 'E']"
+  },
+  {
+   "check": "synthetic (+0.00,0.8): velocity channel kept",
+   "pass": true,
+   "detail": "selected V(ref), p_pred 1.090844294277532, survivors ['V(ref)', 'V(own)', 'E']"
+  },
+  {
+   "check": "synthetic (+0.25,0.8): velocity channel kept",
+   "pass": true,
+   "detail": "selected V(ref), p_pred 1.0488980565880037, survivors ['V(ref)', 'V(own)', 'E']"
+  },
+  {
+   "check": "synthetic (+0.00,0.7): velocity channel kept",
+   "pass": true,
+   "detail": "selected V(ref), p_pred 0.8057218136517849, survivors ['V(ref)', 'V(own)', 'E']"
+  },
+  {
+   "check": "synthetic (+0.50,1.0): velocity channel kept",
+   "pass": true,
+   "detail": "selected V(ref), p_pred 1.4999993655319814, survivors ['V(ref)', 'V(own)', 'E']"
+  },
+  {
+   "check": "synthetic (-0.60,0.5): velocity channel kept",
+   "pass": true,
+   "detail": "selected V(ref), p_pred 0.0, survivors ['V(ref)', 'V(own)', 'E']"
+  },
+  {
+   "check": "stalled (-0.60,0.5): p = 0 still returned, from a channel that passes G1",
+   "pass": true,
+   "detail": "verdict EXPONENT, selected V(ref), p_pred 0.0"
+  },
+  {
+   "check": "synthetic (-0.40,0.2): velocity channel kept",
+   "pass": true,
+   "detail": "selected V(ref), p_pred 0.0, survivors ['V(ref)', 'V(own)', 'E']"
+  },
+  {
+   "check": "stalled (-0.40,0.2): p = 0 still returned, from a channel that passes G1",
+   "pass": true,
+   "detail": "verdict EXPONENT, selected V(ref), p_pred 0.0"
+  },
+  {
+   "check": "V before E is the better order on the bench",
+   "pass": true,
+   "detail": "mean |p_hat - p_true| over 10 cases: V 0.089, E 0.190; worst case V 0.291, E 0.594"
+  }
+ ],
+ "stored_mismatches": [],
+ "seconds": 214.8415448665619
+}

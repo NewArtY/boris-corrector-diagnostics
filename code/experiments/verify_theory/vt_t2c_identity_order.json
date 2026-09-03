@@ -1,0 +1,69 @@
+{
+ "Q1_map_identity": {
+  "shipped_vs_core_same_init_max_dr": 0.0,
+  "shipped_vs_core_same_init_max_dv": 0.0,
+  "shipped_vs_core_halfback_init_max_dr": 0.0,
+  "shipped_vs_core_halfback_init_max_dv": 0.0,
+  "verdict": "0.0 everywhere => identical recursion (bitwise)"
+ },
+ "Q1_init_convention_cost": {
+  "rms_position_gap_over_20000_steps": 0.21655657374807757,
+  "max_position_gap": 0.30997248524664883,
+  "larmor_radius": 1.0
+ },
+ "Q2_position_order": [
+  {
+   "init": "shipped",
+   "h": [
+    0.4,
+    0.2,
+    0.1,
+    0.05,
+    0.025,
+    0.0125
+   ],
+   "pos_err_at_T": [
+    1.4721142155328448,
+    0.3904473383594228,
+    0.09595031979390568,
+    0.024805370536831853,
+    0.007861953355195721,
+    0.003340955890755196
+   ],
+   "order": 1.7934568281747187
+  },
+  {
+   "init": "halfback",
+   "h": [
+    0.4,
+    0.2,
+    0.1,
+    0.05,
+    0.025,
+    0.0125
+   ],
+   "pos_err_at_T": [
+    1.4252415605988518,
+    0.3938514328213211,
+    0.09917205693244774,
+    0.024814187780188315,
+    0.00620976379200761,
+    0.001558354864556457
+   ],
+   "order": 1.975557461169483
+  }
+ ],
+ "Q2_note": "positions are emitted at integer times by BOTH; the order gap is produced by the initial half-step-back (a change of initial DATA), not by any relabelling of the velocity",
+ "Q2b_same_run_three_readouts": {
+  "as_integer_v_n": {
+   "median_abs": 1.2498530289617449e-06,
+   "min": -1.1627402374259077e-09,
+   "max": 2.4990460830709438e-06
+  },
+  "as_avg_of_neighbours": {
+   "median_abs": 0.021954025620084305,
+   "min": -0.021969536640150222,
+   "max": -0.02193770662245087
+  }
+ }
+}

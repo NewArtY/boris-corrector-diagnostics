@@ -1,0 +1,16 @@
+{
+ "mp_true_optimum": {
+  "r0": [
+   0.9999987500741407,
+   0.1500040748122218
+  ],
+  "floor": 1.1179548875881187e-14,
+  "n_evals": 142,
+  "ratio_base_over_opt": 111802364.64608517
+ },
+ "orbit_distance": {
+  "median_dist_to_curve": 0.10648466074885178,
+  "median_simultaneous_err": 0.5193120196748605,
+  "ratio_percent": 20.504948222750834
+ }
+}

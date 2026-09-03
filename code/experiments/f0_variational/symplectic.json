@@ -1,0 +1,70 @@
+{
+  "eps": 1e-06,
+  "h": 0.3,
+  "note": "finite-difference Jacobian; base scheme residual is the noise floor of the method",
+  "rows": [
+    {
+      "amp_factor": 0.1,
+      "seed": 11,
+      "symplectic_resid_base": 2.1339829903155305e-10,
+      "symplectic_resid_varnet": 2.532599702627975e-10,
+      "symplectic_resid_additive": 3.9611871662903475e-05
+    },
+    {
+      "amp_factor": 0.1,
+      "seed": 22,
+      "symplectic_resid_base": 2.6326996138692493e-10,
+      "symplectic_resid_varnet": 2.225084561047197e-10,
+      "symplectic_resid_additive": 6.58223009897263e-05
+    },
+    {
+      "amp_factor": 0.1,
+      "seed": 33,
+      "symplectic_resid_base": 2.046154357060459e-10,
+      "symplectic_resid_varnet": 1.9918711124944366e-10,
+      "symplectic_resid_additive": 3.0918899074805495e-05
+    },
+    {
+      "amp_factor": 1.0,
+      "seed": 11,
+      "symplectic_resid_base": 2.2182710597077113e-10,
+      "symplectic_resid_varnet": 2.5389368385475564e-10,
+      "symplectic_resid_additive": 0.000391619603092197
+    },
+    {
+      "amp_factor": 1.0,
+      "seed": 22,
+      "symplectic_resid_base": 2.0527823885174712e-10,
+      "symplectic_resid_varnet": 2.8131841300904625e-10,
+      "symplectic_resid_additive": 0.0006497829551570522
+    },
+    {
+      "amp_factor": 1.0,
+      "seed": 33,
+      "symplectic_resid_base": 1.7068085888462848e-10,
+      "symplectic_resid_varnet": 2.19486078019492e-10,
+      "symplectic_resid_additive": 0.0003006238838616504
+    },
+    {
+      "amp_factor": 10.0,
+      "seed": 11,
+      "symplectic_resid_base": 3.4083402766782456e-10,
+      "symplectic_resid_varnet": 4.786799691947889e-10,
+      "symplectic_resid_additive": 0.0035807918264404437
+    },
+    {
+      "amp_factor": 10.0,
+      "seed": 22,
+      "symplectic_resid_base": 7.196447882051871e-10,
+      "symplectic_resid_varnet": 9.361618147352146e-10,
+      "symplectic_resid_additive": 0.004224456337459657
+    },
+    {
+      "amp_factor": 10.0,
+      "seed": 33,
+      "symplectic_resid_base": 2.58210897108313e-10,
+      "symplectic_resid_varnet": 5.479467990454623e-10,
+      "symplectic_resid_additive": 0.00276464747629801
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "proj_dr0__paper": {
+    "exponent": 1.7764635463932799,
+    "seconds": 48.94685482978821,
+    "cross_gyrations": 28841.97920947487,
+    "horizons": {
+      "1e+03": {
+        "energy_err_max": 0.00027312136543344856,
+        "mu_err_max": 0.0002549676009619972,
+        "physical_signal": 0.051012713845887014
+      },
+      "1e+04": {
+        "energy_err_max": 0.05572500684487147,
+        "mu_err_max": 0.09207688324565111,
+        "physical_signal": 0.407615152811611
+      },
+      "1e+05": {
+        "energy_err_max": 1.8873266885621829,
+        "mu_err_max": 96.35551736626493,
+        "physical_signal": 0.9946784345211994
+      }
+    }
+  },
+  "proj_dr0__quasistatic": {
+    "exponent": 1.0739580300850038,
+    "seconds": 48.45146942138672,
+    "cross_gyrations": null,
+    "horizons": {
+      "1e+03": {
+        "energy_err_max": 3.853805705666957e-07,
+        "mu_err_max": 3.840356861406491e-07,
+        "physical_signal": 5.235850680540555e-05
+      },
+      "1e+04": {
+        "energy_err_max": 3.835011619268691e-06,
+        "mu_err_max": 3.83644852819387e-06,
+        "physical_signal": 0.000523461721680829
+      },
+      "1e+05": {
+        "energy_err_max": 5.6179629171371204e-05,
+        "mu_err_max": 5.6148140418432746e-05,
+        "physical_signal": 0.005222303865404343
+      }
+    }
+  },
+  "genmodel_raw__paper": {
+    "exponent": 2.213871944040108,
+    "seconds": 25.86867380142212,
+    "cross_gyrations": 24.971410571118415,
+    "horizons": {
+      "1e+03": {
+        "energy_err_max": 558.6869721080643,
+        "mu_err_max": 586.0415004147283,
+        "physical_signal": 0.051012713845887014
+      },
+      "1e+04": {
+        "energy_err_max": 719.6031581681939,
+        "mu_err_max": 811.7026724311035,
+        "physical_signal": 0.407615152811611
+      },
+      "1e+05": {
+        "energy_err_max": 152458.20969365866,
+        "mu_err_max": 18313468.35854497,
+        "physical_signal": 0.9946784345211994
+      }
+    }
+  },
+  "genmodel_proj__paper": {
+    "exponent": 2.6412133060523626,
+    "seconds": 29.37062168121338,
+    "cross_gyrations": 649.2566748492391,
+    "horizons": {
+      "1e+03": {
+        "energy_err_max": 0.11292986801933125,
+        "mu_err_max": 0.11356145940325513,
+        "physical_signal": 0.051012713845887014
+      },
+      "1e+04": {
+        "energy_err_max": 0.909350430030353,
+        "mu_err_max": 0.9999904314717049,
+        "physical_signal": 0.407615152811611
+      },
+      "1e+05": {
+        "energy_err_max": 767.1394639647326,
+        "mu_err_max": 141544.2045962132,
+        "physical_signal": 0.9946784345211994
+      }
+    }
+  }
+}

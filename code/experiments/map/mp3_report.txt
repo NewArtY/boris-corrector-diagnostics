@@ -1,0 +1,230 @@
+wrote mp3_maps.json
+
+==============================================================================
+MAP A -- corrector vs Boris on the trajectory, same step
+gain = boris rms / corrector rms, median over 8 initial conditions; > 1 means the corrector wins
+
+  H_paper (19.10 gyro-orbits)
+    Omega h        uniform     B1_radial       B2_wave     B3_tilted   B4_decaying
+    0.001       2.595e-07     2.513e-07     2.598e-07     2.419e-07     2.598e-07 
+    0.002       1.009e-06     1.000e-06     1.010e-06     9.684e-07     1.009e-06 
+    0.005       6.216e-06     6.160e-06     6.222e-06     6.044e-06     6.217e-06 
+    0.01        2.427e-05     2.406e-05     2.425e-05     2.427e-05     2.428e-05 
+    0.02        9.295e-05     9.203e-05     9.307e-05     9.371e-05     9.298e-05 
+    0.05        5.235e-04     5.168e-04     5.247e-04     5.444e-04     5.236e-04 
+    0.1         2.104e-03     2.046e-03     2.109e-03     2.003e-03     2.103e-03 
+    0.15        5.806e-03     5.559e-03     5.808e-03     5.279e-03     5.799e-03 
+    0.2         1.326e-02     1.268e-02     1.326e-02     1.269e-02     1.324e-02 
+    0.3         1.568e+01*    9.309e-01     3.400e-01     3.914e-02     7.368e+01*
+    0.4         1.079e-01     1.046e-01     1.078e-01     9.261e-02     1.077e-01 
+    0.5         1.966e-01     1.937e-01     1.967e-01     1.691e-01     1.965e-01 
+
+  H_crossover (101.22 gyro-orbits)
+    Omega h        uniform     B1_radial       B2_wave     B3_tilted   B4_decaying
+    0.001       4.833e-08     4.655e-08     4.834e-08     4.504e-08     4.757e-08 
+    0.002       1.836e-07     1.816e-07     1.837e-07     1.766e-07     1.842e-07 
+    0.005       1.071e-06     1.059e-06     1.072e-06     1.043e-06     1.073e-06 
+    0.01        3.932e-06     3.886e-06     3.933e-06     3.946e-06     3.934e-06 
+    0.02        1.612e-05     1.573e-05     1.618e-05     1.641e-05     1.607e-05 
+    0.05        2.112e-04     2.018e-04     2.126e-04     2.015e-04     2.097e-04 
+    0.1         1.830e-03     1.749e-03     1.840e-03     1.171e-03     1.818e-03 
+    0.15        6.258e-03     6.002e-03     6.293e-03     2.962e-03     6.224e-03 
+    0.2         1.410e-02     1.362e-02     1.417e-02     5.729e-03     1.404e-02 
+    0.3         1.966e+00*    8.032e-01     8.980e-02     9.376e-03     1.488e+00*
+    0.4         3.719e-02     3.735e-02     3.728e-02     9.418e-03     3.711e-02 
+    0.5         5.010e-02     5.208e-02     5.014e-02     1.182e-02     5.031e-02 
+
+==============================================================================
+MAP B -- corrector vs vps4 at equal total flops
+ratio = corrector rms / vps4 rms at the same total flop count; < 1 means the corrector wins.  m = measured, i = inferred from the same-step run
+
+  H_paper
+    Omega h        uniform     B1_radial       B2_wave     B3_tilted   B4_decaying
+    0.001       1.539e+14i    1.585e+14i    1.553e+14i    5.188e+13i    1.552e+14i
+    0.002       9.931e+13i    1.033e+14i    1.043e+14i    3.518e+13i    1.043e+14i
+    0.005       9.547e+13i    7.997e+12i    9.245e+13i    3.361e+13i    9.677e+13i
+    0.01        4.197e+12i    2.499e+11i    3.799e+12i    4.195e+12i    4.186e+12i
+    0.02        1.306e+11i    7.805e+09i    1.184e+11i    1.295e+11i    1.305e+11i
+    0.05        1.336e+09i    7.989e+07i    1.211e+09i    1.285e+09i    1.335e+09i
+    0.1         4.177e+07i    2.498e+06i    3.790e+07i    4.389e+07i    4.175e+07i
+    0.15        5.511e+06i    3.297e+05i    5.002e+06i    6.061e+06i    5.508e+06i
+    0.2         3.195e+11m    3.417e+11m    3.443e+11m    1.465e+11m    3.444e+11m
+    0.3         8.543e+08m    1.169e+10m    3.517e+10m    3.263e+11m    1.530e+08m
+    0.4         4.057e+04i    2.516e+03i    3.698e+04i    4.726e+04i    4.055e+04i
+    0.5         1.994e+11m    1.989e+11m    2.026e+11m    1.206e+11m    2.026e+11m
+
+  H_crossover
+    Omega h        uniform     B1_radial       B2_wave     B3_tilted   B4_decaying
+    0.001       3.322e+13i    3.392e+13i    3.323e+13i    1.279e+13i    3.384e+13i
+    0.002       1.928e+13i    1.921e+13i    1.931e+13i    9.844e+12i    1.929e+13i
+    0.005       2.248e+13i    7.542e+12i    2.249e+13i    1.119e+13i    2.251e+13i
+    0.01        1.915e+13i    2.496e+11i    1.762e+13i    1.999e+13i    1.894e+13i
+    0.02        6.883e+11i    7.800e+09i    6.211e+11i    6.764e+11i    6.874e+11i
+    0.05        7.052e+09i    7.992e+07i    6.361e+09i    7.412e+09i    7.037e+09i
+    0.1         2.205e+08i    2.503e+06i    1.990e+08i    3.534e+08i    2.201e+08i
+    0.15        2.907e+07i    3.307e+05i    2.625e+07i    6.327e+07i    2.902e+07i
+    0.2         5.954e+10m    5.941e+10m    5.968e+10m    7.948e+10m    5.974e+10m
+    0.3         8.857e+08m    6.154e+09m    1.949e+10m    1.999e+11m    1.931e+09m
+    0.4         2.122e+05i    2.464e+03i    1.922e+05i    8.583e+05i    2.117e+05i
+    0.5         6.402e+10m    6.214e+10m    6.411e+10m    8.550e+10m    6.421e+10m
+
+==============================================================================
+MAP C -- the energy channel against the trajectory error
+per cell: how many of the five schemes are energy-blind (position rms >= 1 r_L while the energy error is <= 0.01), and the rank agreement between the two channels across the five schemes
+
+  H_paper
+    Omega h          uniform       B1_radial         B2_wave       B3_tilted     B4_decaying
+    0.001             1/5 -0.20          1/5 -0.10          1/5 +0.10          1/5 +0.10          0/5 +1.00
+    0.002             1/5 -0.05          1/5 -0.05          1/5 +0.10          1/5 -0.20          0/5 +0.95
+    0.005             1/5 -0.50          1/5 +0.05          1/5 -0.05          1/5 -0.45          0/5 +0.90
+    0.01              1/5 -0.50          1/5 +0.15          1/5 +0.40          1/5 -0.50          0/5 +0.90
+    0.02              1/5 -0.46          1/5 +0.23          1/5 +0.80          1/5 -0.50          1/5 +0.90
+    0.05              1/5 -0.30          1/5 +0.63          1/5 +0.10          1/5 -0.30          1/5 +0.90
+    0.1               1/5 -0.30          1/5 +0.58          1/5 +0.00          1/5 -0.40          1/5 +0.80
+    0.15              1/5 -0.30          1/5 +0.45          1/5 +0.40          1/5 -0.36          1/5 +0.80
+    0.2               1/5 +0.00          1/5 -0.65          1/5 -0.15          1/5 -0.20          1/5 +0.80
+    0.3               0/5 -0.80          0/5 -0.70          1/5 +0.05          1/5 -0.60          0/5 +0.50
+    0.4               1/5 -0.41          1/5 +0.40          1/5 +0.05          1/5 -0.30          1/5 +0.80
+    0.5               2/5 -0.20          2/5 -0.58          2/5 +0.80          2/5 -0.20          2/5 +0.80
+
+  H_crossover
+    Omega h          uniform       B1_radial         B2_wave       B3_tilted     B4_decaying
+    0.001             1/5 -0.20          1/5 +0.05          1/5 +0.30          1/5 +0.00          0/5 +1.00
+    0.002             1/5 +0.05          1/5 +0.30          1/5 +0.25          1/5 +0.10          0/5 +1.00
+    0.005             1/5 -0.58          1/5 +0.05          1/5 +0.35          1/5 -0.10          0/5 +0.90
+    0.01              1/5 -0.40          1/5 -0.20          1/5 -0.05          1/5 -0.50          0/5 +0.90
+    0.02              1/5 -0.60          1/5 -0.05          1/5 +0.00          1/5 -0.40          0/5 +0.80
+    0.05              1/5 -0.60          1/5 +0.55          1/5 +0.05          1/5 -0.65          0/5 +0.80
+    0.1               1/5 -0.35          1/5 +0.50          1/5 -0.20          1/5 -0.50          1/5 +0.80
+    0.15              1/5 -0.50          1/5 +0.15          1/5 +0.30          1/5 -0.40          1/5 +0.80
+    0.2               2/5 -0.40          2/5 -0.70          2/5 -0.20          2/5 -0.60          2/5 +0.80
+    0.3               1/5 -0.70          2/5 +0.10          2/5 +0.25          2/5 -0.60          1/5 +0.55
+    0.4               2/5 -0.50          2/5 +0.60          2/5 +0.75          2/5 -0.45          2/5 +0.50
+    0.5               2/5 -0.30          2/5 -0.45          2/5 +0.00          2/5 -0.50          2/5 +0.20
+
+==============================================================================
+BLINDNESS RATIO -- position rms in r_L divided by energy rms, median over the eight initial conditions, at H_crossover
+    scheme           uniform     B1_radial       B2_wave     B3_tilted   B4_decaying
+  Omega h = 0.3
+    boris          1.623e+14     1.300e+13     1.029e+13     2.226e+14     7.919e+05
+    corrector      5.971e+13     2.130e+13     1.298e+14     1.285e+16     1.709e+04
+    vps2           9.370e+10     2.969e+11     6.878e+10     1.164e+11     4.669e+02
+    vps4           4.948e+08     4.089e+10     3.875e+08     6.709e+08     5.086e+01
+    gl4            2.908e+10     4.394e+10     9.666e+10     3.301e+10     2.425e+04
+  Omega h = 0.5
+    boris          6.254e+14     1.248e+13     9.586e+12     8.926e+14     5.262e+05
+    corrector      1.804e+15     2.515e+14     1.915e+14     1.036e+16     1.411e+05
+    vps2           4.959e+11     8.454e+11     1.989e+11     5.295e+11     4.668e+02
+    vps4           3.704e+10     2.723e+11     2.998e+09     2.058e+10     5.231e+01
+    gl4            2.390e+11     3.311e+11     3.722e+11     2.730e+11     2.434e+04
+
+==============================================================================
+THE STEP AXIS -- position rms in Larmor radii, median over the eight initial conditions, H_paper.  R marks a cell within a factor of ten of what the reference in that configuration is worth
+    Omega h                      uniform     B1_radial       B2_wave     B3_tilted   B4_decaying
+  boris
+    0.001                     6.997e-04     7.002e-04     7.050e-04     6.997e-04     7.000e-04 
+    0.002                     1.393e-03     1.393e-03     1.403e-03     1.393e-03     1.393e-03 
+    0.005                     3.431e-03     3.433e-03     3.457e-03     3.431e-03     3.432e-03 
+    0.01                      6.698e-03     6.705e-03     6.750e-03     6.698e-03     6.701e-03 
+    0.02                      1.281e-02     1.281e-02     1.291e-02     1.281e-02     1.281e-02 
+    0.05                      2.883e-02     2.875e-02     2.905e-02     2.883e-02     2.884e-02 
+    0.1                       5.798e-02     5.688e-02     5.839e-02     5.798e-02     5.796e-02 
+    0.15                      1.068e-01     1.030e-01     1.075e-01     1.068e-01     1.067e-01 
+    0.2                       1.828e-01     1.759e-01     1.838e-01     1.828e-01     1.826e-01 
+    0.3                       4.171e-01     4.021e-01     4.193e-01     4.171e-01     4.167e-01 
+    0.4                       7.402e-01     7.167e-01     7.439e-01     7.402e-01     7.394e-01 
+    0.5                       1.100e+00     1.073e+00     1.105e+00     1.100e+00     1.099e+00 
+  corrector
+    0.001                     2.696e+03     2.786e+03     2.711e+03     2.893e+03     2.694e+03 
+    0.002                     1.380e+03     1.393e+03     1.388e+03     1.438e+03     1.380e+03 
+    0.005                     5.519e+02     5.571e+02     5.549e+02     5.676e+02     5.520e+02 
+    0.01                      2.759e+02     2.785e+02     2.783e+02     2.760e+02     2.760e+02 
+    0.02                      1.378e+02     1.391e+02     1.385e+02     1.367e+02     1.378e+02 
+    0.05                      5.508e+01     5.563e+01     5.535e+01     5.297e+01     5.509e+01 
+    0.1                       2.755e+01     2.783e+01     2.771e+01     2.895e+01     2.756e+01 
+    0.15                      1.840e+01     1.856e+01     1.851e+01     2.024e+01     1.840e+01 
+    0.2                       1.379e+01     1.389e+01     1.389e+01     1.440e+01     1.379e+01 
+    0.3                       2.671e-02     4.315e-01     1.234e+00     1.066e+01     5.745e-03 
+    0.4                       6.862e+00     6.876e+00     6.903e+00     7.993e+00     6.864e+00 
+    0.5                       5.592e+00     5.550e+00     5.605e+00     6.503e+00     5.593e+00 
+  vps4
+    0.001                     1.762e-11     1.770e-11     1.774e-11     5.584e-11     1.746e-11 
+    0.002                     1.438e-11     1.399e-11     1.384e-11     4.151e-11     1.377e-11 
+    0.005                     5.782e-12     6.958e-11     5.958e-12     1.636e-11     5.705e-12 
+    0.01                      6.574e-11     1.114e-09     7.358e-11     6.577e-11     6.594e-11 
+    0.02                      1.055e-09     1.780e-08     1.177e-09     1.055e-09     1.056e-09 
+    0.05                      4.123e-08     6.943e-07     4.597e-08     4.123e-08     4.126e-08 
+    0.1                       6.597e-07     1.109e-05     7.353e-07     6.597e-07     6.601e-07 
+    0.15                      3.339e-06     5.599e-05     3.720e-06     3.339e-06     3.341e-06 
+    0.2                       1.056e-05     1.759e-04     1.175e-05     1.056e-05     1.057e-05 
+    0.3                       5.351e-05     8.781e-04     5.939e-05     5.351e-05     5.354e-05 
+    0.4                       1.691e-04     2.722e-03     1.871e-04     1.691e-04     1.692e-04 
+    0.5                       4.131e-04     6.481e-03     4.551e-04     4.131e-04     4.133e-04 
+
+==============================================================================
+THE CORRECTOR'S OWN FLOP BUDGET, SPENT ON A CLASSICAL SCHEME
+position rms in Larmor radii, median over eight initial conditions, at equal total flops
+  horizon        field     Om h      corrector  boris x1009   vps2 x1253    vps4 x417
+  H_crossover    B1_radial 0.2      7.3571e+01   1.3849e-04   1.0352e-08   1.2730e-09
+  H_crossover    B1_radial 0.3      2.3353e+00   2.0721e-04   2.3203e-08   9.0111e-10
+  H_crossover    B1_radial 0.5      2.8119e+01   3.4359e-04   6.4443e-08   4.7235e-10
+  H_crossover    B2_wave   0.2      7.3455e+01   1.4015e-04   3.7606e-09   1.2785e-09
+  H_crossover    B2_wave   0.3      1.7531e+01   2.0968e-04   7.0342e-09   8.9626e-10
+  H_crossover    B2_wave   0.5      2.9090e+01   3.4760e-04   1.9055e-08   4.7321e-10
+  H_crossover    B3_tilted 0.2      1.8484e+02   1.3930e-04   4.4641e-09   2.5568e-09
+  H_crossover    B3_tilted 0.3      1.7017e+02   2.0841e-04   7.7195e-09   7.0192e-10
+  H_crossover    B3_tilted 0.5      1.2478e+02   3.4551e-04   1.8955e-08   1.5235e-09
+  H_crossover    B4_decaying 0.2      7.3137e+01   1.3960e-04   3.7190e-09   1.2559e-09
+  H_crossover    B4_decaying 0.3      1.0700e+00   2.0888e-04   6.8444e-09   8.9065e-10
+  H_crossover    B4_decaying 0.5      2.8888e+01   3.4627e-04   1.8738e-08   4.6585e-10
+  H_crossover    uniform   0.2      7.3061e+01   1.3930e-04   3.7489e-09   1.2587e-09
+  H_crossover    uniform   0.3      7.8966e-01   2.0841e-04   6.8167e-09   8.9073e-10
+  H_crossover    uniform   0.5      2.8859e+01   3.4551e-04   1.8748e-08   4.6666e-10
+  H_paper        B1_radial 0.2      1.3886e+01   1.3916e-04   3.6090e-09   4.1101e-11
+  H_paper        B1_radial 0.3      4.3145e-01   2.0864e-04   8.1191e-09   4.0247e-11
+  H_paper        B1_radial 0.5      5.5498e+00   3.4739e-04   2.2559e-08   2.8655e-11
+  H_paper        B2_wave   0.2      1.3891e+01   1.4055e-04   3.0302e-09   4.0803e-11
+  H_paper        B2_wave   0.3      1.2341e+00   2.1080e-04   6.8199e-09   4.0127e-11
+  H_paper        B2_wave   0.5      5.6048e+00   3.5073e-04   1.8927e-08   2.8259e-11
+  H_paper        B3_tilted 0.2      1.4402e+01   1.3948e-04   2.9974e-09   1.0294e-10
+  H_paper        B3_tilted 0.3      1.0657e+01   2.0919e-04   6.7266e-09   3.2553e-11
+  H_paper        B3_tilted 0.5      6.5027e+00   3.4805e-04   1.8685e-08   5.6197e-11
+  H_paper        B4_decaying 0.2      1.3789e+01   1.3954e-04   2.9908e-09   4.0570e-11
+  H_paper        B4_decaying 0.3      5.7447e-03   2.0928e-04   6.7308e-09   3.9736e-11
+  H_paper        B4_decaying 0.5      5.5929e+00   3.4820e-04   1.8682e-08   2.8429e-11
+  H_paper        uniform   0.2      1.3786e+01   1.3948e-04   2.9976e-09   4.3544e-11
+  H_paper        uniform   0.3      2.6709e-02   2.0919e-04   6.7256e-09   3.9799e-11
+  H_paper        uniform   0.5      5.5925e+00   3.4805e-04   1.8684e-08   2.8889e-11
+
+==============================================================================
+PRE-REGISTRATION STATUS
+  P1  confirmed
+  P2  confirmed
+  P3  confirmed
+  P4  confirmed
+
+summary: {
+ "n_cells": 120,
+ "A_holds_in_cells": 4,
+ "A_holds_fraction": 0.03333333333333333,
+ "B_holds_in_cells": 0,
+ "C_energy_blind_cells_any_scheme": 107,
+ "C_energy_blind_scheme_cells": 130,
+ "C_scheme_cells_total": 600,
+ "rank_agreement_median_over_all_cells": 0.0,
+ "rank_agreement_negative_cells": 57
+}
+A holds in: H_crossover|B4_decaying|0.3, H_crossover|uniform|0.3, H_paper|B4_decaying|0.3, H_paper|uniform|0.3
+
+==============================================================================
+HEADLINE NUMBERS
+  A holds in 4 of 120 cells:
+     H_crossover|B4_decaying|0.3      gain median     1.49  ic0     0.98  range 0.18..2.45  5/8 initial conditions
+     H_crossover|uniform|0.3          gain median     1.97  ic0    21.09  range 0.49..21.09  7/8 initial conditions
+     H_paper|B4_decaying|0.3          gain median    73.68  ic0   120.11  range 32.43..120.11  8/8 initial conditions
+     H_paper|uniform|0.3              gain median    15.68  ic0    35.94  range 6.80..76.41  8/8 initial conditions
+  A fails worst at H_crossover|B3_tilted|0.001: gain 4.504e-08 (the corrector is 2.22e+07 times less accurate than the Boris scheme it corrects)
+  B never holds; the corrector's closest approach is H_crossover|B1_radial|0.4, where it is still 2.464e+03 times (3.4 orders) less accurate than vps4 at the same total flops [inferred_from_same_step]
+  B spans 3.4 to 14.2 orders of magnitude over the map
+  C, the most extreme cell: H_crossover|B3_tilted|0.001, corrector -- trajectory off by 1.5273e+04 Larmor radii while the energy error reads 8.491e-14
+  the energy channel ranks the five schemes with a median rank correlation of +0.00 against the trajectory, negative in 57 of 120 cells

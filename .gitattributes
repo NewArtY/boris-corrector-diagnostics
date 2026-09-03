@@ -1,0 +1,7 @@
+# Uniform line endings.  Without this, file hashes and checksums differ
+# between Windows and Linux, which breaks reproducibility.
+* text=auto eol=lf
+*.pt binary
+*.npz binary
+*.pdf binary
+*.png binary

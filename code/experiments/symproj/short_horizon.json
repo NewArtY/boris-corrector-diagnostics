@@ -1,0 +1,42 @@
+{
+  "article_horizon_19.1gyr": {
+    "physical_signal_median": 0.0007497188202992833,
+    "schemes": {
+      "boris": {
+        "pos_err_rms": 0.4174761223215459,
+        "pos_err_final": 0.8730451840867831,
+        "energy_err_median_2nd_half": 1.2454910846004807e-06,
+        "signal_over_energy_err": 601.9463563962582,
+        "traj_gain_over_boris": 1.0
+      },
+      "raw": {
+        "pos_err_rms": 0.0036014017066929803,
+        "pos_err_final": 0.009264100504526454,
+        "energy_err_median_2nd_half": 0.0002530228139392965,
+        "signal_over_energy_err": 2.963048306304706,
+        "traj_gain_over_boris": 115.92045440132173
+      },
+      "proj": {
+        "pos_err_rms": 0.0035435147682684,
+        "pos_err_final": 0.009302435012393966,
+        "energy_err_median_2nd_half": 1.6414756108251716e-05,
+        "signal_over_energy_err": 45.673466931525034,
+        "traj_gain_over_boris": 117.81413359977412
+      },
+      "sym": {
+        "pos_err_rms": 0.0035661719010910368,
+        "pos_err_final": 0.009365665131744189,
+        "energy_err_median_2nd_half": 1.641470869473416e-05,
+        "signal_over_energy_err": 45.6735988583089,
+        "traj_gain_over_boris": 117.06561935329674
+      }
+    }
+  },
+  "crossover": {
+    "proj": 100.98381139180759,
+    "proj_reaches_1_larmor_gyr": 93.15338819168633,
+    "sym": 100.8405719430249,
+    "sym_reaches_1_larmor_gyr": 93.01014874290364,
+    "boris_reaches_1_larmor_gyr": 45.024933400697186
+  }
+}

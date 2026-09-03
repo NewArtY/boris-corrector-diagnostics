@@ -1,0 +1,58 @@
+{
+  "gauge": {
+    "max_abs_E_mismatch_vs_shipped_field": 0.0,
+    "max_abs_curlA_minus_B": 3.3980007696499115e-10
+  },
+  "convergence": {
+    "points": [
+      {
+        "h": 0.3,
+        "omega_dt": 0.3,
+        "n_steps": 400,
+        "err_r": 0.8583857635626455,
+        "err_v": 0.8575278068713134
+      },
+      {
+        "h": 0.15,
+        "omega_dt": 0.15,
+        "n_steps": 800,
+        "err_r": 0.22355269119278542,
+        "err_v": 0.22332925024652153
+      },
+      {
+        "h": 0.075,
+        "omega_dt": 0.075,
+        "n_steps": 1600,
+        "err_r": 0.056139113264359795,
+        "err_v": 0.05608300221275814
+      },
+      {
+        "h": 0.0375,
+        "omega_dt": 0.0375,
+        "n_steps": 3200,
+        "err_r": 0.014045374818082042,
+        "err_v": 0.014031336463975573
+      },
+      {
+        "h": 0.01875,
+        "omega_dt": 0.01875,
+        "n_steps": 6400,
+        "err_r": 0.003511925632884244,
+        "err_v": 0.003508415462720701
+      },
+      {
+        "h": 0.009375,
+        "omega_dt": 0.009375,
+        "n_steps": 12800,
+        "err_r": 0.0008780165192866769,
+        "err_v": 0.000877138941664277
+      }
+    ],
+    "measured_order_position": 1.9897528379137632,
+    "reference": "DOP853 rtol=1e-13 atol=1e-15"
+  },
+  "symplecticity": {
+    "max_abs_JtOmegaJ_minus_Omega": 1.4278845951797219e-09,
+    "note": "finite-difference Jacobian, eps=1e-7"
+  }
+}

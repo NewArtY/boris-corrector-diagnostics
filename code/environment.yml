@@ -1,0 +1,20 @@
+# environment.yml -- environment that reproduces the numbers of the paper.
+# Frozen 30.08.2026; re-verified 01.09.2026 by repro.py.
+# Frozen on: Windows 11 (AMD64), Python 3.14.3
+#
+#   conda env create -f environment.yml
+#   conda activate neural-integrators
+#
+# Everything runs on the CPU; no GPU is required.
+name: neural-integrators
+channels:
+  - conda-forge
+dependencies:
+  - mpmath=1.3.0
+  - python=3.14
+  - numpy=2.4.2
+  - scipy=1.18.1
+  - matplotlib=3.11.1
+  - pip
+  - pip:
+    - torch==2.10.0

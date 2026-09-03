@@ -1,0 +1,11 @@
+[11:04:22] train_corrector_b4: dataset: X=(6000, 13)  Y=(6000, 6)  |Y| mean=9.785e-03
+[11:04:22] train_corrector_b4: epoch    0  loss=1.0271e+00  val relative defect error=0.6189
+[11:04:24] train_corrector_b4: epoch   50  loss=6.7545e-05  val relative defect error=0.0063
+[11:04:26] train_corrector_b4: epoch  100  loss=1.5397e-05  val relative defect error=0.0029
+[11:04:28] train_corrector_b4: epoch  150  loss=8.0445e-06  val relative defect error=0.0022
+[11:04:31] train_corrector_b4: epoch  200  loss=5.5056e-06  val relative defect error=0.0018
+[11:04:33] train_corrector_b4: epoch  250  loss=4.3068e-06  val relative defect error=0.0015
+[11:04:35] train_corrector_b4: epoch  300  loss=3.7310e-06  val relative defect error=0.0015
+[11:04:37] train_corrector_b4: epoch  350  loss=3.4650e-06  val relative defect error=0.0014
+[11:04:39] train_corrector_b4: epoch  399  loss=3.4097e-06  val relative defect error=0.0014
+[11:04:39] train_corrector_b4: saved /home/user/workspace/deliverable/code/checkpoints/boris_corrector_b4.pt (76.1 s)

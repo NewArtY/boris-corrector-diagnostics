@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the paper."
+type: software
+title: "A readout floor can hide a secular growth of the energy error from an absolute-level diagnostic"
+abstract: "Code and data accompanying the paper 'A readout floor can hide a secular growth of the energy error from an absolute-level diagnostic'. It contains the experiment scripts that produce every measured number in the paper, the committed JSON and NPZ outputs of those scripts, the four figure scripts, the trained defect-corrector checkpoints and a single-command reproduction driver (repro.py). The physical setting is a charged particle in a nonstationary magnetic field integrated by the Boris scheme, by a learned defect corrector with a hard speed-constraint projection, and by five classical schemes for comparison; the analysis separates the magnitude and direction channels of the velocity error, measures the readout floor of the energy error, and tests the growth-exponent law and the four-probe validation protocol of the paper."
+version: "2.0.0"
+date-released: "<YYYY-MM-DD>"
+license: MIT
+repository-code: "<GitHub URL>"
+doi: "<Zenodo DOI>"
+
+authors:
+  - family-names: "Akintsov"
+    given-names: "N. S."
+    orcid: "https://orcid.org/0000-0002-1040-1292"
+    email: "akintsov777@ntu.edu.cn"
+    affiliation: "School of Artificial Intelligence and Computer Science, Nantong University, Nantong 226019, China"
+  - family-names: "Nevecheria"
+    given-names: "A. P."
+    orcid: "https://orcid.org/0000-0001-6736-4691"
+    affiliation: "Department of Mathematical and Computer Methods, Kuban State University, Krasnodar 350040, Russia"
+  - family-names: "Andreev"
+    given-names: "S. N."
+    orcid: "https://orcid.org/0000-0003-3588-2894"
+    affiliation: "Joint-Stock Company \"Center for Research and Development\", Moscow 101000, Russia"
+  - family-names: "Qin"
+    given-names: "Qing-Hua"
+    orcid: "https://orcid.org/0000-0003-0948-784X"
+    affiliation: "Institute of Advanced Interdisciplinary Technology, Shenzhen MSU-BIT University, Shenzhen 518172, China"
+
+keywords:
+  - geometric integration
+  - energy conservation
+  - Boris scheme
+  - readout convention
+  - secular growth
+  - Hurst exponent
+  - numerical resonance
+
+preferred-citation:
+  type: article
+  title: "A readout floor can hide a secular growth of the energy error from an absolute-level diagnostic"
+  journal: "Journal of Computational Physics"
+  year: 2026
+  doi: "<article DOI>"
+  authors:
+    - family-names: "Akintsov"
+      given-names: "N. S."
+      orcid: "https://orcid.org/0000-0002-1040-1292"
+    - family-names: "Nevecheria"
+      given-names: "A. P."
+      orcid: "https://orcid.org/0000-0001-6736-4691"
+    - family-names: "Andreev"
+      given-names: "S. N."
+      orcid: "https://orcid.org/0000-0003-3588-2894"
+    - family-names: "Qin"
+      given-names: "Qing-Hua"
+      orcid: "https://orcid.org/0000-0003-0948-784X"

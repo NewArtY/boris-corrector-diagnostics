@@ -1,0 +1,11 @@
+{
+  "Boris": {
+    "low_freq_power_fraction": 0.9998754898659965
+  },
+  "unconstrained correction": {
+    "low_freq_power_fraction": 0.9997336289679013
+  },
+  "constrained hybrid": {
+    "low_freq_power_fraction": 0.9996914114156258
+  }
+}

@@ -1,0 +1,397 @@
+{
+ "meta": {
+  "what": "W18 stand calibration: the closed form priced, and the Section 7 numbers reproduced on the ruler that printed them",
+  "n_random_draws": 0,
+  "tau": 120000.0,
+  "dt": 0.3,
+  "refine": 150,
+  "r0": [
+   1.0,
+   0.0,
+   0.0
+  ],
+  "v0": [
+   0.0,
+   1.0,
+   0.0
+  ],
+  "reused_verbatim": [
+   "../horizon/fast.py:fine_reference",
+   "../horizon/traj.py:coarse",
+   "../spectral/sw_common.py:exact_from_basis",
+   "../spectral/sw_common.py:bessel_basis"
+  ]
+ },
+ "closed_form_price": {
+  "H1e3_coarse_grid": {
+   "n_spot": 61,
+   "t_max": 6283.2,
+   "position_max_abs": 7.0978223298823195e-12,
+   "velocity_max_abs": 6.096428917246044e-12
+  },
+  "H19.1_paper_window": {
+   "n_spot": 61,
+   "t_max": 120.0,
+   "position_max_abs": 8.270995000003722e-12,
+   "velocity_max_abs": 6.97768232083007e-12
+  },
+  "H1e4_coarse_grid": {
+   "n_spot": 61,
+   "t_max": 62832.0,
+   "position_max_abs": 8.849421195833429e-12,
+   "velocity_max_abs": 6.988382095229895e-12
+  },
+  "H1e5_coarse_grid": {
+   "n_spot": 61,
+   "t_max": 628318.5,
+   "position_max_abs": 8.752043534343557e-11,
+   "velocity_max_abs": 4.407141318552021e-12
+  },
+  "seconds": 0.6826539039611816
+ },
+ "coverage": {
+  "position": "r(t) returned by exact_from_basis",
+  "energy_max_abs_dev_from_adiabatic_envelope_over_E0": 6.678646524704845e-11,
+  "energy_dev_from_adiabatic_envelope_at_end_over_E0": 3.916733604114597e-11,
+  "mu_error_of_the_exact_solution_max": 7.034062221578097e-11,
+  "mu_error_of_the_exact_solution_at_end": 4.127276298504512e-11,
+  "t_end": 6283.2,
+  "gyro_orbits": 1000.0,
+  "note": "../horizon/fast.py measures the energy error against E_0 e^{-t/tau} and mu against (E/B)/(E_0/B_0).  Both are adiabatic statements, not exact ones.  The two numbers above are what the exact solution itself scores on those rulers, i.e. the floor those readouts carry before any integrator is run."
+ },
+ "reproduction_on_the_old_ruler": {
+  "reference_refinement": 150,
+  "reference_seconds": 10.504222393035889,
+  "coarse_seconds": 4.427845239639282,
+  "crossover_gyrations": 100.98381139180759,
+  "gain_vs_horizon": [
+   {
+    "gyro_orbits_requested": 19.1,
+    "gyro_orbits_sampled": 19.098593171027442,
+    "boris_pos_err_rms": 0.41747612232154574,
+    "proj_pos_err_rms": 0.0035435147682684,
+    "raw_pos_err_rms": 0.0036014017066929803,
+    "traj_gain_projected": 117.81413359977407
+   },
+   {
+    "gyro_orbits_requested": 25.0,
+    "gyro_orbits_sampled": 24.97141057111838,
+    "boris_pos_err_rms": 0.5560709840121217,
+    "proj_pos_err_rms": 0.00690547414218962,
+    "raw_pos_err_rms": 0.007012464432071635,
+    "traj_gain_projected": 80.52611197466597
+   },
+   {
+    "gyro_orbits_requested": 50.0,
+    "gyro_orbits_sampled": 49.990567625164324,
+    "boris_pos_err_rms": 1.0944303961921764,
+    "proj_pos_err_rms": 0.03344735257278062,
+    "raw_pos_err_rms": 0.03425961041540514,
+    "traj_gain_projected": 32.720987223449825
+   },
+   {
+    "gyro_orbits_requested": 100.0,
+    "gyro_orbits_sampled": 99.98113525032865,
+    "boris_pos_err_rms": 1.5556130300959685,
+    "proj_pos_err_rms": 1.4747149542484368,
+    "raw_pos_err_rms": 1.606675319808757,
+    "traj_gain_projected": 1.0548567542591714
+   },
+   {
+    "gyro_orbits_requested": 200.0,
+    "gyro_orbits_sampled": 199.9622705006573,
+    "boris_pos_err_rms": 1.3902958015343434,
+    "proj_pos_err_rms": 20.719979305736807,
+    "raw_pos_err_rms": 21.262992789517142,
+    "traj_gain_projected": 0.06709928523670908
+   },
+   {
+    "gyro_orbits_requested": 300.0,
+    "gyro_orbits_sampled": 299.9911522339135,
+    "boris_pos_err_rms": 1.3846285355026422,
+    "proj_pos_err_rms": 44.08677841093009,
+    "raw_pos_err_rms": 44.667070356173774,
+    "traj_gain_projected": 0.03140688853688983
+   },
+   {
+    "gyro_orbits_requested": 500.0,
+    "gyro_orbits_sampled": 499.9534227345708,
+    "boris_pos_err_rms": 1.4425774070228015,
+    "proj_pos_err_rms": 90.27306736424208,
+    "raw_pos_err_rms": 90.75151774091594,
+    "traj_gain_projected": 0.015980152764746073
+   },
+   {
+    "gyro_orbits_requested": 1000.0,
+    "gyro_orbits_sampled": 999.9545919520692,
+    "boris_pos_err_rms": 1.4624335015423273,
+    "proj_pos_err_rms": 208.45029339061296,
+    "raw_pos_err_rms": 207.93031680851755,
+    "traj_gain_projected": 0.007015742111726788
+   }
+  ],
+  "boris_reaches_1_larmor_at_gyr": 22.058875112536693,
+  "proj_reaches_1_larmor_at_gyr": 74.0547950206589,
+  "raw_reaches_1_larmor_at_gyr": 73.33859777674536,
+  "one_larmor_horizon_gain": 3.357142857142857,
+  "traj_H1e3_ref150x": {
+   "boris": {
+    "pos_err_rms": 1.462420454313781,
+    "pos_err_final": 1.1573516221388553
+   },
+   "raw": {
+    "pos_err_rms": 207.94237657220006,
+    "pos_err_final": 385.0662447638802
+   },
+   "proj": {
+    "pos_err_rms": 208.46239865919094,
+    "pos_err_final": 386.20272409241346
+   },
+   "traj_gain_projected": 0.0070152721244690725
+  }
+ },
+ "calibration_checks": [
+  {
+   "name": "crossover_gyrations (manuscript: 101)",
+   "committed": 100.98381139180759,
+   "stand": 100.98381139180759,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "gain at 19.1 gyro-orbits",
+   "committed": 117.81413359977407,
+   "stand": 117.81413359977407,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "boris rms at 19.1",
+   "committed": 0.41747612232154574,
+   "stand": 0.41747612232154574,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "proj rms at 19.1",
+   "committed": 0.0035435147682684,
+   "stand": 0.0035435147682684,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "gain at 25 gyro-orbits",
+   "committed": 80.52611197466597,
+   "stand": 80.52611197466597,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "boris rms at 25",
+   "committed": 0.5560709840121217,
+   "stand": 0.5560709840121217,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "proj rms at 25",
+   "committed": 0.00690547414218962,
+   "stand": 0.00690547414218962,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "gain at 50 gyro-orbits",
+   "committed": 32.720987223449825,
+   "stand": 32.720987223449825,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "boris rms at 50",
+   "committed": 1.0944303961921764,
+   "stand": 1.0944303961921764,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "proj rms at 50",
+   "committed": 0.03344735257278062,
+   "stand": 0.03344735257278062,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "gain at 100 gyro-orbits",
+   "committed": 1.0548567542591714,
+   "stand": 1.0548567542591714,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "boris rms at 100",
+   "committed": 1.5556130300959685,
+   "stand": 1.5556130300959685,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "proj rms at 100",
+   "committed": 1.4747149542484368,
+   "stand": 1.4747149542484368,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "gain at 200 gyro-orbits",
+   "committed": 0.06709928523670908,
+   "stand": 0.06709928523670908,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "boris rms at 200",
+   "committed": 1.3902958015343434,
+   "stand": 1.3902958015343434,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "proj rms at 200",
+   "committed": 20.719979305736807,
+   "stand": 20.719979305736807,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "gain at 300 gyro-orbits",
+   "committed": 0.03140688853688983,
+   "stand": 0.03140688853688983,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "boris rms at 300",
+   "committed": 1.3846285355026422,
+   "stand": 1.3846285355026422,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "proj rms at 300",
+   "committed": 44.08677841093009,
+   "stand": 44.08677841093009,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "gain at 500 gyro-orbits",
+   "committed": 0.015980152764746073,
+   "stand": 0.015980152764746073,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "boris rms at 500",
+   "committed": 1.4425774070228015,
+   "stand": 1.4425774070228015,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "proj rms at 500",
+   "committed": 90.27306736424208,
+   "stand": 90.27306736424208,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "gain at 1000 gyro-orbits",
+   "committed": 0.007015742111726788,
+   "stand": 0.007015742111726788,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "boris rms at 1000",
+   "committed": 1.4624335015423273,
+   "stand": 1.4624335015423273,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "proj rms at 1000",
+   "committed": 208.45029339061296,
+   "stand": 208.45029339061296,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "boris reaches 1 Larmor radius",
+   "committed": 22.058875112536693,
+   "stand": 22.058875112536693,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "proj reaches 1 Larmor radius",
+   "committed": 74.0547950206589,
+   "stand": 74.0547950206589,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "raw reaches 1 Larmor radius",
+   "committed": 73.33859777674536,
+   "stand": 73.33859777674536,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "traj 1e3 boris pos_err_rms",
+   "committed": 1.462420454313781,
+   "stand": 1.462420454313781,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "traj 1e3 proj pos_err_rms",
+   "committed": 208.46239865919094,
+   "stand": 208.46239865919094,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "traj 1e3 raw pos_err_rms",
+   "committed": 207.94237657220006,
+   "stand": 207.94237657220006,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "traj 1e3 gain (manuscript: 1/143)",
+   "committed": 0.0070152721244690725,
+   "stand": 0.0070152721244690725,
+   "rel_diff": 0.0,
+   "ok": true
+  }
+ ],
+ "calibration_failures": 0,
+ "ruler_own_error": {
+  "what": "the Boris h/150 reference of Section 7, against the closed form, on the same grid",
+  "rms_over_19.1_gyro_orbits": 0.001397665304988275,
+  "rms_over_1e3_gyro_orbits": 0.001161057557960507,
+  "max_over_1e3_gyro_orbits": 0.001994014725170932,
+  "final_at_1e3_gyro_orbits": 0.0013011432982255597,
+  "w16_value_over_the_table4_window": 0.0013959214902257689,
+  "corrector_reported_error_19.1": 0.0035435147682684
+ },
+ "cost_flops": {
+  "boris_ruler_h_over_150_per_sample": 16950.0,
+  "closed_form_per_sample": 226.0,
+  "ratio": 75.0,
+  "boris_ruler_H1e3_total": 355000800.0,
+  "closed_form_H1e3_total": 4733344.0,
+  "note": "the model of Section 9 and of ../classical/schemes.py, reused unchanged: 1 flop per arithmetic operation, 20 per transcendental"
+ }
+}

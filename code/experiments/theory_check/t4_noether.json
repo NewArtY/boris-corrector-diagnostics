@@ -1,0 +1,14 @@
+{
+ "base": {
+  "max_J_drift": 2.413957922442478e-12,
+  "max_energy_dev": 4.827804822582493e-12
+ },
+ "invariant_resonant": {
+  "max_J_drift": 2.333688797762079e-12,
+  "max_energy_dev": 0.011841398743426934
+ },
+ "noninvariant_resonant": {
+  "max_J_drift": 0.2959744523134354,
+  "max_energy_dev": 0.5919178658216533
+ }
+}

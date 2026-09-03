@@ -1,0 +1,88 @@
+{
+ "keys": 13,
+ "identical_bitwise": false,
+ "max_abs_diff": 2.375877272697835e-14,
+ "max_rel_diff": 9.585231357337275e-13,
+ "per_key": {
+  "net.0.bias": {
+   "n": 128,
+   "bitwise_equal": false,
+   "max_abs_diff": 9.381384558082573e-15,
+   "max_rel_diff": 3.24156780778436e-14
+  },
+  "net.0.weight": {
+   "n": 1664,
+   "bitwise_equal": false,
+   "max_abs_diff": 2.375877272697835e-14,
+   "max_rel_diff": 6.685766778547507e-14
+  },
+  "net.2.bias": {
+   "n": 128,
+   "bitwise_equal": false,
+   "max_abs_diff": 8.482364116657592e-15,
+   "max_rel_diff": 7.399185176009055e-14
+  },
+  "net.2.weight": {
+   "n": 16384,
+   "bitwise_equal": false,
+   "max_abs_diff": 8.840150833577809e-15,
+   "max_rel_diff": 3.451642451984831e-14
+  },
+  "net.4.bias": {
+   "n": 128,
+   "bitwise_equal": false,
+   "max_abs_diff": 4.4278816724308e-15,
+   "max_rel_diff": 4.835656464098392e-14
+  },
+  "net.4.weight": {
+   "n": 16384,
+   "bitwise_equal": false,
+   "max_abs_diff": 7.577272143066693e-15,
+   "max_rel_diff": 4.683768003504017e-14
+  },
+  "net.6.bias": {
+   "n": 128,
+   "bitwise_equal": false,
+   "max_abs_diff": 1.0286910212542466e-14,
+   "max_rel_diff": 1.0291233920623495e-13
+  },
+  "net.6.weight": {
+   "n": 16384,
+   "bitwise_equal": false,
+   "max_abs_diff": 1.4988010832439613e-14,
+   "max_rel_diff": 1.0647837853129632e-13
+  },
+  "net.8.bias": {
+   "n": 6,
+   "bitwise_equal": false,
+   "max_abs_diff": 1.140255424803005e-15,
+   "max_rel_diff": 9.585231357337275e-13
+  },
+  "net.8.weight": {
+   "n": 768,
+   "bitwise_equal": false,
+   "max_abs_diff": 1.0844190129200015e-14,
+   "max_rel_diff": 4.567635821829324e-13
+  },
+  "x_mean": {
+   "n": 13,
+   "bitwise_equal": false,
+   "max_abs_diff": 1.43982048506075e-16,
+   "max_rel_diff": 1.0890977682872368e-16
+  },
+  "x_std": {
+   "n": 13,
+   "bitwise_equal": false,
+   "max_abs_diff": 8.881784197001252e-16,
+   "max_rel_diff": 1.3601256374915128e-16
+  },
+  "y_scale": {
+   "n": 6,
+   "bitwise_equal": false,
+   "max_abs_diff": 2.42861286636753e-17,
+   "max_rel_diff": 8.684972049644372e-16
+  }
+ },
+ "md5_committed": "0fe271bdb54de8a720f11eec85ee01f5",
+ "md5_reproduced": "56972d4cc0ae92be2d7e0b01a66321e7"
+}

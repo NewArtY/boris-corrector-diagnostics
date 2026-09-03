@@ -1,0 +1,264 @@
+{
+  "note": "PREREGISTERED. Derived analytically before any integration of the system.",
+  "derivations": {
+    "fixed_point_residual": "0",
+    "Lambda_symbolic": "2*alpha - 2*epsilon",
+    "Lambda_minus_2(alpha-eps)": "0",
+    "fprime_general": "(4*alpha*exp(4*theta) - epsilon*exp(8*theta)/2 - epsilon*exp(6*theta) - epsilon*exp(4*theta) - epsilon*exp(2*theta) - epsilon/2)*exp(-2*theta)/(exp(4*theta) + 2*exp(2*theta) + 1)",
+    "sech2_at_thetastar": "epsilon/alpha",
+    "comment_factor_2": "Lambda = eps*cosh(2 th*) - alpha*sech^2(th*).  cosh(2th*)=2cosh^2(th*)-1=2a/e-1, sech^2(th*)=e/a.  => Lambda = (2a-e) - e = 2(a-e).  The factor 2 comes from the double-angle identity, NOT from an energy-vs-rapidity conversion.",
+    "preprint_crosscheck": {
+      "claimed_theta_star": 5.93,
+      "derived_theta_star": 5.933019393210601,
+      "claimed_gamma_L": 188.0,
+      "derived_gamma_L": 188.64731952731387,
+      "claimed_Lambda": 0.72,
+      "derived_Lambda": 0.719979768353927
+    }
+  },
+  "params": {
+    "physical": {
+      "name": "physical",
+      "alpha": 0.36,
+      "eps": 1.0115823036502672e-05,
+      "theta_star": 5.933019393210601,
+      "gamma_star": 188.64731952731387,
+      "Lambda": 0.719979768353927,
+      "sech2_star": 2.8099508434729644e-05,
+      "sinh_star": 188.6446690602214
+    },
+    "generic": {
+      "name": "generic",
+      "alpha": 1.0,
+      "eps": 0.1,
+      "theta_star": 1.8184464592320668,
+      "gamma_star": 3.1622776601683795,
+      "Lambda": 1.8,
+      "sech2_star": 0.1,
+      "sinh_star": 3.0
+    },
+    "laser": {
+      "lambda_m": 1e-06,
+      "omega_rad_s": 1883651567308853.2,
+      "a0": 857.0,
+      "eps_rad_formula": "2*r_e*omega/(3c)*a0",
+      "r_e_m": 2.8179403262e-15
+    }
+  },
+  "predictions": {
+    "P7_rate_bias": {
+      "generic_h0.3": {
+        "Lambda_true": 1.8,
+        "Lambda_h": {
+          "euler": {
+            "rho": 0.45999999999999996,
+            "Lambda_h": 2.588429298329988,
+            "rel_bias": 0.43801627684999334
+          },
+          "ieuler": {
+            "rho": 0.6493506493506493,
+            "Lambda_h": 1.4392747214184594,
+            "rel_bias": -0.2004029325453004
+          },
+          "trapezoid": {
+            "rho": 0.5748031496062992,
+            "Lambda_h": 1.8457588177006672,
+            "rel_bias": 0.02542156538925955
+          },
+          "rk4": {
+            "rho": 0.58309894,
+            "Lambda_h": 1.7979946620856144,
+            "rel_bias": -0.0011140766191031215
+          }
+        }
+      },
+      "generic_h0.05": {
+        "Lambda_true": 1.8,
+        "Lambda_h": {
+          "euler": {
+            "rho": 0.91,
+            "Lambda_h": 1.8862135894248258,
+            "rel_bias": 0.047896438569347666
+          },
+          "ieuler": {
+            "rho": 0.9174311926605504,
+            "Lambda_h": 1.7235539248210479,
+            "rel_bias": -0.0424700417660846
+          },
+          "trapezoid": {
+            "rho": 0.9138755980861244,
+            "Lambda_h": 1.8012164783636226,
+            "rel_bias": 0.0006758213131237145
+          },
+          "rk4": {
+            "rho": 0.9139312337500001,
+            "Lambda_h": 1.799998939115518,
+            "rel_bias": -5.893802678125226e-07
+          }
+        }
+      },
+      "physical_h0.3": {
+        "Lambda_true": 0.719979768353927,
+        "Lambda_h": {
+          "euler": {
+            "rho": 0.7840060694938219,
+            "Lambda_h": 0.8111283898679753,
+            "rel_bias": 0.12659886502427597
+          },
+          "ieuler": {
+            "rho": 0.822372525810004,
+            "Lambda_h": 0.6518726405715579,
+            "rel_bias": -0.09459589112910882
+          },
+          "trapezoid": {
+            "rho": 0.805059095575374,
+            "Lambda_h": 0.7227986453512174,
+            "rel_bias": 0.003915216956352996
+          },
+          "rk4": {
+            "rho": 0.8057439731567598,
+            "Lambda_h": 0.719964127025338,
+            "rel_bias": -2.172467793748467e-05
+          }
+        }
+      },
+      "physical_h0.05": {
+        "Lambda_true": 0.719979768353927,
+        "Lambda_h": {
+          "euler": {
+            "rho": 0.9640010115823037,
+            "Lambda_h": 0.7332587002581168,
+            "rel_bias": 0.018443479230741744
+          },
+          "ieuler": {
+            "rho": 0.9652519077526529,
+            "Lambda_h": 0.7073233481203923,
+            "rel_bias": -0.01757885539266013
+          },
+          "trapezoid": {
+            "rho": 0.9646375183656909,
+            "Lambda_h": 0.7200575369169767,
+            "rel_bias": 0.00010801492829104475
+          },
+          "rk4": {
+            "rho": 0.9646412697974734,
+            "Lambda_h": 0.719979757970656,
+            "rel_bias": -1.442161479126014e-08
+          }
+        }
+      }
+    },
+    "P7b_attractor_exact": {
+      "claim": "the fixed point of any consistent one-step scheme applied to an autonomous ODE satisfies f(theta)=0 exactly, hence theta_inf^num = theta* to round-off",
+      "tolerance": 1e-12
+    },
+    "P1_P4_T3_collapse": {
+      "generic": {
+        "scheme": "rk4",
+        "h": 0.05,
+        "kappa_per_step": 1e-06,
+        "rho": 0.9139312337500001,
+        "Lambda": 1.8,
+        "P1_DC_plateau_dtheta_discrete": 1.1618616643061277e-05,
+        "P1_DC_plateau_dtheta_continuum_q0_over_Lambda": 1.111111111111111e-05,
+        "P1_DC_plateau_dev_gamma": 3.334407893526355e-05,
+        "P2_sinusoid_plateau": {
+          "0": 1.1618616643061277e-05,
+          "Lambda": 8.218372492181461e-06,
+          "10Lambda": 1.1960381144684794e-06,
+          "alias_2pi_over_h": 1.1618616643061277e-05,
+          "nyquist_pi_over_h": 5.224848115575615e-07
+        },
+        "P2_ratio_to_DC": {
+          "0": 1.0,
+          "Lambda": 0.7073451809849957,
+          "10Lambda": 0.10294152490027822,
+          "alias_2pi_over_h": 1.0,
+          "nyquist_pi_over_h": 0.04496962311512302
+        },
+        "P3_noise_rms_plateau": 2.463848763075652e-06,
+        "P4_coherent_over_incoherent": 4.715637102886794,
+        "P4_max_exponent_over_all_omega": 0.0
+      },
+      "physical": {
+        "scheme": "rk4",
+        "h": 0.05,
+        "kappa_per_step": 1e-06,
+        "rho": 0.9646412697974734,
+        "Lambda": 0.719979768353927,
+        "P1_DC_plateau_dtheta_discrete": 2.828155859308955e-05,
+        "P1_DC_plateau_dtheta_continuum_q0_over_Lambda": 2.77785583416122e-05,
+        "P1_DC_plateau_dev_gamma": 0.003989102629657609,
+        "P2_sinusoid_plateau": {
+          "0": 2.828155859308955e-05,
+          "Lambda": 1.999916152606426e-05,
+          "10Lambda": 2.8293722519442463e-06,
+          "alias_2pi_over_h": 2.828155859308955e-05,
+          "nyquist_pi_over_h": 5.08998775182548e-07
+        },
+        "P2_ratio_to_DC": {
+          "0": 1.0,
+          "Lambda": 0.7071449566768554,
+          "10Lambda": 0.1000430100990116,
+          "alias_2pi_over_h": 1.0,
+          "nyquist_pi_over_h": 0.017997550365096187
+        },
+        "P3_noise_rms_plateau": 3.794111053216029e-06,
+        "P4_coherent_over_incoherent": 7.45406715734297,
+        "P4_max_exponent_over_all_omega": 0.0
+      }
+    },
+    "P4_statement": "TRICHOTOMY COLLAPSES: envelope exponent p = 0 for DC, for every sinusoid frequency (including aliases), and for white noise.  Resonant enhancement over DC is <= 1 for ALL omega (|1-rho e^{i w h}| >= 1-rho, minimised at w=0).  Contrast: in the conservative rotation model the same protocol gives p = 1 at w = omega_h.",
+    "P5_neutral_channel": {
+      "generic": {
+        "dpsi_dt_slope": 1.1618616643061278e-06,
+        "coupling_sech2_star_equals_eps_over_alpha": 0.1,
+        "abs_dpsi_at_T1e5": 0.11618616643061278,
+        "predicted_exponent_p": 1.0
+      },
+      "physical": {
+        "dpsi_dt_slope": 7.946978942338205e-10,
+        "coupling_sech2_star_equals_eps_over_alpha": 2.8099508434729644e-05,
+        "abs_dpsi_at_T1e5": 7.946978942338206e-05,
+        "predicted_exponent_p": 1.0
+      }
+    },
+    "P5_statement": "Same run, two channels, two exponents: energy p=0 (bounded, plateau q0/Lambda), phase/quadrature p=1 (linear, slope (eps/alpha)*q0/Lambda).  The attractor protects the contracting direction and gives nothing to the neutral one.",
+    "P6_convention": {
+      "law": "reported relative energy error at readout offset delta = | dev_true +- delta * dlnGamma/dt |, affine in delta",
+      "P6a_slope_equals_dlnGamma_dt_tolerance_rel": 0.02,
+      "P6b_half_step_artifact_scales_as_h": "halving h halves the artifact, factor 2.00 +- 0.02",
+      "P6c_scheme_independence_tolerance_rel": 0.02,
+      "P6d_collapse_at_delta_star": "for rk4 (true error far below the convention floor) there is delta* in (0,h) where the reported error drops by >= 100x",
+      "P6d_min_collapse_factor": 100.0
+    },
+    "P9_BEA_divisor": {
+      "generic_h0.3": {
+        "rho": 0.5827482523739896,
+        "min_over_omega_abs(1-rho e^{i w h})": 0.41725174762601036,
+        "conservative_analogue_min": 0.0
+      },
+      "generic_h0.05": {
+        "rho": 0.9139311852712282,
+        "min_over_omega_abs(1-rho e^{i w h})": 0.08606881472877181,
+        "conservative_analogue_min": 0.0
+      },
+      "physical_h0.3": {
+        "rho": 0.8057401922937577,
+        "min_over_omega_abs(1-rho e^{i w h})": 0.1942598077062423,
+        "conservative_analogue_min": 0.0
+      },
+      "physical_h0.05": {
+        "rho": 0.9646412692966668,
+        "min_over_omega_abs(1-rho e^{i w h})": 0.035358730703333174,
+        "conservative_analogue_min": 0.0
+      }
+    },
+    "P9_statement": "The resonant small divisor 1-e^{i m omega_h h} of the conservative case becomes 1-rho e^{i m omega h} with rho=e^{-Lambda h}<1; its modulus is bounded below by 1-rho = Lambda*h + O(h^2) > 0.  Dissipation regularises the homological equations: the T4 obstruction disappears in the contracting direction and survives only at m=0 (the secular/DC mode), which is exactly the bounded response q0/Lambda.",
+    "P8_certification_gap": {
+      "claim": "energy-only certification understates the state error by a factor that grows like exp(Lambda*T) (energy error decays exponentially to the attractor while the rate error stays O(h^p)); in the magnetic system the same factor was the fixed 1.07e6",
+      "test": "ratio (|Lambda_h-Lambda|/Lambda) / (dev_gamma(T)) vs T, fitted slope in ln-space = Lambda",
+      "tolerance_rel": 0.05
+    }
+  }
+}

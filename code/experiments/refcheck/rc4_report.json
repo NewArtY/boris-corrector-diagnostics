@@ -1,0 +1,345 @@
+{
+ "meta": {
+  "what": "W18: the was/now table for Section 7",
+  "n_random_draws": 0
+ },
+ "table": [
+  {
+   "label": "trajectory advantage at 19.1 gyro-orbits",
+   "printed_in_manuscript": "117.8",
+   "old_ruler": 117.81413359977407,
+   "closed_form": 120.11205621431748,
+   "shift_ratio": 1.019504642985787,
+   "shift_percent": 1.9504642985787033,
+   "source": "horizon/crossover.json"
+  },
+  {
+   "label": "trajectory advantage at 25 gyro-orbits",
+   "printed_in_manuscript": "(not printed)",
+   "old_ruler": 80.52611197466597,
+   "closed_form": 83.81306307576916,
+   "shift_ratio": 1.0408184503200315,
+   "shift_percent": 4.081845032003153,
+   "source": "horizon/crossover.json"
+  },
+  {
+   "label": "trajectory advantage at 50 gyro-orbits",
+   "printed_in_manuscript": "32.7",
+   "old_ruler": 32.720987223449825,
+   "closed_form": 32.80314413762594,
+   "shift_ratio": 1.0025108323784693,
+   "shift_percent": 0.25108323784692776,
+   "source": "horizon/crossover.json"
+  },
+  {
+   "label": "horizon at which the advantage reaches unity",
+   "printed_in_manuscript": "101",
+   "old_ruler": 100.98381139180759,
+   "closed_form": 100.98381139180759,
+   "shift_ratio": 1.0,
+   "shift_percent": 0.0,
+   "source": "horizon/crossover.json"
+  },
+  {
+   "label": "trajectory advantage at 200 gyro-orbits",
+   "printed_in_manuscript": "0.07",
+   "old_ruler": 0.06709928523670908,
+   "closed_form": 0.06709673148307534,
+   "shift_ratio": 0.9999619406730678,
+   "shift_percent": -0.0038059326932203806,
+   "source": "horizon/crossover.json"
+  },
+  {
+   "label": "disadvantage factor at 1e3 gyro-orbits",
+   "printed_in_manuscript": "143",
+   "old_ruler": 142.5461453607805,
+   "closed_form": 142.5387712315535,
+   "shift_ratio": 0.9999482684767915,
+   "shift_percent": -0.005173152320842589,
+   "source": "horizon/traj_summary.json"
+  },
+  {
+   "label": "disadvantage factor at 1e4 gyro-orbits",
+   "printed_in_manuscript": "1575",
+   "old_ruler": 1575.2238410159794,
+   "closed_form": 1575.016993654382,
+   "shift_ratio": 0.999868687004214,
+   "shift_percent": -0.013131299578596534,
+   "source": "horizon/traj_summary.json"
+  },
+  {
+   "label": "Boris reaches one Larmor radius at",
+   "printed_in_manuscript": "22.1",
+   "old_ruler": 22.058875112536693,
+   "closed_form": 22.058875112536693,
+   "shift_ratio": 1.0,
+   "shift_percent": 0.0,
+   "source": "horizon/crossover.json"
+  },
+  {
+   "label": "corrector reaches one Larmor radius at",
+   "printed_in_manuscript": "74.1",
+   "old_ruler": 74.0547950206589,
+   "closed_form": 74.0547950206589,
+   "shift_ratio": 1.0,
+   "shift_percent": 0.0,
+   "source": "horizon/crossover.json"
+  },
+  {
+   "label": "one-Larmor horizon gain",
+   "printed_in_manuscript": "3.4",
+   "old_ruler": 3.357142857142857,
+   "closed_form": 3.357142857142857,
+   "shift_ratio": 1.0,
+   "shift_percent": 0.0,
+   "source": "horizon/crossover.json"
+  },
+  {
+   "label": "corrector trajectory error at 19.1 gyro-orbits",
+   "printed_in_manuscript": "3.47e-3",
+   "old_ruler": 0.0035435147682684,
+   "closed_form": 0.0034732063836010953,
+   "shift_ratio": 0.9801585743914757,
+   "shift_percent": -1.9841425608524328,
+   "source": "horizon/crossover.json"
+  },
+  {
+   "label": "Boris trajectory error at 19.1 gyro-orbits",
+   "printed_in_manuscript": "0.417",
+   "old_ruler": 0.41747612232154574,
+   "closed_form": 0.41717396039102106,
+   "shift_ratio": 0.9992762174544394,
+   "shift_percent": -0.07237825455606564,
+   "source": "horizon/validation.json"
+  },
+  {
+   "label": "Boris trajectory error at 1e3 gyro-orbits",
+   "printed_in_manuscript": "1.462",
+   "old_ruler": 1.462420454313781,
+   "closed_form": 1.4625013769011463,
+   "shift_ratio": 1.0000553346933343,
+   "shift_percent": 0.005533469333429321,
+   "source": "horizon/traj_summary.json"
+  },
+  {
+   "label": "Boris trajectory error at 1e4 gyro-orbits",
+   "printed_in_manuscript": "1.632",
+   "old_ruler": 1.631745568336142,
+   "closed_form": 1.6319604402453114,
+   "shift_ratio": 1.000131682238542,
+   "shift_percent": 0.013168223854198535,
+   "source": "horizon/traj_summary.json"
+  },
+  {
+   "label": "tab:seeds  advantage, committed run",
+   "printed_in_manuscript": "117.8",
+   "old_ruler": 117.81413380788808,
+   "closed_form": 120.11205620944715,
+   "shift_ratio": 1.0195046411435331,
+   "shift_percent": 1.950464114353323,
+   "source": "seeds/sd5_summary.json"
+  },
+  {
+   "label": "tab:seeds  advantage, ensemble median",
+   "printed_in_manuscript": "152.8",
+   "old_ruler": 152.76974792619848,
+   "closed_form": 143.11715285905956,
+   "shift_ratio": 0.9368160568556938,
+   "shift_percent": -6.3183943144306225,
+   "source": "seeds/sd5_summary.json"
+  },
+  {
+   "label": "tab:seeds  advantage, first quartile",
+   "printed_in_manuscript": "95.7",
+   "old_ruler": 95.70312360261448,
+   "closed_form": 103.68159905577545,
+   "shift_ratio": 1.083366928401311,
+   "shift_percent": 8.33669284013109,
+   "source": "seeds/sd5_summary.json"
+  },
+  {
+   "label": "tab:seeds  advantage, third quartile",
+   "printed_in_manuscript": "252.2",
+   "old_ruler": 252.1747956362853,
+   "closed_form": 182.1904533788949,
+   "shift_ratio": 0.7224768554652478,
+   "shift_percent": -27.752314453475222,
+   "source": "seeds/sd5_summary.json"
+  },
+  {
+   "label": "tab:seeds  advantage, ensemble minimum",
+   "printed_in_manuscript": "(not printed)",
+   "old_ruler": 44.63630279109012,
+   "closed_form": 45.88278101434951,
+   "shift_ratio": 1.0279252121102693,
+   "shift_percent": 2.7925212110269246,
+   "source": "seeds/sd5_summary.json"
+  },
+  {
+   "label": "tab:seeds  advantage, ensemble maximum",
+   "printed_in_manuscript": "(not printed)",
+   "old_ruler": 576.7507390869481,
+   "closed_form": 295.59436383907286,
+   "shift_ratio": 0.512516662409531,
+   "shift_percent": -48.74833375904691,
+   "source": "seeds/sd5_summary.json"
+  },
+  {
+   "label": "tab:seeds  advantage, max/min spread",
+   "printed_in_manuscript": "(not printed)",
+   "old_ruler": 12.921113600879904,
+   "closed_form": 6.442381157032043,
+   "shift_ratio": 0.4985933376975595,
+   "shift_percent": -50.14066623024406,
+   "source": "seeds/sd5_summary.json"
+  },
+  {
+   "label": "tab:seeds  corrector error, ensemble median",
+   "printed_in_manuscript": "2.91e-3",
+   "old_ruler": 0.0027653257719922938,
+   "closed_form": 0.002911306897722346,
+   "shift_ratio": 1.052789847477854,
+   "shift_percent": 5.278984747785403,
+   "source": "seeds/sd5_summary.json"
+  }
+ ],
+ "verdicts": {
+  "P0": {
+   "statement": "no manuscript number is spoiled by a seed collision",
+   "status": "confirmed",
+   "evidence": {
+    "same_stream_collisions": [
+     {
+      "seed": 13000001,
+      "a": "hpo",
+      "a_roles": [
+       "pinn cfg0 rep0 shuffle"
+      ],
+      "a_families": [
+       "numpy"
+      ],
+      "a_sources": [
+       "hpo/hp_common.py:448"
+      ],
+      "b": "spectrum",
+      "b_roles": [
+       "cloud hnn rep1"
+      ],
+      "b_families": [
+       "numpy"
+      ],
+      "b_sources": [
+       "spectrum/sp2_spectra.py:220"
+      ],
+      "same_generator_family": true
+     },
+     {
+      "seed": 11000000,
+      "a": "hpo",
+      "a_roles": [
+       "hnn cfg0 rep0 init"
+      ],
+      "a_families": [
+       "torch"
+      ],
+      "a_sources": [
+       "hpo/hp_common.py:447"
+      ],
+      "b": "sympmat",
+      "b_roles": [
+       "pinit dt0 rep0"
+      ],
+      "b_families": [
+       "torch"
+      ],
+      "b_sources": [
+       "sympmat/sm_arch.py:69"
+      ],
+      "same_generator_family": true
+     },
+     {
+      "seed": 13000000,
+      "a": "spectral",
+      "a_roles": [
+       "ensemble (eight initial conditions)"
+      ],
+      "a_families": [
+       "numpy"
+      ],
+      "a_sources": [
+       "spectral/sw3_ensemble.py:50"
+      ],
+      "b": "spectrum",
+      "b_roles": [
+       "cloud hnn rep0"
+      ],
+      "b_families": [
+       "numpy"
+      ],
+      "b_sources": [
+       "spectrum/sp2_spectra.py:220"
+      ],
+      "same_generator_family": true
+     }
+    ],
+    "n_same_stream": 3,
+    "n_integer_collisions": 30
+   }
+  },
+  "P1": {
+   "statement": "the corrector's advantage will fall, to 111 if the two errors are uncorrelated and 86 if aligned",
+   "status": "refuted",
+   "predicted_range": [
+    86.0,
+    111.0
+   ],
+   "observed": 120.11205620944715,
+   "shift_ratio": 1.0195046411435331,
+   "measured_rho": -0.24701965573420392,
+   "note": "the two error fields are anti-correlated, rho = -0.2470, which is the pre-registration's third case and the one it did not predict"
+  },
+  "P2": {
+   "statement": "the inversion point will move earlier than 101 gyro-orbits",
+   "status": "refuted",
+   "old": 100.98381139180759,
+   "new": 100.98381139180759,
+   "note": "the two land on the same coarse sample; the grid resolves 1 step = 0.0477 gyro-orbits"
+  },
+  "P3": {
+   "statement": "the negative control: if the advantage grows, the corrector's residual runs against the ruler's bias, and it is reported at the same length",
+   "status": "fired",
+   "observed_gain": 120.11205620944715,
+   "observed_rho": -0.24701965573420392,
+   "rms_measured": 0.0035435147682684,
+   "rms_ruler": 0.001397665304988275,
+   "rms_true": 0.0034732063836010953
+  }
+ },
+ "latex": "%% W18: Section 7 read against the closed form of \\ref{sec:app_setups}.\n%% Anchors: the paragraph now at main.tex lines 1578-1599, and the\n%% 'trajectory advantage over Boris' row of Table~\\ref{tab:seeds} (line 1663).\n\n%% --- ANCHOR A: replaces the sentence beginning 'Against a Boris reference at a step $150$ times smaller' (line 1578-1582).\nLengthening the run reverses what is left.  Against the closed form of the\nproblem---Bessel of order zero in the Larmor frame, \\ref{sec:app_setups}---the\ntrajectory advantage of the corrector is $120.1$ at $19.1$ gyro-orbits, $32.8$ at\n$50$, unity at $101$, and $0.067$ at $200$.  At $10^{3}$ gyro-orbits the corrector\nis worse than Boris by a factor of $143$ and at $10^{4}$ by a factor of $1575$.\n\n%% --- ANCHOR B: replaces the sentence 'Measured against the closed form, that\n%% reference carries $1.396\\times10^{-3}$ ... An advantage above $298$ therefore\n%% reports a corrector error below the error of the ruler.' (lines 1589-1593).\nThe Boris reference at $h/150$ that earlier versions of this section used is not\nindependent of the corrector, whose training target is the displacement between\na coarse Boris step and the same state carried by Boris at $h/150$.  Measured\nagainst the closed form that reference carries $1.398\\times10^{-3}$ Larmor radii of error of\nits own, and the two error fields are anti-correlated at $\\rho = -0.25$, so the\nadvantage it reports is $1.9$ per cent \\emph{below} the true one rather than above\nit: $117.8$ against $120.1$.  The closed form agrees with the independent DOP853\nreference of Table~\\ref{tab:family} to eleven significant figures.\n\n%% --- ANCHOR C: replaces the 'trajectory advantage over Boris' row of\n%% Table~\\ref{tab:seeds} (line 1663).\n    trajectory advantage over Boris            & $120.1$ & $143.1$ & $103.7$--$182.2$ & $8/20$ \\\\\n\n%% --- ANCHOR D: a sentence for the caption of Table~\\ref{tab:seeds}, replacing\n%% 'that reference carries a trajectory error of $1.396\\times10^{-3}$ ... above $298$'.\nBoth blocks are now scored against the closed form, so the two no longer differ\nby their reference.  On the Boris reference at $h/150$ the same ensemble read\n$152.8$ at the median with an upper quartile of $252.2$ and a maximum of $576.8$.  The\n$3$ members whose reported error fell below that reference's own error of $1.397\\times10^{-3}$\nLarmor radii were exactly its $3$ largest advantages; on an independent ruler none\nis below that floor and the maximum falls to $295.6$.",
+ "anchor_d_check": {
+  "floor": 0.001397499970886964,
+  "members_below_floor": [
+   "i13_s1",
+   "w16_s16000003",
+   "w16_s16000004"
+  ],
+  "the_same_number_of_largest_advantages": [
+   "i13_s1",
+   "w16_s16000003",
+   "w16_s16000004"
+  ],
+  "identical": true,
+  "their_gains_old": {
+   "i13_s1": 446.6853469196707,
+   "w16_s16000003": 576.7507390869481,
+   "w16_s16000004": 361.6356560240021
+  },
+  "their_gains_new": {
+   "i13_s1": 196.30549325356984,
+   "w16_s16000003": 237.7662972524164,
+   "w16_s16000004": 295.59436383907286
+  },
+  "members_below_floor_on_closed_form": 0
+ },
+ "repro_lines": "    (\"data\", os.path.join(EXP, \"refcheck\"), [\"rc0_seed_audit.py\"],\n     \"refcheck/rc0_seed_audit.json     the seed-collision audit\"),\n    (\"data\", os.path.join(EXP, \"refcheck\"), [\"rc1_calibration.py\"],\n     \"refcheck/rc1_calibration.json    the stand, calibrated on the old ruler\"),\n    (\"data\", os.path.join(EXP, \"refcheck\"), [\"rc2_horizon.py\"],\n     \"refcheck/rc2_horizon.json        Sec. 7 horizon numbers on the closed form\"),\n    (\"data\", os.path.join(EXP, \"refcheck\"), [\"rc3_seeds.py\"],\n     \"refcheck/rc3_seeds.json          tab:seeds on the closed form\"),\n    (\"data\", os.path.join(EXP, \"refcheck\"), [\"rc4_report.py\"],\n     \"refcheck/rc4_report.json         the was/now table and the LaTeX\"),"
+}

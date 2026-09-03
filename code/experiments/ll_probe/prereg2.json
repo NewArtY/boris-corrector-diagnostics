@@ -1,0 +1,142 @@
+{
+  "note": "PREREGISTERED round 2, written before the measurement section runs.",
+  "F1_alias_cosine": {
+    "generic_cos_2pi_over_h_equals_DC": 1.1618616643061277e-05,
+    "generic_cos_pi_over_h_equals_kappa_over_1_plus_rho": 5.224848115575615e-07,
+    "statement": "cos at omega = 2pi/h aliases exactly onto DC (e^{i w h}=1); at omega = pi/h it alternates and the plateau is kappa/(1+rho).  Round 1 used sin, which vanishes identically at those sample points -- a degenerate test, not a refutation."
+  },
+  "F2_convention_normaliser": {
+    "law": "artefact(delta) = delta * |d(gamma/gamma_0)/dt| = delta * sinh(theta)*|f(theta)|/cosh(theta_0)",
+    "round1_error": "round 1 predicted delta*|dln gamma/dt| = delta*tanh(theta)*|f|, i.e. it normalised by gamma(t) instead of gamma_0; the miss factor must equal gamma(t_med)/gamma_0 exactly",
+    "tolerance_rel": 0.03
+  },
+  "F3_protection_erosion": {
+    "grid": {
+      "c_over_Lambda=0.0": {
+        "Lambda_eff": 1.8,
+        "rho": 0.9139312337500001,
+        "plateau_dtheta": 1.1618616643061277e-05,
+        "expected": "bounded, p=0"
+      },
+      "c_over_Lambda=0.5": {
+        "Lambda_eff": 0.9,
+        "rho": 0.955997483359375,
+        "plateau_dtheta": 2.272597288394083e-05,
+        "expected": "bounded, p=0"
+      },
+      "c_over_Lambda=0.9": {
+        "Lambda_eff": 0.17999999999999997,
+        "rho": 0.991040378773375,
+        "plateau_dtheta": 0.00011161186111621968,
+        "expected": "bounded, p=0"
+      },
+      "c_over_Lambda=0.99": {
+        "Lambda_eff": 0.018000000000000016,
+        "rho": 0.9991004048785272,
+        "plateau_dtheta": 0.0011116111861110061,
+        "expected": "bounded, p=0"
+      },
+      "c_over_Lambda=1.05": {
+        "Lambda_eff": -0.09000000000000008,
+        "rho": 1.0045101402045857,
+        "plateau_dtheta": null,
+        "expected": "unstable fixed point, exponential blow-up"
+      }
+    },
+    "statement": "a defect linear in (theta-theta*) with coefficient c erodes the contraction to Lambda-c; the plateau scales as 1/(Lambda-c) and diverges at c=Lambda.  The protection is proportional to the fidelity of the learned dissipation."
+  },
+  "F4_neutral_long": {
+    "h": 0.5,
+    "T_end": 1000000.0,
+    "rho": 0.6977308910074973,
+    "plateau_dtheta": 3.3083102779940487e-06,
+    "dpsi_slope": 9.296189256119655e-11,
+    "expected_exponent": 1.0,
+    "tolerance_abs": 0.05
+  },
+  "F5_noise_neutral_ensemble": {
+    "n_seeds": 8,
+    "expected_median_exponent": 0.5,
+    "tolerance_abs": 0.2
+  },
+  "F7_eps_sweep": {
+    "grid": {
+      "eps_over_alpha=0": {
+        "Lambda": 0.0,
+        "kappa": 1e-06,
+        "T": 300.0,
+        "attractor": null,
+        "predicted_exponent_theta": 1.0,
+        "predicted_dtheta_slope_per_unit_time": 1.9999999999999998e-05,
+        "predicted_dtheta_at_T": 0.005999999999999999,
+        "predicted_exponent_psi": 0.0,
+        "note": "no attractor; f -> alpha, Green function -> 1, defect integrates freely"
+      },
+      "eps_over_alpha=0.1": {
+        "Lambda": 1.8,
+        "kappa": 1e-06,
+        "T": 20000.0,
+        "theta_star": 1.8184464592320668,
+        "rho": 0.9139312337500001,
+        "predicted_plateau_dtheta": 1.1618616643061277e-05,
+        "predicted_plateau_continuum_q0_over_Lambda": 1.111111111111111e-05,
+        "predicted_exponent_theta": 0.0,
+        "Lambda_times_T": 36000.0
+      },
+      "eps_over_alpha=0.5": {
+        "Lambda": 1.0,
+        "kappa": 1e-06,
+        "T": 20000.0,
+        "theta_star": 0.881373587019543,
+        "rho": 0.9512294270833332,
+        "predicted_plateau_dtheta": 2.0504167578852903e-05,
+        "predicted_plateau_continuum_q0_over_Lambda": 1.9999999999999998e-05,
+        "predicted_exponent_theta": 0.0,
+        "Lambda_times_T": 20000.0
+      },
+      "eps_over_alpha=0.9": {
+        "Lambda": 0.19999999999999996,
+        "kappa": 1e-06,
+        "T": 20000.0,
+        "theta_star": 0.32745015023725865,
+        "rho": 0.99004983375,
+        "predicted_plateau_dtheta": 0.00010050083334034742,
+        "predicted_plateau_continuum_q0_over_Lambda": 0.00010000000000000002,
+        "predicted_exponent_theta": 0.0,
+        "Lambda_times_T": 3999.999999999999
+      },
+      "eps_over_alpha=0.99": {
+        "Lambda": 0.020000000000000018,
+        "kappa": 1e-07,
+        "T": 20000.0,
+        "theta_star": 0.10033534773107579,
+        "rho": 0.9990004998333749,
+        "predicted_plateau_dtheta": 0.0001000500083333251,
+        "predicted_plateau_continuum_q0_over_Lambda": 9.999999999999991e-05,
+        "predicted_exponent_theta": 0.0,
+        "Lambda_times_T": 400.00000000000034
+      },
+      "eps_over_alpha=0.999": {
+        "Lambda": 0.0020000000000000018,
+        "kappa": 1e-08,
+        "T": 20000.0,
+        "theta_star": 0.03163332385629436,
+        "rho": 0.9999000049998333,
+        "predicted_plateau_dtheta": 0.00010000500008333198,
+        "predicted_plateau_continuum_q0_over_Lambda": 9.999999999999991e-05,
+        "predicted_exponent_theta": 0.0,
+        "Lambda_times_T": 40.000000000000036
+      }
+    },
+    "law": "plateau * Lambda / q0 = 1 across three decades of Lambda (eps/alpha = 0.1 -> 0.999); the eps=0 point is off the law entirely (linear growth, no plateau)",
+    "law_tolerance_rel": 0.02,
+    "crossover": "for eps/alpha=0.999 (Lambda=0.002) the envelope exponent measured on the early window t in [1,1e2] (Lambda*T<1) must be ~1 and on the late window t in [1e3,2e4] (Lambda*T>1) must be ~0 -- the crossover sits at Lambda*T ~ 1",
+    "confound_statement": "eps=0 keeps the relativistic kinematics, the code, alpha, h, theta_0 and T identical and removes only the contraction.  If p goes 1 -> 0 along the sweep, the responsible factor is dissipation, not relativity.",
+    "caveat": "at eps/alpha >= 0.9 the attractor sits at theta* <= 0.33 (sub-relativistic): that end of the sweep tests the dynamical law, not a physical regime."
+  },
+  "F6_certification_gap": {
+    "claim": "with no injected defect the energy-channel error of a consistent scheme decays like exp(-Lambda_min*t) with Lambda_min = min(Lambda, Lambda_h), while the rate error stays at its O(h^p) value; the understatement factor of energy-only certification therefore grows exponentially, unbounded in T",
+    "fitted_decay_rate_expected_generic_euler_h0.3": 1.8,
+    "tolerance_rel": 0.05
+  }
+}

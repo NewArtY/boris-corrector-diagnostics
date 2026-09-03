@@ -1,0 +1,23 @@
+{
+  "boris": {
+    "max_rel_diff_vs_fast": 0.0,
+    "e_err_end_fast": 2.2876302910868063e-06,
+    "e_err_end_new": 2.2876302910868063e-06
+  },
+  "raw": {
+    "max_rel_diff_vs_fast": 0.0,
+    "e_err_end_fast": 2.489703116592934,
+    "e_err_end_new": 2.489703116592934
+  },
+  "proj": {
+    "max_rel_diff_vs_fast": 0.0,
+    "e_err_end_fast": 0.014637353920994522,
+    "e_err_end_new": 0.014637353920994522
+  },
+  "sym_mu_stats": {
+    "mean_abs": 0.0001492682945805776,
+    "max_abs": 0.00034732535571275146,
+    "net_evals_per_step": 1.0,
+    "boris_evals_per_step": 4.93985
+  }
+}

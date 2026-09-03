@@ -1,0 +1,21 @@
+{
+  "note": "plain Boris, no network, displaced initial position",
+  "runs": {
+    "0.0e+00": {
+      "envelope_exponent": 8.354252798528677e-16,
+      "energy_err_max_1e5": 2.499690216373196e-06
+    },
+    "3.5e-03": {
+      "envelope_exponent": 1.6773476681861167e-18,
+      "energy_err_max_1e5": 2.500025568341613e-06
+    },
+    "1.0e-02": {
+      "envelope_exponent": 5.875341689427178e-16,
+      "energy_err_max_1e5": 2.5026509308245792e-06
+    },
+    "1.0e-01": {
+      "envelope_exponent": 7.140240270628863e-16,
+      "energy_err_max_1e5": 2.7519031560174767e-06
+    }
+  }
+}

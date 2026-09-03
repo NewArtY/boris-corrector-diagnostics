@@ -1,0 +1,51 @@
+{
+  "config": {
+    "dt_work": 0.3,
+    "dt_fine": 0.002,
+    "t_final": 120.0,
+    "tau": 120000.0,
+    "n_work_steps": 400,
+    "n_params_defectnet": 52102
+  },
+  "boris": {
+    "radial_median_2nd_half": 0.21309518390565263,
+    "tangential_median_2nd_half": 0.6169456771273413,
+    "radial_over_tangential": 0.3454034800890071,
+    "energy_err_median_2nd_half": 1.245860386966946e-06,
+    "pos_err_rms": 0.4169552535942972,
+    "energy_identity_max_residual": 4.440892098500626e-16,
+    "energy_first_order_term_median": 0.42603057891366514,
+    "energy_second_order_term_median": 0.42603152592989757
+  },
+  "corrector_raw": {
+    "radial_median_2nd_half": 0.00012718169792674247,
+    "tangential_median_2nd_half": 0.0008175379358239382,
+    "radial_over_tangential": 0.15556672339438915,
+    "energy_err_median_2nd_half": 0.0002544608272758708,
+    "pos_err_rms": 0.00359690837779631,
+    "energy_identity_max_residual": 2.4275731334247753e-16,
+    "energy_first_order_term_median": 0.00025429599877012176,
+    "energy_second_order_term_median": 6.841161017521653e-07,
+    "proj_t_rel_median": 0.00221966040447943,
+    "proj_t_rel_max": 0.002222268447507908,
+    "speed_violation_max": 1.5392178545901392e-05,
+    "dv_radial_raw_median": 1.9016310100319702e-06
+  },
+  "corrector_projected": {
+    "radial_median_2nd_half": 7.816083831333376e-06,
+    "tangential_median_2nd_half": 0.0008650906567027741,
+    "radial_over_tangential": 0.00903498814924643,
+    "energy_err_median_2nd_half": 1.637474972693287e-05,
+    "pos_err_rms": 0.0035390936626557064,
+    "energy_identity_max_residual": 2.007064685551562e-16,
+    "energy_first_order_term_median": 1.562630679149932e-05,
+    "energy_second_order_term_median": 7.484429354808953e-07,
+    "proj_t_rel_median": 0.0022198058022917617,
+    "proj_t_rel_max": 0.002222500651018953,
+    "speed_violation_max": 2.2210134997929783e-16,
+    "dv_radial_raw_median": 1.8956009640149906e-06,
+    "retraction_vs_exp_median": 3.6460483203844034e-09,
+    "retraction_vs_exp_max": 3.6593433264690683e-09,
+    "retraction_vs_exp_predicted_t3_over_3": 3.646058999734582e-09
+  }
+}

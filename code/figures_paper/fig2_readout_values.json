@@ -1,0 +1,23 @@
+{
+ "source": "experiments/symproj/env_quasistatic_*.npz; exponents refitted here and asserted equal to experiments/symproj/summary.json",
+ "setup": {
+  "h": 0.3,
+  "tau": 120000000.0,
+  "gyroperiods_run": 99999.99511136938,
+  "config": "quasistatic"
+ },
+ "panel_a": {
+  "exponent_integer_time_readout": 0.9772017548657451,
+  "exponent_half_integer_readout": 2.7215093062598033e-16,
+  "readout_floor_measured": 0.02200488746871221,
+  "readout_floor_closed_form_sin2_theta_h_half": 0.022004889975550123,
+  "corrector_level_half_integer_readout": 0.022331294548033842,
+  "boris_level_integer_time_readout": 2.499982110215626e-09,
+  "envelope_at_1e5_gyroperiods": 0.00013023775327658527
+ },
+ "panel_b": {
+  "fraction_of_floor_at_1e5_gyroperiods": 0.005918583017603006,
+  "crossing_gyroperiods_anchored_at_last_point": 19043934.864240766,
+  "crossing_gyroperiods_from_lsq_intercept": 24710288.000593074
+ }
+}

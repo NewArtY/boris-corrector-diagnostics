@@ -1,0 +1,86 @@
+{
+ "meta": {
+  "setting": "S3b",
+  "w_grad": 1.0,
+  "dt": 0.05,
+  "method": "antithetic pairs (a, -a) to isolate O(a^2)"
+ },
+ "smooth_only": {
+  "dE_final": -0.000999500436124734,
+  "flops": 655200
+ },
+ "mean_shift": [
+  {
+   "rms": 0.0003,
+   "structured": false,
+   "mean_dE": -0.0009962587269012058,
+   "stderr": 2.2886655425890206e-07,
+   "mean_shift_vs_smooth": 3.2417092235281775e-06,
+   "shift_over_stderr": 14.164189407339265,
+   "shift_over_signal": 0.003243329473768858
+  },
+  {
+   "rms": 0.0003,
+   "structured": true,
+   "mean_dE": -0.0009994810074194737,
+   "stderr": 5.681843469646364e-09,
+   "mean_shift_vs_smooth": 1.9428705260284354e-08,
+   "shift_over_stderr": 3.419436907066641,
+   "shift_over_signal": 1.9438415990705705e-05
+  },
+  {
+   "rms": 0.001,
+   "structured": false,
+   "mean_dE": -0.0009634807828839362,
+   "stderr": 2.5430286602936746e-06,
+   "mean_shift_vs_smooth": 3.60196532407977e-05,
+   "shift_over_stderr": 14.164076796774312,
+   "shift_over_signal": 0.03603765635206044
+  },
+  {
+   "rms": 0.001,
+   "structured": true,
+   "mean_dE": -0.0009992845585493789,
+   "stderr": 6.313190123924645e-08,
+   "mean_shift_vs_smooth": 2.1587757535507408e-07,
+   "shift_over_stderr": 3.4194689391180897,
+   "shift_over_signal": 0.00021598547389541445
+  },
+  {
+   "rms": 0.003,
+   "structured": false,
+   "mean_dE": -0.0006752711871255401,
+   "stderr": 2.289255565201055e-05,
+   "mean_shift_vs_smooth": 0.00032422924899919387,
+   "shift_over_stderr": 14.163086635140202,
+   "shift_over_signal": 0.3243913031757109
+  },
+  {
+   "rms": 0.003,
+   "structured": true,
+   "mean_dE": -0.0009975572870013587,
+   "stderr": 5.682118591674322e-07,
+   "mean_shift_vs_smooth": 1.9431491233752336e-06,
+   "shift_over_stderr": 3.4197616470420327,
+   "shift_over_signal": 0.0019441203356641015
+  },
+  {
+   "rms": 0.01,
+   "structured": false,
+   "mean_dE": 0.0026096600065325312,
+   "stderr": 0.00025503194948945236,
+   "mean_shift_vs_smooth": 0.003609160442657265,
+   "shift_over_stderr": 14.151797254745658,
+   "shift_over_signal": 3.6109643500013995
+  },
+  {
+   "rms": 0.01,
+   "structured": true,
+   "mean_dE": -0.0009778781665370241,
+   "stderr": 6.316597409783277e-06,
+   "mean_shift_vs_smooth": 2.16222695877098e-05,
+   "shift_over_stderr": 3.423088125613448,
+   "shift_over_signal": 0.02163307669133565
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+ "marginal_a_plus_H_zero": {
+  "predicted_slope_sqrt_logN": 0.050809886076838895,
+  "measured_rms_slope": 0.03983447434435622,
+  "VarS_over_logN": 1.0915862071515887
+ }
+}

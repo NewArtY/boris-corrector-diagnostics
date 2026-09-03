@@ -1,0 +1,76 @@
+{
+  "physical_signal": 0.0007497187720287846,
+  "dt": 0.3,
+  "schemes": {
+    "shipped": {
+      "traj": 0.4166534686545755,
+      "energy": 1.2498392230053668e-06,
+      "below_signal": 599.8521715665227,
+      "flops": 45200.0,
+      "wall_s": 0.01835529998061247,
+      "traj_vs_hybrid": 0.008325558917262292,
+      "energy_vs_hybrid": 13.110932765403104,
+      "flops_cheaper_than_hybrid": 1009.6548672566372
+    },
+    "staggered": {
+      "traj": 0.5065233104356814,
+      "energy": 0.02195374003629602,
+      "below_signal": 0.03414993394242976,
+      "flops": 45200.0,
+      "wall_s": 0.017373700015014037,
+      "traj_vs_hybrid": 0.006848397556238124,
+      "energy_vs_hybrid": 0.0007464130482229997,
+      "flops_cheaper_than_hybrid": 1009.6548672566372
+    },
+    "imr": {
+      "traj": 0.5026379075146472,
+      "energy": 1.6479318080353522e-05,
+      "below_signal": 45.49452643447618,
+      "flops": 506400.0,
+      "wall_s": 0.2265670000051614,
+      "traj_vs_hybrid": 0.0069013358314290695,
+      "energy_vs_hybrid": 0.9943711226693847,
+      "flops_cheaper_than_hybrid": 90.11927330173776
+    },
+    "vps2": {
+      "traj": 0.010583014451054718,
+      "energy": 5.568576563752536e-06,
+      "below_signal": 134.63382669620083,
+      "flops": 36400.0,
+      "wall_s": 0.013227299990830943,
+      "traj_vs_hybrid": 0.3277774038208606,
+      "energy_vs_hybrid": 2.942683436742494,
+      "flops_cheaper_than_hybrid": 1253.7472527472528
+    },
+    "gl4": {
+      "traj": 0.0007745714317733591,
+      "energy": 4.177814716399553e-08,
+      "below_signal": 17945.23747273535,
+      "flops": 772800.0,
+      "wall_s": 0.363442900008522,
+      "traj_vs_hybrid": 4.47844170217262,
+      "energy_vs_hybrid": 392.22797401865114,
+      "flops_cheaper_than_hybrid": 59.053312629399585
+    },
+    "vps4": {
+      "traj": 5.35394015973843e-05,
+      "energy": 2.635140666784608e-07,
+      "below_signal": 2845.0806496929426,
+      "flops": 109200.0,
+      "wall_s": 0.039718100015306845,
+      "traj_vs_hybrid": 64.79103049098778,
+      "energy_vs_hybrid": 62.184756308974805,
+      "flops_cheaper_than_hybrid": 417.9157509157509
+    },
+    "hybrid": {
+      "traj": 0.0034688730013653656,
+      "energy": 1.638655802038702e-05,
+      "below_signal": 45.752059163128486,
+      "flops": 45636400.0,
+      "wall_s": 0.09633249999023974,
+      "traj_vs_hybrid": 1.0,
+      "energy_vs_hybrid": 1.0,
+      "flops_cheaper_than_hybrid": 1.0
+    }
+  }
+}

@@ -1,0 +1,1284 @@
+{
+ "meta": {
+  "what": "Part 1 of W18: the seed-collision audit",
+  "n_random_draws": 0,
+  "block_floor": 1000000,
+  "method": "declared extents, realised seeds from committed JSON, and the generator family of each consuming call"
+ },
+ "declared_extents": {
+  "hpo": {
+   "lo": 11000000,
+   "hi": 13999903,
+   "formula": "11e6 + 1e6*arch + 1e4*cfg + 100*rep + role",
+   "source": "hpo/hp_common.py:127"
+  },
+  "sympmat": {
+   "lo": 11000000,
+   "hi": 11799999,
+   "formula": "11e6 + 1e5*role + 1e3*dt_index + rep",
+   "source": "sympmat/sm_common.py:170"
+  },
+  "spectrum": {
+   "lo": 13000000,
+   "hi": 13003999,
+   "formula": "13e6 + 1e3*arch + rep",
+   "source": "spectrum/sp_common.py:157"
+  },
+  "spectral": {
+   "lo": 13000000,
+   "hi": 13000000,
+   "formula": "a single constant",
+   "source": "spectral/sw_common.py:146"
+  },
+  "map": {
+   "lo": 14000000,
+   "hi": 14000001,
+   "formula": "MAP_SEED and MAP_SEED+1",
+   "source": "map/map_common.py:103, mp1_calibration.py:103"
+  },
+  "external_arch": {
+   "lo": 9000000,
+   "hi": 9204999,
+   "formula": "9e6 + 1e5*arch + 1e3*role + rep",
+   "source": "external_arch/ea_common.py:123"
+  },
+  "seeds": {
+   "lo": 16000000,
+   "hi": 16000015,
+   "formula": "16e6 + i, i = 0..15",
+   "source": "seeds/sd_common.py:146"
+  },
+  "refcheck (W18, reserved, unused)": {
+   "lo": 18000000,
+   "hi": 18999999,
+   "formula": "declared free before the first run of W18; W18 draws nothing, so no seed in it is consumed",
+   "source": "refcheck/rc_common.py docstring"
+  }
+ },
+ "declared_extent_overlaps": [
+  {
+   "a": "hpo",
+   "b": "spectral",
+   "overlap_lo": 13000000,
+   "overlap_hi": 13000000
+  },
+  {
+   "a": "hpo",
+   "b": "spectrum",
+   "overlap_lo": 13000000,
+   "overlap_hi": 13003999
+  },
+  {
+   "a": "hpo",
+   "b": "sympmat",
+   "overlap_lo": 11000000,
+   "overlap_hi": 11799999
+  },
+  {
+   "a": "spectral",
+   "b": "spectrum",
+   "overlap_lo": 13000000,
+   "overlap_hi": 13000000
+  }
+ ],
+ "realised": {
+  "checkpoints": {
+   "n": 1,
+   "block_seeds": [],
+   "small_seeds": [
+    42
+   ]
+  },
+  "external_arch": {
+   "n": 36,
+   "block_seeds": [
+    9000000,
+    9000001,
+    9000002,
+    9000003,
+    9001500,
+    9001501,
+    9001502,
+    9001503,
+    9004000,
+    9004001,
+    9004500,
+    9004501,
+    9100000,
+    9100001,
+    9100002,
+    9100003,
+    9101500,
+    9101501,
+    9101502,
+    9101503,
+    9104000,
+    9104001,
+    9104500,
+    9104501,
+    9200000,
+    9200001,
+    9200002,
+    9200003,
+    9201500,
+    9201501,
+    9201502,
+    9201503,
+    9204000,
+    9204001,
+    9204500,
+    9204501
+   ],
+   "small_seeds": []
+  },
+  "f0_variational": {
+   "n": 5,
+   "block_seeds": [],
+   "small_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ]
+  },
+  "hpo": {
+   "n": 160,
+   "block_seeds": [
+    11000000,
+    11000001,
+    11000100,
+    11000101,
+    11000200,
+    11000201,
+    11000300,
+    11000301,
+    11010000,
+    11010001,
+    11010100,
+    11010101,
+    11010200,
+    11010201,
+    11010300,
+    11010301,
+    11020000,
+    11020001,
+    11020100,
+    11020101,
+    11020200,
+    11020201,
+    11020300,
+    11020301,
+    11030000,
+    11030001,
+    11030100,
+    11030101,
+    11030200,
+    11030201,
+    11030300,
+    11030301,
+    11040000,
+    11040001,
+    11040100,
+    11040101,
+    11040200,
+    11040201,
+    11040300,
+    11040301,
+    11050000,
+    11050001,
+    11050100,
+    11050101,
+    11050200,
+    11050201,
+    11050300,
+    11050301,
+    12000000,
+    12000001,
+    12000002,
+    12000003,
+    12000100,
+    12000101,
+    12000102,
+    12000103,
+    12000200,
+    12000201,
+    12000202,
+    12000203,
+    12000300,
+    12000301,
+    12000302,
+    12000303,
+    12001002,
+    12001003,
+    12001102,
+    12001103,
+    12001202,
+    12001203,
+    12001302,
+    12001303,
+    12002002,
+    12002003,
+    12002102,
+    12002103,
+    12002202,
+    12002203,
+    12002302,
+    12002303,
+    12010000,
+    12010001,
+    12010100,
+    12010101,
+    12010200,
+    12010201,
+    12010300,
+    12010301,
+    12020000,
+    12020001,
+    12020100,
+    12020101,
+    12020200,
+    12020201,
+    12020300,
+    12020301,
+    12030000,
+    12030001,
+    12030100,
+    12030101,
+    12030200,
+    12030201,
+    12030300,
+    12030301,
+    12040000,
+    12040001,
+    12040100,
+    12040101,
+    12040200,
+    12040201,
+    12040300,
+    12040301,
+    12050000,
+    12050001,
+    12050100,
+    12050101,
+    12050200,
+    12050201,
+    12050300,
+    12050301,
+    13000000,
+    13000001,
+    13000100,
+    13000101,
+    13000200,
+    13000201,
+    13000300,
+    13000301,
+    13010000,
+    13010001,
+    13010100,
+    13010101,
+    13010200,
+    13010201,
+    13010300,
+    13010301,
+    13020000,
+    13020001,
+    13020100,
+    13020101,
+    13020200,
+    13020201,
+    13020300,
+    13020301,
+    13030000,
+    13030001,
+    13030100,
+    13030101,
+    13030200,
+    13030201,
+    13030300,
+    13030301,
+    13040000,
+    13040001,
+    13040100,
+    13040101,
+    13040200,
+    13040201,
+    13040300,
+    13040301
+   ],
+   "small_seeds": []
+  },
+  "map": {
+   "n": 1,
+   "block_seeds": [
+    14000000
+   ],
+   "small_seeds": []
+  },
+  "p_law": {
+   "n": 1,
+   "block_seeds": [],
+   "small_seeds": [
+    64
+   ]
+  },
+  "seeds": {
+   "n": 81,
+   "block_seeds": [
+    9000000,
+    9000001,
+    9000002,
+    9000003,
+    9000004,
+    9000005,
+    9000006,
+    9000007,
+    9000008,
+    9000009,
+    9001500,
+    9001501,
+    9001502,
+    9001503,
+    9001504,
+    9001505,
+    9001506,
+    9001507,
+    9001508,
+    9001509,
+    9100000,
+    9100001,
+    9100002,
+    9100003,
+    9100004,
+    9100005,
+    9100006,
+    9100007,
+    9100008,
+    9100009,
+    9101500,
+    9101501,
+    9101502,
+    9101503,
+    9101504,
+    9101505,
+    9101506,
+    9101507,
+    9101508,
+    9101509,
+    9200000,
+    9200001,
+    9200002,
+    9200003,
+    9200004,
+    9200005,
+    9200006,
+    9200007,
+    9200008,
+    9200009,
+    9201500,
+    9201501,
+    9201502,
+    9201503,
+    9201504,
+    9201505,
+    9201506,
+    9201507,
+    9201508,
+    9201509,
+    16000000,
+    16000001,
+    16000002,
+    16000003,
+    16000004,
+    16000005,
+    16000006,
+    16000007,
+    16000008,
+    16000009,
+    16000010,
+    16000011,
+    16000012,
+    16000013,
+    16000014,
+    16000015
+   ],
+   "small_seeds": [
+    1,
+    7,
+    42,
+    123,
+    2026
+   ]
+  },
+  "spectral": {
+   "n": 1,
+   "block_seeds": [
+    13000000
+   ],
+   "small_seeds": []
+  },
+  "spectrum": {
+   "n": 16,
+   "block_seeds": [
+    13000000,
+    13000001,
+    13000002,
+    13000003,
+    13001000,
+    13001001,
+    13001002,
+    13001003,
+    13002000,
+    13002001,
+    13002002,
+    13002003,
+    13003000
+   ],
+   "small_seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "sympmat": {
+   "n": 60,
+   "block_seeds": [
+    11000000,
+    11000001,
+    11000002,
+    11001000,
+    11001001,
+    11001002,
+    11002000,
+    11002001,
+    11002002,
+    11003000,
+    11003001,
+    11003002,
+    11004000,
+    11004001,
+    11004002,
+    11005000,
+    11005001,
+    11005002,
+    11006000,
+    11006001,
+    11006002,
+    11007000,
+    11007001,
+    11007002,
+    11008000,
+    11008001,
+    11008002,
+    11100000,
+    11100001,
+    11100002,
+    11101000,
+    11101001,
+    11101002,
+    11102000,
+    11102001,
+    11102002,
+    11103000,
+    11103001,
+    11103002,
+    11104000,
+    11104001,
+    11104002,
+    11105000,
+    11105001,
+    11105002,
+    11106000,
+    11106001,
+    11106002,
+    11107000,
+    11107001,
+    11107002,
+    11108000,
+    11108001,
+    11108002,
+    11400000,
+    11500000,
+    11700000
+   ],
+   "small_seeds": [
+    0,
+    1,
+    2
+   ]
+  }
+ },
+ "block_seed_collisions": [
+  {
+   "a": "external_arch",
+   "b": "seeds",
+   "shared": [
+    9000000,
+    9000001,
+    9000002,
+    9000003,
+    9001500,
+    9001501,
+    9001502,
+    9001503,
+    9100000,
+    9100001,
+    9100002,
+    9100003,
+    9101500,
+    9101501,
+    9101502,
+    9101503,
+    9200000,
+    9200001,
+    9200002,
+    9200003,
+    9201500,
+    9201501,
+    9201502,
+    9201503
+   ],
+   "n_shared": 24
+  },
+  {
+   "a": "hpo",
+   "b": "spectral",
+   "shared": [
+    13000000
+   ],
+   "n_shared": 1
+  },
+  {
+   "a": "hpo",
+   "b": "spectrum",
+   "shared": [
+    13000000,
+    13000001
+   ],
+   "n_shared": 2
+  },
+  {
+   "a": "hpo",
+   "b": "sympmat",
+   "shared": [
+    11000000,
+    11000001
+   ],
+   "n_shared": 2
+  },
+  {
+   "a": "spectral",
+   "b": "spectrum",
+   "shared": [
+    13000000
+   ],
+   "n_shared": 1
+  }
+ ],
+ "small_seed_sharing": [
+  {
+   "a": "checkpoints",
+   "b": "seeds",
+   "shared": [
+    42
+   ]
+  },
+  {
+   "a": "seeds",
+   "b": "spectrum",
+   "shared": [
+    1
+   ]
+  },
+  {
+   "a": "seeds",
+   "b": "sympmat",
+   "shared": [
+    1
+   ]
+  },
+  {
+   "a": "spectrum",
+   "b": "sympmat",
+   "shared": [
+    0,
+    1,
+    2
+   ]
+  }
+ ],
+ "collision_detail": [
+  {
+   "seed": 9000000,
+   "a": "external_arch",
+   "a_roles": [
+    "hnn init rep0"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:307"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9000001,
+   "a": "external_arch",
+   "a_roles": [
+    "hnn init rep1"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:307"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9000002,
+   "a": "external_arch",
+   "a_roles": [
+    "hnn init rep2"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:307"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9000003,
+   "a": "external_arch",
+   "a_roles": [
+    "hnn init rep3"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:307"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9001500,
+   "a": "external_arch",
+   "a_roles": [
+    "hnn shuffle rep500"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:308"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9001501,
+   "a": "external_arch",
+   "a_roles": [
+    "hnn shuffle rep501"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:308"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9001502,
+   "a": "external_arch",
+   "a_roles": [
+    "hnn shuffle rep502"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:308"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9001503,
+   "a": "external_arch",
+   "a_roles": [
+    "hnn shuffle rep503"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:308"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9100000,
+   "a": "external_arch",
+   "a_roles": [
+    "sympnet init rep0"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:307"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9100001,
+   "a": "external_arch",
+   "a_roles": [
+    "sympnet init rep1"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:307"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9100002,
+   "a": "external_arch",
+   "a_roles": [
+    "sympnet init rep2"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:307"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9100003,
+   "a": "external_arch",
+   "a_roles": [
+    "sympnet init rep3"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:307"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9101500,
+   "a": "external_arch",
+   "a_roles": [
+    "sympnet shuffle rep500"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:308"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9101501,
+   "a": "external_arch",
+   "a_roles": [
+    "sympnet shuffle rep501"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:308"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9101502,
+   "a": "external_arch",
+   "a_roles": [
+    "sympnet shuffle rep502"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:308"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9101503,
+   "a": "external_arch",
+   "a_roles": [
+    "sympnet shuffle rep503"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:308"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9200000,
+   "a": "external_arch",
+   "a_roles": [
+    "pinn init rep0"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:307"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9200001,
+   "a": "external_arch",
+   "a_roles": [
+    "pinn init rep1"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:307"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9200002,
+   "a": "external_arch",
+   "a_roles": [
+    "pinn init rep2"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:307"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9200003,
+   "a": "external_arch",
+   "a_roles": [
+    "pinn init rep3"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:307"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9201500,
+   "a": "external_arch",
+   "a_roles": [
+    "pinn shuffle rep500"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:308"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9201501,
+   "a": "external_arch",
+   "a_roles": [
+    "pinn shuffle rep501"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:308"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9201502,
+   "a": "external_arch",
+   "a_roles": [
+    "pinn shuffle rep502"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:308"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 9201503,
+   "a": "external_arch",
+   "a_roles": [
+    "pinn shuffle rep503"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "external_arch/ea1_train.py:308"
+   ],
+   "b": "seeds",
+   "b_roles": [
+    "recorded, not drawn"
+   ],
+   "b_families": [
+    "unknown"
+   ],
+   "b_sources": [],
+   "same_generator_family": false
+  },
+  {
+   "seed": 13000000,
+   "a": "hpo",
+   "a_roles": [
+    "pinn cfg0 rep0 init"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "hpo/hp_common.py:447"
+   ],
+   "b": "spectral",
+   "b_roles": [
+    "ensemble (eight initial conditions)"
+   ],
+   "b_families": [
+    "numpy"
+   ],
+   "b_sources": [
+    "spectral/sw3_ensemble.py:50"
+   ],
+   "same_generator_family": false
+  },
+  {
+   "seed": 13000000,
+   "a": "hpo",
+   "a_roles": [
+    "pinn cfg0 rep0 init"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "hpo/hp_common.py:447"
+   ],
+   "b": "spectrum",
+   "b_roles": [
+    "cloud hnn rep0"
+   ],
+   "b_families": [
+    "numpy"
+   ],
+   "b_sources": [
+    "spectrum/sp2_spectra.py:220"
+   ],
+   "same_generator_family": false
+  },
+  {
+   "seed": 13000001,
+   "a": "hpo",
+   "a_roles": [
+    "pinn cfg0 rep0 shuffle"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "hpo/hp_common.py:448"
+   ],
+   "b": "spectrum",
+   "b_roles": [
+    "cloud hnn rep1"
+   ],
+   "b_families": [
+    "numpy"
+   ],
+   "b_sources": [
+    "spectrum/sp2_spectra.py:220"
+   ],
+   "same_generator_family": true
+  },
+  {
+   "seed": 11000000,
+   "a": "hpo",
+   "a_roles": [
+    "hnn cfg0 rep0 init"
+   ],
+   "a_families": [
+    "torch"
+   ],
+   "a_sources": [
+    "hpo/hp_common.py:447"
+   ],
+   "b": "sympmat",
+   "b_roles": [
+    "pinit dt0 rep0"
+   ],
+   "b_families": [
+    "torch"
+   ],
+   "b_sources": [
+    "sympmat/sm_arch.py:69"
+   ],
+   "same_generator_family": true
+  },
+  {
+   "seed": 11000001,
+   "a": "hpo",
+   "a_roles": [
+    "hnn cfg0 rep0 shuffle"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "hpo/hp_common.py:448"
+   ],
+   "b": "sympmat",
+   "b_roles": [
+    "pinit dt0 rep1"
+   ],
+   "b_families": [
+    "torch"
+   ],
+   "b_sources": [
+    "sympmat/sm_arch.py:69"
+   ],
+   "same_generator_family": false
+  },
+  {
+   "seed": 13000000,
+   "a": "spectral",
+   "a_roles": [
+    "ensemble (eight initial conditions)"
+   ],
+   "a_families": [
+    "numpy"
+   ],
+   "a_sources": [
+    "spectral/sw3_ensemble.py:50"
+   ],
+   "b": "spectrum",
+   "b_roles": [
+    "cloud hnn rep0"
+   ],
+   "b_families": [
+    "numpy"
+   ],
+   "b_sources": [
+    "spectrum/sp2_spectra.py:220"
+   ],
+   "same_generator_family": true
+  }
+ ]
+}

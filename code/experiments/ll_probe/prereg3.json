@@ -1,0 +1,77 @@
+{
+  "note": "PREREGISTERED round 3.",
+  "F3b_linear_feedback": {
+    "grid": {
+      "c_over_Lambda=0.0": {
+        "Lambda_eff": 1.8,
+        "plateau_dtheta": 1.1618616643061277e-05,
+        "continuum_q0_over_Lambda_eff": 1.111111111111111e-05,
+        "expected_exponent": 0.0
+      },
+      "c_over_Lambda=0.5": {
+        "Lambda_eff": 0.9,
+        "plateau_dtheta": 2.272597288394083e-05,
+        "continuum_q0_over_Lambda_eff": 2.222222222222222e-05,
+        "expected_exponent": 0.0
+      },
+      "c_over_Lambda=0.9": {
+        "Lambda_eff": 0.17999999999999997,
+        "plateau_dtheta": 0.00011161186111621968,
+        "continuum_q0_over_Lambda_eff": 0.00011111111111111112,
+        "expected_exponent": 0.0
+      },
+      "c_over_Lambda=0.99": {
+        "Lambda_eff": 0.018000000000000016,
+        "plateau_dtheta": 0.0011116111861110061,
+        "continuum_q0_over_Lambda_eff": 0.00111111111111111,
+        "expected_exponent": 0.0
+      },
+      "c_over_Lambda=1.05": {
+        "Lambda_eff": -0.09000000000000001,
+        "expected": "unstable: exponential growth of dtheta, exponent >> 1"
+      }
+    },
+    "statement": "a defect proportional to the state error erodes the contraction to Lambda-c; plateau = kappa/(1-R(-(Lambda-c)h)) ~ q0/(Lambda-c), divergent at c=Lambda."
+  },
+  "F3c_drag_gain_error": {
+    "grid": {
+      "m=0.01": {
+        "theta_star_new": 1.8132007192662327,
+        "d_theta_star": -0.005245739965834106,
+        "gamma_star_rel_shift": -0.004962809790010958,
+        "Lambda_new": 1.798,
+        "Lambda_rel_shift": -0.0011111111111110628
+      },
+      "m=0.1": {
+        "theta_star_new": 1.7680755021447185,
+        "d_theta_star": -0.05037095708734829,
+        "gamma_star_rel_shift": -0.04653741075440776,
+        "Lambda_new": 1.78,
+        "Lambda_rel_shift": -0.011111111111111072
+      },
+      "m=0.5": {
+        "theta_star_new": 1.6019026012165503,
+        "d_theta_star": -0.21654385801551657,
+        "gamma_star_rel_shift": -0.18350341907227408,
+        "Lambda_new": 1.7,
+        "Lambda_rel_shift": -0.05555555555555558
+      }
+    },
+    "statement": "a relative error m on the radiation-reaction coefficient shifts the attractor energy by (1+m)^{-1/2}-1 and the rate by -2*eps*m/Lambda: both bounded, both first order in m, no secular growth."
+  },
+  "F6b_energy_decay_rate": {
+    "grid": {
+      "euler": {
+        "Lambda_h": 2.588429298329988,
+        "predicted_dev_decay_rate": 1.8
+      },
+      "ieuler": {
+        "Lambda_h": 1.4392747214184596,
+        "predicted_dev_decay_rate": 1.4392747214184596
+      }
+    },
+    "h": 0.3,
+    "tolerance_rel": 0.05,
+    "statement": "the energy-channel error decays at min(Lambda, Lambda_h); the rate error stays at its O(h^p) value, so energy-only certification understates the defect by a factor growing like exp(min(Lambda,Lambda_h) t) -- unbounded in T."
+  }
+}

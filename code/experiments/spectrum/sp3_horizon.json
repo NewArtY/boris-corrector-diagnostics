@@ -1,0 +1,1218 @@
+{
+ "setup": {
+  "field": "frozen: tau = infinity, B_z = 1, E = 0; exact solution r(t) = (cos t, sin t), v(t) = (-sin t, cos t)",
+  "n_steps": 100000,
+  "gyro_orbits": 4774.64829275686,
+  "dt": 0.3,
+  "blowup_threshold": 1000.0,
+  "amplitude": "|w| in canonical coordinates; exactly sqrt(5)/2 on the exact solution at every time",
+  "growth_fit": "log of the running maximum against step number, over the last decade of the run"
+ },
+ "runs": {
+  "boris": {
+   "n_steps_declared": 100000,
+   "blowup_step": null,
+   "amplitude_0": 1.118033988749895,
+   "amplitude_running_max": 1.2402317080139682,
+   "checkpoints": {
+    "100": {
+     "amplitude": 1.2387561833289202,
+     "amplitude_running_max": 1.2402316850786042,
+     "energy_rel_err": 1.1102230246251565e-15,
+     "position_err": 0.18429005450482958
+    },
+    "400": {
+     "amplitude": 1.145303114794358,
+     "amplitude_running_max": 1.2402316850786042,
+     "energy_rel_err": 2.6645352591003757e-15,
+     "position_err": 0.8722293971595667
+    },
+    "1000": {
+     "amplitude": 1.100145880279604,
+     "amplitude_running_max": 1.2402316850786042,
+     "energy_rel_err": 6.439293542825908e-15,
+     "position_err": 1.6012495963928572
+    },
+    "4000": {
+     "amplitude": 1.2065767043731483,
+     "amplitude_running_max": 1.2402316850786042,
+     "energy_rel_err": 3.108624468950438e-14,
+     "position_err": 1.9356073675165675
+    },
+    "10000": {
+     "amplitude": 1.1615153803825429,
+     "amplitude_running_max": 1.2402316850786042,
+     "energy_rel_err": 9.85878045867139e-14,
+     "position_err": 2.0527504587179943
+    },
+    "40000": {
+     "amplitude": 1.239834153968498,
+     "amplitude_running_max": 1.2402317080139682,
+     "energy_rel_err": 3.703704010149522e-13,
+     "position_err": 0.7466884178144928
+    },
+    "100000": {
+     "amplitude": 1.0589678353897851,
+     "amplitude_running_max": 1.2402317080139682,
+     "energy_rel_err": 9.057199434892027e-13,
+     "position_err": 1.5148619939963548
+    }
+   },
+   "growth_per_step_measured": 2.2822408935199756e-13,
+   "measured_frequency_per_step": 0.2977798952189941,
+   "closed_form_frequency_per_step": 0.2977798952189945
+  },
+  "hnn_r0": {
+   "n_steps_declared": 100000,
+   "blowup_step": null,
+   "amplitude_0": 1.118033988749895,
+   "amplitude_running_max": 660.3972235265985,
+   "checkpoints": {
+    "100": {
+     "amplitude": 1.1137592307343915,
+     "amplitude_running_max": 1.1221639699980168,
+     "energy_rel_err": 0.0008387889761105605,
+     "position_err": 0.035545965938219556
+    },
+    "400": {
+     "amplitude": 1.1116580567157714,
+     "amplitude_running_max": 1.135256019840823,
+     "energy_rel_err": 0.001371643653627741,
+     "position_err": 0.0475922261936572
+    },
+    "1000": {
+     "amplitude": 1.1227047241329382,
+     "amplitude_running_max": 1.1520441072582328,
+     "energy_rel_err": 0.007051358685122411,
+     "position_err": 0.6437395842275909
+    },
+    "4000": {
+     "amplitude": 1.0422835212820893,
+     "amplitude_running_max": 2.047987321352062,
+     "energy_rel_err": 0.03876127292007436,
+     "position_err": 1.2186006825265532
+    },
+    "10000": {
+     "amplitude": 75.90469136447223,
+     "amplitude_running_max": 75.90469136447223,
+     "energy_rel_err": 121.04937016893567,
+     "position_err": 63.55457110924216
+    },
+    "40000": {
+     "amplitude": 367.90087976754086,
+     "amplitude_running_max": 368.40120282902205,
+     "energy_rel_err": 3425.4030879801867,
+     "position_err": 311.7208071900763
+    },
+    "100000": {
+     "amplitude": 660.3972235265985,
+     "amplitude_running_max": 660.3972235265985,
+     "energy_rel_err": 10962.422297572293,
+     "position_err": 558.6028432865792
+    }
+   },
+   "growth_per_step_measured": 1.8026796228263833e-05,
+   "measured_frequency_per_step": 0.2982603734490111
+  },
+  "hnn_r1": {
+   "n_steps_declared": 100000,
+   "blowup_step": 46327,
+   "amplitude_0": 1.118033988749895,
+   "amplitude_running_max": 999.9898402080458,
+   "checkpoints": {
+    "100": {
+     "amplitude": 1.102931837529752,
+     "amplitude_running_max": 1.1353493726436212,
+     "energy_rel_err": 0.00565031636464286,
+     "position_err": 0.09879111639899724
+    },
+    "400": {
+     "amplitude": 1.137630686006296,
+     "amplitude_running_max": 1.1718285485413371,
+     "energy_rel_err": 0.00039605448977897417,
+     "position_err": 0.36088023337275216
+    },
+    "1000": {
+     "amplitude": 0.9966424453635658,
+     "amplitude_running_max": 1.282751705297538,
+     "energy_rel_err": 0.004635358466172468,
+     "position_err": 0.900131219940975
+    },
+    "4000": {
+     "amplitude": 24.61345814146745,
+     "amplitude_running_max": 24.61345814146745,
+     "energy_rel_err": 35.63979144676878,
+     "position_err": 20.487161699987112
+    },
+    "10000": {
+     "amplitude": 168.74920534613463,
+     "amplitude_running_max": 168.74920534613463,
+     "energy_rel_err": 2588.6101538427365,
+     "position_err": 147.45814214229262
+    },
+    "40000": {
+     "amplitude": 859.8871912699543,
+     "amplitude_running_max": 859.8871912699543,
+     "energy_rel_err": 65557.77996288311,
+     "position_err": 747.3915693150692
+    }
+   },
+   "growth_per_step_measured": 7.497030754139461e-05,
+   "measured_frequency_per_step": 0.2979497134375549
+  },
+  "hnn_r2": {
+   "n_steps_declared": 100000,
+   "blowup_step": null,
+   "amplitude_0": 1.118033988749895,
+   "amplitude_running_max": 2.242626049903478,
+   "checkpoints": {
+    "100": {
+     "amplitude": 1.1347308967980396,
+     "amplitude_running_max": 1.1347308967980396,
+     "energy_rel_err": 0.0019573572762143776,
+     "position_err": 0.033945930086134224
+    },
+    "400": {
+     "amplitude": 1.1091467625698883,
+     "amplitude_running_max": 1.18730547237853,
+     "energy_rel_err": 6.592280015138563e-05,
+     "position_err": 0.12448268502958294
+    },
+    "1000": {
+     "amplitude": 1.2473531937340094,
+     "amplitude_running_max": 1.3151996422392558,
+     "energy_rel_err": 0.003546268680984843,
+     "position_err": 0.6472373272637201
+    },
+    "4000": {
+     "amplitude": 1.242406067217972,
+     "amplitude_running_max": 1.636182572208412,
+     "energy_rel_err": 0.013145816987642611,
+     "position_err": 1.3398833248309159
+    },
+    "10000": {
+     "amplitude": 1.1368084047986373,
+     "amplitude_running_max": 1.6934363105451573,
+     "energy_rel_err": 0.02347114959122676,
+     "position_err": 1.0978995286656639
+    },
+    "40000": {
+     "amplitude": 1.8568099913273088,
+     "amplitude_running_max": 1.8689462845892446,
+     "energy_rel_err": 0.12109085100099604,
+     "position_err": 0.8546385292125331
+    },
+    "100000": {
+     "amplitude": 1.04944775417239,
+     "amplitude_running_max": 2.242626049903478,
+     "energy_rel_err": 0.14744851557142313,
+     "position_err": 1.0707434901845814
+    }
+   },
+   "growth_per_step_measured": 3.469527746828963e-06,
+   "measured_frequency_per_step": 0.29760763264927964
+  },
+  "hnn_r3": {
+   "n_steps_declared": 100000,
+   "blowup_step": null,
+   "amplitude_0": 1.118033988749895,
+   "amplitude_running_max": 2.337504073894356,
+   "checkpoints": {
+    "100": {
+     "amplitude": 1.121458686878418,
+     "amplitude_running_max": 1.1427308979972142,
+     "energy_rel_err": 0.0003830170089056395,
+     "position_err": 0.02679117036951323
+    },
+    "400": {
+     "amplitude": 1.040935971122877,
+     "amplitude_running_max": 1.2099130215624163,
+     "energy_rel_err": 0.0004553857316873522,
+     "position_err": 0.13915363613409953
+    },
+    "1000": {
+     "amplitude": 1.2587491210998107,
+     "amplitude_running_max": 1.3093236142040763,
+     "energy_rel_err": 0.001957609337409405,
+     "position_err": 0.45582350315608255
+    },
+    "4000": {
+     "amplitude": 1.0939890642856194,
+     "amplitude_running_max": 1.8787552845418336,
+     "energy_rel_err": 0.003527940816879349,
+     "position_err": 1.2335812573222227
+    },
+    "10000": {
+     "amplitude": 1.365095665631203,
+     "amplitude_running_max": 1.920153593567661,
+     "energy_rel_err": 0.010224373467052406,
+     "position_err": 0.3406918234997963
+    },
+    "40000": {
+     "amplitude": 1.1845257043408395,
+     "amplitude_running_max": 2.0824148978431265,
+     "energy_rel_err": 0.035932459544520734,
+     "position_err": 0.08280411660874297
+    },
+    "100000": {
+     "amplitude": 1.0732658807176707,
+     "amplitude_running_max": 2.337504073894356,
+     "energy_rel_err": 0.07574947209089822,
+     "position_err": 1.1714082024592056
+    }
+   },
+   "growth_per_step_measured": 2.3308051135891245e-06,
+   "measured_frequency_per_step": 0.2986608088991848
+  },
+  "sympnet_r0": {
+   "n_steps_declared": 100000,
+   "blowup_step": null,
+   "amplitude_0": 1.118033988749895,
+   "amplitude_running_max": 1.3074068252943056,
+   "checkpoints": {
+    "100": {
+     "amplitude": 1.1227942134763909,
+     "amplitude_running_max": 1.1254812327357253,
+     "energy_rel_err": 0.0009079632084569855,
+     "position_err": 0.008179229323388292
+    },
+    "400": {
+     "amplitude": 1.157090161189907,
+     "amplitude_running_max": 1.1579930936712464,
+     "energy_rel_err": 0.0002444646615806789,
+     "position_err": 0.08995536475333088
+    },
+    "1000": {
+     "amplitude": 1.0393450343074577,
+     "amplitude_running_max": 1.2336969771965356,
+     "energy_rel_err": 0.00029547339235880266,
+     "position_err": 0.1309584237524854
+    },
+    "4000": {
+     "amplitude": 1.0980828532856952,
+     "amplitude_running_max": 1.3071621558251496,
+     "energy_rel_err": 9.508727887308499e-05,
+     "position_err": 0.11732805188591953
+    },
+    "10000": {
+     "amplitude": 1.1719013456529375,
+     "amplitude_running_max": 1.3073644499250259,
+     "energy_rel_err": 0.0003563261745695989,
+     "position_err": 0.6614618700987663
+    },
+    "40000": {
+     "amplitude": 1.0006080590532682,
+     "amplitude_running_max": 1.3073988632790865,
+     "energy_rel_err": 0.0004835009454378092,
+     "position_err": 1.3555528022757224
+    },
+    "100000": {
+     "amplitude": 1.2404884250427037,
+     "amplitude_running_max": 1.3074068252943056,
+     "energy_rel_err": 0.0016174214504240947,
+     "position_err": 2.0898772089614472
+    }
+   },
+   "growth_per_step_measured": 9.367515445094629e-11,
+   "measured_frequency_per_step": 0.2999704950483266
+  },
+  "sympnet_r1": {
+   "n_steps_declared": 100000,
+   "blowup_step": null,
+   "amplitude_0": 1.118033988749895,
+   "amplitude_running_max": 1.6477530044591795,
+   "checkpoints": {
+    "100": {
+     "amplitude": 1.122005013126299,
+     "amplitude_running_max": 1.1252257175618214,
+     "energy_rel_err": 0.00035903203767451153,
+     "position_err": 0.013929058760420995
+    },
+    "400": {
+     "amplitude": 1.1038211400872557,
+     "amplitude_running_max": 1.1402219909594353,
+     "energy_rel_err": 0.0005956195628441519,
+     "position_err": 0.048106560729963666
+    },
+    "1000": {
+     "amplitude": 1.1984015167668667,
+     "amplitude_running_max": 1.2131228137301755,
+     "energy_rel_err": 0.00038266312822732296,
+     "position_err": 0.11518132342020594
+    },
+    "4000": {
+     "amplitude": 1.0002165444852635,
+     "amplitude_running_max": 1.647400034612038,
+     "energy_rel_err": 0.0003798898464026923,
+     "position_err": 0.25893692575923133
+    },
+    "10000": {
+     "amplitude": 1.415648155003329,
+     "amplitude_running_max": 1.647400034612038,
+     "energy_rel_err": 0.007343562221796329,
+     "position_err": 1.5557522891448352
+    },
+    "40000": {
+     "amplitude": 1.0664358982016324,
+     "amplitude_running_max": 1.647400034612038,
+     "energy_rel_err": 0.00584442103304883,
+     "position_err": 0.7063821123307324
+    },
+    "100000": {
+     "amplitude": 1.1157281074123022,
+     "amplitude_running_max": 1.6477530044591795,
+     "energy_rel_err": 6.416305116629939e-05,
+     "position_err": 0.5007665939567085
+    }
+   },
+   "growth_per_step_measured": 1.9183973378427126e-09,
+   "measured_frequency_per_step": 0.30007751195593224
+  },
+  "sympnet_r2": {
+   "n_steps_declared": 100000,
+   "blowup_step": null,
+   "amplitude_0": 1.118033988749895,
+   "amplitude_running_max": 1.260053308500096,
+   "checkpoints": {
+    "100": {
+     "amplitude": 1.1199056118248696,
+     "amplitude_running_max": 1.133759338571479,
+     "energy_rel_err": 0.0008668633507633583,
+     "position_err": 0.004508233102166773
+    },
+    "400": {
+     "amplitude": 1.072827409114476,
+     "amplitude_running_max": 1.1712328653331026,
+     "energy_rel_err": 7.222902150383348e-05,
+     "position_err": 0.10572448682327888
+    },
+    "1000": {
+     "amplitude": 1.2225242663957996,
+     "amplitude_running_max": 1.243398968485841,
+     "energy_rel_err": 0.000825092089249635,
+     "position_err": 0.1427754021819704
+    },
+    "4000": {
+     "amplitude": 1.0496621837811564,
+     "amplitude_running_max": 1.2600483262242383,
+     "energy_rel_err": 0.0002620511486743915,
+     "position_err": 0.21663543110199568
+    },
+    "10000": {
+     "amplitude": 1.1594241701721475,
+     "amplitude_running_max": 1.2600483262242383,
+     "energy_rel_err": 0.0013565589009967294,
+     "position_err": 0.6219440114489329
+    },
+    "40000": {
+     "amplitude": 1.0152171343668634,
+     "amplitude_running_max": 1.2600483262242383,
+     "energy_rel_err": 0.0008927434874907991,
+     "position_err": 1.717881650538836
+    },
+    "100000": {
+     "amplitude": 1.0996847445172377,
+     "amplitude_running_max": 1.260053308500096,
+     "energy_rel_err": 0.0012186205504556291,
+     "position_err": 0.38682516866206773
+    }
+   },
+   "growth_per_step_measured": 3.274364078632303e-11,
+   "measured_frequency_per_step": 0.30002224803534483
+  },
+  "sympnet_r3": {
+   "n_steps_declared": 100000,
+   "blowup_step": null,
+   "amplitude_0": 1.118033988749895,
+   "amplitude_running_max": 1.2440589148214867,
+   "checkpoints": {
+    "100": {
+     "amplitude": 1.1204645136086369,
+     "amplitude_running_max": 1.1280243848099347,
+     "energy_rel_err": 0.0007942755327219331,
+     "position_err": 0.01113777656248737
+    },
+    "400": {
+     "amplitude": 1.1671643184978218,
+     "amplitude_running_max": 1.1671643184978218,
+     "energy_rel_err": 0.0006162439511017137,
+     "position_err": 0.07372922379936414
+    },
+    "1000": {
+     "amplitude": 1.0564102747048352,
+     "amplitude_running_max": 1.2310020521833573,
+     "energy_rel_err": 0.0009565096139545481,
+     "position_err": 0.14639437046409137
+    },
+    "4000": {
+     "amplitude": 1.0940832314134825,
+     "amplitude_running_max": 1.2436614750140575,
+     "energy_rel_err": 0.0002025200512870695,
+     "position_err": 0.06696073269473116
+    },
+    "10000": {
+     "amplitude": 1.095854486130807,
+     "amplitude_running_max": 1.2439795850289441,
+     "energy_rel_err": 0.0012311098815422916,
+     "position_err": 0.07464767246026299
+    },
+    "40000": {
+     "amplitude": 1.0913493360214177,
+     "amplitude_running_max": 1.2439795850289441,
+     "energy_rel_err": 0.0003085895081469392,
+     "position_err": 0.5785093458110797
+    },
+    "100000": {
+     "amplitude": 1.0421986927337166,
+     "amplitude_running_max": 1.2440589148214867,
+     "energy_rel_err": 0.00041903175367263845,
+     "position_err": 1.0557841211485992
+    }
+   },
+   "growth_per_step_measured": 3.455262792354525e-10,
+   "measured_frequency_per_step": 0.29998493715394564
+  },
+  "pinn_r0": {
+   "n_steps_declared": 100000,
+   "blowup_step": null,
+   "amplitude_0": 1.118033988749895,
+   "amplitude_running_max": 1.247905966542219,
+   "checkpoints": {
+    "100": {
+     "amplitude": 1.146653068652222,
+     "amplitude_running_max": 1.1469229817802291,
+     "energy_rel_err": 0.011209415059354244,
+     "position_err": 0.38740969649276275
+    },
+    "400": {
+     "amplitude": 1.1438645648673422,
+     "amplitude_running_max": 1.1620787210002008,
+     "energy_rel_err": 0.001000719410432449,
+     "position_err": 1.4487220349380392
+    },
+    "1000": {
+     "amplitude": 1.0312537776108244,
+     "amplitude_running_max": 1.2467296222626678,
+     "energy_rel_err": 0.0005405524600499145,
+     "position_err": 1.7935828431414818
+    },
+    "4000": {
+     "amplitude": 1.11735599688258,
+     "amplitude_running_max": 1.2479058282654876,
+     "energy_rel_err": 0.004568255957345002,
+     "position_err": 0.9546020411894218
+    },
+    "10000": {
+     "amplitude": 1.0981185266419564,
+     "amplitude_running_max": 1.2479059637382557,
+     "energy_rel_err": 0.011248904887961597,
+     "position_err": 1.0298336895420124
+    },
+    "40000": {
+     "amplitude": 1.1291448302863538,
+     "amplitude_running_max": 1.247905966542219,
+     "energy_rel_err": 0.009102079938136942,
+     "position_err": 1.9984786140851258
+    },
+    "100000": {
+     "amplitude": 1.190723214111903,
+     "amplitude_running_max": 1.247905966542219,
+     "energy_rel_err": 0.009363627679409126,
+     "position_err": 1.3694358374517583
+    }
+   },
+   "growth_per_step_measured": 2.6531354208226012e-14,
+   "measured_frequency_per_step": 0.2965084464765227
+  },
+  "pinn_r1": {
+   "n_steps_declared": 100000,
+   "blowup_step": null,
+   "amplitude_0": 1.118033988749895,
+   "amplitude_running_max": 1.225381575580187,
+   "checkpoints": {
+    "100": {
+     "amplitude": 1.1309051717372458,
+     "amplitude_running_max": 1.1316367698344951,
+     "energy_rel_err": 0.004657094501952619,
+     "position_err": 0.16677264492128652
+    },
+    "400": {
+     "amplitude": 1.1714245777148653,
+     "amplitude_running_max": 1.1783005677886669,
+     "energy_rel_err": 0.00010936297763697311,
+     "position_err": 0.7051544210598681
+    },
+    "1000": {
+     "amplitude": 1.0574541861714843,
+     "amplitude_running_max": 1.2229795662394545,
+     "energy_rel_err": 0.00788626492613509,
+     "position_err": 0.9765146445351875
+    },
+    "4000": {
+     "amplitude": 1.0133968970454885,
+     "amplitude_running_max": 1.225381575580187,
+     "energy_rel_err": 0.021718336505121116,
+     "position_err": 1.7916272425366067
+    },
+    "10000": {
+     "amplitude": 1.1487016161931238,
+     "amplitude_running_max": 1.225381575580187,
+     "energy_rel_err": 0.017032363920697957,
+     "position_err": 1.854921310567533
+    },
+    "40000": {
+     "amplitude": 1.1520306771908466,
+     "amplitude_running_max": 1.225381575580187,
+     "energy_rel_err": 0.004316931066518759,
+     "position_err": 0.8466662177559316
+    },
+    "100000": {
+     "amplitude": 1.218902661480038,
+     "amplitude_running_max": 1.225381575580187,
+     "energy_rel_err": 0.009172768005238252,
+     "position_err": 1.2737442085005204
+    }
+   },
+   "growth_per_step_measured": 1.5065129843436863e-21,
+   "measured_frequency_per_step": 0.2989953708457124
+  },
+  "pinn_r2": {
+   "n_steps_declared": 100000,
+   "blowup_step": null,
+   "amplitude_0": 1.118033988749895,
+   "amplitude_running_max": 1.2810482603626339,
+   "checkpoints": {
+    "100": {
+     "amplitude": 1.1655643969696048,
+     "amplitude_running_max": 1.1655643969696048,
+     "energy_rel_err": 0.0008730417557851755,
+     "position_err": 0.24629680983081909
+    },
+    "400": {
+     "amplitude": 1.2131169273514177,
+     "amplitude_running_max": 1.2678451030998887,
+     "energy_rel_err": 0.002913290619498188,
+     "position_err": 1.1954028503807685
+    },
+    "1000": {
+     "amplitude": 1.0123288025538888,
+     "amplitude_running_max": 1.2810115648382263,
+     "energy_rel_err": 0.005136230668041586,
+     "position_err": 1.6488396015732418
+    },
+    "4000": {
+     "amplitude": 1.1477618183523386,
+     "amplitude_running_max": 1.2810482405871562,
+     "energy_rel_err": 0.0031911482392318335,
+     "position_err": 1.9690204112629812
+    },
+    "10000": {
+     "amplitude": 1.260880734664162,
+     "amplitude_running_max": 1.2810482405871562,
+     "energy_rel_err": 0.00601062135149788,
+     "position_err": 2.0395634857225136
+    },
+    "40000": {
+     "amplitude": 1.1230931794938943,
+     "amplitude_running_max": 1.2810482598274193,
+     "energy_rel_err": 0.0033396430041827685,
+     "position_err": 1.6820380151231746
+    },
+    "100000": {
+     "amplitude": 1.2797790006266032,
+     "amplitude_running_max": 1.2810482603626339,
+     "energy_rel_err": 0.0038588428868262525,
+     "position_err": 0.9970593778102459
+    }
+   },
+   "growth_per_step_measured": 5.871694240723394e-14,
+   "measured_frequency_per_step": 0.2976736828155802
+  },
+  "pinn_r3": {
+   "n_steps_declared": 100000,
+   "blowup_step": null,
+   "amplitude_0": 1.118033988749895,
+   "amplitude_running_max": 1.2656709069045917,
+   "checkpoints": {
+    "100": {
+     "amplitude": 1.218089064719548,
+     "amplitude_running_max": 1.2483607221839574,
+     "energy_rel_err": 0.005707102154710153,
+     "position_err": 0.5265713949741606
+    },
+    "400": {
+     "amplitude": 1.1124233375788415,
+     "amplitude_running_max": 1.265615544524771,
+     "energy_rel_err": 0.002076201132001243,
+     "position_err": 1.3489247165635105
+    },
+    "1000": {
+     "amplitude": 1.0537513615980425,
+     "amplitude_running_max": 1.2656708736612647,
+     "energy_rel_err": 0.009166488578473686,
+     "position_err": 1.879518388618826
+    },
+    "4000": {
+     "amplitude": 1.0368632744096884,
+     "amplitude_running_max": 1.2656708736612647,
+     "energy_rel_err": 0.0025036770696158506,
+     "position_err": 0.14732273941918705
+    },
+    "10000": {
+     "amplitude": 1.246776867976437,
+     "amplitude_running_max": 1.265670906367352,
+     "energy_rel_err": 0.012605674213091111,
+     "position_err": 0.4604147002148213
+    },
+    "40000": {
+     "amplitude": 1.0038786265125523,
+     "amplitude_running_max": 1.265670906367352,
+     "energy_rel_err": 0.0011009551851095534,
+     "position_err": 1.2020144899157907
+    },
+    "100000": {
+     "amplitude": 1.0561028570142346,
+     "amplitude_running_max": 1.2656709069045917,
+     "energy_rel_err": 0.009079866008958382,
+     "position_err": 1.7447103144756189
+    }
+   },
+   "growth_per_step_measured": 5.834687691871538e-15,
+   "measured_frequency_per_step": 0.2968558390247158
+  }
+ },
+ "predictors": {
+  "P1_log_median_rho_on_orbit": {
+   "spearman_with_measured_growth": 0.4755244755244755,
+   "ratio_predicted_over_measured": [
+    17078.275688093603,
+    2879.0714863264343,
+    78591.42946451939,
+    100606.1963981101,
+    NaN,
+    1499042.1768259453,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "ratio_median_over_growing_cells": 9978.673587210018,
+   "ratio_range_over_growing_cells": [
+    2879.0714863264343,
+    17078.275688093603
+   ]
+  },
+  "P2_log_max_rho_all_points": {
+   "spearman_with_measured_growth": 0.23776223776223776,
+   "ratio_predicted_over_measured": [
+    18692.662849572214,
+    3069.7291959237964,
+    85547.30000846818,
+    121514.61619231259,
+    NaN,
+    15980954.730599033,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "ratio_median_over_growing_cells": 10881.196022748005,
+   "ratio_range_over_growing_cells": [
+    3069.7291959237964,
+    18692.662849572214
+   ]
+  },
+  "P3_lyapunov_max_per_step": {
+   "spearman_with_measured_growth": 0.8811188811188811,
+   "ratio_predicted_over_measured": [
+    116.69604425150155,
+    27.63894296584242,
+    523.0377921783285,
+    759.3801770244861,
+    NaN,
+    656110.0462485253,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "ratio_median_over_growing_cells": 72.16749360867199,
+   "ratio_range_over_growing_cells": [
+    27.63894296584242,
+    116.69604425150155
+   ]
+  },
+  "P4_lyapunov_extrapolated": {
+   "spearman_with_measured_growth": 0.9370629370629371,
+   "ratio_predicted_over_measured": [
+    47.50911579698034,
+    12.14318031667268,
+    148.32650164942936,
+    205.03520106556024,
+    NaN,
+    239364.20763593828,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "ratio_median_over_growing_cells": 29.82614805682651,
+   "ratio_range_over_growing_cells": [
+    12.14318031667268,
+    47.50911579698034
+   ]
+  },
+  "blowup_calls": [
+   {
+    "cell": "hnn_r1",
+    "actual_blowup_step": 46327,
+    "predicted_step_P1": 31.486425196659905,
+    "predicted_step_P2": 29.530835850415542,
+    "predicted_step_P3": 3279.8529633381986,
+    "predicted_step_P4": 7465.23288183313
+   }
+  ],
+  "blowup_note": "The predicted step is log(10^3 / |w_0|) divided by the predictor.  A predictor that had the rate right would land on the actual step; the ones here are short by three to four orders of magnitude, which is another way of saying that none of them is the growth rate of the state."
+ },
+ "frequency_channel": {
+  "exact_per_step": 0.3,
+  "rows": [
+   {
+    "cell": "hnn_r0",
+    "arg_from_spectrum": 0.0,
+    "spectrum_has_a_complex_pair": false,
+    "frequency_measured_on_run": 0.2982603734490111,
+    "arg_minus_measured": -0.2982603734490111,
+    "relative_frequency_error_vs_exact": -0.0057987551699630515,
+    "steps_to_pi_of_phase_drift": 1805.9006122917074
+   },
+   {
+    "cell": "hnn_r1",
+    "arg_from_spectrum": 0.0010226899216801992,
+    "spectrum_has_a_complex_pair": true,
+    "frequency_measured_on_run": 0.2979497134375549,
+    "arg_minus_measured": -0.2969270235158747,
+    "relative_frequency_error_vs_exact": -0.0068342885414836765,
+    "steps_to_pi_of_phase_drift": 1532.2700305089234
+   },
+   {
+    "cell": "hnn_r2",
+    "arg_from_spectrum": 0.0,
+    "spectrum_has_a_complex_pair": false,
+    "frequency_measured_on_run": 0.29760763264927964,
+    "arg_minus_measured": -0.29760763264927964,
+    "relative_frequency_error_vs_exact": -0.007974557835734494,
+    "steps_to_pi_of_phase_drift": 1313.173184980915
+   },
+   {
+    "cell": "hnn_r3",
+    "arg_from_spectrum": 0.0,
+    "spectrum_has_a_complex_pair": false,
+    "frequency_measured_on_run": 0.2986608088991848,
+    "arg_minus_measured": -0.2986608088991848,
+    "relative_frequency_error_vs_exact": -0.00446397033605069,
+    "steps_to_pi_of_phase_drift": 2345.888239309094
+   },
+   {
+    "cell": "sympnet_r0",
+    "arg_from_spectrum": 0.2667734875770142,
+    "spectrum_has_a_complex_pair": true,
+    "frequency_measured_on_run": 0.2999704950483266,
+    "arg_minus_measured": -0.033197007471312434,
+    "relative_frequency_error_vs_exact": -9.834983891121585e-05,
+    "steps_to_pi_of_phase_drift": 106476.79373851775
+   },
+   {
+    "cell": "sympnet_r1",
+    "arg_from_spectrum": 0.26355026714685403,
+    "spectrum_has_a_complex_pair": true,
+    "frequency_measured_on_run": 0.30007751195593224,
+    "arg_minus_measured": -0.03652724480907821,
+    "relative_frequency_error_vs_exact": 0.0002583731864408412,
+    "steps_to_pi_of_phase_drift": 40530.42676842827
+   },
+   {
+    "cell": "sympnet_r2",
+    "arg_from_spectrum": 0.2690397846172405,
+    "spectrum_has_a_complex_pair": true,
+    "frequency_measured_on_run": 0.30002224803534483,
+    "arg_minus_measured": -0.030982463418104345,
+    "relative_frequency_error_vs_exact": 7.416011781613552e-05,
+    "steps_to_pi_of_phase_drift": 141207.64395128185
+   },
+   {
+    "cell": "sympnet_r3",
+    "arg_from_spectrum": 0.26348301503398375,
+    "spectrum_has_a_complex_pair": true,
+    "frequency_measured_on_run": 0.29998493715394564,
+    "arg_minus_measured": -0.036501922119961894,
+    "relative_frequency_error_vs_exact": -5.020948684782608e-05,
+    "steps_to_pi_of_phase_drift": 208565.67492323183
+   },
+   {
+    "cell": "pinn_r0",
+    "arg_from_spectrum": 0.14862513143489092,
+    "spectrum_has_a_complex_pair": true,
+    "frequency_measured_on_run": 0.2965084464765227,
+    "arg_minus_measured": -0.14788331504163177,
+    "relative_frequency_error_vs_exact": -0.011638511744924326,
+    "steps_to_pi_of_phase_drift": 899.7692953768692
+   },
+   {
+    "cell": "pinn_r1",
+    "arg_from_spectrum": 0.11534164293161553,
+    "spectrum_has_a_complex_pair": true,
+    "frequency_measured_on_run": 0.2989953708457124,
+    "arg_minus_measured": -0.1836537279140969,
+    "relative_frequency_error_vs_exact": -0.0033487638476252064,
+    "steps_to_pi_of_phase_drift": 3127.11674768952
+   },
+   {
+    "cell": "pinn_r2",
+    "arg_from_spectrum": 0.13073600355152948,
+    "spectrum_has_a_complex_pair": true,
+    "frequency_measured_on_run": 0.2976736828155802,
+    "arg_minus_measured": -0.16693767926405073,
+    "relative_frequency_error_vs_exact": -0.007754390614732598,
+    "steps_to_pi_of_phase_drift": 1350.45757071745
+   },
+   {
+    "cell": "pinn_r3",
+    "arg_from_spectrum": 0.06849214877473868,
+    "spectrum_has_a_complex_pair": true,
+    "frequency_measured_on_run": 0.2968558390247158,
+    "arg_minus_measured": -0.2283636902499771,
+    "relative_frequency_error_vs_exact": -0.010480536584280647,
+    "steps_to_pi_of_phase_drift": 999.1831456103585
+   },
+   {
+    "cell": "boris",
+    "arg_from_spectrum": 0.2977798952189945,
+    "spectrum_has_a_complex_pair": true,
+    "frequency_measured_on_run": 0.2977798952189941,
+    "arg_minus_measured": 3.885780586188048e-16,
+    "relative_frequency_error_vs_exact": -0.007400349270019572,
+    "steps_to_pi_of_phase_drift": 1415.0650367801197
+   }
+  ],
+  "boris_arg_minus_measured": 3.885780586188048e-16,
+  "worst_arg_minus_measured_learned": 0.2986608088991848,
+  "n_learned_cells_with_no_complex_pair": 3,
+  "note": "On the Boris scheme the argument of the gyration eigenvalue and the phase advance measured on the run agree to 4e-16, which is parker1991's 2 arctan(Omega h / 2) recovered from a numerical Jacobian.  On the learned maps they do not agree at all: the four HNN cells have no complex eigenvalue on the orbit whatsoever -- all four eigenvalues are real, in reciprocal pairs -- and the SympNet's complex pair sits at 0.263 to 0.269 where the run advances by 0.29997 per step.  The Jacobian rotates the tangent space; only for a linear map is that the rotation of the state.  So the argument channel fails to transfer from the linear case for exactly the reason the modulus channel does, and the frequency error quoted here and in Section 7 of the manuscript has to come from the run."
+ },
+ "verdict": {
+  "n_cells": 12,
+  "n_bounded_over_1e5_steps": 10,
+  "n_blown_up": 1,
+  "cells_that_grew": [
+   "hnn_r0",
+   "hnn_r1"
+  ],
+  "sympnet_max_rho_over_all_points": 1.0509059808451056,
+  "sympnet_min_lambda_max_per_step": 0.001125452375397868,
+  "sympnet_min_lambda_extrapolated": 0.00033316069393224515,
+  "sympnet_bounded": true,
+  "note": "Every SympNet cell has a spectral radius above one at almost every point and a positive leading Lyapunov exponent, and every SympNet run stays bounded for 10^5 steps.  The inference that carried in Wave 10 -- eigenvalue off the circle, therefore exponential blow-up -- carried there because SympMat is linear, and does not carry to a nonlinear symplectic architecture."
+ },
+ "cells": [
+  {
+   "cell": "hnn_r0",
+   "arch": "hnn",
+   "rep": 0,
+   "P1_log_median_rho_on_orbit": 0.3078665957593757,
+   "P2_log_max_rho_all_points": 0.3369688241528759,
+   "P3_lyapunov_max_per_step": 0.0021036558103662774,
+   "P4_lyapunov_extrapolated": 0.0008564371494571548,
+   "g_measured_growth_per_step": 1.8026796228263833e-05,
+   "blowup_step": null,
+   "amplitude_running_max": 660.3972235265985,
+   "final_position_error": 558.6028432865792,
+   "final_energy_rel_err": 10962.422297572293,
+   "median_rotation_arg_on_orbit": 0.0,
+   "measured_frequency_per_step": 0.2982603734490111
+  },
+  {
+   "cell": "hnn_r1",
+   "arch": "hnn",
+   "rep": 1,
+   "P1_log_median_rho_on_orbit": 0.21584487476355285,
+   "P2_log_max_rho_all_points": 0.230138541887205,
+   "P3_lyapunov_max_per_step": 0.0020721000542682716,
+   "P4_lyapunov_extrapolated": 0.0009103779628715603,
+   "g_measured_growth_per_step": 7.497030754139461e-05,
+   "blowup_step": 46327,
+   "amplitude_running_max": 999.9898402080458,
+   "final_position_error": 747.3915693150692,
+   "final_energy_rel_err": 65557.77996288311,
+   "median_rotation_arg_on_orbit": 0.0010226899216801992,
+   "measured_frequency_per_step": 0.2979497134375549
+  },
+  {
+   "cell": "hnn_r2",
+   "arch": "hnn",
+   "rep": 2,
+   "P1_log_median_rho_on_orbit": 0.27267514519010133,
+   "P2_log_max_rho_all_points": 0.29680873104568195,
+   "P3_lyapunov_max_per_step": 0.0018146941326028711,
+   "P4_lyapunov_extrapolated": 0.0005146229130627671,
+   "g_measured_growth_per_step": 3.469527746828963e-06,
+   "blowup_step": null,
+   "amplitude_running_max": 2.242626049903478,
+   "final_position_error": 1.0707434901845814,
+   "final_energy_rel_err": 0.14744851557142313,
+   "median_rotation_arg_on_orbit": 0.0,
+   "measured_frequency_per_step": 0.29760763264927964
+  },
+  {
+   "cell": "hnn_r3",
+   "arch": "hnn",
+   "rep": 3,
+   "P1_log_median_rho_on_orbit": 0.23449343702346678,
+   "P2_log_max_rho_all_points": 0.28322688879686203,
+   "P3_lyapunov_max_per_step": 0.001769967199766887,
+   "P4_lyapunov_extrapolated": 0.00047789709510938214,
+   "g_measured_growth_per_step": 2.3308051135891245e-06,
+   "blowup_step": null,
+   "amplitude_running_max": 2.337504073894356,
+   "final_position_error": 1.1714082024592056,
+   "final_energy_rel_err": 0.07574947209089822,
+   "median_rotation_arg_on_orbit": 0.0,
+   "measured_frequency_per_step": 0.2986608088991848
+  },
+  {
+   "cell": "sympnet_r0",
+   "arch": "sympnet",
+   "rep": 0,
+   "P1_log_median_rho_on_orbit": 6.094880155940954e-11,
+   "P2_log_max_rho_all_points": 0.03820676168871425,
+   "P3_lyapunov_max_per_step": 0.001125452375397868,
+   "P4_lyapunov_extrapolated": 0.00033316069393224515,
+   "g_measured_growth_per_step": 9.367515445094629e-11,
+   "blowup_step": null,
+   "amplitude_running_max": 1.3074068252943056,
+   "final_position_error": 2.0898772089614472,
+   "final_energy_rel_err": 0.0016174214504240947,
+   "median_rotation_arg_on_orbit": 0.2667734875770142,
+   "measured_frequency_per_step": 0.2999704950483266
+  },
+  {
+   "cell": "sympnet_r1",
+   "arch": "sympnet",
+   "rep": 1,
+   "P1_log_median_rho_on_orbit": 0.0028757585213368382,
+   "P2_log_max_rho_all_points": 0.03065782101136609,
+   "P3_lyapunov_max_per_step": 0.00125867976605503,
+   "P4_lyapunov_extrapolated": 0.0004591956587036143,
+   "g_measured_growth_per_step": 1.9183973378427126e-09,
+   "blowup_step": null,
+   "amplitude_running_max": 1.6477530044591795,
+   "final_position_error": 0.5007665939567085,
+   "final_energy_rel_err": 6.416305116629939e-05,
+   "median_rotation_arg_on_orbit": 0.26355026714685403,
+   "measured_frequency_per_step": 0.30007751195593224
+  },
+  {
+   "cell": "sympnet_r2",
+   "arch": "sympnet",
+   "rep": 2,
+   "P1_log_median_rho_on_orbit": 4.359823613147457e-11,
+   "P2_log_max_rho_all_points": 0.02136052538966331,
+   "P3_lyapunov_max_per_step": 0.0012200577832958508,
+   "P4_lyapunov_extrapolated": 0.0004691686803228043,
+   "g_measured_growth_per_step": 3.274364078632303e-11,
+   "blowup_step": null,
+   "amplitude_running_max": 1.260053308500096,
+   "final_position_error": 0.38682516866206773,
+   "final_energy_rel_err": 0.0012186205504556291,
+   "median_rotation_arg_on_orbit": 0.2690397846172405,
+   "measured_frequency_per_step": 0.30002224803534483
+  },
+  {
+   "cell": "sympnet_r3",
+   "arch": "sympnet",
+   "rep": 3,
+   "P1_log_median_rho_on_orbit": 0.0016243707308802784,
+   "P2_log_max_rho_all_points": 0.049652631038035556,
+   "P3_lyapunov_max_per_step": 0.0012488817785090652,
+   "P4_lyapunov_extrapolated": 0.000458983801877142,
+   "g_measured_growth_per_step": 3.455262792354525e-10,
+   "blowup_step": null,
+   "amplitude_running_max": 1.2440589148214867,
+   "final_position_error": 1.0557841211485992,
+   "final_energy_rel_err": 0.00041903175367263845,
+   "median_rotation_arg_on_orbit": 0.26348301503398375,
+   "measured_frequency_per_step": 0.29998493715394564
+  },
+  {
+   "cell": "pinn_r0",
+   "arch": "pinn",
+   "rep": 0,
+   "P1_log_median_rho_on_orbit": 0.00812475008082868,
+   "P2_log_max_rho_all_points": 0.22249906732362104,
+   "P3_lyapunov_max_per_step": 0.00131376816563328,
+   "P4_lyapunov_extrapolated": 7.785577017555001e-06,
+   "g_measured_growth_per_step": 2.6531354208226012e-14,
+   "blowup_step": null,
+   "amplitude_running_max": 1.247905966542219,
+   "final_position_error": 1.3694358374517583,
+   "final_energy_rel_err": 0.009363627679409126,
+   "median_rotation_arg_on_orbit": 0.14862513143489092,
+   "measured_frequency_per_step": 0.2965084464765227
+  },
+  {
+   "cell": "pinn_r1",
+   "arch": "pinn",
+   "rep": 1,
+   "P1_log_median_rho_on_orbit": 0.009769641437964886,
+   "P2_log_max_rho_all_points": 0.19912497814608868,
+   "P3_lyapunov_max_per_step": -0.005162557020506659,
+   "P4_lyapunov_extrapolated": -0.006349694132088666,
+   "g_measured_growth_per_step": 1.5065129843436863e-21,
+   "blowup_step": null,
+   "amplitude_running_max": 1.225381575580187,
+   "final_position_error": 1.2737442085005204,
+   "final_energy_rel_err": 0.009172768005238252,
+   "median_rotation_arg_on_orbit": 0.11534164293161553,
+   "measured_frequency_per_step": 0.2989953708457124
+  },
+  {
+   "cell": "pinn_r2",
+   "arch": "pinn",
+   "rep": 2,
+   "P1_log_median_rho_on_orbit": 0.002736849328294118,
+   "P2_log_max_rho_all_points": 0.25088039136854323,
+   "P3_lyapunov_max_per_step": 7.880039909200168e-05,
+   "P4_lyapunov_extrapolated": -3.9949787212045956e-05,
+   "g_measured_growth_per_step": 5.871694240723394e-14,
+   "blowup_step": null,
+   "amplitude_running_max": 1.2810482603626339,
+   "final_position_error": 0.9970593778102459,
+   "final_energy_rel_err": 0.0038588428868262525,
+   "median_rotation_arg_on_orbit": 0.13073600355152948,
+   "measured_frequency_per_step": 0.2976736828155802
+  },
+  {
+   "cell": "pinn_r3",
+   "arch": "pinn",
+   "rep": 3,
+   "P1_log_median_rho_on_orbit": 0.01658614691603974,
+   "P2_log_max_rho_all_points": 0.3029546051549527,
+   "P3_lyapunov_max_per_step": -8.708093084429176e-06,
+   "P4_lyapunov_extrapolated": -1.2178798444669737e-06,
+   "g_measured_growth_per_step": 5.834687691871538e-15,
+   "blowup_step": null,
+   "amplitude_running_max": 1.2656709069045917,
+   "final_position_error": 1.7447103144756189,
+   "final_energy_rel_err": 0.009079866008958382,
+   "median_rotation_arg_on_orbit": 0.06849214877473868,
+   "measured_frequency_per_step": 0.2968558390247158
+  }
+ ],
+ "ranking": {
+  "P1_log_median_rho_on_orbit": {
+   "ranks_of_the_cells_that_grew": [
+    1,
+    4
+   ],
+   "best_possible": [
+    1,
+    2
+   ],
+   "ordering": [
+    "hnn_r0",
+    "hnn_r2",
+    "hnn_r3",
+    "hnn_r1",
+    "pinn_r3",
+    "pinn_r1",
+    "pinn_r0",
+    "sympnet_r1",
+    "pinn_r2",
+    "sympnet_r3",
+    "sympnet_r0",
+    "sympnet_r2"
+   ]
+  },
+  "P2_log_max_rho_all_points": {
+   "ranks_of_the_cells_that_grew": [
+    1,
+    6
+   ],
+   "best_possible": [
+    1,
+    2
+   ],
+   "ordering": [
+    "hnn_r0",
+    "pinn_r3",
+    "hnn_r2",
+    "hnn_r3",
+    "pinn_r2",
+    "hnn_r1",
+    "pinn_r0",
+    "pinn_r1",
+    "sympnet_r3",
+    "sympnet_r0",
+    "sympnet_r1",
+    "sympnet_r2"
+   ]
+  },
+  "P3_lyapunov_max_per_step": {
+   "ranks_of_the_cells_that_grew": [
+    1,
+    2
+   ],
+   "best_possible": [
+    1,
+    2
+   ],
+   "ordering": [
+    "hnn_r0",
+    "hnn_r1",
+    "hnn_r2",
+    "hnn_r3",
+    "pinn_r0",
+    "sympnet_r1",
+    "sympnet_r3",
+    "sympnet_r2",
+    "sympnet_r0",
+    "pinn_r2",
+    "pinn_r3",
+    "pinn_r1"
+   ]
+  },
+  "P4_lyapunov_extrapolated": {
+   "ranks_of_the_cells_that_grew": [
+    1,
+    2
+   ],
+   "best_possible": [
+    1,
+    2
+   ],
+   "ordering": [
+    "hnn_r1",
+    "hnn_r0",
+    "hnn_r2",
+    "hnn_r3",
+    "sympnet_r2",
+    "sympnet_r1",
+    "sympnet_r3",
+    "sympnet_r0",
+    "pinn_r0",
+    "pinn_r3",
+    "pinn_r2",
+    "pinn_r1"
+   ]
+  },
+  "note": "Two of the twelve cells grew.  A predictor that put them first and second would have ranked perfectly; the probability of that by chance is 1/66. The leading Lyapunov exponent does it; the pointwise spectral radius does not."
+ }
+}

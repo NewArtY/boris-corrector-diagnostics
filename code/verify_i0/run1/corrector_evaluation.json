@@ -1,0 +1,22 @@
+{
+  "boris": {
+    "energy_err_median_2nd_half": 1.2458603868559237e-06,
+    "energy_err_max": 2.4840047152530076e-06,
+    "pos_err_final": 0.8730451840867831,
+    "pos_err_rms": 0.41695525361490254
+  },
+  "corrector_raw": {
+    "energy_err_median_2nd_half": 0.0002544608272756488,
+    "energy_err_max": 0.0003107158827286849,
+    "pos_err_final": 0.00926410050452273,
+    "pos_err_rms": 0.003596908372027636
+  },
+  "corrector_projected": {
+    "energy_err_median_2nd_half": 1.6374749727154914e-05,
+    "energy_err_max": 2.185001306231893e-05,
+    "pos_err_final": 0.00930243501239169,
+    "pos_err_rms": 0.003539093656579478
+  },
+  "physical_signal_median": 0.0007497069637355525,
+  "traj_gain_projected": 117.81413380788808
+}

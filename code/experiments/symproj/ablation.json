@@ -1,0 +1,37 @@
+{
+  "config": {
+    "dt": 0.3,
+    "tau": 120000.0,
+    "n_gyrations": 100000,
+    "n_steps": 2094395,
+    "base": "shipped"
+  },
+  "full correction": {
+    "mode": "proj",
+    "zero_dr": false,
+    "zero_dv": false,
+    "envelope_exponent": 1.539542116411257,
+    "energy_err_max_1e5": 35.15863412211816
+  },
+  "position correction removed": {
+    "mode": "proj",
+    "zero_dr": true,
+    "zero_dv": false,
+    "envelope_exponent": 1.7764635463932799,
+    "energy_err_max_1e5": 1.8873266885621829
+  },
+  "velocity correction removed": {
+    "mode": "proj",
+    "zero_dr": false,
+    "zero_dv": true,
+    "envelope_exponent": 1.0724678367419893,
+    "energy_err_max_1e5": 0.6133801749264179
+  },
+  "symmetric projection, position correction removed": {
+    "mode": "sym",
+    "zero_dr": true,
+    "zero_dv": false,
+    "envelope_exponent": 1.7087790935003837,
+    "energy_err_max_1e5": 2.0944184338804495
+  }
+}

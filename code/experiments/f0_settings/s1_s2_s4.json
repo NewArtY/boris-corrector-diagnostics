@@ -1,0 +1,162 @@
+{
+ "meta": {
+  "t_final": 120.0,
+  "dt_work": 0.3,
+  "physical_signal": 0.0026990763183538657,
+  "hybrid_ref": {
+   "pos_err_rms": 0.003469,
+   "energy_err_median_2nd_half": 1.639e-05,
+   "flops": 45600000.0,
+   "source": "experiments/classical/verdict.json"
+  }
+ },
+ "ignoring_perturbation": {
+  "pos_err_rms": 0.00980688016834048,
+  "pos_err_final": 0.013366792088653915,
+  "energy_err_median_2nd_half": 0.0019436431146380162,
+  "energy_err_max": 0.005698152120297673,
+  "flops": 109200
+ },
+ "S1": {
+  "description": "field known only on a coarse time grid",
+  "attack": "cubic spline through the same samples + vps4",
+  "nodes": [
+   {
+    "pos_err_rms": 0.0018876895040509487,
+    "pos_err_final": 0.0007862835900739792,
+    "energy_err_median_2nd_half": 0.0005583784714110474,
+    "energy_err_max": 0.0031595230544904096,
+    "flops": 109200,
+    "h_node": 2.0,
+    "n_nodes": 61
+   },
+   {
+    "pos_err_rms": 0.0001962947881741088,
+    "pos_err_final": 0.00027991376216147956,
+    "energy_err_median_2nd_half": 0.00014069432666063975,
+    "energy_err_max": 0.0006942915146556095,
+    "flops": 109200,
+    "h_node": 1.0,
+    "n_nodes": 121
+   },
+   {
+    "pos_err_rms": 5.7907075813954276e-05,
+    "pos_err_final": 2.7920202301035302e-05,
+    "energy_err_median_2nd_half": 5.24153999759136e-06,
+    "energy_err_max": 4.753518552425007e-05,
+    "flops": 109200,
+    "h_node": 0.5,
+    "n_nodes": 241
+   },
+   {
+    "pos_err_rms": 5.386132793428472e-05,
+    "pos_err_final": 2.692094727459668e-05,
+    "energy_err_median_2nd_half": 1.424351378176425e-06,
+    "energy_err_max": 4.659001955231723e-06,
+    "flops": 109200,
+    "h_node": 0.25,
+    "n_nodes": 481
+   }
+  ],
+  "best": {
+   "pos_err_rms": 5.386132793428472e-05,
+   "pos_err_final": 2.692094727459668e-05,
+   "energy_err_median_2nd_half": 1.424351378176425e-06,
+   "energy_err_max": 4.659001955231723e-06,
+   "flops": 109200,
+   "h_node": 0.25,
+   "n_nodes": 481
+  }
+ },
+ "S2": {
+  "description": "deterministic quasi-periodic dB, 9 free parameters",
+  "attack": "least-squares identification of the tones + vps4",
+  "fit_residual_rms": 7.043184781207005e-12,
+  "n_params": 9,
+  "fitted": {
+   "amps": [
+    0.001999999999987719,
+    -0.0012999999999761735,
+    -0.0007999999997134043
+   ],
+   "freqs": [
+    0.9136999999996738,
+    1.6179999999980719,
+    2.718300000315647
+   ],
+   "phases": [
+    0.3000000000257869,
+    -1.4415926534326922,
+    -0.24159267836157872
+   ]
+  },
+  "true": {
+   "amps": [
+    0.002,
+    0.0013,
+    0.0008
+   ],
+   "freqs": [
+    0.9137,
+    1.618,
+    2.7183
+   ],
+   "phases": [
+    0.3,
+    1.7,
+    2.9
+   ]
+  },
+  "score": {
+   "pos_err_rms": 5.33604484192202e-05,
+   "pos_err_final": 2.711164851767522e-05,
+   "energy_err_median_2nd_half": 9.119944062163654e-07,
+   "energy_err_max": 2.2645421660083542e-06,
+   "flops": 109200
+  }
+ },
+ "S4": {
+  "description": "large step, field fully known",
+  "attack": "vps4 subcycled to the hybrid's flop budget",
+  "runs": [
+   {
+    "pos_err_rms": 6.214374843610975e-12,
+    "pos_err_final": 1.0617043698342793e-11,
+    "energy_err_median_2nd_half": 1.0151879337172431e-12,
+    "energy_err_max": 5.923150858677673e-12,
+    "dt_outer": 1.0,
+    "subcycles": 417,
+    "dt_sub": 0.002398081534772182,
+    "flops": 13660920,
+    "hybrid_budget": 13690920.0
+   },
+   {
+    "pos_err_rms": 7.005609517792009e-12,
+    "pos_err_final": 9.365317740240147e-12,
+    "energy_err_median_2nd_half": 1.0902390101819037e-12,
+    "energy_err_max": 6.024181153918562e-12,
+    "dt_outer": 2.0,
+    "subcycles": 417,
+    "dt_sub": 0.004796163069544364,
+    "flops": 6830460,
+    "hybrid_budget": 6845460.0
+   },
+   {
+    "pos_err_rms": 1.8527119607611155e-11,
+    "pos_err_final": 4.221468793742065e-12,
+    "energy_err_median_2nd_half": 1.0336176359260207e-12,
+    "energy_err_max": 5.9002802643703944e-12,
+    "dt_outer": 3.0,
+    "subcycles": 417,
+    "dt_sub": 0.007194244604316547,
+    "flops": 4553640,
+    "hybrid_budget": 4563640.0
+   }
+  ],
+  "known_competitor": {
+   "ref": "Bigi, Spies, Ceriotti, arXiv:2508.01068",
+   "what": "learned generating function for large-step molecular dynamics; trained from scratch on autonomous systems",
+   "why_it_matters": "direct precedent for a learned construction in exactly the large-step regime S4 probes. Not reimplemented (out of budget, and S4 is expected to die on flops regardless), but any wall-clock-only survival of S4 must be argued against this work, not only against filtered Boris."
+  }
+ }
+}
