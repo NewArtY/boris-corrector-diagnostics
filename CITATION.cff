@@ -10,7 +10,7 @@ version: "1.0.0"
 date-released: "2026-09-03"
 license: MIT
 repository-code: "https://github.com/NewArtY/boris-corrector-diagnostics"
-doi: "<Zenodo concept DOI>"
+doi: "10.5281/zenodo.22285693"
 
 authors:
   - family-names: "Akintsov"
