@@ -10,7 +10,8 @@ driver is `code/repro.py`.
 | trained defect-corrector checkpoints | `code/checkpoints/` |
 | the four figure scripts | `code/figures/` |
 | one-command reproduction | `code/repro.py` |
-| how to cite | `code/CITATION.cff` |
+| how to cite | `CITATION.cff` (repository root) |
+| Zenodo deposit metadata | `.zenodo.json` (repository root) |
 
 ## Two things worth knowing before you run it
 
@@ -31,8 +32,9 @@ produced them are here.
 
 The first version of this work, titled "Separating physical particle heating from
 numerical drift in non-stationary magnetic fields", was withdrawn. Its LaTeX
-source and figures are not part of this branch: its figures are not the figures
-of the present paper and its numbers are not the numbers of the present paper.
-They remain in the history before the September 2026 commit that untracked them.
+source and figures are not part of this repository and are not in its history:
+its figures are not the figures of the present paper and its numbers are not the
+numbers of the present paper. They exist only in the authors' local working copy,
+which is where they belong.
 
 Licence: MIT, see `code/LICENSE`.

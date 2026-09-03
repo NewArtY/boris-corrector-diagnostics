@@ -104,7 +104,9 @@ checkpoint and import no PyTorch. PyTorch is needed for `data` and `train`.
 repro.py                    the build.  Run this.
 common.py                   shared constants, global seed, paths
 environment.yml             pinned environment (also requirements-lock.txt)
-CITATION.cff  LICENSE       citation metadata; MIT, four rightsholders
+LICENSE                     MIT, four rightsholders.  Citation metadata is
+                            CITATION.cff one level up, in the repository root,
+                            which is where GitHub and Zenodo read it from
 
 figures_paper/              THE FOUR FIGURES OF THE PAPER
   paper_style.py              shared style: text-width artwork, Okabe-Ito,
@@ -337,17 +339,27 @@ Two further caveats a reader of the data files should know:
 experiments load them and would otherwise need a retraining run before anything
 could be reproduced at all. (The four figure scripts do not: they read the
 committed JSON and NPZ, which is why the `figures` stage needs no PyTorch.)
-**On publication the checkpoints and datasets move to Zenodo**
-and the repository keeps the code and the JSON; the DOI goes into
-`CITATION.cff` and into the paper's data availability statement, both of which
-carry a placeholder until then.
+**The checkpoints and datasets stay in this repository and are also archived in
+the Zenodo deposit.** An earlier revision of this file planned to move them out
+on publication; that was reversed, because `checkpoints/` is 1.1 MB over eight
+files and a reproduction bundle whose weights live somewhere else stops
+reproducing on the day that somewhere else moves. Zenodo is the archival copy,
+not a replacement. The DOI goes into `CITATION.cff` and into the paper's data
+availability statement, both of which carry a placeholder until the deposit is
+made.
 
 ## License and citation
 
-MIT, four rightsholders — see `LICENSE`. If you use this software, cite both
-the software and the paper; `CITATION.cff` carries both records, with the
-Zenodo DOI, the repository URL and the release date left as placeholders until
-submission.
+MIT, four rightsholders — see `LICENSE`. Citation metadata is `CITATION.cff` in
+the repository root, and the Zenodo deposit is described by `.zenodo.json` next
+to it.
+
+**Cite the software, not a paper.** The manuscript has not been submitted and no
+journal has been chosen, so `CITATION.cff` deliberately carries no
+`preferred-citation` block: an earlier revision named a journal and a year, which
+asserted something untrue about the record. The block is restored on acceptance,
+together with the real journal, year and article DOI. Until the deposit is made,
+the repository URL, the Zenodo concept DOI and the release date are placeholders.
 
 ## If a figure script is edited
 

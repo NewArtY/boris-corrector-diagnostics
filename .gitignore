@@ -134,7 +134,7 @@ $RECYCLE.BIN/
 # figures of the present paper and its numbers are not the numbers of the
 # present paper.  Nothing under code/ reads it, so it adds nothing reproducible
 # and a reader who opens it finds a different title over different figures.
-# Untracked in 2026-09; it remains in the history before that commit, which is
-# deliberate — several reports cite commit hashes, and rewriting the history
-# would break those references.
+# It is not in the history either: the repository was re-initialised in
+# September 2026 with a single initial commit, deliberately, so that neither the
+# withdrawn text nor any credential can be recovered from an earlier revision.
 latex/

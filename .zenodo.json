@@ -1,0 +1,46 @@
+{
+  "upload_type": "software",
+  "title": "Two-channel diagnostics for charged-particle integrators: reproduction bundle (v1.0.0)",
+  "version": "1.0.0",
+  "language": "eng",
+  "access_right": "open",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Akintsov, N. S.",
+      "orcid": "0000-0002-1040-1292",
+      "affiliation": "School of Artificial Intelligence and Computer Science, Nantong University, Nantong 226019, China"
+    },
+    {
+      "name": "Nevecheria, A. P.",
+      "orcid": "0000-0001-6736-4691",
+      "affiliation": "Department of Mathematical and Computer Methods, Kuban State University, Krasnodar 350040, Russia"
+    },
+    {
+      "name": "Andreev, S. N.",
+      "orcid": "0000-0003-3588-2894",
+      "affiliation": "Joint-Stock Company \"Center for Research and Development\", Moscow 101000, Russia"
+    },
+    {
+      "name": "Qin, Qing-Hua",
+      "orcid": "0000-0003-0948-784X",
+      "affiliation": "Institute of Advanced Interdisciplinary Technology, Shenzhen MSU-BIT University, Shenzhen 518172, China"
+    }
+  ],
+  "description": "<p>Reproduction bundle for the study of how a <strong>readout floor</strong> can hide a secular growth of the energy error from an absolute-level diagnostic.</p><p>It contains the experiment scripts that produce every measured number in the manuscript, the committed JSON and NPZ outputs of those scripts, the four figure scripts, the trained defect-corrector checkpoints and a single-command reproduction driver (<code>code/repro.py</code>).</p><p>The physical setting is a charged particle in a non-stationary magnetic field, integrated by the Boris scheme, by a learned defect corrector with a hard speed-constraint projection, by three external machine-learning architectures (Hamiltonian neural network, symplectic network, symplectic physics-informed network) and by five classical schemes: a staggered Boris variant, two volume-preserving splittings of second and fourth order, the implicit midpoint rule and a two-stage Gauss-Legendre method.</p><p>The analysis separates the magnitude and direction channels of the velocity error, measures the readout floor of the energy error, scores every scheme against a closed-form reference rather than against a refined run of the scheme under test, and reports an applicability map over 120 step-and-field cells, twenty independent retrainings, a hyper-parameter search over 96 configurations and seven ablations of the training objective.</p><p><strong>The result is in part negative, and this bundle is the evidence for it.</strong> The learned corrector is outperformed by the fourth-order volume-preserving splitting at the same step and at a fraction of its cost, and its trajectory advantage inverts beyond roughly one hundred gyro-orbits. Every number supporting that statement is in the committed outputs, and the scripts that produced them are here.</p><p>The accompanying manuscript has not yet been submitted; no journal is named in this record on purpose. Licence: MIT. See <code>CITATION.cff</code> for citation metadata and <code>code/README.md</code> for how to run the bundle.</p>",
+  "keywords": [
+    "geometric integration",
+    "Boris scheme",
+    "charged particle motion",
+    "volume-preserving integrator",
+    "energy conservation",
+    "readout convention",
+    "secular growth",
+    "scientific machine learning",
+    "learned corrector",
+    "baseline strength",
+    "negative result",
+    "reproducibility"
+  ],
+  "notes": "Version 1.0.0 is the first public release. Earlier internal revisions of this bundle were never published. When the manuscript is accepted, add the article as a related identifier (isSupplementTo) and cut a new version."
+}
